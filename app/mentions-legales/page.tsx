@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 // cette page — voir README.md "À compléter avant publication".
 export default function MentionsLegalesPage() {
   return (
-    <>
+    <div className="page">
       <h1>Mentions légales</h1>
 
       <h2>Éditeur du site</h2>
@@ -52,6 +52,6 @@ export default function MentionsLegalesPage() {
         Pour toute question relative à ces mentions légales, voir la page{" "}
         <a href="/contact/">contact</a>.
       </p>
-    </>
+    </div>
   );
 }

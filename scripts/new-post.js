@@ -36,6 +36,15 @@ title: "${title.replace(/"/g, '\\"')}"
 description: "TODO — une phrase, affichée dans le listing et les meta/OG."
 date: "${today}"
 author: "Techno Play"
+# Rubrique : un des slugs de lib/categories.ts (technologie, gaming, vr-ar,
+# ia, llm, robotique, drones, crypto). Sert de repli pour l'image à la une
+# si "image" est vide ci-dessous.
+category: "TODO"
+# Image à la une (optionnelle) : chemin sous public/ ou URL absolue. Sans
+# elle, la couverture de la rubrique ci-dessus est utilisée automatiquement
+# (voir lib/posts.ts, resolveCoverImage).
+# image: "/uploads/mon-image.jpg"
+# imageAlt: "TODO — description de l'image pour l'accessibilité et le SEO"
 ---
 
 TODO — contenu de l'article en Markdown.

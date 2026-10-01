@@ -12,6 +12,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
+import { getCategory, type CategorySlug } from "./categories";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
 
@@ -21,6 +22,16 @@ export type PostFrontmatter = {
   date: string; // format ISO "AAAA-MM-JJ"
   slug: string;
   author?: string;
+  // Rubrique (voir lib/categories.ts) — sert à l'étiquette affichée sur les
+  // cartes et, en l'absence d'`image`, à choisir l'image à la une de
+  // secours (voir resolveCoverImage ci-dessous).
+  category?: CategorySlug;
+  // Image à la une : chemin sous public/ (ex. "/uploads/mon-image.jpg") ou
+  // URL absolue. Optionnelle — resolveCoverImage() fournit toujours un
+  // visuel de repli quand elle est absente, aucune carte ne reste sans
+  // image.
+  image?: string;
+  imageAlt?: string;
 };
 
 export type Post = PostFrontmatter & {
@@ -62,4 +73,24 @@ export function getPostBySlug(slug: string): Post | undefined {
 /** Tous les slugs — pour generateStaticParams (export statique). */
 export function getAllSlugs(): string[] {
   return readSlugs();
+}
+
+/**
+ * Image à la une résolue pour un article : la photo fournie en
+ * frontmatter si elle existe, sinon la couverture de secours de sa
+ * rubrique (public/covers/<slug>.png — voir scripts/generate-covers.js),
+ * sinon le visuel générique du site. Toujours une image valide : aucune
+ * carte ni page article ne se retrouve sans visuel.
+ */
+export function resolveCoverImage(
+  post: Pick<Post, "image" | "imageAlt" | "category" | "title">
+): { src: string; alt: string } {
+  if (post.image) {
+    return { src: post.image, alt: post.imageAlt || post.title };
+  }
+  const category = getCategory(post.category);
+  if (category) {
+    return { src: `/covers/${category.slug}.png`, alt: category.title };
+  }
+  return { src: "/covers/default.png", alt: "Techno Play" };
 }

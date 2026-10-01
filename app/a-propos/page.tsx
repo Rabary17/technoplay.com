@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 // voir README.md "À compléter avant publication".
 export default function AboutPage() {
   return (
-    <>
+    <div className="page">
       <h1>À propos de {SITE_NAME}</h1>
       <p>
         {SITE_NAME} est un média indépendant consacré à l&apos;actualité tech,
@@ -43,6 +43,6 @@ export default function AboutPage() {
         Une question, une correction à signaler, une proposition ? La page{" "}
         <a href="/contact/">contact</a> est le meilleur moyen de nous joindre.
       </p>
-    </>
+    </div>
   );
 }

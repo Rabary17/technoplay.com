@@ -3,6 +3,7 @@ title: "Bienvenue sur Techno Play"
 description: "Le premier article de Techno Play — à remplacer ou supprimer dès que du vrai contenu est prêt."
 date: "2026-09-30"
 author: "Techno Play"
+category: "technologie"
 ---
 
 Ceci est un article d'exemple, généré au démarrage du projet pour vérifier que

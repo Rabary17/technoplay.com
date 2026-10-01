@@ -4,7 +4,7 @@
 export const SITE_URL = "https://techno-play.com";
 export const SITE_NAME = "Techno Play";
 export const SITE_DESCRIPTION =
-  "Techno Play — actualités, tests et décryptages tech.";
+  "Techno Play — actualités, tests et décryptages sur la tech, le gaming, l'intelligence artificielle, la robotique et la crypto.";
 // Locale par défaut du site (balises lang, Open Graph). À changer si le
 // site n'est finalement pas francophone.
 export const SITE_LOCALE = "fr_FR";
@@ -16,14 +16,31 @@ export const SITE_LANG = "fr";
 // À REMPLACER avant mise en ligne réelle — voir README.md "À compléter
 // avant publication".
 
-// Email affiché sur /contact (indépamment du formulaire Formspree, pour les
-// gens qui préfèrent écrire directement).
+// Email affiché sur /contact (indépendamment du formulaire Zoho CRM, pour
+// les gens qui préfèrent écrire directement).
 export const CONTACT_EMAIL = "contact@techno-play.com"; // TODO : vraie adresse
 
-// Formspree (https://formspree.io) : compte gratuit, aucun backend requis —
-// reste compatible avec l'export statique. Remplacer par l'ID réel une fois
-// le compte créé (Formspree → New Form → copier l'ID dans l'URL d'action).
-export const FORMSPREE_FORM_ID = "YOUR_FORM_ID"; // TODO
+// Zoho CRM — formulaire "Web-to-Lead" (décision du 2026-09-30, remplace
+// Formspree) : POST direct depuis une page statique vers Zoho, sans backend
+// — chaque soumission crée un prospect (Lead) directement dans le CRM.
+// Marche à suivre dans Zoho CRM : Configuration (⚙) > Canaux > Formulaires
+// web (Webforms) > module Prospects (Leads) > Nouveau formulaire. Zoho
+// génère alors un extrait HTML contenant le vrai domaine d'action (selon le
+// centre de données du compte : crm.zoho.com / .eu / .in / .com.cn / ...)
+// et trois champs cachés obligatoires — sa propre documentation prévient
+// que le formulaire cesse de fonctionner s'ils sont retirés ou modifiés.
+// Copier ces valeurs TELLES QUELLES depuis le code généré par Zoho : elles
+// sont propres à ce formulaire/cette organisation et ne peuvent pas être
+// devinées ni réutilisées d'un autre compte.
+export const ZOHO_WEBFORM = {
+  actionUrl: "https://crm.zoho.com/crm/WebToLeadForm", // TODO : confirmer le domaine (centre de données) donné par Zoho
+  xnQsjsdp: "TODO — coller la valeur exacte fournie par Zoho CRM",
+  xmIwtLD: "TODO — coller la valeur exacte fournie par Zoho CRM",
+  actionType: "TODO — coller la valeur exacte fournie par Zoho CRM",
+  // Page affichée après soumission — Zoho l'exige (returnURL). Peut rester
+  // sur /contact/ tant qu'il n'y a pas de page de remerciement dédiée.
+  returnUrl: `${SITE_URL}/contact/`,
+};
 
 // Réseaux sociaux retenus (décision du 2026-09-30) : X et YouTube. Remplacer
 // les URLs par les vrais profils une fois créés — alimente aussi le JSON-LD

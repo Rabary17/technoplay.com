@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Techno Play">
+  <!-- Marque Techno Play — pastille + triangle « play » + point accent.
+       Version identité livrée le 2026-09-30 (nettoyée des métadonnées de
+       provenance de l'export d'origine). S'adapte seule au mode sombre du
+       système via la media query ci-dessous — un seul fichier à référencer
+       partout (favicon, en-tête, pied de page), pas de variante séparée à
+       swapper en CSS/JS. -->
+  <style>
+    .tp-tile { fill: #2F45D6; }
+    .tp-mark { fill: #FFFFFF; stroke: #FFFFFF; }
+    @media (prefers-color-scheme: dark) {
+      .tp-tile { fill: #8C9BFF; }
+      .tp-mark { fill: #0F1115; stroke: #0F1115; }
+    }
+  </style>
+  <rect class="tp-tile" width="64" height="64" rx="16"/>
+  <polygon class="tp-mark" points="15,17 15,47 37,32" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="48" cy="44" r="5.5" fill="#F2B33D"/>
+</svg>

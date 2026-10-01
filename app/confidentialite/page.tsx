@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 
 // Politique volontairement courte : le site n'a, à ce stade, ni analytics
 // ni compte utilisateur — la seule collecte réelle est le formulaire de
-// contact (Formspree, voir app/contact/page.tsx). À étoffer si un outil de
+// contact (Zoho CRM, voir app/contact/page.tsx). À étoffer si un outil de
 // mesure d'audience (Plausible, GA, etc.) est ajouté plus tard.
 export default function ConfidentialitePage() {
   return (
-    <>
+    <div className="page">
       <h1>Politique de confidentialité</h1>
 
       <p>
@@ -24,15 +24,15 @@ export default function ConfidentialitePage() {
 
       <h2>Formulaire de contact</h2>
       <p>
-        Le formulaire de la page <a href="/contact/">contact</a> est traité
-        par un service tiers, Formspree (
-        <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noreferrer">
-          politique de confidentialité de Formspree
+        Le formulaire de la page <a href="/contact/">contact</a> transmet
+        directement vos informations (nom, email, message) au CRM Zoho, où
+        elles créent une fiche prospect consultable par l&apos;équipe{" "}
+        {SITE_NAME} dans le seul but de répondre à votre demande (
+        <a href="https://www.zoho.com/privacy.html" target="_blank" rel="noreferrer">
+          politique de confidentialité de Zoho
         </a>
-        ). Les informations que vous saisissez (nom, email, message) sont
-        transmises à Formspree puis à {SITE_NAME} dans le seul but de
-        répondre à votre demande. Elles ne sont ni vendues, ni utilisées à
-        des fins commerciales. Vous pouvez aussi nous écrire directement à{" "}
+        ). Ces informations ne sont ni vendues, ni utilisées à des fins
+        commerciales tierces. Vous pouvez aussi nous écrire directement à{" "}
         <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> si vous
         préférez ne pas utiliser ce formulaire.
       </p>
@@ -53,6 +53,6 @@ export default function ConfidentialitePage() {
         Contactez-nous via la page <a href="/contact/">contact</a> pour
         exercer ces droits.
       </p>
-    </>
+    </div>
   );
 }

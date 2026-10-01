@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_NAME, CONTACT_EMAIL, FORMSPREE_FORM_ID } from "@/lib/site";
+import { SITE_NAME, CONTACT_EMAIL, ZOHO_WEBFORM } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -7,18 +7,27 @@ export const metadata: Metadata = {
   alternates: { canonical: "/contact/" },
 };
 
-// Formulaire 100% statique : POST direct vers Formspree (https://formspree.io),
+// Formulaire 100% statique : POST direct vers Zoho CRM (Web-to-Lead),
 // aucun backend/serverless requis — compatible avec l'export statique
-// (next.config.ts, output: "export"). TODO avant publication : créer un
-// compte Formspree gratuit, un formulaire, et remplacer FORMSPREE_FORM_ID
-// dans lib/site.ts par l'ID réel (visible dans l'URL d'action fournie par
-// Formspree). Tant que ce n'est pas fait, le formulaire ne délivre nulle
-// part — testez une soumission après configuration.
+// (next.config.ts, output: "export"). Chaque soumission crée un prospect
+// dans le module Prospects (Leads) du CRM. TODO avant publication : générer
+// le vrai formulaire dans Zoho CRM (Configuration > Canaux > Formulaires
+// web > Prospects > Nouveau formulaire) et reporter les valeurs exactes
+// qu'il fournit dans ZOHO_WEBFORM (lib/site.ts) — action, xnQsjsdp,
+// xmIwtLD, actionType. Ne jamais modifier ces trois champs cachés une fois
+// collés : Zoho prévient explicitement que le formulaire cesse de
+// fonctionner s'ils sont altérés. Vérifiez aussi que les attributs `name`
+// des champs visibles ci-dessous (Last Name, Email, Description)
+// correspondent aux noms d'API du formulaire tel que généré par votre
+// compte — un layout Leads personnalisé peut les renommer.
 export default function ContactPage() {
-  const formConfigured = FORMSPREE_FORM_ID !== "YOUR_FORM_ID";
+  const formConfigured =
+    !ZOHO_WEBFORM.xnQsjsdp.startsWith("TODO") &&
+    !ZOHO_WEBFORM.xmIwtLD.startsWith("TODO") &&
+    !ZOHO_WEBFORM.actionType.startsWith("TODO");
 
   return (
-    <>
+    <div className="page">
       <h1>Contact</h1>
       <p>
         Une question, une correction à signaler, une proposition ? Écrivez-nous
@@ -28,31 +37,32 @@ export default function ContactPage() {
 
       {!formConfigured && (
         <p className="empty-state">
-          Formulaire pas encore configuré (FORMSPREE_FORM_ID est un
-          placeholder dans lib/site.ts) — visible uniquement en développement,
-          à corriger avant mise en ligne.
+          Formulaire pas encore configuré (ZOHO_WEBFORM contient encore des
+          valeurs TODO dans lib/site.ts) — visible uniquement en
+          développement, à corriger avant mise en ligne.
         </p>
       )}
 
-      <form
-        method="POST"
-        action={`https://formspree.io/f/${FORMSPREE_FORM_ID}`}
-        className="contact-form"
-      >
-        {/* Piège à bots — champ caché, convention Formspree */}
-        <input type="text" name="_gotcha" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+      <form method="POST" action={ZOHO_WEBFORM.actionUrl} className="contact-form">
+        {/* Champs requis par Zoho CRM — ne pas renommer ni retirer. */}
+        <input type="hidden" name="xnQsjsdp" value={ZOHO_WEBFORM.xnQsjsdp} />
+        <input type="hidden" name="xmIwtLD" value={ZOHO_WEBFORM.xmIwtLD} />
+        <input type="hidden" name="actionType" value={ZOHO_WEBFORM.actionType} />
+        <input type="hidden" name="returnURL" value={ZOHO_WEBFORM.returnUrl} />
 
-        <label htmlFor="name">Nom</label>
-        <input type="text" id="name" name="name" required />
+        <label htmlFor="lastName">Nom</label>
+        <input type="text" id="lastName" name="Last Name" required />
 
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="email" required />
+        <input type="email" id="email" name="Email" required />
 
         <label htmlFor="message">Message</label>
-        <textarea id="message" name="message" rows={6} required />
+        <textarea id="message" name="Description" rows={6} required />
 
-        <button type="submit">Envoyer</button>
+        <button type="submit" className="btn btn--primary">
+          Envoyer
+        </button>
       </form>
-    </>
+    </div>
   );
 }

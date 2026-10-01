@@ -4,7 +4,7 @@
 // Optimization) autant que le SEO classique — les moteurs génératifs
 // s'appuient fortement sur ces données structurées.
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION, SOCIAL_LINKS } from "./site";
-import type { Post } from "./posts";
+import { resolveCoverImage, type Post } from "./posts";
 
 export function websiteSchema() {
   return {
@@ -42,11 +42,13 @@ export function faqSchema(items: { question: string; answer: string }[]) {
 }
 
 export function blogPostingSchema(post: Post) {
+  const cover = resolveCoverImage(post);
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
+    image: `${SITE_URL}${cover.src}`,
     datePublished: post.date,
     dateModified: post.date,
     author: post.author

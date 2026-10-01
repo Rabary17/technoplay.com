@@ -1,138 +1,332 @@
-/* Styles minimaux, volontairement sans design — voir README.md :
-   le vrai design vient une fois qu'il y a du trafic. Objectif ici :
-   lisible, rapide, propre, rien de plus. */
+/* Techno Play — design tokens & composants de base.
+   Identité livrée le 2026-09-30 (voir Techno Play Identité.dc.html et
+   Techno Play Accueil.dc.html dans la conversation) : tokens de couleur,
+   typo et composants (.btn/.tag/.card) repris tels quels de la charte.
+   Le reste (mise en page : header/footer/hero/grilles/images) a été
+   reconstruit pour coller à la maquette, qui ne définissait le layout
+   qu'en HTML/inline-style de démonstration.
+
+   Polices : chargées via next/font/google dans app/layout.tsx (pas de
+   <link> Google Fonts ici) — --font-display/--font-body sont définies
+   par les classes que next/font applique sur <html>, auto-hébergées,
+   sans requête réseau supplémentaire au chargement.
+
+   Icônes : voir components/Icon.tsx — tracés Lucide (lucide-static
+   v0.460.0) copiés en JSX, aucune requête réseau. Pour ajouter une
+   icône : vérifier qu'elle existe à cette version sur
+   https://lucide.dev/icons puis https://unpkg.com/lucide-static@0.460.0/icons/<nom>.svg
+   avant de l'utiliser dans lib/categories.ts. */
+
 :root {
   color-scheme: light dark;
-  --fg: #1a1a1a;
-  --bg: #ffffff;
-  --muted: #6b6b6b;
-  --border: #e4e4e4;
-  --max-width: 680px;
+  --bg: #FAFAF7;          --surface: #FFFFFF;     --surface-2: #F1F1EC;
+  --fg: #15171C;          /* 17.2:1 sur --bg */
+  --fg-2: #474C55;        /* 8.3:1 */
+  --fg-3: #676C75;        /* 5.1:1 — méta, dates */
+  --border: #E3E3DC;
+  --border-strong: #C9C9C0;
+  --brand: #2F45D6;       /* 6.8:1 sur --bg — liens, CTA */
+  --brand-hover: #2334B0;
+  --on-brand: #FFFFFF;    /* 7.1:1 sur --brand */
+  --brand-soft: #EBEEFC;  /* fond d'étiquette, --brand dessus 6.2:1 */
+  --signal: #F2B33D;      /* décoratif uniquement (point du logo) */
+  --focus: #2F45D6;
+  --bg-blur: rgba(250, 250, 247, 0.86);
+
+  --fs-h1: clamp(2.25rem, 1.4rem + 3.6vw, 4.5rem);
+  --fs-h2: clamp(1.75rem, 1.3rem + 1.8vw, 2.75rem);
+  --fs-h3: 1.375rem;
+  --fs-body: 1.0625rem;   /* 17px */
+  --fs-small: 0.875rem;
+
+  --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px; --radius-pill: 999px;
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 24px;
+  --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px;
+  --container: 1200px;
+  --content-width: 720px; /* colonne de lecture des articles/pages de texte */
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --fg: #f0f0f0;
-    --bg: #121212;
-    --muted: #a0a0a0;
-    --border: #2a2a2a;
+    --bg: #0F1115;        --surface: #171A20;   --surface-2: #1E222A;
+    --fg: #EDEEF0;        /* 16.3:1 */
+    --fg-2: #B6BAC2;      /* 9.7:1 */
+    --fg-3: #8D929C;      /* 6.1:1 */
+    --border: #2A2F38;
+    --border-strong: #454B56;
+    --brand: #8C9BFF;     /* 7.4:1 */
+    --brand-hover: #A9B4FF;
+    --on-brand: #0F1115;  /* 7.4:1 sur --brand */
+    --brand-soft: #1D2244;
+    --focus: #8C9BFF;
+    --bg-blur: rgba(15, 17, 21, 0.86);
   }
 }
+
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  color: var(--fg);
   background: var(--bg);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
+  color: var(--fg);
+  font: 400 var(--fs-body)/1.6 var(--font-body), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
-.site-header, .site-footer {
-  max-width: var(--max-width);
+h1, h2, h3 {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-wrap: balance;
+  margin: 0;
+}
+p { text-wrap: pretty; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 4px; }
+
+a { color: var(--brand); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--brand-hover); text-decoration-thickness: 2px; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* --- Composants (charte graphique) --- */
+.btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: var(--radius-md);
+  font: 600 0.9375rem/1 var(--font-body), sans-serif; text-decoration: none; border: 1px solid transparent;
+  transition: background-color .2s var(--ease), border-color .2s var(--ease); }
+.btn:active { transform: scale(0.98); }
+.btn--primary { background: var(--brand); color: var(--on-brand); }
+.btn--primary:hover { background: var(--brand-hover); color: var(--on-brand); text-decoration: none; }
+.btn--secondary { background: transparent; color: var(--fg); border-color: var(--border-strong); }
+.btn--secondary:hover { border-color: var(--fg); color: var(--fg); text-decoration: none; }
+
+.tag { display: inline-block; font: 600 0.75rem/1 var(--font-body), sans-serif; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--brand); background: var(--brand-soft); padding: 6px 10px; border-radius: var(--radius-pill); }
+
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: var(--space-5);
+  transition: border-color .2s var(--ease); }
+.card:hover { border-color: var(--brand); }
+.card__meta { color: var(--fg-3); font-size: var(--fs-small); }
+
+/* --- Structure de page --- */
+.container {
+  max-width: var(--container);
   margin: 0 auto;
-  padding: 1.5rem 1rem;
+  padding-left: clamp(20px, 5vw, 48px);
+  padding-right: clamp(20px, 5vw, 48px);
 }
+
+/* Pages "simples" (texte courant : à propos, contact, FAQ, légal,
+   articles) — une seule colonne de lecture confortable, centrée, avec
+   l'espacement vertical de page. L'accueil ne l'utilise pas : chacune de
+   ses sections gère son propre fond/padding via .container ci-dessus. */
+.page {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: var(--space-7) clamp(20px, 5vw, 48px) var(--space-8);
+}
+
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--bg-blur);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.site-header .container {
+  padding-top: 14px;
+  padding-bottom: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px 24px;
   flex-wrap: wrap;
-  gap: 0.5rem 1.5rem;
 }
-.site-title {
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--fg);
+}
+.site-logo:hover { color: var(--fg); text-decoration: none; }
+.site-logo img { display: block; }
+.site-logo span {
+  font-family: var(--font-display), system-ui, sans-serif;
   font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--fg);
-  text-decoration: none;
+  font-size: 1.3125rem;
+  letter-spacing: -0.02em;
 }
-.site-nav, .footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1.25rem;
-}
-.site-nav a, .footer-nav a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-.site-nav a:hover, .footer-nav a:hover {
-  color: var(--fg);
-  text-decoration: underline;
-}
-main {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 1rem 3rem;
-}
-.site-footer {
-  color: var(--muted);
-  font-size: 0.875rem;
-  border-top: 1px solid var(--border);
-  margin-top: 2rem;
-}
-.footer-nav {
-  margin-bottom: 0.75rem;
-}
-h1 { font-size: 1.75rem; margin-bottom: 0.25rem; }
-h2 { font-size: 1.25rem; }
-a { color: inherit; }
-.post-list { list-style: none; padding: 0; margin: 1.5rem 0 0; }
-.post-list li {
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--border);
-}
-.post-list li:first-child { padding-top: 0; }
-.post-list a { text-decoration: none; }
-.post-list a:hover { text-decoration: underline; }
-.post-meta {
-  color: var(--muted);
-  font-size: 0.875rem;
-}
-.post-description {
-  color: var(--muted);
-  margin: 0.25rem 0 0;
-}
-.empty-state {
-  color: var(--muted);
-  border: 1px dashed var(--border);
-  border-radius: 8px;
-  padding: 2rem;
-  margin-top: 1.5rem;
-}
-article.post-content { margin-top: 1.5rem; }
-article.post-content h2 { margin-top: 2rem; }
+.site-logo--footer span { font-size: 1.1875rem; }
 
-.contact-form {
+.site-nav { display: flex; gap: clamp(16px, 3vw, 32px); }
+.site-nav a {
+  color: var(--fg-2);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  padding: 10px 0;
+}
+.site-nav a:hover { color: var(--fg); text-decoration: none; }
+
+.site-footer { background: var(--surface-2); border-top: 1px solid var(--border); }
+.site-footer .container { padding-top: var(--space-7); padding-bottom: var(--space-5); }
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: var(--space-6);
+}
+.footer-tagline { margin: var(--space-3) 0 0; font-size: var(--fs-small); color: var(--fg-2); max-width: 30ch; }
+.footer-heading {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  margin-bottom: var(--space-2);
+}
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { color: var(--fg); font-size: 0.90625rem; text-decoration: none; }
+.footer-links a:hover { color: var(--brand); }
+.footer-bottom {
+  margin: var(--space-6) 0 0;
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--border);
+  font-size: 0.84375rem;
+  color: var(--fg-3);
+}
+
+/* --- Accueil --- */
+.hero { display: flex; flex-direction: column; gap: var(--space-5); padding-top: clamp(48px, 8vw, 96px); }
+.hero-eyebrow {
   display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  margin-top: 1.5rem;
-  max-width: 480px;
-}
-.contact-form label {
-  font-size: 0.875rem;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8125rem;
   font-weight: 600;
-  margin-top: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--fg-3);
 }
-.contact-form input,
-.contact-form textarea {
-  font: inherit;
-  color: var(--fg);
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 0.5rem 0.65rem;
+.hero-eyebrow .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--signal); flex: none; }
+.hero h1 { font-size: var(--fs-h1); max-width: 17ch; }
+.hero h1 .brand { color: var(--brand); }
+.hero .lead { margin: 0; font-size: clamp(1.0625rem, 1.7vw, 1.25rem); line-height: 1.6; color: var(--fg-2); max-width: 62ch; }
+.hero-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.hero-chips a {
+  display: flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 14px;
+  border: 1px solid var(--border); border-radius: var(--radius-pill);
+  color: var(--fg); text-decoration: none; font-size: 0.875rem; font-weight: 500; background: var(--surface);
 }
-.contact-form button {
-  align-self: flex-start;
-  margin-top: 1.25rem;
-  font: inherit;
-  font-weight: 600;
-  color: var(--bg);
-  background: var(--fg);
-  border: none;
-  border-radius: 6px;
-  padding: 0.6rem 1.25rem;
-  cursor: pointer;
+.hero-chips a:hover { border-color: var(--brand); text-decoration: none; }
+.hero-chips svg { color: var(--brand); flex: none; }
+
+.promise-section { background: var(--surface-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.promise-section .container {
+  padding-top: clamp(48px, 7vw, 96px);
+  padding-bottom: clamp(48px, 7vw, 96px);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  gap: var(--space-5) var(--space-8);
 }
-.contact-form button:hover {
-  opacity: 0.9;
+.promise-heading { display: flex; flex-direction: column; gap: var(--space-4); }
+.promise-heading .icon-tile { width: 40px; height: 40px; }
+.promise-heading h2 { font-size: var(--fs-h2); }
+.promise-body { display: flex; flex-direction: column; gap: var(--space-5); }
+.promise-body p { margin: 0; font-size: var(--fs-body); line-height: 1.65; color: var(--fg-2); }
+.promise-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: var(--space-2); }
+
+.home-section { padding-top: clamp(56px, 8vw, 112px); }
+.home-section h2 { font-size: var(--fs-h2); margin-bottom: var(--space-6); }
+.section-intro { margin: -1rem 0 var(--space-6); font-size: var(--fs-body); color: var(--fg-2); max-width: 70ch; }
+
+.icon-tile {
+  width: 48px; height: 48px; border-radius: var(--radius-md);
+  background: var(--brand-soft); color: var(--brand);
+  display: grid; place-items: center; flex: none;
 }
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: var(--space-4);
+}
+.category-card { display: flex; flex-direction: column; gap: var(--space-4); }
+.category-card__head { display: flex; align-items: center; justify-content: space-between; }
+.category-card__num { font-size: 0.8125rem; font-weight: 600; color: var(--fg-3); font-variant-numeric: tabular-nums; letter-spacing: 0.04em; }
+.category-card h3 { font-size: 1.4375rem; line-height: 1.15; }
+.category-card p { margin: 0; font-size: 0.96875rem; line-height: 1.65; color: var(--fg-2); }
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: var(--space-4);
+}
+.article-card { display: flex; flex-direction: column; overflow: hidden; padding: 0; }
+.article-card__image {
+  width: 100%;
+  /* height: auto est indispensable ici : les attributs HTML width/height
+     (1200x630, pour le CLS) fixent sinon une hauteur figée à 630px que
+     aspect-ratio ne recalcule plus une fois la largeur réduite par le
+     width: 100% ci-dessus — l'image se retrouve alors étirée/rognée au
+     lieu de garder son ratio 1200:630. */
+  height: auto;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
+  background: var(--surface-2);
+  display: block;
+}
+.article-card__body { padding: var(--space-5); display: flex; flex-direction: column; gap: var(--space-3); flex: 1; }
+.article-card .tag { align-self: flex-start; }
+.article-card h3 { font-size: 1.25rem; font-weight: 600; line-height: 1.22; letter-spacing: -0.015em; }
+.article-card h3 a { color: var(--fg); text-decoration: none; }
+.article-card h3 a:hover { color: var(--brand); }
+.article-card__excerpt { margin: 0; font-size: 0.9375rem; line-height: 1.6; color: var(--fg-2); flex: 1; }
+.article-card__meta {
+  display: flex; flex-wrap: wrap; gap: 4px 8px;
+  font-size: 0.84375rem; color: var(--fg-3);
+  padding-top: var(--space-4); margin-top: var(--space-2);
+  border-top: 1px solid var(--border);
+}
+
+.empty-state {
+  color: var(--fg-2);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  text-align: center;
+}
+
+/* --- Article --- */
+.post-hero-image {
+  width: 100%;
+  /* height: auto — même remarque que .article-card__image ci-dessus. */
+  height: auto;
+  aspect-ratio: 1200 / 630;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin-top: var(--space-5);
+  display: block;
+}
+.post-content { margin-top: var(--space-3); }
+.post-content > .tag { margin-bottom: var(--space-3); }
+.post-content h1 { font-size: var(--fs-h2); margin-top: var(--space-2); }
+.post-meta { color: var(--fg-3); font-size: var(--fs-small); margin-top: var(--space-2); }
+.post-content h2 { margin-top: var(--space-7); font-size: 1.5rem; }
+.post-content p { line-height: 1.7; }
+
+/* --- Formulaire de contact --- */
+.contact-form { display: flex; flex-direction: column; gap: var(--space-1); margin-top: var(--space-5); max-width: 480px; }
+.contact-form label { font-size: var(--fs-small); font-weight: 600; margin-top: var(--space-4); }
+.contact-form input, .contact-form textarea {
+  font: inherit; color: var(--fg); background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 10px 14px;
+}
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--brand); }
+.contact-form button { align-self: flex-start; margin-top: var(--space-5); }
+
+/* --- Listes simples (à propos / faq / mentions légales) --- */
+.post-list { list-style: none; padding: 0; margin: var(--space-5) 0 0; }
+.post-list li { padding: var(--space-5) 0; border-bottom: 1px solid var(--border); }
+.post-list li:first-child { padding-top: 0; }
+.post-description { color: var(--fg-2); margin: 0.25rem 0 0; }

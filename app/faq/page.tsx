@@ -37,7 +37,7 @@ const questions = [
 
 export default function FaqPage() {
   return (
-    <>
+    <div className="page">
       <JsonLd data={faqSchema(questions)} />
       <h1>Questions fréquentes</h1>
       <div>
@@ -48,6 +48,6 @@ export default function FaqPage() {
           </section>
         ))}
       </div>
-    </>
+    </div>
   );
 }

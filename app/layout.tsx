@@ -10,6 +10,7 @@ import {
 } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
+import { SECTIONS, sectionUrl } from "@/lib/categories";
 import "./globals.css";
 
 // next/font : auto-hébergé au build (aucune requête vers
@@ -31,14 +32,18 @@ const inter = Inter({
   display: "swap",
 });
 
-// Navigation E-E-A-T (décision du 2026-09-30) : ces pages doivent être
-// atteignables en un clic depuis n'importe où sur le site, pas seulement
-// via des liens internes ponctuels — c'est aussi ce qui aide Google à les
-// découvrir et à les associer au site dans son ensemble.
-const NAV_LINKS = [
+// Menu principal = les 4 rubriques (structure du 2026-10-02, voir
+// lib/categories.ts).
+// Pages E-E-A-T (décision du 2026-09-30) : elles doivent rester
+// atteignables en un clic depuis n'importe où sur le site — elles sont
+// dans le pied de page, présent sur toutes les pages.
+const INFO_LINKS = [
   { label: "À propos", href: "/a-propos/" },
+  { label: "La rédaction", href: "/a-propos/#la-redaction" },
   { label: "FAQ", href: "/faq/" },
   { label: "Contact", href: "/contact/" },
+  { label: "Mentions légales", href: "/mentions-legales/" },
+  { label: "Confidentialité", href: "/confidentialite/" },
 ];
 
 const DEFAULT_OG_IMAGE = {
@@ -93,9 +98,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <span>{SITE_NAME}</span>
             </a>
             <nav className="site-nav" aria-label="Navigation principale">
-              {NAV_LINKS.map((link) => (
-                <a key={link.href} href={link.href}>
-                  {link.label}
+              {SECTIONS.map((section) => (
+                <a key={section.slug} href={sectionUrl(section)}>
+                  {section.short}
                 </a>
               ))}
             </nav>
@@ -113,15 +118,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <span>{SITE_NAME}</span>
                 </a>
                 <p className="footer-tagline">
-                  La tech, les jeux, l&apos;IA et la crypto expliqués
+                  Tutos, comparatifs et décryptages : la tech expliquée
                   simplement.
                 </p>
               </div>
-              <nav aria-label="Informations légales">
+              <nav aria-label="Rubriques">
+                <span className="footer-heading">Rubriques</span>
+                <div className="footer-links">
+                  {SECTIONS.map((section) => (
+                    <a key={section.slug} href={sectionUrl(section)}>
+                      {section.title}
+                    </a>
+                  ))}
+                </div>
+              </nav>
+              <nav aria-label="Informations">
                 <span className="footer-heading">Informations</span>
                 <div className="footer-links">
-                  <a href="/mentions-legales/">Mentions légales</a>
-                  <a href="/confidentialite/">Confidentialité</a>
+                  {INFO_LINKS.map((link) => (
+                    <a key={link.href} href={link.href}>
+                      {link.label}
+                    </a>
+                  ))}
                 </div>
               </nav>
               <nav aria-label="Réseaux sociaux">

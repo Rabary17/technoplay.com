@@ -4,7 +4,7 @@
 export const SITE_URL = "https://techno-play.com";
 export const SITE_NAME = "Techno Play";
 export const SITE_DESCRIPTION =
-  "Techno Play — actualités, tests et décryptages sur la tech, le gaming, l'intelligence artificielle, la robotique et la crypto.";
+  "Techno Play — tutos et solutions de dépannage, comparatifs d'achat, décryptages de l'IA et actualité tech, expliqués simplement.";
 // Locale par défaut du site (balises lang, Open Graph). À changer si le
 // site n'est finalement pas francophone.
 export const SITE_LOCALE = "fr_FR";

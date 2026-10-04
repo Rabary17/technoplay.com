@@ -32,15 +32,33 @@ const BRAND_HOVER = "#2334B0";
 const SIGNAL = "#F2B33D";
 const WHITE = "#FFFFFF";
 
+// Une couverture par rubrique ET par sous-catégorie (structure du
+// 2026-10-02) — garder synchronisé avec lib/categories.ts (slug, titre,
+// icône).
 const CATEGORIES = [
-  { slug: "technologie", title: "Technologie & gadgets", icon: "smartphone" },
-  { slug: "gaming", title: "Jeux vidéo & gaming", icon: "gamepad-2" },
-  { slug: "vr-ar", title: "Réalité virtuelle & réalité augmentée", icon: "glasses" },
-  { slug: "ia", title: "Intelligence artificielle", icon: "brain-circuit" },
-  { slug: "llm", title: "LLM & IA générative", icon: "message-square-text" },
-  { slug: "robotique", title: "Robots & robotique", icon: "bot" },
-  { slug: "drones", title: "Drones", icon: "plane" },
-  { slug: "crypto", title: "Crypto & Web3", icon: "coins" },
+  // Rubriques
+  { slug: "guides-tutos", title: "Guides & Tutos", icon: "wrench" },
+  { slug: "comparatifs-achats", title: "Comparatifs & Achats", icon: "scale" },
+  { slug: "decryptage-concepts", title: "Décryptage & Concepts", icon: "lightbulb" },
+  { slug: "actu-tech", title: "Actu Tech", icon: "newspaper" },
+  // Guides & Tutos
+  { slug: "windows-mac", title: "Windows & Mac", icon: "laptop" },
+  { slug: "android-ios", title: "Android & iOS", icon: "smartphone" },
+  { slug: "reseau-stockage", title: "Réseau & Stockage", icon: "router" },
+  { slug: "securite-vpn", title: "Sécurité & VPN", icon: "shield-check" },
+  // Comparatifs & Achats
+  { slug: "materiel-pc-composants", title: "Matériel PC & Composants", icon: "cpu" },
+  { slug: "peripheriques-ecrans", title: "Périphériques & Écrans", icon: "monitor" },
+  { slug: "audio-mobilite", title: "Audio & Mobilité", icon: "headphones" },
+  { slug: "domotique-maison-connectee", title: "Domotique & Maison connectée", icon: "house" },
+  // Décryptage & Concepts
+  { slug: "intelligence-artificielle", title: "Intelligence artificielle", icon: "brain-circuit" },
+  { slug: "hardware-innovation", title: "Hardware & Innovation", icon: "circuit-board" },
+  { slug: "culture-tech", title: "Culture Tech", icon: "history" },
+  // Actu Tech
+  { slug: "annonces-produits", title: "Annonces & Produits", icon: "rocket" },
+  { slug: "cyberattaques-failles", title: "Cyberattaques & Failles", icon: "shield-alert" },
+  { slug: "logiciels-mises-a-jour", title: "Logiciels & Mises à jour", icon: "refresh-cw" },
 ];
 
 function readIconInner(name) {
@@ -55,7 +73,7 @@ function readIconInner(name) {
 
 // Découpe grossière du titre en 1-2 lignes pour qu'il tienne dans la
 // largeur du visuel à cette taille de police (pas besoin de plus robuste :
-// les 8 titres sont connus et fixes).
+// les titres sont connus et fixes).
 function wrapTitle(title, maxCharsPerLine = 21) {
   const words = title.split(" ");
   const lines = [];
@@ -116,8 +134,8 @@ function buildDefaultSvg() {
   </g>
   <text x="80" y="400" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="64" fill="${WHITE}">Techno Play</text>
   <text font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="30" fill="${WHITE}" opacity="0.9">
-    <tspan x="80" y="452">La tech, les jeux, l'IA et la crypto</tspan>
-    <tspan x="80" y="490">expliqués simplement</tspan>
+    <tspan x="80" y="452">Tutos, comparatifs et décryptages :</tspan>
+    <tspan x="80" y="490">la tech sans jargon ni langue de bois</tspan>
   </text>
 </svg>`;
 }

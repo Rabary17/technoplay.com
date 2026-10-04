@@ -1,16 +1,26 @@
 #!/usr/bin/env node
-// Usage : npm run new-post -- "Titre de l'article"
+// Usage : npm run new-post -- --categorie android-ios "Titre de l'article"
 // Crée content/posts/<slug>.md avec le frontmatter déjà rempli (date du
 // jour, slug dérivé du titre) — évite les fautes de frappe dans les clés
-// YAML attendues par lib/posts.ts.
+// YAML attendues par lib/posts.ts. L'auteur est choisi selon sa spécialité
+// (titre + sous-catégorie, voir scripts/generation/choisir-auteur.js).
 const fs = require("fs");
 const path = require("path");
+const { choisirAuteur, REGLES } = require("./generation/choisir-auteur");
 
-const title = process.argv.slice(2).join(" ").trim();
+const args = process.argv.slice(2);
+const iCat = args.indexOf("--categorie");
+const categorie = iCat >= 0 ? args[iCat + 1] : "";
+const title = args.filter((_, i) => iCat < 0 || (i !== iCat && i !== iCat + 1)).join(" ").trim();
 if (!title) {
-  console.error('Usage : npm run new-post -- "Titre de l\'article"');
+  console.error('Usage : npm run new-post -- --categorie <slug> "Titre de l\'article"');
   process.exit(1);
 }
+if (categorie && !REGLES.categories[categorie]) {
+  console.error(`Sous-catégorie inconnue : ${categorie}`);
+  process.exit(1);
+}
+const choix = choisirAuteur({ titre: title, categorie });
 
 function slugify(s) {
   return s
@@ -35,11 +45,21 @@ const frontmatter = `---
 title: "${title.replace(/"/g, '\\"')}"
 description: "TODO — une phrase, affichée dans le listing et les meta/OG."
 date: "${today}"
-author: "Techno Play"
-# Rubrique : un des slugs de lib/categories.ts (technologie, gaming, vr-ar,
-# ia, llm, robotique, drones, crypto). Sert de repli pour l'image à la une
-# si "image" est vide ci-dessous.
-category: "TODO"
+# Auteur : slug de lib/authors.ts, choisi selon sa spécialité
+# (${choix.raison}). Modifiable à la main.
+author: "${choix.auteur}"
+# Sous-catégorie : un des slugs de lib/categories.ts —
+#   Guides & Tutos : windows-mac, android-ios, reseau-stockage, securite-vpn
+#   Comparatifs & Achats : materiel-pc-composants, peripheriques-ecrans,
+#     audio-mobilite, domotique-maison-connectee
+#   Décryptage & Concepts : intelligence-artificielle, hardware-innovation,
+#     culture-tech
+#   Actu Tech : annonces-produits, cyberattaques-failles,
+#     logiciels-mises-a-jour
+# Détermine la rubrique, le fil d'Ariane et l'image à la une de secours.
+category: "${categorie || "TODO"}"
+# Date de mise à jour (optionnelle) : "AAAA-MM-JJ"
+# updated: "${today}"
 # Image à la une (optionnelle) : chemin sous public/ ou URL absolue. Sans
 # elle, la couverture de la rubrique ci-dessus est utilisée automatiquement
 # (voir lib/posts.ts, resolveCoverImage).
@@ -52,4 +72,4 @@ TODO — contenu de l'article en Markdown.
 
 fs.mkdirSync(dir, { recursive: true });
 fs.writeFileSync(file, frontmatter, "utf8");
-console.log(`Créé : content/posts/${slug}.md`);
+console.log(`Créé : content/posts/${slug}.md — auteur : ${choix.auteur} (${choix.raison})`);

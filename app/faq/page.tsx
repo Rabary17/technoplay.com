@@ -5,7 +5,7 @@ import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "FAQ",
-  description: `Questions fréquentes sur ${SITE_NAME} : qui publie, comment nous contacter, avec quelle fréquence.`,
+  description: `Questions fréquentes sur ${SITE_NAME} : qui écrit, à quel rythme, liens affiliés, comment nous contacter.`,
   alternates: { canonical: "/faq/" },
 };
 
@@ -16,22 +16,27 @@ export const metadata: Metadata = {
 // ligne éditoriale/fréquence de publication stabilisée (voir /a-propos/).
 const questions = [
   {
-    question: `Qui écrit les articles publiés sur ${SITE_NAME} ?`,
-    answer: `Les contenus sont rédigés et relus par l'équipe éditoriale de ${SITE_NAME}. Voir la page À propos pour plus de détails.`,
+    question: `Qui écrit les articles de ${SITE_NAME} ?`,
+    answer: `Chaque article est signé par le spécialiste du sujet — beauté et mode, design et jeux vidéo, famille et maison connectée, tech et business — et publié sous la responsabilité d'Andrianina RABARIVELO, rédacteur en chef de ${SITE_NAME}, qui fixe la ligne éditoriale et relit chaque article avant publication. Toute l'équipe est présentée dans la section « La rédaction » de la page À propos.`,
   },
   {
     question: "À quelle fréquence publiez-vous ?",
     answer:
-      "La fréquence de publication varie selon l'actualité et le temps nécessaire à la vérification de chaque article — nous privilégions la qualité à la cadence.",
+      "Ça dépend de l'actu et du temps qu'il faut pour vérifier chaque article. Une règle : on préfère publier juste que publier vite.",
   },
   {
     question: `${SITE_NAME} est-il indépendant ?`,
     answer:
-      "Oui. La ligne éditoriale n'est pas influencée par des annonceurs ou des partenaires commerciaux ; tout contenu sponsorisé, le cas échéant, serait clairement identifié comme tel.",
+      "Oui. Aucun annonceur ni partenaire commercial ne dicte ce qu'on écrit. Si un contenu sponsorisé devait un jour être publié, il serait clairement signalé comme tel — pas déguisé en article.",
   },
   {
-    question: "Comment signaler une erreur ou une correction ?",
-    answer: `Écrivez-nous via la page Contact, ou directement à ${CONTACT_EMAIL} — chaque signalement est examiné et l'article corrigé si besoin.`,
+    question: "Les comparatifs contiennent-ils des liens affiliés ?",
+    answer:
+      "Certains guides d'achat peuvent contenir des liens d'affiliation : si tu achètes un produit via l'un de ces liens, le site peut toucher une commission, sans surcoût pour toi. Ces liens sont signalés comme tels et n'influencent ni le choix des produits ni leur classement — un produit décevant reste décevant, commission ou pas.",
+  },
+  {
+    question: "Comment signaler une erreur ?",
+    answer: `Écris-nous via la page Contact, ou directement à ${CONTACT_EMAIL}. Chaque signalement est lu, et l'article est corrigé si besoin.`,
   },
 ];
 

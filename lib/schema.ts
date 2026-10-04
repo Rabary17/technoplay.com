@@ -5,6 +5,39 @@
 // s'appuient fortement sur ces données structurées.
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION, SOCIAL_LINKS } from "./site";
 import { resolveCoverImage, type Post } from "./posts";
+import { resolveAuthor, authorUrl, type Author } from "./authors";
+import { resolveCategory } from "./categories";
+
+/**
+ * Entité `Person` d'un auteur — `sameAs` relie la personne à ses profils
+ * externes (LinkedIn, X, YouTube...), ce qui permet à Google et aux
+ * moteurs génératifs de la reconnaître comme une entité réelle et
+ * vérifiable (signal E-E-A-T « Experience/Expertise »).
+ */
+export function personSchema(author: Author) {
+  return {
+    "@type": "Person",
+    "@id": `${SITE_URL}${authorUrl(author)}#person`,
+    name: author.name,
+    url: `${SITE_URL}${authorUrl(author)}`,
+    jobTitle: author.role,
+    ...(author.image ? { image: `${SITE_URL}${author.image}` } : {}),
+    description: author.shortBio,
+    knowsAbout: author.expertise,
+    worksFor: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+    sameAs: author.socials.map((s) => s.url),
+  };
+}
+
+/** Page auteur : ProfilePage dont l'entité principale est la Person. */
+export function profilePageSchema(author: Author) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    url: `${SITE_URL}${authorUrl(author)}`,
+    mainEntity: personSchema(author),
+  };
+}
 
 export function websiteSchema() {
   return {
@@ -43,6 +76,8 @@ export function faqSchema(items: { question: string; answer: string }[]) {
 
 export function blogPostingSchema(post: Post) {
   const cover = resolveCoverImage(post);
+  const author = resolveAuthor(post.author);
+  const category = resolveCategory(post.category);
   return {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -50,11 +85,15 @@ export function blogPostingSchema(post: Post) {
     description: post.description,
     image: `${SITE_URL}${cover.src}`,
     datePublished: post.date,
-    dateModified: post.date,
-    author: post.author
-      ? { "@type": "Person", name: post.author }
-      : { "@type": "Organization", name: SITE_NAME },
-    publisher: { "@type": "Organization", name: SITE_NAME },
+    dateModified: post.updated ?? post.date,
+    ...(category ? { articleSection: category.sub?.title ?? category.section.title } : {}),
+    author: personSchema(author),
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: `${SITE_URL}/favicon-192x192.png` },
+    },
     mainEntityOfPage: `${SITE_URL}/${post.slug}/`,
   };
 }

@@ -1,89 +1,246 @@
-// Source de vérité unique pour les 8 rubriques du site — réutilisée par la
-// page d'accueil (grille de rubriques), par le frontmatter des articles
-// (champ `category`) pour l'étiquette affichée sur chaque carte, et par
-// scripts/generate-covers.js pour les visuels de secours (voir ce fichier
-// et lib/posts.ts). Ajouter une rubrique ici suffit à la faire apparaître
-// partout où elle est utilisée.
+// Arborescence éditoriale du site (structure validée le 2026-10-02) :
+// textes rédigés selon la charte de ton (tutoiement, ton direct — voir la
+// doc projet « Charte de ton »).
+// 4 rubriques, chacune découpée en sous-catégories. Source de vérité
+// unique, réutilisée par :
+//   - le menu principal et le pied de page (app/layout.tsx) ;
+//   - les pages hub de rubrique (/<rubrique>/) et de sous-catégorie
+//     (/<rubrique>/<sous-categorie>/) — voir app/[slug]/ ;
+//   - le frontmatter des articles : champ `category` = slug d'une
+//     SOUS-CATÉGORIE (ex. "windows-mac"), la rubrique parente en est déduite ;
+//   - scripts/generate-covers.js pour les visuels de secours.
+// Ajouter une sous-catégorie ici suffit à la faire apparaître partout
+// (penser à relancer `npm run generate-covers` pour son visuel).
 //
+// `seoTarget` = cible de mots-clés interne (brief de l'étude de mots-clés),
+// jamais affichée sur le site.
 import type { IconName } from "@/components/Icon";
 
-export type CategorySlug =
-  | "technologie"
-  | "gaming"
-  | "vr-ar"
-  | "ia"
-  | "llm"
-  | "robotique"
-  | "drones"
-  | "crypto";
+export type SectionSlug =
+  | "guides-tutos"
+  | "comparatifs-achats"
+  | "decryptage-concepts"
+  | "actu-tech";
 
-export interface Category {
-  slug: CategorySlug;
+export type SubcategorySlug =
+  // Guides & Tutos
+  | "windows-mac"
+  | "android-ios"
+  | "reseau-stockage"
+  | "securite-vpn"
+  // Comparatifs & Achats
+  | "materiel-pc-composants"
+  | "peripheriques-ecrans"
+  | "audio-mobilite"
+  | "domotique-maison-connectee"
+  // Décryptage & Concepts
+  | "intelligence-artificielle"
+  | "hardware-innovation"
+  | "culture-tech"
+  // Actu Tech
+  | "annonces-produits"
+  | "cyberattaques-failles"
+  | "logiciels-mises-a-jour";
+
+export interface Subcategory {
+  slug: SubcategorySlug;
   title: string;
-  short: string;
   icon: IconName;
+  /** Une à deux phrases affichées sur la page hub et la page de la sous-catégorie. */
   body: string;
+  /** Cible SEO interne — brief pour l'étude de mots-clés, non affichée. */
+  seoTarget: string;
 }
 
-export const CATEGORIES: Category[] = [
+export interface Section {
+  slug: SectionSlug;
+  title: string;
+  /** Libellé court pour le menu et les étiquettes. */
+  short: string;
+  icon: IconName;
+  /** Phrase d'accroche (meta description, cartes). */
+  description: string;
+  /** Paragraphe de présentation (page hub + accueil). */
+  body: string;
+  subcategories: Subcategory[];
+}
+
+export const SECTIONS: Section[] = [
   {
-    slug: "technologie",
-    title: "Technologie & gadgets",
-    short: "Tech & gadgets",
-    icon: "smartphone",
-    body: "Smartphones, ordinateurs, objets connectés, audio, domotique : cette catégorie couvre le matériel et les services que vous utilisez — ou envisagez d'acheter — au quotidien. On y trouve des tests pratiques, des comparatifs honnêtes entre plusieurs produits, et des explications sur ce qui rend un appareil réellement meilleur qu'un autre, au-delà de la fiche technique marketing. L'idée n'est pas de vous pousser vers le produit le plus cher, mais vers celui qui correspond réellement à votre usage et à votre budget. On y retrouve aussi des guides d'achat saisonniers et des dossiers sur les tendances qui durent — comme la domotique ou l'écoconception — face à celles qui ne sont, pour l'instant, que des effets d'annonce.",
+    slug: "guides-tutos",
+    title: "Guides & Tutos",
+    short: "Guides & Tutos",
+    icon: "wrench",
+    description:
+      "Tutos pas à pas et solutions de dépannage pour Windows, Mac, Android, iOS, ton réseau et ta sécurité.",
+    body: "Un bug qui revient, un réglage introuvable, une sauvegarde à mettre en place ? Ici, chaque guide part d'une question précise et va droit au but : étapes numérotées, captures quand elles aident, et un plan B si la première méthode ne marche pas chez toi.",
+    subcategories: [
+      {
+        slug: "windows-mac",
+        title: "Windows & Mac",
+        icon: "laptop",
+        body: "Booste ton ordi, règle les bugs les plus courants et gagne du temps au quotidien sur Windows 11 et macOS.",
+        seoTarget: "optimisation OS, astuces productivité, résolution bugs",
+      },
+      {
+        slug: "android-ios",
+        title: "Android & iOS",
+        icon: "smartphone",
+        body: "Sauvegardes, transferts, autonomie, réglages cachés : tire le meilleur de ton smartphone, iPhone ou Android.",
+        seoTarget: "tutoriels applications, sauvegardes, astuces batterie",
+      },
+      {
+        slug: "reseau-stockage",
+        title: "Réseau & Stockage",
+        icon: "router",
+        body: "Wi-Fi qui décroche, box à paramétrer, NAS à installer : des guides clairs pour un réseau qui tient la route et des données bien rangées.",
+        seoTarget: "routeurs wi-fi, installation NAS, sécurité box",
+      },
+      {
+        slug: "securite-vpn",
+        title: "Sécurité & VPN",
+        icon: "shield-check",
+        body: "Virer un malware, choisir un gestionnaire de mots de passe, protéger ta vie privée en ligne : la sécurité sans parano ni jargon.",
+        seoTarget: "suppression malwares, gestionnaires mots de passe, vie privée",
+      },
+    ],
   },
   {
-    slug: "gaming",
-    title: "Jeux vidéo & gaming",
-    short: "Jeux vidéo",
-    icon: "gamepad-2",
-    body: "Sorties attendues, tests de jeux, actualité de l'esport, matériel gaming (cartes graphiques, PC, périphériques) : la catégorie Jeux couvre le jeu vidéo comme loisir et comme industrie. On y parle aussi bien des grosses productions que des jeux indépendants qui méritent d'être découverts, et des évolutions techniques — moteurs de jeu, cloud gaming — qui redessinent la façon de jouer (la réalité virtuelle a sa propre catégorie, juste à côté). On y aborde aussi les choix de configuration pour jouer dans de bonnes conditions sans se ruiner, et les tendances qui traversent la communauté : abonnements, jeux-services, montée en puissance du jeu mobile.",
+    slug: "comparatifs-achats",
+    title: "Comparatifs & Achats",
+    short: "Comparatifs",
+    icon: "scale",
+    description:
+      "Guides d'achat et comparatifs pour choisir ton matériel PC, tes périphériques, ton audio et ta domotique selon ton usage et ton budget.",
+    body: "Avant d'acheter, la vraie question n'est pas « quel est le meilleur produit ? » mais « quel est le bon produit pour moi ? ». Nos comparatifs partent de ton usage et de ton budget, séparent les critères qui comptent vraiment du blabla marketing… et n'hésitent pas à te dire quand un produit ne vaut pas son prix.",
+    subcategories: [
+      {
+        slug: "materiel-pc-composants",
+        title: "Matériel PC & Composants",
+        icon: "cpu",
+        body: "Cartes graphiques, processeurs, SSD, configs complètes : choisis les bons composants pour monter ou upgrader ton PC, sans payer pour des perfs dont tu n'as pas besoin.",
+        seoTarget: "cartes graphiques, processeurs, SSD, config PC",
+      },
+      {
+        slug: "peripheriques-ecrans",
+        title: "Périphériques & Écrans",
+        icon: "monitor",
+        body: "Souris, claviers mécaniques, écrans : les critères qui font vraiment la différence à l'usage, pour bosser comme pour jouer.",
+        seoTarget: "souris gaming, claviers mécaniques, moniteurs vidéo",
+      },
+      {
+        slug: "audio-mobilite",
+        title: "Audio & Mobilité",
+        icon: "headphones",
+        body: "Casques à réduction de bruit, écouteurs sans fil, batteries externes : de quoi t'équiper pour les trajets, le télétravail et les voyages.",
+        seoTarget: "casques réduction bruit, écouteurs sans fil, batteries externes",
+      },
+      {
+        slug: "domotique-maison-connectee",
+        title: "Domotique & Maison connectée",
+        icon: "house",
+        body: "Caméras, ampoules connectées, assistants vocaux : construis une maison connectée vraiment utile, compatible… et qui respecte ta vie privée.",
+        seoTarget: "caméras surveillance, ampoules connectées, assistants vocaux",
+      },
+    ],
   },
   {
-    slug: "vr-ar",
-    title: "Réalité virtuelle & réalité augmentée",
-    short: "VR & AR",
-    icon: "glasses",
-    body: "Réalité virtuelle, réalité augmentée, réalité mixte : cette catégorie couvre le matériel — casques, lunettes connectées — et les usages, bien au-delà du seul jeu vidéo : formation professionnelle, santé, visite virtuelle, collaboration à distance. On y teste les casques et applications qui comptent vraiment, on explique les différences entre des technologies souvent confondues (VR, AR, XR), et on prend du recul sur les promesses répétées d'un « métavers » qui peine encore à convaincre au-delà des démonstrations. On y suit aussi les usages grand public qui commencent réellement à s'installer, loin des annonces qui ne débouchent sur rien.",
+    slug: "decryptage-concepts",
+    title: "Décryptage & Concepts",
+    short: "Décryptages",
+    icon: "lightbulb",
+    description:
+      "IA, hardware et culture tech expliqués simplement : comprends enfin comment marchent les technologies que tu utilises tous les jours.",
+    body: "Comment un LLM « réfléchit »-il ? Pourquoi une puce ARM consomme-t-elle moins qu'une puce x86 ? Ici, on prend le temps d'expliquer ce qu'il y a sous le capot, avec des analogies simples et des schémas, pour que tu te fasses ton propre avis au lieu de répéter des slogans.",
+    subcategories: [
+      {
+        slug: "intelligence-artificielle",
+        title: "Intelligence artificielle",
+        icon: "brain-circuit",
+        body: "Comprendre les LLM, écrire des prompts qui marchent, démêler le jargon de l'IA : l'intelligence artificielle sans fantasme ni poudre aux yeux.",
+        seoTarget: "comprendre les LLM, prompts efficaces, lexique IA",
+      },
+      {
+        slug: "hardware-innovation",
+        title: "Hardware & Innovation",
+        icon: "circuit-board",
+        body: "Chiffrement, puces ARM contre x86, nouvelles technos d'écran ou de batterie : ce qui se passe vraiment sous le capot.",
+        seoTarget: "fonctionnement chiffrement, architectures puces ARM vs x86",
+      },
+      {
+        slug: "culture-tech",
+        title: "Culture Tech",
+        icon: "history",
+        body: "L'histoire des grandes marques, les coulisses du web, l'impact environnemental du numérique : la tech racontée autrement.",
+        seoTarget: "histoire des marques, coulisses du web, impact environnemental numérique",
+      },
+    ],
   },
   {
-    slug: "ia",
-    title: "Intelligence artificielle",
-    short: "IA",
-    icon: "brain-circuit",
-    body: "L'IA est partout, mais rarement expliquée simplement. Cette catégorie couvre ses usages concrets — au travail, dans la création, dans la recherche — ainsi que les questions qu'elle soulève : éthique, régulation, impact sur l'emploi, fiabilité réelle des outils. L'objectif est de séparer ce qui fonctionne vraiment aujourd'hui de ce qui relève encore de la promesse marketing. On y couvre aussi bien les grandes annonces des laboratoires de recherche que les usages plus discrets, déjà intégrés dans des outils que vous utilisez peut-être sans le savoir.",
-  },
-  {
-    slug: "llm",
-    title: "LLM & IA générative",
-    short: "LLM",
-    icon: "message-square-text",
-    body: "Les grands modèles de langage (LLM) et les outils d'IA générative — chatbots, générateurs d'images, assistants de code — ont leur propre catégorie tant leur évolution est rapide. On y compare les modèles entre eux, on explique comment les utiliser efficacement, cas d'usage concrets à l'appui, et on prend le temps de signaler leurs limites autant que leurs progrès. On y trouve aussi des guides pratiques pour rédiger de meilleurs prompts, automatiser des tâches répétitives, ou simplement comprendre ce qui se cache derrière l'outil que vous utilisez peut-être déjà.",
-  },
-  {
-    slug: "robotique",
-    title: "Robots & robotique",
-    short: "Robotique",
-    icon: "bot",
-    body: "Robots domestiques, robots industriels, humanoïdes : la robotique avance vite, portée par les progrès de l'IA et de la miniaturisation. On y suit les annonces qui comptent réellement, les usages déjà concrets — logistique, santé, agriculture — et ceux qui restent, pour l'instant, au stade de démonstration. On s'intéresse en particulier à la frontière, parfois floue, entre un prototype spectaculaire en vidéo et un produit réellement utilisable au quotidien.",
-  },
-  {
-    slug: "drones",
-    title: "Drones",
-    short: "Drones",
-    icon: "plane",
-    body: "Drones grand public, drones professionnels (agriculture, BTP, inspection, cinéma), drone racing, cadre réglementaire : cette catégorie suit un secteur à la croisée de la robotique et de l'aérien. On y teste le matériel destiné aux particuliers — photo, vidéo, loisir — mais aussi les usages professionnels qui se généralisent, souvent moins spectaculaires que les vidéos qui circulent sur les réseaux mais bien plus significatifs pour l'avenir du secteur. On y suit aussi les évolutions réglementaires, qui changent régulièrement ce qu'il est permis de faire voler, où, et sous quelles conditions — un point souvent négligé mais essentiel avant tout achat.",
-  },
-  {
-    slug: "crypto",
-    title: "Crypto & Web3",
-    short: "Crypto",
-    icon: "coins",
-    body: "Cryptomonnaies, blockchain, finance décentralisée : cette catégorie décrypte un secteur volatile et souvent mal expliqué. Notre approche est pédagogique et prudente — on explique comment fonctionne une technologie ou un projet, sans jamais recommander un investissement. On y couvre aussi bien les projets déjà établis que les tendances émergentes, avec un regard critique sur les promesses non tenues qui ont marqué ce secteur. Les contenus de cette catégorie sont informatifs, pas des conseils financiers : à vous de faire vos propres recherches avant toute décision, et de ne jamais investir plus que ce que vous pouvez vous permettre de perdre.",
+    slug: "actu-tech",
+    title: "Actu Tech",
+    short: "Actu",
+    icon: "newspaper",
+    description:
+      "L'actu tech qui te concerne vraiment : lancements de produits, alertes de sécurité et nouveautés des logiciels que tu utilises.",
+    body: "Toutes les annonces ne se valent pas. On suit l'actu tech avec un filtre simple : qu'est-ce que ça change concrètement pour toi ? Lancements majeurs, failles à corriger d'urgence, mises à jour qui bousculent tes habitudes — l'essentiel, vérifié, sans emballement.",
+    subcategories: [
+      {
+        slug: "annonces-produits",
+        title: "Annonces & Produits",
+        icon: "rocket",
+        body: "Les lancements majeurs d'Apple, Google, Nvidia, Microsoft et des autres acteurs qui comptent, résumés et remis en perspective : la hype, mais filtrée.",
+        seoTarget: "lancements majeurs Apple, Google, Nvidia, Microsoft",
+      },
+      {
+        slug: "cyberattaques-failles",
+        title: "Cyberattaques & Failles",
+        icon: "shield-alert",
+        body: "Les alertes de sécurité qui touchent le grand public, et surtout les bons réflexes à adopter tout de suite pour te protéger.",
+        seoTarget: "alertes sécurité grand public, correctifs immédiats",
+      },
+      {
+        slug: "logiciels-mises-a-jour",
+        title: "Logiciels & Mises à jour",
+        icon: "refresh-cw",
+        body: "Nouvelles fonctions et mises à jour des applis populaires : ce qui change, et comment en profiter.",
+        seoTarget: "nouveautés applications populaires, nouvelles fonctionnalités",
+      },
+    ],
   },
 ];
 
-export function getCategory(slug: CategorySlug | string | undefined) {
-  return CATEGORIES.find((c) => c.slug === slug);
+export const ALL_SUBCATEGORIES: { section: Section; sub: Subcategory }[] =
+  SECTIONS.flatMap((section) => section.subcategories.map((sub) => ({ section, sub })));
+
+export function getSection(slug: string | undefined): Section | undefined {
+  return SECTIONS.find((s) => s.slug === slug);
+}
+
+export function getSubcategory(
+  slug: string | undefined
+): { section: Section; sub: Subcategory } | undefined {
+  return ALL_SUBCATEGORIES.find((entry) => entry.sub.slug === slug);
+}
+
+/**
+ * Résout le champ `category` d'un article : slug de sous-catégorie
+ * (cas normal) ou, à défaut, slug de rubrique. Renvoie la rubrique et,
+ * si elle est connue, la sous-catégorie.
+ */
+export function resolveCategory(
+  slug: string | undefined
+): { section: Section; sub?: Subcategory } | undefined {
+  const entry = getSubcategory(slug);
+  if (entry) return entry;
+  const section = getSection(slug);
+  return section ? { section } : undefined;
+}
+
+export function sectionUrl(section: Section) {
+  return `/${section.slug}/`;
+}
+
+export function subcategoryUrl(section: Section, sub: Subcategory) {
+  return `/${section.slug}/${sub.slug}/`;
 }

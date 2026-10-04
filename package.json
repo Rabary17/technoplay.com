@@ -4,12 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generation/verifier-contenu.js",
     "build": "next build",
     "start": "npx serve out",
     "lint": "next lint",
     "new-post": "node scripts/new-post.js",
     "generate-covers": "node scripts/generate-covers.js",
-    "generate-favicons": "node scripts/generate-favicons.js"
+    "generate-favicons": "node scripts/generate-favicons.js",
+    "test:garde-fou": "node --test \"scripts/generation/*.test.js\"",
+    "garde-fou:cutoff": "node scripts/generation/llm.js --cutoff",
+    "garde-fou:audit": "node scripts/generation/llm.js --audit",
+    "auteur": "node scripts/generation/choisir-auteur.js"
   },
   "dependencies": {
     "next": "^15.1.0",

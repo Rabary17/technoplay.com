@@ -30,7 +30,7 @@ export default function ContactPage() {
     <div className="page">
       <h1>Contact</h1>
       <p>
-        Une question, une correction à signaler, une proposition ? Écrivez-nous
+        Une question, une coquille à signaler, un sujet à proposer ? Écris-nous
         via le formulaire ci-dessous, ou directement à{" "}
         <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
       </p>

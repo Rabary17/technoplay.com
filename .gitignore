@@ -13,3 +13,9 @@ next-env.d.ts
 .DS_Store
 *.log
 .vercel
+
+# stratégie éditoriale (études de mots-clés...) — reste en local, le repo est public
+/_strategie/
+
+# dossier de livraison de l'app Claude (aperçus, fichiers temporaires)
+/Claude outputs/

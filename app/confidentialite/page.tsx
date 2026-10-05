@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_NAME, CONTACT_EMAIL, COMPANY, COMPANY_ADDRESS, COMPANY_PHONE_HREF } from "@/lib/site";
+import { SITE_NAME, COMPANY, COMPANY_ADDRESS, COMPANY_PHONE_HREF } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
@@ -38,10 +38,11 @@ export default function ConfidentialitePage() {
         <a href="https://www.zoho.com/privacy.html" target="_blank" rel="noreferrer">
           politique de confidentialité de Zoho
         </a>
-        ). Ces informations ne sont ni vendues, ni utilisées à des fins
-        commerciales tierces. Vous pouvez aussi nous écrire directement à{" "}
-        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a> si vous
-        préférez ne pas utiliser ce formulaire.
+        ). Une copie du message est aussi transmise par e-mail au rédacteur
+        en chef. Ces informations ne sont ni vendues, ni utilisées à des fins
+        commerciales tierces. Si vous préférez ne pas utiliser ce formulaire,
+        vous pouvez nous joindre par téléphone, aux horaires indiqués sur la
+        page <a href="/contact/">contact</a>.
       </p>
 
       <h2>Mesure d&apos;audience</h2>

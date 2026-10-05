@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_NAME, CONTACT_EMAIL, COMPANY } from "@/lib/site";
+import { SITE_NAME, COMPANY } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
 import { faqSchema } from "@/lib/schema";
 
@@ -40,7 +40,7 @@ const questions = [
   },
   {
     question: "Comment signaler une erreur ?",
-    answer: `Écris-nous via la page Contact, ou directement à ${CONTACT_EMAIL}. Chaque signalement est lu, et l'article est corrigé si besoin.`,
+    answer: `Écris-nous via le formulaire de la page Contact, ou appelle-nous aux horaires indiqués. Chaque signalement est lu, et l'article est corrigé si besoin.`,
   },
 ];
 

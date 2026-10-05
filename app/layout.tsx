@@ -143,16 +143,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   ))}
                 </div>
               </nav>
-              <nav aria-label="Réseaux sociaux">
-                <span className="footer-heading">Nous suivre</span>
-                <div className="footer-links">
-                  {SOCIAL_LINKS.map((social) => (
-                    <a key={social.url} href={social.url} target="_blank" rel="noreferrer me">
-                      {social.label}
-                    </a>
-                  ))}
-                </div>
-              </nav>
+              {SOCIAL_LINKS.length > 0 && (
+                <nav aria-label="Réseaux sociaux">
+                  <span className="footer-heading">Nous suivre</span>
+                  <div className="footer-links">
+                    {SOCIAL_LINKS.map((social) => (
+                      <a key={social.url} href={social.url} target="_blank" rel="noreferrer me">
+                        {social.label}
+                      </a>
+                    ))}
+                  </div>
+                </nav>
+              )}
             </div>
             <p className="footer-bottom">
               © {new Date().getFullYear()} {SITE_NAME}, un média édité par{" "}

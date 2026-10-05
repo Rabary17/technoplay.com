@@ -102,7 +102,7 @@ export function organizationSchema() {
     // `sameAs` : signal E-E-A-T reconnu par Google — relie l'entité du site
     // à une présence externe vérifiable (voir décision du 2026-09-30).
     // Remplacer par les vrais profils dans lib/site.ts avant publication.
-    sameAs: SOCIAL_LINKS.map((s) => s.url),
+    ...(SOCIAL_LINKS.length > 0 ? { sameAs: SOCIAL_LINKS.map((s) => s.url) } : {}),
   };
 }
 

@@ -62,9 +62,11 @@ export const COMPANY_PHONE_HREF = `tel:${COMPANY.telephone.replace(/\s+/g, "")}`
 // À REMPLACER avant mise en ligne réelle — voir README.md "À compléter
 // avant publication".
 
-// Email affiché sur /contact (indépendamment du formulaire Zoho CRM, pour
-// les gens qui préfèrent écrire directement).
-export const CONTACT_EMAIL = "contact@techno-play.com"; // TODO : vraie adresse
+// Pas d'email public (décision du 2026-10-05) : tout le monde passe par le
+// formulaire de contact, ou par téléphone (COMPANY). La copie des messages
+// dans la boîte d'Andrianina se règle dans Zoho CRM (règle de workflow sur
+// la création d'un prospect) : l'adresse n'a rien à faire dans ce dépôt,
+// qui est public.
 
 // Zoho CRM — formulaire "Web-to-Lead" (décision du 2026-09-30, remplace
 // Formspree) : POST direct depuis une page statique vers Zoho, sans backend
@@ -83,19 +85,20 @@ export const ZOHO_WEBFORM = {
   xnQsjsdp: "TODO — coller la valeur exacte fournie par Zoho CRM",
   xmIwtLD: "TODO — coller la valeur exacte fournie par Zoho CRM",
   actionType: "TODO — coller la valeur exacte fournie par Zoho CRM",
-  // Page affichée après soumission — Zoho l'exige (returnURL). Peut rester
-  // sur /contact/ tant qu'il n'y a pas de page de remerciement dédiée.
-  returnUrl: `${SITE_URL}/contact/`,
+  // Page affichée après soumission — Zoho l'exige (returnURL) :
+  // page de remerciement app/contact/merci/.
+  returnUrl: `${SITE_URL}/contact/merci/`,
 };
 
-// Réseaux sociaux retenus (décision du 2026-09-30) : X et YouTube. Remplacer
-// les URLs par les vrais profils une fois créés — alimente aussi le JSON-LD
-// `sameAs` de l'organisation (lib/schema.ts), signal E-E-A-T reconnu par
-// Google (cohérence entre le site et une présence externe vérifiable).
-export const SOCIAL_LINKS = [
-  { label: "X (Twitter)", url: "https://x.com/technoplay" }, // TODO : vrai handle
-  { label: "YouTube", url: "https://youtube.com/@technoplay" }, // TODO : vrai handle
-];
+// Profils officiels du média : VIDE tant qu'aucun vrai compte n'existe (les
+// handles @technoplay d'origine n'étaient que des placeholders, retirés le
+// 2026-10-05 : un lien mort ou fictif nuit plus à la crédibilité qu'une
+// absence). Ajouter ici un profil réel, `{ label, url }` : il apparaît alors
+// dans « Nous suivre » du pied de page et dans le `sameAs` JSON-LD de
+// l'organisation (lib/schema.ts). Ordre de priorité pour Google : fiche
+// Google Business Profile / Maps d'Anmira Studio, page LinkedIn, chaîne
+// YouTube (seulement si on y publie), puis Facebook et X.
+export const SOCIAL_LINKS: { label: string; url: string }[] = [];
 
 // Mentions légales : identité de l'éditeur (Anmira Studio) et de
 // l'hébergeur. Aucune valeur inventée : la forme juridique n'a pas été

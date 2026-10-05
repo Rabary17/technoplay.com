@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_NAME, CONTACT_EMAIL, ZOHO_WEBFORM, COMPANY } from "@/lib/site";
+import { SITE_NAME, ZOHO_WEBFORM, COMPANY } from "@/lib/site";
 import CompanyDetails from "@/components/CompanyDetails";
 
 export const metadata: Metadata = {
@@ -32,18 +32,18 @@ export default function ContactPage() {
       <h1>Contact</h1>
       <p>
         Une question, une coquille à signaler, un sujet à proposer ? Écris-nous
-        via le formulaire ci-dessous, ou directement à{" "}
-        <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>.
+        via le formulaire ci-dessous : on lit tout, et on te répond à
+        l&apos;adresse que tu indiques.
       </p>
 
       {!formConfigured && (
         <p className="empty-state">
-          Formulaire pas encore configuré (ZOHO_WEBFORM contient encore des
-          valeurs TODO dans lib/site.ts) — visible uniquement en
-          développement, à corriger avant mise en ligne.
+          Le formulaire de contact arrive très bientôt. En attendant, tu peux
+          nous joindre par téléphone aux horaires indiqués plus bas.
         </p>
       )}
 
+      {formConfigured && (
       <form method="POST" action={ZOHO_WEBFORM.actionUrl} className="contact-form">
         {/* Champs requis par Zoho CRM — ne pas renommer ni retirer. */}
         <input type="hidden" name="xnQsjsdp" value={ZOHO_WEBFORM.xnQsjsdp} />
@@ -63,7 +63,13 @@ export default function ContactPage() {
         <button type="submit" className="btn btn--primary">
           Envoyer
         </button>
+        <p className="contact-form__note">
+          En envoyant ce message, tu acceptes que ton nom et ton adresse soient
+          utilisés uniquement pour te répondre. Détails dans la{" "}
+          <a href="/confidentialite/">politique de confidentialité</a>.
+        </p>
       </form>
+      )}
 
       <h2>Coordonnées de l&apos;éditeur</h2>
       <p>

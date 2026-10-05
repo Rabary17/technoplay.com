@@ -325,6 +325,7 @@ a:hover { color: var(--brand-hover); text-decoration-thickness: 2px; }
 }
 .contact-form input:focus, .contact-form textarea:focus { border-color: var(--brand); }
 .contact-form button { align-self: flex-start; margin-top: var(--space-5); }
+.contact-form__note { margin: var(--space-3) 0 0; color: var(--fg-3); font-size: var(--fs-small); line-height: 1.5; }
 
 /* --- Listes simples (à propos / faq / mentions légales) --- */
 .post-list { list-style: none; padding: 0; margin: var(--space-5) 0 0; }

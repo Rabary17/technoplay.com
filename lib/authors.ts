@@ -45,11 +45,12 @@ export const AUTHORS: Author[] = [
     role: "Rédacteur en chef",
     image: "/authors/andrianina-rabarivelo.jpg",
     shortBio:
-      "Rédacteur en chef de Techno Play, Andrianina RABARIVELO est développeur web et spécialiste du référencement. Au quotidien, il construit des outils d'automatisation et d'IA, dont ChatSEO. Sa règle pour chaque tuto, comparatif ou décryptage du site : à la fin de l'article, ton problème doit être réglé.",
+      "Rédacteur en chef de Techno Play, Andrianina RABARIVELO est développeur web et spécialiste du référencement. Au quotidien, il conçoit des automatisations et travaille avec les outils d'IA. Guitariste à ses heures, il applique une règle simple à chaque tuto, comparatif ou décryptage du site : à la fin de l'article, ton problème doit être réglé.",
     bio: [
       "Andrianina RABARIVELO est le rédacteur en chef de Techno Play. Développeur et responsable technique, il passe ses journées à la croisée du web, du référencement et de l'intelligence artificielle : sites WordPress et Next.js, scripts d'automatisation en Python et Node.js, extensions Chrome, infra cloud. Bref, la tech, il ne se contente pas d'en parler : il la fait tourner.",
-      "Il a aussi fondé ChatSEO (chatseo.app), un outil d'IA qui aide les éditeurs de sites à optimiser leurs contenus pour Google comme pour les moteurs de réponse génératifs (ChatGPT, Perplexity, Gemini…). Les grands modèles de langage, il travaille avec tous les jours — de quoi nourrir directement la rubrique Décryptage & Concepts : comment fonctionnent les LLM, ce qu'ils font bien, et là où ils se plantent.",
+      "Les grands modèles de langage, il travaille avec tous les jours : ChatGPT, Claude, Gemini et consorts font partie de sa boîte à outils, pour le référencement sur Google comme sur les moteurs de réponse génératifs. De quoi nourrir directement la rubrique Décryptage & Concepts : comment fonctionnent les LLM, ce qu'ils font bien, et là où ils se plantent.",
       "Sur Techno Play, il fixe la ligne éditoriale, choisit les sujets et veille à ce que chaque guide, comparatif ou décryptage réponde à une vraie question, avec des infos vérifiées. Son critère, simple et sans pitié : un bon tuto se juge à une seule chose — est-ce que tu as réglé ton problème à la fin ?",
+      "Quand il lâche le clavier, c'est souvent pour prendre sa guitare : Andrianina est aussi guitariste.",
       "Tu peux aussi suivre ses analyses tech et IA, en français et en anglais, sur LinkedIn, X et YouTube.",
     ],
     expertise: [

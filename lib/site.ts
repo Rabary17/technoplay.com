@@ -81,13 +81,21 @@ export const COMPANY_PHONE_HREF = `tel:${COMPANY.telephone.replace(/\s+/g, "")}`
 // sont propres à ce formulaire/cette organisation et ne peuvent pas être
 // devinées ni réutilisées d'un autre compte.
 export const ZOHO_WEBFORM = {
-  actionUrl: "https://crm.zoho.com/crm/WebToLeadForm", // TODO : confirmer le domaine (centre de données) donné par Zoho
-  xnQsjsdp: "TODO — coller la valeur exacte fournie par Zoho CRM",
-  xmIwtLD: "TODO — coller la valeur exacte fournie par Zoho CRM",
-  actionType: "TODO — coller la valeur exacte fournie par Zoho CRM",
-  // Page affichée après soumission — Zoho l'exige (returnURL) :
-  // page de remerciement app/contact/merci/.
-  returnUrl: `${SITE_URL}/contact/merci/`,
+  // Valeurs copiées telles quelles du code généré par Zoho CRM le 2026-10-05
+  // (formulaire « Prospect Technoplay », centre de données crm.zoho.com).
+  // Ce sont des identifiants de formulaire, pas des secrets : ils figurent
+  // en clair dans le HTML de la page contact. Ne pas les modifier à la main.
+  actionUrl: "https://crm.zoho.com/crm/WebToLeadForm",
+  xnQsjsdp: "0618c72b947f5dad499a2caea89bbff797a4cbc7c12716b88c7c6e3b6d3f4e21",
+  xmIwtLD: "577f5c42d889ee5c4fc7eb5fd34a501273e49751ddff50f869ae8f5f5510a66860fa73f61f2e6c742db07857d25a826a",
+  actionType: "TGVhZHM=", // base64 de « Leads »
+  // Champ-piège anti-spam de Zoho (base64 de « honeypot ») : caché, doit
+  // rester vide — Zoho écarte les envois où il est rempli.
+  honeypot: "aG9uZXlwb3Q",
+  // Page affichée après soumission (returnURL), identique à celle déclarée
+  // dans Zoho : page de remerciement app/contact/merci/ (le serveur ajoute
+  // la barre finale par redirection).
+  returnUrl: `${SITE_URL}/contact/merci`,
 };
 
 // Profils officiels du média : VIDE tant qu'aucun vrai compte n'existe (les

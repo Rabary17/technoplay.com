@@ -11,16 +11,13 @@ export const metadata: Metadata = {
 // Formulaire 100% statique : POST direct vers Zoho CRM (Web-to-Lead),
 // aucun backend/serverless requis — compatible avec l'export statique
 // (next.config.ts, output: "export"). Chaque soumission crée un prospect
-// dans le module Prospects (Leads) du CRM. TODO avant publication : générer
-// le vrai formulaire dans Zoho CRM (Configuration > Canaux > Formulaires
-// web > Prospects > Nouveau formulaire) et reporter les valeurs exactes
-// qu'il fournit dans ZOHO_WEBFORM (lib/site.ts) — action, xnQsjsdp,
-// xmIwtLD, actionType. Ne jamais modifier ces trois champs cachés une fois
-// collés : Zoho prévient explicitement que le formulaire cesse de
-// fonctionner s'ils sont altérés. Vérifiez aussi que les attributs `name`
-// des champs visibles ci-dessous (Last Name, Email, Description)
-// correspondent aux noms d'API du formulaire tel que généré par votre
-// compte — un layout Leads personnalisé peut les renommer.
+// dans le module Prospects (Leads) du CRM Zoho (formulaire « Prospect
+// Technoplay », relié le 2026-10-05). Les valeurs cachées viennent du code
+// généré par Zoho et vivent dans ZOHO_WEBFORM (lib/site.ts) : ne pas les
+// modifier, Zoho prévient que le formulaire cesse de marcher sinon. Les
+// attributs `name` visibles (Last Name, Email, Description) sont les noms
+// d'API du formulaire Zoho. Anti-spam : champ-piège « honeypot » de Zoho
+// (caché, doit rester vide) ; pas de captcha pour l'instant.
 export default function ContactPage() {
   const formConfigured =
     !ZOHO_WEBFORM.xnQsjsdp.startsWith("TODO") &&
@@ -44,18 +41,29 @@ export default function ContactPage() {
       )}
 
       {formConfigured && (
-      <form method="POST" action={ZOHO_WEBFORM.actionUrl} className="contact-form">
+      <form method="POST" action={ZOHO_WEBFORM.actionUrl} acceptCharset="UTF-8" className="contact-form">
         {/* Champs requis par Zoho CRM — ne pas renommer ni retirer. */}
         <input type="hidden" name="xnQsjsdp" value={ZOHO_WEBFORM.xnQsjsdp} />
         <input type="hidden" name="xmIwtLD" value={ZOHO_WEBFORM.xmIwtLD} />
         <input type="hidden" name="actionType" value={ZOHO_WEBFORM.actionType} />
         <input type="hidden" name="returnURL" value={ZOHO_WEBFORM.returnUrl} />
+        <input type="hidden" name="zc_gad" id="zc_gad" value="" />
+        {/* Champ-piège anti-spam de Zoho : invisible, jamais rempli par un humain. */}
+        <input
+          type="text"
+          name={ZOHO_WEBFORM.honeypot}
+          defaultValue=""
+          tabIndex={-1}
+          autoComplete="off"
+          aria-hidden="true"
+          style={{ display: "none" }}
+        />
 
         <label htmlFor="lastName">Nom</label>
-        <input type="text" id="lastName" name="Last Name" required />
+        <input type="text" id="lastName" name="Last Name" autoComplete="name" maxLength={80} required />
 
         <label htmlFor="email">Email</label>
-        <input type="email" id="email" name="Email" required />
+        <input type="email" id="email" name="Email" autoComplete="email" maxLength={100} required />
 
         <label htmlFor="message">Message</label>
         <textarea id="message" name="Description" rows={6} required />

@@ -72,6 +72,7 @@ export const AUTHORS: Author[] = [
     name: "Felana RABARIVELO",
     initials: "FR",
     role: "Spécialiste beauté, mode & tech lifestyle",
+    image: "/authors/felana-rabarivelo.jpg",
     shortBio:
       "Chez Techno Play, Felana RABARIVELO couvre la tech qui touche à la beauté, aux cosmétiques et à la mode : appareils de soin, objets connectés à porter, applis et tendances des réseaux. Son fil rouge : te dire si un gadget tient ses promesses au quotidien, au-delà de la jolie fiche produit.",
     bio: [
@@ -97,6 +98,7 @@ export const AUTHORS: Author[] = [
     name: "Andee RAKOTOVAO",
     initials: "AR",
     role: "Spécialiste design, jeux vidéo & création",
+    image: "/authors/andee-rakotovao.jpg",
     shortBio:
       "Andee RAKOTOVAO couvre pour Techno Play le design, le graphisme, la photographie, le développement et les jeux vidéo. Écrans, PC, périphériques, logiciels de création : chaque produit est jugé sur ce qui compte quand on crée ou qu'on joue, pour t'aider à choisir sans payer pour du marketing.",
     bio: [
@@ -123,6 +125,7 @@ export const AUTHORS: Author[] = [
     name: "Mialy ANDRIAHARISOA",
     initials: "MA",
     role: "Spécialiste famille, cuisine & maison connectée",
+    image: "/authors/mialy-andriaharisoa.jpg",
     shortBio:
       "Mialy ANDRIAHARISOA couvre pour Techno Play la tech du quotidien en famille : maison connectée, cuisine, couture, et tout ce qui concerne les enfants, des écrans au contrôle parental. Son critère : un appareil doit faire gagner du temps à la maison, pas en faire perdre.",
     bio: [
@@ -147,6 +150,7 @@ export const AUTHORS: Author[] = [
     name: "Nekena JUDICAËL",
     initials: "NJ",
     role: "Spécialiste tech & business",
+    image: "/authors/nekena-judicael.jpg",
     shortBio:
       "Nekena JUDICAËL suit pour Techno Play l'actualité tech et ses coulisses business : annonces produits, mises à jour, stratégies des grandes marques, réseau et stockage. Son rôle : t'expliquer ce qui change vraiment pour toi derrière chaque annonce, sans recopier les communiqués.",
     bio: [

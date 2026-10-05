@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { SITE_NAME } from "@/lib/site";
+import { SITE_NAME, COMPANY, COMPANY_PHONE_HREF } from "@/lib/site";
+import CompanyDetails from "@/components/CompanyDetails";
 import { SECTIONS, sectionUrl } from "@/lib/categories";
 import { AUTHORS, DEFAULT_AUTHOR_SLUG, getAuthor, authorUrl, type Author } from "@/lib/authors";
 import AuthorBox from "@/components/AuthorBox";
@@ -60,10 +61,23 @@ export default function AboutPage() {
         <AuthorBox key={author.slug} author={author} heading="L'équipe" headingLevel={3} />
       ))}
 
+      <h2 id="editeur">Qui édite {SITE_NAME} ?</h2>
+      <p>
+        {SITE_NAME} est un média édité par {COMPANY.nom}, une entreprise basée
+        à {COMPANY.adresse.ville}, à {COMPANY.adresse.pays}. L&apos;identité
+        complète de l&apos;éditeur, le directeur de la publication et
+        l&apos;hébergeur figurent dans les{" "}
+        <a href="/mentions-legales/">mentions légales</a>.
+      </p>
+      <CompanyDetails />
+
       <h2>Nous contacter</h2>
       <p>
         Une question, une coquille à signaler, un sujet à proposer ? Passe par
-        la <a href="/contact/">page contact</a>, on lit tout.
+        la <a href="/contact/">page contact</a>, on lit tout. Tu peux aussi
+        appeler {COMPANY.nom} au{" "}
+        <a href={COMPANY_PHONE_HREF}>{COMPANY.telephone}</a>, aux horaires
+        indiqués ci-dessus.
       </p>
     </div>
   );

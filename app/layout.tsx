@@ -7,6 +7,7 @@ import {
   SITE_LOCALE,
   SITE_LANG,
   SOCIAL_LINKS,
+  COMPANY,
 } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
@@ -154,7 +155,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </nav>
             </div>
             <p className="footer-bottom">
-              © {new Date().getFullYear()} {SITE_NAME}. Tous droits réservés.
+              © {new Date().getFullYear()} {SITE_NAME}, un média édité par{" "}
+              {COMPANY.nom} ({COMPANY.adresse.ville}, {COMPANY.adresse.pays}). Tous
+              droits réservés.
             </p>
           </div>
         </footer>

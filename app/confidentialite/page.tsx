@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_NAME, CONTACT_EMAIL } from "@/lib/site";
+import { SITE_NAME, CONTACT_EMAIL, COMPANY, COMPANY_ADDRESS, COMPANY_PHONE_HREF } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
@@ -22,12 +22,19 @@ export default function ConfidentialitePage() {
         collectées et pourquoi.
       </p>
 
+      <h2>Responsable du traitement</h2>
+      <p>
+        Le responsable du traitement des données collectées sur {SITE_NAME}
+        est {COMPANY.nom}, éditeur du site : {COMPANY_ADDRESS}. Téléphone :{" "}
+        <a href={COMPANY_PHONE_HREF}>{COMPANY.telephone}</a>.
+      </p>
+
       <h2>Formulaire de contact</h2>
       <p>
         Le formulaire de la page <a href="/contact/">contact</a> transmet
         directement vos informations (nom, email, message) au CRM Zoho, où
-        elles créent une fiche prospect consultable par l&apos;équipe{" "}
-        {SITE_NAME} dans le seul but de répondre à votre demande (
+        elles créent une fiche prospect consultable par l&apos;équipe de{" "}
+        {SITE_NAME} ({COMPANY.nom}) dans le seul but de répondre à votre demande (
         <a href="https://www.zoho.com/privacy.html" target="_blank" rel="noreferrer">
           politique de confidentialité de Zoho
         </a>
@@ -50,7 +57,8 @@ export default function ConfidentialitePage() {
       <p>
         Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de
         rectification et de suppression des données vous concernant.
-        Contactez-nous via la page <a href="/contact/">contact</a> pour
+        Contactez-nous via la page <a href="/contact/">contact</a>, par
+        téléphone ou par courrier à l&apos;adresse de {COMPANY.nom} pour
         exercer ces droits.
       </p>
     </div>

@@ -10,6 +10,52 @@ export const SITE_DESCRIPTION =
 export const SITE_LOCALE = "fr_FR";
 export const SITE_LANG = "fr";
 
+// Éditeur du site : Anmira Studio (informations fournies par Andrianina le
+// 2026-10-05). Source unique pour les mentions légales, la page contact,
+// À propos, la politique de confidentialité, le pied de page et le JSON-LD.
+// NIF et STAT : à renseigner dès qu'on les a — tant qu'ils sont vides, les
+// lignes correspondantes n'apparaissent nulle part (ni page, ni JSON-LD).
+export interface Horaire {
+  jours: string;
+  horaires: string;
+  /** Pour le JSON-LD (OpeningHoursSpecification) ; absent = fermé. */
+  schema?: { jours: string[]; ouvre: string; ferme: string };
+}
+
+export const COMPANY = {
+  nom: "Anmira Studio",
+  adresse: {
+    rue: "Andranomanalina",
+    ville: "Antananarivo",
+    codePostal: "101",
+    pays: "Madagascar",
+    codePays: "MG",
+  },
+  telephone: "+261 34 29 917 88",
+  nif: "",
+  stat: "",
+  horaires: [
+    {
+      jours: "Lundi au vendredi",
+      horaires: "9h00 – 16h00",
+      schema: {
+        jours: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        ouvre: "09:00",
+        ferme: "16:00",
+      },
+    },
+    {
+      jours: "Samedi",
+      horaires: "8h00 – 12h00",
+      schema: { jours: ["Saturday"], ouvre: "08:00", ferme: "12:00" },
+    },
+    { jours: "Dimanche", horaires: "Fermé" },
+  ] as Horaire[],
+};
+
+export const COMPANY_ADDRESS = `${COMPANY.adresse.rue}, ${COMPANY.adresse.ville} ${COMPANY.adresse.codePostal}, ${COMPANY.adresse.pays}`;
+export const COMPANY_PHONE_HREF = `tel:${COMPANY.telephone.replace(/\s+/g, "")}`;
+
 // Marque autonome "Techno Play" (décision du 2026-09-30 — pages E-E-A-T pour
 // limiter le risque des mises à jour anti-spam Google : identité vérifiable,
 // contact réel, présence sociale). TOUT CE QUI SUIT EST UN PLACEHOLDER
@@ -51,18 +97,18 @@ export const SOCIAL_LINKS = [
   { label: "YouTube", url: "https://youtube.com/@technoplay" }, // TODO : vrai handle
 ];
 
-// Mentions légales — France (LCEN art. 6-III) : identité de l'éditeur
-// obligatoire. AUCUNE valeur inventée ici volontairement — à remplir avec
-// les vraies informations avant publication (voir README.md).
+// Mentions légales : identité de l'éditeur (Anmira Studio) et de
+// l'hébergeur. Aucune valeur inventée : la forme juridique n'a pas été
+// communiquée, la ligne « Statut » n'existe donc pas ; NIF et STAT
+// s'affichent dès qu'ils sont renseignés dans COMPANY.
 export const LEGAL = {
-  editeur_nom: "TODO — nom de la structure ou de la personne éditrice",
-  editeur_statut: "TODO — ex. auto-entrepreneur / SASU Publithings / ...",
-  editeur_adresse: "TODO — adresse (ou ville, a minima, si personne physique)",
-  editeur_siret: "TODO — si applicable (société/auto-entrepreneur)",
-  directeur_publication: "TODO — nom du directeur de la publication",
+  editeur_nom: COMPANY.nom,
+  editeur_adresse: COMPANY_ADDRESS,
+  editeur_telephone: COMPANY.telephone,
+  directeur_publication: "Andrianina RABARIVELO",
   hebergeur_nom: "Vercel Inc.",
-  // Adresse trouvée par recherche publique (opengovny.com), à reconfirmer sur
-  // vercel.com/legal/privacy-policy avant publication — jamais republier une
-  // adresse d'hébergeur sans l'avoir vérifiée sur la source officielle.
-  hebergeur_adresse: "650 California St., Floor 7, San Francisco, CA 94108, États-Unis (À VÉRIFIER sur vercel.com/legal)",
+  // Adresse relevée le 2026-10-05 dans la section « Contact Us » de
+  // vercel.com/legal/privacy-policy (l'ancienne adresse, issue d'un
+  // annuaire tiers, n'y figure plus).
+  hebergeur_adresse: "440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis",
 };

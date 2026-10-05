@@ -3,7 +3,7 @@
 // composant <JsonLd>. C'est ce qui alimente le GEO (Generative Engine
 // Optimization) autant que le SEO classique — les moteurs génératifs
 // s'appuient fortement sur ces données structurées.
-import { SITE_NAME, SITE_URL, SITE_DESCRIPTION, SOCIAL_LINKS } from "./site";
+import { SITE_NAME, SITE_URL, SITE_DESCRIPTION, SOCIAL_LINKS, COMPANY } from "./site";
 import { resolveCoverImage, type Post } from "./posts";
 import { resolveAuthor, authorUrl, type Author } from "./authors";
 import { resolveCategory } from "./categories";
@@ -49,12 +49,56 @@ export function websiteSchema() {
   };
 }
 
+/**
+ * Société éditrice (Anmira Studio) : rattachée au média via
+ * `parentOrganization`. Le NIF alimente `taxID` seulement quand il est
+ * renseigné ; le STAT (identifiant statistique) n'a pas d'équivalent
+ * schema.org et reste sur les mentions légales.
+ */
+export function companySchema() {
+  const horaires = COMPANY.horaires.flatMap((h) =>
+    h.schema
+      ? [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: h.schema.jours,
+            opens: h.schema.ouvre,
+            closes: h.schema.ferme,
+          },
+        ]
+      : []
+  );
+  return {
+    "@type": "Organization",
+    name: COMPANY.nom,
+    legalName: COMPANY.nom,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: COMPANY.adresse.rue,
+      addressLocality: COMPANY.adresse.ville,
+      postalCode: COMPANY.adresse.codePostal,
+      addressCountry: COMPANY.adresse.codePays,
+    },
+    telephone: COMPANY.telephone,
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      telephone: COMPANY.telephone,
+      url: `${SITE_URL}/contact/`,
+      availableLanguage: ["fr"],
+    },
+    openingHoursSpecification: horaires,
+    ...(COMPANY.nif ? { taxID: COMPANY.nif } : {}),
+  };
+}
+
 export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: SITE_NAME,
     url: SITE_URL,
+    parentOrganization: companySchema(),
     // `sameAs` : signal E-E-A-T reconnu par Google — relie l'entité du site
     // à une présence externe vérifiable (voir décision du 2026-09-30).
     // Remplacer par les vrais profils dans lib/site.ts avant publication.
@@ -92,6 +136,7 @@ export function blogPostingSchema(post: Post) {
       "@type": "Organization",
       name: SITE_NAME,
       url: SITE_URL,
+      parentOrganization: companySchema(),
       logo: { "@type": "ImageObject", url: `${SITE_URL}/favicon-192x192.png` },
     },
     mainEntityOfPage: `${SITE_URL}/${post.slug}/`,

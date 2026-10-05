@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { SITE_NAME, CONTACT_EMAIL } from "@/lib/site";
+import { SITE_NAME, CONTACT_EMAIL, COMPANY } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
 import { faqSchema } from "@/lib/schema";
 
@@ -18,6 +18,10 @@ const questions = [
   {
     question: `Qui écrit les articles de ${SITE_NAME} ?`,
     answer: `Chaque article est signé par le spécialiste du sujet — beauté et mode, design et jeux vidéo, famille et maison connectée, tech et business, WordPress et création de sites web — et publié sous la responsabilité d'Andrianina RABARIVELO, rédacteur en chef de ${SITE_NAME}, qui fixe la ligne éditoriale et relit chaque article avant publication. Toute l'équipe est présentée dans la section « La rédaction » de la page À propos.`,
+  },
+  {
+    question: `Qui est derrière ${SITE_NAME} ?`,
+    answer: `${SITE_NAME} est édité par ${COMPANY.nom}, une entreprise basée à ${COMPANY.adresse.ville}, à ${COMPANY.adresse.pays}. Les coordonnées complètes et le directeur de la publication figurent dans les mentions légales.`,
   },
   {
     question: "À quelle fréquence publiez-vous ?",

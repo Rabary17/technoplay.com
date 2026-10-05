@@ -159,6 +159,25 @@ Le champ `author:` se corrige à la main si besoin. Tests :
 `npm run test:garde-fou` (inclut `choisir-auteur.test.js`, qui vérifie aussi
 que chaque sous-catégorie a un titulaire existant).
 
+## Éditeur et mentions légales (Anmira Studio)
+
+Techno Play est édité par **Anmira Studio** (Andranomanalina, Antananarivo
+101, Madagascar). Tout vient de `COMPANY` et `LEGAL` dans `lib/site.ts` :
+mentions légales, page contact, À propos (section « Qui édite Techno Play ? »),
+politique de confidentialité (responsable du traitement), FAQ, pied de page
+et JSON-LD (`parentOrganization` de l'organisation et du `publisher` des
+articles). Directeur de la publication : Andrianina RABARIVELO.
+
+- **NIF et STAT** : vides pour l'instant. Les renseigner dans `COMPANY.nif` et
+  `COMPANY.stat` suffit : les lignes apparaissent alors dans les mentions
+  légales (le NIF alimente aussi `taxID` en JSON-LD). Tant qu'ils sont vides,
+  rien ne s'affiche.
+- **Forme juridique** : non communiquée, donc pas de ligne « Statut ».
+- **Horaires** : lun.-ven. 9h00 – 16h00, sam. 8h00 – 12h00, dimanche fermé
+  (`COMPANY.horaires`, repris en `OpeningHoursSpecification`).
+- **Hébergeur** : adresse de Vercel relevée le 2026-10-05 sur
+  vercel.com/legal/privacy-policy.
+
 ## Accueil et photos
 
 `app/page.tsx` (refonte du 2026-10-03) : hero, « La tech qui fait l'actu »

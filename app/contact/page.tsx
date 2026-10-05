@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { SITE_NAME, CONTACT_EMAIL, ZOHO_WEBFORM } from "@/lib/site";
+import { SITE_NAME, CONTACT_EMAIL, ZOHO_WEBFORM, COMPANY } from "@/lib/site";
+import CompanyDetails from "@/components/CompanyDetails";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -63,6 +64,13 @@ export default function ContactPage() {
           Envoyer
         </button>
       </form>
+
+      <h2>Coordonnées de l&apos;éditeur</h2>
+      <p>
+        {SITE_NAME} est édité par {COMPANY.nom}, à Antananarivo (Madagascar).
+        Tu peux aussi nous joindre par téléphone aux horaires ci-dessous.
+      </p>
+      <CompanyDetails />
     </div>
   );
 }

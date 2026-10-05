@@ -120,11 +120,12 @@ Ajouter une sous-catégorie : l'ajouter dans `lib/categories.ts` **et** dans
 ## Auteurs (E-E-A-T)
 
 `lib/authors.ts` : la rédaction — rédacteur en chef (Andrianina
-RABARIVELO, avec photo dans `public/authors/`) et quatre spécialistes :
+RABARIVELO, avec photo dans `public/authors/`) et cinq spécialistes :
 Felana RABARIVELO (beauté, cosmétiques, mode), Andee RAKOTOVAO (design,
 jeux vidéo, développement, graphisme, photo), Mialy ANDRIAHARISOA (maman &
-enfant, couture, cuisine) et Nekena JUDICAËL (tech & business) — noms de
-famille repris de leurs profils LinkedIn. Bio, expertise et profils sociaux — pas
+enfant, couture, cuisine), Nekena JUDICAËL (tech & business) et Dina
+RAKOTOARIVELO (WordPress, intégration HTML/CSS) — noms de famille repris de
+leurs profils LinkedIn. Bio, expertise et profils sociaux — pas
 d'email public, le contact passe par `/contact/`. Alimente l'encart auteur
 sous chaque article, la page `/auteur/<slug>/` (JSON-LD `ProfilePage` +
 `Person` avec `sameAs`), la section « La rédaction » de `/a-propos/` et
@@ -141,9 +142,11 @@ la page auteur pour afficher les « Rubriques suivies ») :
 
 1. **Mots-clés** du titre (et des tags) : l'auteur qui cumule le plus de
    correspondances l'emporte (« sèche-cheveux » → Felana RABARIVELO, « PS5 » → Andee
-   RAKOTOVAO, « contrôle parental » → Mialy ANDRIAHARISOA…) ;
+   RAKOTOVAO, « contrôle parental » → Mialy ANDRIAHARISOA, « WordPress » ou
+   « CSS » → Dina RAKOTOARIVELO…) ;
 2. égalité ou aucun mot-clé : **titulaire de la sous-catégorie** (chaque
-   sous-catégorie a un titulaire) ;
+   sous-catégorie a un titulaire ; Dina n'en a pas, aucune ne couvre la
+   création de sites : elle est choisie par ses mots-clés) ;
 3. sinon : rédacteur en chef.
 
 ```bash

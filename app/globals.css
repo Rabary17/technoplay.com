@@ -536,8 +536,17 @@ a.tag:hover { background: var(--brand); color: var(--on-brand); text-decoration:
 }
 
 /* La rédaction */
-.team-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(190px, 100%), 1fr));
+/* Flex centré plutôt que grille : 6 cartes = 3 + 3 sur desktop, et une
+   dernière ligne incomplète (nouvel auteur) reste centrée. */
+.team-grid { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center;
   gap: var(--space-4); }
+.team-grid > li { flex: 1 1 100%; min-width: 0; }
+@media (min-width: 600px) {
+  .team-grid > li { flex: 0 1 calc((100% - var(--space-4)) / 2); }
+}
+@media (min-width: 960px) {
+  .team-grid > li { flex: 0 1 calc((100% - 2 * var(--space-4)) / 3); }
+}
 .team-card { display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-2); }
 .team-card .author-avatar { margin-bottom: var(--space-2); }
 .team-card h3 { margin: 0; font-size: 1.0625rem; }

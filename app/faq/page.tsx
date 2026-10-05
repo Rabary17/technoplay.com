@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 const questions = [
   {
     question: `Qui écrit les articles de ${SITE_NAME} ?`,
-    answer: `Chaque article est signé par le spécialiste du sujet — beauté et mode, design et jeux vidéo, famille et maison connectée, tech et business — et publié sous la responsabilité d'Andrianina RABARIVELO, rédacteur en chef de ${SITE_NAME}, qui fixe la ligne éditoriale et relit chaque article avant publication. Toute l'équipe est présentée dans la section « La rédaction » de la page À propos.`,
+    answer: `Chaque article est signé par le spécialiste du sujet — beauté et mode, design et jeux vidéo, famille et maison connectée, tech et business, WordPress et création de sites web — et publié sous la responsabilité d'Andrianina RABARIVELO, rédacteur en chef de ${SITE_NAME}, qui fixe la ligne éditoriale et relit chaque article avant publication. Toute l'équipe est présentée dans la section « La rédaction » de la page À propos.`,
   },
   {
     question: "À quelle fréquence publiez-vous ?",

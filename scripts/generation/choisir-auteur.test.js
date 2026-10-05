@@ -32,6 +32,13 @@ test("la spécialité l'emporte sur la sous-catégorie", () => {
   assert.strictEqual(choisirAuteur({ titre: "PS5 ou Xbox : quelle console choisir ?", categorie: "annonces-produits" }).auteur, "andee-rakotovao");
 });
 
+test("WordPress et intégration HTML/CSS : Dina, quelle que soit la sous-catégorie", () => {
+  assert.strictEqual(choisirAuteur({ titre: "Installer un thème WordPress et le personnaliser avec Elementor", categorie: "logiciels-mises-a-jour" }).auteur, "dina-rakotoarivelo");
+  assert.strictEqual(choisirAuteur({ titre: "Centrer un élément en CSS : la méthode simple", categorie: "windows-mac" }).auteur, "dina-rakotoarivelo");
+  assert.strictEqual(choisirAuteur({ titre: "Créer un site vitrine responsive en HTML", categorie: "culture-tech" }).auteur, "dina-rakotoarivelo");
+  assert.deepStrictEqual(correspondances("Activer le mode sombre et changer de thème sur Windows"), {});
+});
+
 test("égalité ou aucun mot-clé : titulaire de la sous-catégorie, puis rédacteur en chef", () => {
   assert.strictEqual(choisirAuteur({ titre: "Changer le mot de passe Wi-Fi de ta box", categorie: "reseau-stockage" }).auteur, "nekena-judicael");
   assert.strictEqual(choisirAuteur({ titre: "OLED ou QLED : quelle dalle choisir ?", categorie: "hardware-innovation" }).auteur, "andee-rakotovao");

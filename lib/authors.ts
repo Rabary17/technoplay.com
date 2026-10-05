@@ -171,6 +171,30 @@ export const AUTHORS: Author[] = [
       { label: "Facebook", url: "https://www.facebook.com/nekenajudi", icon: "facebook" },
     ],
   },
+  {
+    slug: "dina-rakotoarivelo",
+    name: "Dina RAKOTOARIVELO",
+    initials: "DR",
+    role: "Spécialiste WordPress & intégration web",
+    image: "/authors/dina-rakotoarivelo.jpg",
+    shortBio:
+      "Dina RAKOTOARIVELO couvre pour Techno Play la création de sites web : WordPress, thèmes, plugins, intégration HTML et CSS. Chaque tuto vise un site propre, rapide, qui s'affiche bien sur mobile et que tu sais modifier toi-même, sans passer par trois agences.",
+    bio: [
+      "Dina RAKOTOARIVELO est spécialiste WordPress et intégration HTML/CSS chez Techno Play. Son terrain : la création de sites web, du thème que tu installes en dix minutes à la page que tu codes ligne par ligne, plugins compris.",
+      "Sur le site, Dina traduit le jargon du web en gestes concrets : choisir un thème, régler un plugin, corriger un affichage cassé sur mobile, comprendre ce que fait vraiment une ligne de CSS. Le fil rouge : un site propre, rapide, que tu sais faire évoluer sans appeler au secours.",
+      "Tu peux suivre Dina sur LinkedIn et Facebook.",
+    ],
+    expertise: [
+      "WordPress (thèmes et plugins)",
+      "Intégration HTML et CSS",
+      "Création de sites web",
+      "Sites adaptés au mobile",
+    ],
+    socials: [
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/dina-henintsoa-rakotoarivelo", icon: "linkedin" },
+      { label: "Facebook", url: "https://www.facebook.com/share/1EkxXgJAtC/", icon: "facebook" },
+    ],
+  },
 ];
 
 export const DEFAULT_AUTHOR_SLUG = "andrianina-rabarivelo";

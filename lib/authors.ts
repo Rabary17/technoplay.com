@@ -11,7 +11,7 @@
 // scripts/generation/choisir-auteur.js et `npm run new-post`. Pas d'email public : le contact passe par
 // la page /contact/ (choix du 2026-10-02).
 import type { IconName } from "@/components/Icon";
-import { ALL_SUBCATEGORIES, type Section, type Subcategory } from "./categories";
+import { CATEGORIES, type Category } from "./categories";
 import REGLES from "./auteurs-specialites.json";
 
 export interface AuthorSocial {
@@ -45,11 +45,11 @@ export const AUTHORS: Author[] = [
     role: "Rédacteur en chef",
     image: "/authors/andrianina-rabarivelo.jpg",
     shortBio:
-      "Rédacteur en chef de Techno Play, Andrianina RABARIVELO est développeur web et spécialiste du référencement. Au quotidien, il conçoit des automatisations et travaille avec les outils d'IA. Guitariste à ses heures, il applique une règle simple à chaque tuto, comparatif ou décryptage du site : à la fin de l'article, ton problème doit être réglé.",
+      "Rédacteur en chef de Techno Play, Andrianina RABARIVELO est développeur web et spécialiste du référencement. Au quotidien, il conçoit des automatisations et travaille avec les outils d'IA. Guitariste à ses heures, il applique une règle simple à chaque article du site : à la fin, tu dois avoir compris, ou ton problème doit être réglé.",
     bio: [
       "Andrianina RABARIVELO est le rédacteur en chef de Techno Play. Développeur et responsable technique, il passe ses journées à la croisée du web, du référencement et de l'intelligence artificielle : sites WordPress et Next.js, scripts d'automatisation en Python et Node.js, extensions Chrome, infra cloud. Bref, la tech, il ne se contente pas d'en parler : il la fait tourner.",
-      "Les grands modèles de langage, il travaille avec tous les jours : ChatGPT, Claude, Gemini et consorts font partie de sa boîte à outils, pour le référencement sur Google comme sur les moteurs de réponse génératifs. De quoi nourrir directement la rubrique Décryptage & Concepts : comment fonctionnent les LLM, ce qu'ils font bien, et là où ils se plantent.",
-      "Sur Techno Play, il fixe la ligne éditoriale, choisit les sujets et veille à ce que chaque guide, comparatif ou décryptage réponde à une vraie question, avec des infos vérifiées. Son critère, simple et sans pitié : un bon tuto se juge à une seule chose — est-ce que tu as réglé ton problème à la fin ?",
+      "Les grands modèles de langage, il travaille avec tous les jours : ChatGPT, Claude, Gemini et consorts font partie de sa boîte à outils, pour le référencement sur Google comme sur les moteurs de réponse génératifs. De quoi nourrir directement le thème Intelligence artificielle : comment ces outils fonctionnent, ce qu'ils font bien, et là où ils se plantent.",
+      "Sur Techno Play, il fixe la ligne éditoriale, choisit les sujets et veille à ce que chaque article réponde à une vraie question de débutant, avec des infos vérifiées. Son critère, simple et sans pitié : un bon tuto se juge à une seule chose — est-ce que tu as réglé ton problème à la fin ?",
       "Quand il lâche le clavier, c'est souvent pour prendre sa guitare : Andrianina est aussi guitariste.",
       "Tu peux aussi suivre ses analyses tech et IA, en français et en anglais, sur LinkedIn, X et YouTube.",
     ],
@@ -104,7 +104,7 @@ export const AUTHORS: Author[] = [
       "Andee RAKOTOVAO couvre pour Techno Play le design, le graphisme, la photographie, le développement et les jeux vidéo. Écrans, PC, périphériques, logiciels de création : chaque produit est jugé sur ce qui compte quand on crée ou qu'on joue, pour t'aider à choisir sans payer pour du marketing.",
     bio: [
       "Andee RAKOTOVAO est spécialiste design, jeux vidéo et création chez Techno Play. Graphisme, photographie, développement, gaming : ces sujets ont un point commun, ils demandent du bon matériel et des outils bien choisis.",
-      "Sur le site, Andee décortique les écrans, les composants PC, les périphériques et les innovations hardware, avec les critères qui comptent vraiment quand on retouche des photos, qu'on code ou qu'on enchaîne les parties. Les fiches techniques gonflées et le marketing « gamer » n'ont qu'à bien se tenir.",
+      "Sur le site, Andee décortique les écrans, les composants PC, les périphériques et les innovations hardware, avec les critères qui comptent vraiment quand on retouche des photos, qu'on code ou qu'on enchaîne les parties. Andee suit aussi la programmation pour débutants et les innovations hardware, des robots aux drones. Les fiches techniques gonflées et le marketing « gamer » n'ont qu'à bien se tenir.",
       "Tu peux suivre Andee sur Instagram, TikTok, LinkedIn et Facebook.",
     ],
     expertise: [
@@ -153,9 +153,9 @@ export const AUTHORS: Author[] = [
     role: "Spécialiste tech & business",
     image: "/authors/nekena-judicael.jpg",
     shortBio:
-      "Nekena JUDICAËL suit pour Techno Play l'actualité tech et ses coulisses business : annonces produits, mises à jour, stratégies des grandes marques, réseau et stockage. Son rôle : t'expliquer ce qui change vraiment pour toi derrière chaque annonce, sans recopier les communiqués.",
+      "Nekena JUDICAËL couvre pour Techno Play les appareils, Internet et les coulisses business de la tech : réseau, Wi-Fi, stockage, mises à jour, stratégies des grandes marques. Son rôle : t'expliquer ce qui change vraiment pour toi derrière chaque nouveauté, sans recopier les communiqués.",
     bio: [
-      "Nekena JUDICAËL est spécialiste tech et business chez Techno Play. Sa rubrique de prédilection : l'Actu Tech, des lancements de produits aux mises à jour logicielles, en passant par les stratégies des entreprises qui les fabriquent.",
+      "Nekena JUDICAËL est spécialiste tech et business chez Techno Play. Ses terrains de jeu : les appareils du quotidien et Internet, des lancements de produits aux mises à jour logicielles, en passant par les stratégies des entreprises qui les fabriquent.",
       "Nekena couvre aussi le réseau, le stockage et la culture tech : l'histoire d'Internet, des grandes inventions et des entreprises qui ont façonné le numérique. Le fil rouge : relier chaque nouveauté à ce qu'elle change concrètement pour toi, ton budget ou ton travail.",
       "Tu peux suivre Nekena sur LinkedIn et Facebook.",
     ],
@@ -219,8 +219,8 @@ export function authorUrl(author: Author) {
   return `/auteur/${author.slug}/`;
 }
 
-/** Sous-catégories dont l'auteur est titulaire (lib/auteurs-specialites.json). */
-export function authorSubcategories(author: Author): { section: Section; sub: Subcategory }[] {
-  const categories = REGLES.categories as Record<string, string>;
-  return ALL_SUBCATEGORIES.filter(({ sub }) => categories[sub.slug] === author.slug);
+/** Thèmes dont l'auteur est titulaire (lib/auteurs-specialites.json). */
+export function authorCategories(author: Author): Category[] {
+  const titulaires = REGLES.categories as Record<string, string>;
+  return CATEGORIES.filter((category) => titulaires[category.slug] === author.slug);
 }

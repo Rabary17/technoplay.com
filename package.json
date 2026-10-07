@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generation/verifier-contenu.js",
+    "prebuild": "node scripts/generation/verifier-contenu.js && node scripts/generation/verifier-lisibilite.js",
     "build": "next build",
     "start": "npx serve out",
     "lint": "next lint",
@@ -12,6 +12,7 @@
     "generate-covers": "node scripts/generate-covers.js",
     "generate-favicons": "node scripts/generate-favicons.js",
     "test:garde-fou": "node --test \"scripts/generation/*.test.js\"",
+    "lisibilite": "node scripts/generation/verifier-lisibilite.js",
     "garde-fou:cutoff": "node scripts/generation/llm.js --cutoff",
     "garde-fou:audit": "node scripts/generation/llm.js --audit",
     "auteur": "node scripts/generation/choisir-auteur.js"

@@ -1,246 +1,163 @@
-// Arborescence éditoriale du site (structure validée le 2026-10-02) :
-// textes rédigés selon la charte de ton (tutoiement, ton direct — voir la
-// doc projet « Charte de ton »).
-// 4 rubriques, chacune découpée en sous-catégories. Source de vérité
-// unique, réutilisée par :
-//   - le menu principal et le pied de page (app/layout.tsx) ;
-//   - les pages hub de rubrique (/<rubrique>/) et de sous-catégorie
-//     (/<rubrique>/<sous-categorie>/) — voir app/[slug]/ ;
-//   - le frontmatter des articles : champ `category` = slug d'une
-//     SOUS-CATÉGORIE (ex. "windows-mac"), la rubrique parente en est déduite ;
-//   - scripts/generate-covers.js pour les visuels de secours.
-// Ajouter une sous-catégorie ici suffit à la faire apparaître partout
-// (penser à relancer `npm run generate-covers` pour son visuel).
+// Thèmes du site — structure du 2026-10-07, repositionnement « QG des
+// débutants en tech » : tous les visiteurs sont pris pour des novices, donc
+// une structure la plus simple possible.
 //
-// `seoTarget` = cible de mots-clés interne (brief de l'étude de mots-clés),
-// jamais affichée sur le site.
+// 6 thèmes à PLAT : un seul niveau d'URL (/<theme>/), pas de sous-catégories.
+// Un débutant ne sait pas dans quelle « rubrique de rubrique » chercher :
+// il choisit son sujet (IA, robots, maison connectée…), puis son article.
+// Le type d'article (« c'est quoi ? », « comment faire », « lequel
+// choisir ? ») se voit dans le titre et dans le gabarit d'article, pas dans
+// l'arborescence — voir README.md, « Structure d'un article ».
+//
+// Source unique de vérité, réutilisée par :
+//   - le menu principal et le pied de page (app/layout.tsx) ;
+//   - les pages de thème (/<theme>/) — voir app/[slug]/ et
+//     components/CategoryHub.tsx ;
+//   - l'accueil (app/page.tsx), À propos, les pages auteur ;
+//   - le frontmatter des articles : champ `category` = slug d'un thème ;
+//   - scripts/generate-covers.js (visuels de secours) et
+//     lib/auteurs-specialites.json (titulaire de chaque thème).
+// Ajouter un thème ici suffit à le faire apparaître partout (penser à
+// ajouter ses visuels : `npm run generate-covers`, et son titulaire dans
+// lib/auteurs-specialites.json).
+//
+// Indexation : les pages de thème servent à naviguer, pas à se positionner —
+// elles sont en `noindex, follow` et hors sitemap (voir lib/sitemaps.ts).
+// Textes rédigés selon la charte de ton : tutoiement, mots simples, aucun
+// terme technique sans explication.
 import type { IconName } from "@/components/Icon";
 
-export type SectionSlug =
-  | "guides-tutos"
-  | "comparatifs-achats"
-  | "decryptage-concepts"
-  | "actu-tech";
-
-export type SubcategorySlug =
-  // Guides & Tutos
-  | "windows-mac"
-  | "android-ios"
-  | "reseau-stockage"
-  | "securite-vpn"
-  // Comparatifs & Achats
-  | "materiel-pc-composants"
-  | "peripheriques-ecrans"
-  | "audio-mobilite"
-  | "domotique-maison-connectee"
-  // Décryptage & Concepts
+export type CategorySlug =
   | "intelligence-artificielle"
-  | "hardware-innovation"
-  | "culture-tech"
-  // Actu Tech
-  | "annonces-produits"
-  | "cyberattaques-failles"
-  | "logiciels-mises-a-jour";
+  | "robotique-drones"
+  | "maison-connectee"
+  | "programmation"
+  | "appareils-internet"
+  | "securite-vie-privee";
 
-export interface Subcategory {
-  slug: SubcategorySlug;
-  title: string;
-  icon: IconName;
-  /** Une à deux phrases affichées sur la page hub et la page de la sous-catégorie. */
-  body: string;
-  /** Cible SEO interne — brief pour l'étude de mots-clés, non affichée. */
-  seoTarget: string;
+/** Une question de débutant à laquelle le thème répond (liée à l'article s'il est publié). */
+export interface Question {
+  question: string;
+  /** Slug de l'article qui répond à la question, s'il existe ou existera. */
+  slug?: string;
 }
 
-export interface Section {
-  slug: SectionSlug;
+export interface Category {
+  slug: CategorySlug;
   title: string;
-  /** Libellé court pour le menu et les étiquettes. */
+  /** Libellé court pour le menu. */
   short: string;
   icon: IconName;
-  /** Phrase d'accroche (meta description, cartes). */
+  /** Une phrase d'accroche (meta description, cartes de l'accueil). */
   description: string;
-  /** Paragraphe de présentation (page hub + accueil). */
+  /** Paragraphe de présentation (page du thème). */
   body: string;
-  subcategories: Subcategory[];
+  /** Exemples de questions de débutant, affichés sur la page du thème. */
+  questions: Question[];
 }
 
-export const SECTIONS: Section[] = [
+export const CATEGORIES: Category[] = [
   {
-    slug: "guides-tutos",
-    title: "Guides & Tutos",
-    short: "Guides & Tutos",
-    icon: "wrench",
+    slug: "intelligence-artificielle",
+    title: "Intelligence artificielle",
+    short: "IA",
+    icon: "brain-circuit",
     description:
-      "Tutos pas à pas et solutions de dépannage pour Windows, Mac, Android, iOS, ton réseau et ta sécurité.",
-    body: "Un bug qui revient, un réglage introuvable, une sauvegarde à mettre en place ? Ici, chaque guide part d'une question précise et va droit au but : étapes numérotées, captures quand elles aident, et un plan B si la première méthode ne marche pas chez toi.",
-    subcategories: [
-      {
-        slug: "windows-mac",
-        title: "Windows & Mac",
-        icon: "laptop",
-        body: "Booste ton ordi, règle les bugs les plus courants et gagne du temps au quotidien sur Windows 11 et macOS.",
-        seoTarget: "optimisation OS, astuces productivité, résolution bugs",
-      },
-      {
-        slug: "android-ios",
-        title: "Android & iOS",
-        icon: "smartphone",
-        body: "Sauvegardes, transferts, autonomie, réglages cachés : tire le meilleur de ton smartphone, iPhone ou Android.",
-        seoTarget: "tutoriels applications, sauvegardes, astuces batterie",
-      },
-      {
-        slug: "reseau-stockage",
-        title: "Réseau & Stockage",
-        icon: "router",
-        body: "Wi-Fi qui décroche, box à paramétrer, NAS à installer : des guides clairs pour un réseau qui tient la route et des données bien rangées.",
-        seoTarget: "routeurs wi-fi, installation NAS, sécurité box",
-      },
-      {
-        slug: "securite-vpn",
-        title: "Sécurité & VPN",
-        icon: "shield-check",
-        body: "Virer un malware, choisir un gestionnaire de mots de passe, protéger ta vie privée en ligne : la sécurité sans parano ni jargon.",
-        seoTarget: "suppression malwares, gestionnaires mots de passe, vie privée",
-      },
+      "ChatGPT, Gemini, agents, prompts : l'IA expliquée simplement, ce qu'elle sait faire, comment t'en servir et où elle se trompe.",
+    body: "Tout le monde parle d'IA, peu de gens t'expliquent calmement de quoi il s'agit. Ici, on part de zéro : c'est quoi une IA, à quoi elle peut te servir concrètement, comment lui poser une bonne question, et dans quels cas elle se trompe.",
+    questions: [
+      { question: "C'est quoi une IA, concrètement ?" },
+      { question: "Comment écrire un bon prompt pour ChatGPT ?", slug: "prompt-chatgpt" },
+      { question: "C'est quoi un agent IA, au juste ?", slug: "agent-ia" },
+      { question: "ChatGPT ou Gemini : lequel choisir pour débuter ?", slug: "chatgpt-ou-gemini" },
     ],
   },
   {
-    slug: "comparatifs-achats",
-    title: "Comparatifs & Achats",
-    short: "Comparatifs",
-    icon: "scale",
+    slug: "robotique-drones",
+    title: "Robotique & drones",
+    short: "Robotique",
+    icon: "bot",
     description:
-      "Guides d'achat et comparatifs pour choisir ton matériel PC, tes périphériques, ton audio et ta domotique selon ton usage et ton budget.",
-    body: "Avant d'acheter, la vraie question n'est pas « quel est le meilleur produit ? » mais « quel est le bon produit pour moi ? ». Nos comparatifs partent de ton usage et de ton budget, séparent les critères qui comptent vraiment du blabla marketing… et n'hésitent pas à te dire quand un produit ne vaut pas son prix.",
-    subcategories: [
-      {
-        slug: "materiel-pc-composants",
-        title: "Matériel PC & Composants",
-        icon: "cpu",
-        body: "Cartes graphiques, processeurs, SSD, configs complètes : choisis les bons composants pour monter ou upgrader ton PC, sans payer pour des perfs dont tu n'as pas besoin.",
-        seoTarget: "cartes graphiques, processeurs, SSD, config PC",
-      },
-      {
-        slug: "peripheriques-ecrans",
-        title: "Périphériques & Écrans",
-        icon: "monitor",
-        body: "Souris, claviers mécaniques, écrans : les critères qui font vraiment la différence à l'usage, pour bosser comme pour jouer.",
-        seoTarget: "souris gaming, claviers mécaniques, moniteurs vidéo",
-      },
-      {
-        slug: "audio-mobilite",
-        title: "Audio & Mobilité",
-        icon: "headphones",
-        body: "Casques à réduction de bruit, écouteurs sans fil, batteries externes : de quoi t'équiper pour les trajets, le télétravail et les voyages.",
-        seoTarget: "casques réduction bruit, écouteurs sans fil, batteries externes",
-      },
-      {
-        slug: "domotique-maison-connectee",
-        title: "Domotique & Maison connectée",
-        icon: "house",
-        body: "Caméras, ampoules connectées, assistants vocaux : construis une maison connectée vraiment utile, compatible… et qui respecte ta vie privée.",
-        seoTarget: "caméras surveillance, ampoules connectées, assistants vocaux",
-      },
+      "Robots, aspirateurs robots, drones : comprendre comment ils fonctionnent, à quoi ils servent et par où commencer.",
+    body: "Les robots ne sont plus réservés aux films et aux usines : un aspirateur dans ton salon, un drone dans le ciel, un robot-chien dans une vidéo virale. On t'explique comment ça marche, à quoi ça sert vraiment, et ce qu'il faut savoir avant de t'y mettre.",
+    questions: [
+      { question: "C'est quoi un robot, exactement ?" },
+      { question: "Comment un drone fait-il pour rester en l'air ?" },
+      { question: "Faut-il une autorisation pour faire voler un drone ?" },
+      { question: "Un aspirateur robot, ça vaut le coup ?" },
     ],
   },
   {
-    slug: "decryptage-concepts",
-    title: "Décryptage & Concepts",
-    short: "Décryptages",
-    icon: "lightbulb",
+    slug: "maison-connectee",
+    title: "Maison connectée",
+    short: "Maison connectée",
+    icon: "house",
     description:
-      "IA, hardware et culture tech expliqués simplement : comprends enfin comment marchent les technologies que tu utilises tous les jours.",
-    body: "Comment un LLM « réfléchit »-il ? Pourquoi une puce ARM consomme-t-elle moins qu'une puce x86 ? Ici, on prend le temps d'expliquer ce qu'il y a sous le capot, avec des analogies simples et des schémas, pour que tu te fasses ton propre avis au lieu de répéter des slogans.",
-    subcategories: [
-      {
-        slug: "intelligence-artificielle",
-        title: "Intelligence artificielle",
-        icon: "brain-circuit",
-        body: "Comprendre les LLM, écrire des prompts qui marchent, démêler le jargon de l'IA : l'intelligence artificielle sans fantasme ni poudre aux yeux.",
-        seoTarget: "comprendre les LLM, prompts efficaces, lexique IA",
-      },
-      {
-        slug: "hardware-innovation",
-        title: "Hardware & Innovation",
-        icon: "circuit-board",
-        body: "Chiffrement, puces ARM contre x86, nouvelles technos d'écran ou de batterie : ce qui se passe vraiment sous le capot.",
-        seoTarget: "fonctionnement chiffrement, architectures puces ARM vs x86",
-      },
-      {
-        slug: "culture-tech",
-        title: "Culture Tech",
-        icon: "history",
-        body: "L'histoire des grandes marques, les coulisses du web, l'impact environnemental du numérique : la tech racontée autrement.",
-        seoTarget: "histoire des marques, coulisses du web, impact environnemental numérique",
-      },
+      "Ampoules, prises, thermostats, enceintes : la maison connectée expliquée simplement, à mettre en place pas à pas.",
+    body: "Une maison connectée, c'est une maison dont certains appareils se commandent depuis ton téléphone ou avec ta voix. Pas besoin de tout changer d'un coup : on t'explique par où commencer, quoi acheter en premier et comment éviter les pièges.",
+    questions: [
+      { question: "C'est quoi une maison connectée ?" },
+      { question: "Quel thermostat connecté pour un radiateur électrique ?", slug: "thermostat-connecte-radiateur-electrique" },
+      { question: "Par quoi commencer : une ampoule, une prise, une enceinte ?" },
+      { question: "Alexa ou Google Home : quelle différence ?" },
     ],
   },
   {
-    slug: "actu-tech",
-    title: "Actu Tech",
-    short: "Actu",
-    icon: "newspaper",
+    slug: "programmation",
+    title: "Programmation",
+    short: "Programmation",
+    icon: "code",
     description:
-      "L'actu tech qui te concerne vraiment : lancements de produits, alertes de sécurité et nouveautés des logiciels que tu utilises.",
-    body: "Toutes les annonces ne se valent pas. On suit l'actu tech avec un filtre simple : qu'est-ce que ça change concrètement pour toi ? Lancements majeurs, failles à corriger d'urgence, mises à jour qui bousculent tes habitudes — l'essentiel, vérifié, sans emballement.",
-    subcategories: [
-      {
-        slug: "annonces-produits",
-        title: "Annonces & Produits",
-        icon: "rocket",
-        body: "Les lancements majeurs d'Apple, Google, Nvidia, Microsoft et des autres acteurs qui comptent, résumés et remis en perspective : la hype, mais filtrée.",
-        seoTarget: "lancements majeurs Apple, Google, Nvidia, Microsoft",
-      },
-      {
-        slug: "cyberattaques-failles",
-        title: "Cyberattaques & Failles",
-        icon: "shield-alert",
-        body: "Les alertes de sécurité qui touchent le grand public, et surtout les bons réflexes à adopter tout de suite pour te protéger.",
-        seoTarget: "alertes sécurité grand public, correctifs immédiats",
-      },
-      {
-        slug: "logiciels-mises-a-jour",
-        title: "Logiciels & Mises à jour",
-        icon: "refresh-cw",
-        body: "Nouvelles fonctions et mises à jour des applis populaires : ce qui change, et comment en profiter.",
-        seoTarget: "nouveautés applications populaires, nouvelles fonctionnalités",
-      },
+      "Apprendre à coder depuis zéro : ce que c'est, par où commencer et comment réaliser ton premier petit projet.",
+    body: "Coder, ce n'est pas réservé aux matheux : c'est donner des instructions claires à un ordinateur, une étape après l'autre. On t'explique les bases avec des exemples de la vie de tous les jours, puis on te guide vers ton premier programme ou ton premier site.",
+    questions: [
+      { question: "C'est quoi la programmation, concrètement ?" },
+      { question: "Quel langage apprendre en premier ?" },
+      { question: "Peut-on créer un site sans savoir coder ?" },
+      { question: "C'est quoi le HTML et le CSS ?" },
+    ],
+  },
+  {
+    slug: "appareils-internet",
+    title: "Appareils & Internet",
+    short: "Appareils & Internet",
+    icon: "smartphone",
+    description:
+      "Smartphone, ordinateur, box, casque, TV : bien les utiliser, les dépanner et choisir le bon sans te tromper.",
+    body: "Ton téléphone se vide trop vite, ton Wi-Fi décroche, tu hésites entre deux casques ? On t'explique comment marchent tes appareils du quotidien et Internet, on règle les petits bugs pas à pas, et on t'aide à choisir sans payer pour du marketing.",
+    questions: [
+      { question: "Mon iPhone ne charge plus : que faire ?", slug: "iphone-ne-charge-plus" },
+      { question: "Comment changer le mot de passe Wi-Fi de ma box ?", slug: "changer-mot-de-passe-wifi" },
+      { question: "Comment faire une capture d'écran sur PC ?", slug: "capture-ecran-pc" },
+      { question: "OLED ou QLED : quelle différence, concrètement ?", slug: "oled-ou-qled" },
+    ],
+  },
+  {
+    slug: "securite-vie-privee",
+    title: "Sécurité & vie privée",
+    short: "Sécurité",
+    icon: "shield-check",
+    description:
+      "Mots de passe, VPN, arnaques en ligne : te protéger sur Internet sans paranoïa ni jargon.",
+    body: "Se protéger en ligne ne demande pas d'être expert : quelques bons réflexes évitent l'essentiel des problèmes. On t'explique les risques simplement, puis les gestes à adopter, dans le bon ordre.",
+    questions: [
+      { question: "Un VPN gratuit, est-ce fiable ?", slug: "vpn-gratuit" },
+      { question: "Comment choisir un bon mot de passe ?" },
+      { question: "Comment reconnaître un faux message (phishing) ?" },
+      { question: "Existe-t-il un gestionnaire de mots de passe gratuit ?", slug: "gestionnaire-mot-de-passe-gratuit" },
     ],
   },
 ];
 
-export const ALL_SUBCATEGORIES: { section: Section; sub: Subcategory }[] =
-  SECTIONS.flatMap((section) => section.subcategories.map((sub) => ({ section, sub })));
-
-export function getSection(slug: string | undefined): Section | undefined {
-  return SECTIONS.find((s) => s.slug === slug);
+export function getCategory(slug: string | undefined): Category | undefined {
+  return CATEGORIES.find((c) => c.slug === slug);
 }
 
-export function getSubcategory(
-  slug: string | undefined
-): { section: Section; sub: Subcategory } | undefined {
-  return ALL_SUBCATEGORIES.find((entry) => entry.sub.slug === slug);
+/** Thème d'un article : le champ `category` de son frontmatter (slug d'un thème). */
+export function resolveCategory(slug: string | undefined): Category | undefined {
+  return getCategory(slug);
 }
 
-/**
- * Résout le champ `category` d'un article : slug de sous-catégorie
- * (cas normal) ou, à défaut, slug de rubrique. Renvoie la rubrique et,
- * si elle est connue, la sous-catégorie.
- */
-export function resolveCategory(
-  slug: string | undefined
-): { section: Section; sub?: Subcategory } | undefined {
-  const entry = getSubcategory(slug);
-  if (entry) return entry;
-  const section = getSection(slug);
-  return section ? { section } : undefined;
-}
-
-export function sectionUrl(section: Section) {
-  return `/${section.slug}/`;
-}
-
-export function subcategoryUrl(section: Section, sub: Subcategory) {
-  return `/${section.slug}/${sub.slug}/`;
+export function categoryUrl(category: Category) {
+  return `/${category.slug}/`;
 }

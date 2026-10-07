@@ -3,8 +3,8 @@ import { resolveCategory } from "@/lib/categories";
 import { resolveAuthor, authorUrl } from "@/lib/authors";
 import { formatDate } from "@/lib/format";
 
-// Carte d'article réutilisée par l'accueil, les pages de rubrique /
-// sous-catégorie et la page auteur.
+// Carte d'article réutilisée par l'accueil, les pages de thème et la page
+// auteur.
 export default function ArticleCard({ post }: { post: Post }) {
   const cover = resolveCoverImage(post);
   const category = resolveCategory(post.category);
@@ -24,7 +24,7 @@ export default function ArticleCard({ post }: { post: Post }) {
       />
       <div className="article-card__body">
         {category ? (
-          <span className="tag">{category.sub?.title ?? category.section.short}</span>
+          <span className="tag">{category.title}</span>
         ) : null}
         <h3>
           <a href={`/${post.slug}/`}>{post.title}</a>

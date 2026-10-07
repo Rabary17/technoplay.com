@@ -9,6 +9,28 @@ import { resolveAuthor, authorUrl, type Author } from "./authors";
 import { resolveCategory } from "./categories";
 
 /**
+ * Identifiant unique de l'entité « Techno Play » (Organization) : toutes les
+ * pages la référencent (accueil, auteurs, `publisher` des articles) avec le
+ * même `@id`, pour que les moteurs la reconnaissent comme une seule entité.
+ */
+export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
+
+/**
+ * Techno Play vue depuis une autre entité (`worksFor` d'un auteur,
+ * `publisher` d'un article) : même `@id` que l'organisation du site, avec
+ * son `sameAs` recopié pour que ce bloc JSON-LD reste complet même lu seul.
+ */
+function organizationRef() {
+  return {
+    "@type": "Organization",
+    "@id": ORGANIZATION_ID,
+    name: SITE_NAME,
+    url: SITE_URL,
+    ...(SOCIAL_LINKS.length > 0 ? { sameAs: SOCIAL_LINKS.map((s) => s.url) } : {}),
+  };
+}
+
+/**
  * Entité `Person` d'un auteur — `sameAs` relie la personne à ses profils
  * externes (LinkedIn, X, YouTube...), ce qui permet à Google et aux
  * moteurs génératifs de la reconnaître comme une entité réelle et
@@ -24,7 +46,7 @@ export function personSchema(author: Author) {
     ...(author.image ? { image: `${SITE_URL}${author.image}` } : {}),
     description: author.shortBio,
     knowsAbout: author.expertise,
-    worksFor: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+    worksFor: organizationRef(),
     sameAs: author.socials.map((s) => s.url),
   };
 }
@@ -43,9 +65,11 @@ export function websiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: SITE_NAME,
     url: SITE_URL,
     description: SITE_DESCRIPTION,
+    publisher: { "@id": ORGANIZATION_ID },
   };
 }
 
@@ -96,12 +120,16 @@ export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": ORGANIZATION_ID,
     name: SITE_NAME,
     url: SITE_URL,
+    logo: { "@type": "ImageObject", url: `${SITE_URL}/favicon-192x192.png` },
     parentOrganization: companySchema(),
     // `sameAs` : signal E-E-A-T reconnu par Google — relie l'entité du site
-    // à une présence externe vérifiable (voir décision du 2026-09-30).
-    // Remplacer par les vrais profils dans lib/site.ts avant publication.
+    // à ses profils externes vérifiables (SOCIAL_LINKS dans lib/site.ts :
+    // page LinkedIn de Techno Play). Les profils des auteurs, eux, sont
+    // dans le `sameAs` de leur Person (personSchema) — jamais ici : `sameAs`
+    // désigne la MÊME entité, pas ses membres.
     ...(SOCIAL_LINKS.length > 0 ? { sameAs: SOCIAL_LINKS.map((s) => s.url) } : {}),
   };
 }
@@ -130,12 +158,10 @@ export function blogPostingSchema(post: Post) {
     image: `${SITE_URL}${cover.src}`,
     datePublished: post.date,
     dateModified: post.updated ?? post.date,
-    ...(category ? { articleSection: category.sub?.title ?? category.section.title } : {}),
+    ...(category ? { articleSection: category.title } : {}),
     author: personSchema(author),
     publisher: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: SITE_URL,
+      ...organizationRef(),
       parentOrganization: companySchema(),
       logo: { "@type": "ImageObject", url: `${SITE_URL}/favicon-192x192.png` },
     },

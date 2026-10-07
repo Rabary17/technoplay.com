@@ -38,7 +38,9 @@ export type IconName =
   | "youtube"
   | "tiktok"
   | "check"
-  | "arrow-right";
+  | "arrow-right"
+  | "bot"
+  | "code";
 
 const PATHS: Record<IconName, React.ReactNode> = {
   smartphone: (
@@ -230,6 +232,22 @@ const PATHS: Record<IconName, React.ReactNode> = {
     <>
       <path d="M5 12h14" />
       <path d="m12 5 7 7-7 7" />
+    </>
+  ),
+  bot: (
+    <>
+      <path d="M12 8V4H8" />
+      <rect width="16" height="12" x="4" y="8" rx="2" />
+      <path d="M2 14h2" />
+      <path d="M20 14h2" />
+      <path d="M15 13v2" />
+      <path d="M9 13v2" />
+    </>
+  ),
+  code: (
+    <>
+      <polyline points="16 18 22 12 16 6" />
+      <polyline points="8 6 2 12 8 18" />
     </>
   ),
   // Pas d'icône TikTok dans Lucide (pas de logos de marque) : glyphe

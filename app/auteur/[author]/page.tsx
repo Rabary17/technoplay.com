@@ -4,8 +4,8 @@ import ArticleCard from "@/components/ArticleCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import { AuthorAvatar, AuthorSocials } from "@/components/AuthorBox";
-import { AUTHORS, getAuthor, authorUrl, authorSubcategories } from "@/lib/authors";
-import { subcategoryUrl } from "@/lib/categories";
+import { AUTHORS, getAuthor, authorUrl, authorCategories } from "@/lib/authors";
+import { categoryUrl } from "@/lib/categories";
 import { getPostsByAuthor } from "@/lib/posts";
 import { profilePageSchema } from "@/lib/schema";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
@@ -27,7 +27,7 @@ export async function generateMetadata({
   const author = getAuthor(slug);
   if (!author) return {};
   // Page sans article = page mince : hors index (et hors sitemap) tant que
-  // l'auteur n'a rien publié, comme les sous-catégories vides.
+  // l'auteur n'a rien publié, comme les thèmes vides.
   const hasPosts = getPostsByAuthor(author.slug).length > 0;
   return {
     title: `${author.name}, ${author.role.toLowerCase()}`,
@@ -85,13 +85,13 @@ export default async function AuthorPage({
         ))}
       </ul>
 
-      {authorSubcategories(author).length > 0 && (
+      {authorCategories(author).length > 0 && (
         <>
-          <h2>Rubriques suivies</h2>
+          <h2>Thèmes suivis</h2>
           <ul>
-            {authorSubcategories(author).map(({ section, sub }) => (
-              <li key={sub.slug}>
-                <a href={subcategoryUrl(section, sub)}>{sub.title}</a> ({section.title})
+            {authorCategories(author).map((category) => (
+              <li key={category.slug}>
+                <a href={categoryUrl(category)}>{category.title}</a>
               </li>
             ))}
           </ul>

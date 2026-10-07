@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { SITE_NAME, COMPANY, COMPANY_PHONE_HREF } from "@/lib/site";
+import { SITE_NAME, COMPANY, COMPANY_PHONE_HREF, SOCIAL_LINKS } from "@/lib/site";
 import CompanyDetails from "@/components/CompanyDetails";
-import { SECTIONS, sectionUrl } from "@/lib/categories";
+import { CATEGORIES, categoryUrl } from "@/lib/categories";
 import { AUTHORS, DEFAULT_AUTHOR_SLUG, getAuthor, authorUrl, type Author } from "@/lib/authors";
 import AuthorBox from "@/components/AuthorBox";
 
 export const metadata: Metadata = {
   title: "À propos",
-  description: `Qui est derrière ${SITE_NAME}, notre ligne éditoriale et la rédaction.`,
+  description: `${SITE_NAME}, le QG des débutants en tech : pour qui, comment on écrit, qui est derrière le site et la rédaction.`,
   alternates: { canonical: "/a-propos/" },
 };
 
@@ -20,27 +20,51 @@ export default function AboutPage() {
     <div className="page">
       <h1>À propos de {SITE_NAME}</h1>
       <p>
-        {SITE_NAME}, c&apos;est le média tech indépendant qui répond aux
-        questions que tu te poses vraiment : comment régler ce bug, quoi
-        acheter sans te faire avoir, comment ça marche sous le capot, et ce
-        qui vient de changer. Le tout sans jargon — et sans langue de bois.
+        {SITE_NAME}, c&apos;est le QG des débutants en technologie : un
+        endroit où tu peux découvrir l&apos;IA, la robotique, la maison
+        connectée, la programmation ou la sécurité sans jamais te sentir
+        perdu. Ici, tout le monde est considéré comme un débutant, et aucune
+        question n&apos;est bête.
       </p>
 
-      <h2>Notre ligne éditoriale</h2>
+      <h2>Comment on écrit pour les débutants</h2>
       <p>
         Chaque article part d&apos;une question précise et doit y répondre
-        complètement — pas remplir une grille de mots-clés. Un chiffre, une
-        caractéristique technique, une affirmation ? C&apos;est vérifié,
-        jamais inventé. Quand un produit déçoit ou coûte trop cher pour ce
-        qu&apos;il offre, on te le dit. Et une erreur signalée est corrigée
-        ouvertement.
+        complètement. Pour que tout reste simple, on s&apos;impose quelques
+        règles :
       </p>
-      <p>Le site tourne autour de quatre rubriques :</p>
       <ul>
-        {SECTIONS.map((section) => (
-          <li key={section.slug}>
-            <a href={sectionUrl(section)}>{section.title}</a> —{" "}
-            {section.description}
+        <li>
+          <strong>On part de zéro.</strong> Aucune connaissance n&apos;est
+          supposée, et chaque mot technique est expliqué dès qu&apos;il
+          apparaît.
+        </li>
+        <li>
+          <strong>L&apos;essentiel d&apos;abord.</strong> La réponse tient
+          dans un encadré en haut de l&apos;article ; le reste est là pour
+          comprendre.
+        </li>
+        <li>
+          <strong>Toujours un exemple concret</strong>, tiré de la vie de
+          tous les jours, et des étapes numérotées quand il faut agir.
+        </li>
+        <li>
+          <strong>Rien d&apos;inventé.</strong> Un chiffre, une
+          caractéristique technique, une affirmation ? C&apos;est vérifié, et
+          les sources sont citées sous l&apos;article.
+        </li>
+        <li>
+          <strong>On te prévient.</strong> Une manipulation risquée ou un
+          produit qui ne vaut pas son prix ? On te le dit franchement. Et une
+          erreur signalée est corrigée ouvertement.
+        </li>
+      </ul>
+      <p>Le site est organisé en six thèmes, sans sous-menus :</p>
+      <ul>
+        {CATEGORIES.map((category) => (
+          <li key={category.slug}>
+            <a href={categoryUrl(category)}>{category.title}</a> —{" "}
+            {category.description}
           </li>
         ))}
       </ul>
@@ -79,6 +103,20 @@ export default function AboutPage() {
         <a href={COMPANY_PHONE_HREF}>{COMPANY.telephone}</a>, aux horaires
         indiqués ci-dessus.
       </p>
+      {SOCIAL_LINKS.length > 0 && (
+        <p>
+          Tu peux aussi suivre {SITE_NAME} sur{" "}
+          {SOCIAL_LINKS.map((social, i) => (
+            <span key={social.url}>
+              {i > 0 && (i === SOCIAL_LINKS.length - 1 ? " et " : ", ")}
+              <a href={social.url} target="_blank" rel="noreferrer me">
+                {social.label}
+              </a>
+            </span>
+          ))}
+          .
+        </p>
+      )}
     </div>
   );
 }

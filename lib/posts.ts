@@ -12,7 +12,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
-import { resolveCategory, type SubcategorySlug, type SectionSlug } from "./categories";
+import { resolveCategory, type CategorySlug } from "./categories";
 import { resolveAuthor } from "./authors";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "posts");
@@ -36,11 +36,11 @@ export type PostFrontmatter = {
   // Date de mise à jour (optionnelle, "AAAA-MM-JJ") — reprise en
   // dateModified dans le JSON-LD et affichée sous le titre.
   updated?: string;
-  // Sous-catégorie (voir lib/categories.ts), ex. "windows-mac" — détermine
-  // la rubrique parente, le fil d'Ariane, l'étiquette affichée sur les
-  // cartes et, en l'absence d'`image`, l'image à la une de secours (voir
-  // resolveCoverImage ci-dessous). Un slug de rubrique est toléré.
-  category?: SubcategorySlug | SectionSlug;
+  // Thème (voir lib/categories.ts), ex. "intelligence-artificielle" —
+  // détermine le fil d'Ariane, l'étiquette affichée sur les cartes et, en
+  // l'absence d'`image`, l'image à la une de secours (voir
+  // resolveCoverImage ci-dessous).
+  category?: CategorySlug;
   // Image à la une : chemin sous public/ (ex. "/uploads/mon-image.jpg") ou
   // URL absolue. Optionnelle — resolveCoverImage() fournit toujours un
   // visuel de repli quand elle est absente, aucune carte ne reste sans
@@ -85,12 +85,9 @@ export function getPostBySlug(slug: string): Post | undefined {
   return readPost(slug);
 }
 
-/** Articles d'une rubrique (toutes sous-catégories confondues) ou d'une sous-catégorie. */
+/** Articles d'un thème (slug de lib/categories.ts). */
 export function getPostsByCategory(slug: string): Post[] {
-  return getAllPosts().filter((post) => {
-    const cat = resolveCategory(post.category);
-    return cat?.section.slug === slug || cat?.sub?.slug === slug;
-  });
+  return getAllPosts().filter((post) => resolveCategory(post.category)?.slug === slug);
 }
 
 /** Articles signés par un auteur (slug de lib/authors.ts). */
@@ -105,10 +102,9 @@ export function getAllSlugs(): string[] {
 
 /**
  * Image à la une résolue pour un article : la photo fournie en
- * frontmatter si elle existe, sinon la couverture de secours de sa
- * sous-catégorie ou de sa rubrique (public/covers/<slug>.png — voir
- * scripts/generate-covers.js),
- * sinon le visuel générique du site. Toujours une image valide : aucune
+ * frontmatter si elle existe, sinon la couverture de secours de son thème
+ * (public/covers/<slug>.png — voir scripts/generate-covers.js), sinon le
+ * visuel générique du site. Toujours une image valide : aucune
  * carte ni page article ne se retrouve sans visuel.
  */
 export function resolveCoverImage(
@@ -118,11 +114,8 @@ export function resolveCoverImage(
     return { src: post.image, alt: post.imageAlt || post.title };
   }
   const category = resolveCategory(post.category);
-  if (category?.sub) {
-    return { src: `/covers/${category.sub.slug}.png`, alt: category.sub.title };
-  }
   if (category) {
-    return { src: `/covers/${category.section.slug}.png`, alt: category.section.title };
+    return { src: `/covers/${category.slug}.png`, alt: category.title };
   }
   return { src: "/covers/default.png", alt: "Techno Play" };
 }

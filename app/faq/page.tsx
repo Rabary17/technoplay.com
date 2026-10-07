@@ -5,7 +5,7 @@ import { faqSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "FAQ",
-  description: `Questions fréquentes sur ${SITE_NAME} : qui écrit, à quel rythme, liens affiliés, comment nous contacter.`,
+  description: `Questions fréquentes sur ${SITE_NAME} : pour qui, par où commencer, qui écrit, liens affiliés, comment nous contacter.`,
   alternates: { canonical: "/faq/" },
 };
 
@@ -16,8 +16,17 @@ export const metadata: Metadata = {
 // ligne éditoriale/fréquence de publication stabilisée (voir /a-propos/).
 const questions = [
   {
+    question: `Pour qui est ${SITE_NAME} ?`,
+    answer: `Pour tous ceux qui débutent en technologie : IA, robotique, maison connectée, programmation, appareils du quotidien, sécurité. Chaque article part de zéro, explique les mots techniques au passage et donne un exemple concret. Aucune question n'est bête.`,
+  },
+  {
+    question: "Je n'y connais rien : par où commencer ?",
+    answer:
+      "Choisis le thème qui te parle dans le menu (par exemple Intelligence artificielle ou Appareils & Internet), puis ouvre un article. Chaque article commence par un encadré « L'essentiel en 30 secondes » : si ça te suffit, tu peux t'arrêter là ; sinon, la suite explique tout pas à pas.",
+  },
+  {
     question: `Qui écrit les articles de ${SITE_NAME} ?`,
-    answer: `Chaque article est signé par le spécialiste du sujet — beauté et mode, design et jeux vidéo, famille et maison connectée, tech et business, WordPress et création de sites web — et publié sous la responsabilité d'Andrianina RABARIVELO, rédacteur en chef de ${SITE_NAME}, qui fixe la ligne éditoriale et relit chaque article avant publication. Toute l'équipe est présentée dans la section « La rédaction » de la page À propos.`,
+    answer: `Chaque article est signé par le spécialiste du sujet — IA et sécurité, maison connectée, programmation et design, appareils et Internet, WordPress et création de sites web, beauté et mode connectée — et publié sous la responsabilité d'Andrianina RABARIVELO, rédacteur en chef de ${SITE_NAME}, qui fixe la ligne éditoriale et relit chaque article avant publication. Toute l'équipe est présentée dans la section « La rédaction » de la page À propos.`,
   },
   {
     question: `Qui est derrière ${SITE_NAME} ?`,
@@ -34,7 +43,7 @@ const questions = [
       "Oui. Aucun annonceur ni partenaire commercial ne dicte ce qu'on écrit. Si un contenu sponsorisé devait un jour être publié, il serait clairement signalé comme tel — pas déguisé en article.",
   },
   {
-    question: "Les comparatifs contiennent-ils des liens affiliés ?",
+    question: "Les guides d'achat contiennent-ils des liens affiliés ?",
     answer:
       "Certains guides d'achat peuvent contenir des liens d'affiliation : si tu achètes un produit via l'un de ces liens, le site peut toucher une commission, sans surcoût pour toi. Ces liens sont signalés comme tels et n'influencent ni le choix des produits ni leur classement — un produit décevant reste décevant, commission ou pas.",
   },

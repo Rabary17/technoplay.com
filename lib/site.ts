@@ -4,7 +4,7 @@
 export const SITE_URL = "https://techno-play.com";
 export const SITE_NAME = "Techno Play";
 export const SITE_DESCRIPTION =
-  "Techno Play — tutos et solutions de dépannage, comparatifs d'achat, décryptages de l'IA et actualité tech, expliqués simplement.";
+  "Techno Play — le QG des débutants en tech : IA, robotique, maison connectée, programmation, appareils et sécurité, expliqués simplement avec des exemples concrets.";
 // Locale par défaut du site (balises lang, Open Graph). À changer si le
 // site n'est finalement pas francophone.
 export const SITE_LOCALE = "fr_FR";
@@ -98,15 +98,18 @@ export const ZOHO_WEBFORM = {
   returnUrl: `${SITE_URL}/contact/merci`,
 };
 
-// Profils officiels du média : VIDE tant qu'aucun vrai compte n'existe (les
-// handles @technoplay d'origine n'étaient que des placeholders, retirés le
-// 2026-10-05 : un lien mort ou fictif nuit plus à la crédibilité qu'une
-// absence). Ajouter ici un profil réel, `{ label, url }` : il apparaît alors
-// dans « Nous suivre » du pied de page et dans le `sameAs` JSON-LD de
-// l'organisation (lib/schema.ts). Ordre de priorité pour Google : fiche
-// Google Business Profile / Maps d'Anmira Studio, page LinkedIn, chaîne
-// YouTube (seulement si on y publie), puis Facebook et X.
-export const SOCIAL_LINKS: { label: string; url: string }[] = [];
+// Profils officiels du média (jamais de lien fictif : les handles @technoplay
+// d'origine n'étaient que des placeholders, retirés le 2026-10-05 — un lien
+// mort nuit plus à la crédibilité qu'une absence). Chaque profil réel ajouté
+// ici, `{ label, url }`, apparaît dans « Nous suivre » du pied de page, sur
+// la page À propos et dans le `sameAs` JSON-LD de l'organisation (lib/schema.ts),
+// y compris celle qui figure en `publisher` des articles et en `worksFor`
+// des auteurs. Page LinkedIn ajoutée le 2026-10-07. Ordre de priorité pour
+// Google : fiche Google Business Profile / Maps d'Anmira Studio, page
+// LinkedIn, chaîne YouTube (seulement si on y publie), puis Facebook et X.
+export const SOCIAL_LINKS: { label: string; url: string }[] = [
+  { label: "LinkedIn", url: "https://www.linkedin.com/company/techno-play-com/" },
+];
 
 // Mentions légales : identité de l'éditeur (Anmira Studio) et de
 // l'hébergeur. Aucune valeur inventée : la forme juridique n'a pas été

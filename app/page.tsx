@@ -1,189 +1,66 @@
 import { getAllPosts } from "@/lib/posts";
-import { getSection, getSubcategory, sectionUrl, subcategoryUrl, type Section } from "@/lib/categories";
+import { CATEGORIES, categoryUrl, type CategorySlug } from "@/lib/categories";
 import { AUTHORS, DEFAULT_AUTHOR_SLUG, authorUrl } from "@/lib/authors";
 import { faqSchema } from "@/lib/schema";
 import { PHOTOS_ACCUEIL as P, PHOTOS_TENDANCES as T, UNSPLASH_URL, imgProps, type PhotoAccueil } from "@/lib/photos-accueil";
-import Icon from "@/components/Icon";
+import Icon, { type IconName } from "@/components/Icon";
 import ArticleCard from "@/components/ArticleCard";
 import JsonLd from "@/components/JsonLd";
 import { AuthorAvatar } from "@/components/AuthorBox";
+import { nbsp } from "@/lib/format";
 
-// Accueil (refonte du 2026-10-03) — sur la charte existante (tokens de
-// app/globals.css, Bricolage Grotesque + Inter, bleu #2F45D6 et point
-// jaune #F2B33D du logo). Déroulé :
-//   1. hero : promesse + photo + preuves
-//   1 bis. « La tech qui fait l'actu » : bento de 8 tendances (IA, drones,
-//      réalité virtuelle, robots…) reliées aux sous-rubriques
-//   2. derniers articles (6 max)
-//   3. « Par où commencer ? » : les 4 rubriques présentées par situation,
-//      avec des exemples de questions — liés automatiquement à l'article
-//      dès qu'il est publié (slug présent dans content/posts)
-//   4. le nom de marque : pourquoi « Techno Play »
-//   5. la méthode (comment on travaille) + indépendance
+// Accueil — repositionnement du 2026-10-07 : « le QG des débutants en
+// tech ». Tous les visiteurs sont pris pour des novices, donc une page
+// courte et simple, sur la charte existante (tokens de app/globals.css,
+// Bricolage Grotesque + Inter, bleu #2F45D6 et point jaune #F2B33D du
+// logo). Déroulé :
+//   1. hero : la promesse (QG des débutants) + photo + 3 preuves
+//   2. « Choisis ton sujet » : les 6 thèmes (lib/categories.ts), chacun
+//      avec une question de débutant en exemple
+//   3. derniers articles (6 max)
+//   4. comment on explique les choses (4 engagements pour les novices)
+//   5. le nom de marque : pourquoi « Techno Play »
 //   6. la rédaction (un spécialiste par sujet)
-//   7. FAQ (JSON-LD FAQPage) + appel à proposer un sujet
-//   8. crédits photos (Unsplash)
-// Ton : charte de ton du projet (tutoiement, direct, sans jargon). Aucun
-// chiffre d'audience ou de volume inventé (garde-fou du site).
+//   7. FAQ (JSON-LD FAQPage) + appel à poser sa question
+//   8. crédits photos (Unsplash) — uniquement les photos affichées ici
+// Ton : charte de ton du projet (tutoiement, mots simples, aucun terme
+// technique sans explication). Aucun chiffre d'audience ou de volume inventé
+// (garde-fou du site).
 
-interface Exemple {
-  question: string;
-  /** Slug de l'article qui répond à la question, s'il existe ou existera. */
-  slug?: string;
-}
+/** Photo de la tuile de chaque thème (banque Unsplash de lib/photos-accueil.ts). */
+const PHOTO_THEME: Record<CategorySlug, PhotoAccueil> = {
+  "intelligence-artificielle": T.ia,
+  "robotique-drones": T.robot,
+  "maison-connectee": T.maison,
+  programmation: P.methode,
+  "appareils-internet": P.guides,
+  "securite-vie-privee": T.cyber,
+};
 
-interface Situation {
-  section: string;
-  titre: string;
-  texte: string;
-  photo: PhotoAccueil;
-  exemples: Exemple[];
-  cta: string;
-}
-
-const SITUATIONS: Situation[] = [
+const ENGAGEMENTS: { icon: IconName; titre: string; texte: string }[] = [
   {
-    section: "guides-tutos",
-    titre: "Tu as un problème à régler",
+    icon: "lightbulb",
+    titre: "On part de zéro",
     texte:
-      "Un bug qui revient, un réglage introuvable, une sauvegarde à faire ? Nos tutos vont droit au but : étapes numérotées, menus nommés comme sur ton écran, et un plan B si la première méthode coince.",
-    photo: P.guides,
-    exemples: [
-      { question: "Mon iPhone ne charge plus : que faire ?", slug: "iphone-ne-charge-plus" },
-      { question: "Comment changer le mot de passe Wi-Fi de ma box ?", slug: "changer-mot-de-passe-wifi" },
-      { question: "Comment faire une capture d'écran sur PC ?", slug: "capture-ecran-pc" },
-    ],
-    cta: "Voir les guides & tutos",
+      "Aucune connaissance n'est supposée. Chaque mot technique est expliqué dès qu'il apparaît, avec des mots du quotidien.",
   },
   {
-    section: "comparatifs-achats",
-    titre: "Tu veux acheter sans te tromper",
+    icon: "rocket",
+    titre: "L'essentiel en 30 secondes",
     texte:
-      "La bonne question n'est pas « quel est le meilleur ? », mais « quel est le bon pour moi ? ». On compare selon ton usage et ton budget, et on te dit quand un produit ne vaut pas son prix.",
-    photo: P.comparatifs,
-    exemples: [
-      { question: "Quel casque Bluetooth pour le sport ?", slug: "casque-bluetooth-sport" },
-      { question: "Quel casque sans fil pour regarder la TV ?", slug: "casque-sans-fil-tv" },
-      { question: "Quel thermostat connecté pour un radiateur électrique ?", slug: "thermostat-connecte-radiateur-electrique" },
-    ],
-    cta: "Voir les comparatifs",
+      "Chaque article commence par un encadré qui donne la réponse. Pressé ? Tu peux t'arrêter là. Curieux ? La suite explique tout.",
   },
   {
-    section: "decryptage-concepts",
-    titre: "Tu veux comprendre comment ça marche",
+    icon: "house",
+    titre: "Des exemples de la vraie vie",
     texte:
-      "IA, puces, écrans, Internet : on ouvre le capot avec des analogies simples et des schémas. Objectif : te faire ton propre avis, au lieu de répéter des slogans.",
-    photo: P.decryptage,
-    exemples: [
-      { question: "C'est quoi un agent IA, au juste ?", slug: "agent-ia" },
-      { question: "OLED ou QLED : quelle différence, concrètement ?", slug: "oled-ou-qled" },
-      { question: "Comment écrire un bon prompt pour ChatGPT ?", slug: "prompt-chatgpt" },
-    ],
-    cta: "Voir les décryptages",
+      "Pas de théorie qui flotte : une situation que tu reconnais, des étapes numérotées et, quand c'est risqué, un avertissement clair.",
   },
   {
-    section: "actu-tech",
-    titre: "Tu veux savoir ce qui change pour toi",
+    icon: "shield-check",
+    titre: "Des infos vérifiées, des avis honnêtes",
     texte:
-      "Toutes les annonces ne se valent pas. On trie l'actu avec un seul filtre : qu'est-ce que ça change concrètement pour toi ? Lancements, failles à corriger d'urgence, mises à jour qui bousculent tes habitudes.",
-    photo: P.actu,
-    exemples: [
-      { question: "Une faille fait la une : faut-il mettre à jour tout de suite ?" },
-      { question: "Ce nouveau smartphone mérite-t-il vraiment le buzz ?" },
-      { question: "Cette mise à jour va-t-elle changer tes habitudes ?" },
-    ],
-    cta: "Voir l'actu tech",
-  },
-];
-
-interface Tendance {
-  titre: string;
-  texte: string;
-  /** Slug de la sous-rubrique vers laquelle pointe la tuile. */
-  rubrique: string;
-  photo: PhotoAccueil;
-  /** Emplacement dans la grille (voir .trend-tile--* dans app/globals.css). */
-  taille?: "grande" | "haute";
-}
-
-const TENDANCES: Tendance[] = [
-  {
-    titre: "IA générative",
-    texte: "ChatGPT, Gemini, Claude, agents IA : ce qu'ils savent vraiment faire, et là où ils se plantent.",
-    rubrique: "intelligence-artificielle",
-    photo: T.ia,
-    taille: "grande",
-  },
-  {
-    titre: "Drones",
-    texte: "Prises de vue, modèles grand public, règles de vol : on fait le point.",
-    rubrique: "hardware-innovation",
-    photo: T.drone,
-    taille: "haute",
-  },
-  {
-    titre: "Réalité virtuelle",
-    texte: "Casques VR et mixtes : au-delà de l'effet waouh.",
-    rubrique: "hardware-innovation",
-    photo: T.vr,
-  },
-  {
-    titre: "Robots",
-    texte: "Humanoïdes, robots-chiens, aspirateurs : la robotique sort des labos.",
-    rubrique: "hardware-innovation",
-    photo: T.robot,
-  },
-  {
-    titre: "Montres connectées",
-    texte: "Ce qu'elles mesurent vraiment, et ce qu'elles valent.",
-    rubrique: "audio-mobilite",
-    photo: T.montre,
-  },
-  {
-    titre: "Maison connectée",
-    texte: "Automatiser sans te compliquer la vie.",
-    rubrique: "domotique-maison-connectee",
-    photo: T.maison,
-  },
-  {
-    titre: "Cybersécurité",
-    texte: "Failles, arnaques, piratages : les bons réflexes.",
-    rubrique: "cyberattaques-failles",
-    photo: T.cyber,
-  },
-  {
-    titre: "Gaming",
-    texte: "Consoles, manettes, écrans : le bon matos sans te ruiner.",
-    rubrique: "peripheriques-ecrans",
-    photo: T.gaming,
-  },
-];
-
-const METHODE = [
-  {
-    titre: "On part de ta question",
-    texte:
-      "Chaque article répond à une question que des gens se posent vraiment, formulée avec leurs mots. Pas à un sujet choisi pour remplir une grille.",
-  },
-  {
-    titre: "On vérifie à la source",
-    texte:
-      "Documentation officielle, pages d'assistance des constructeurs, textes de loi : chaque fait est contrôlé. Les sources s'affichent sous l'article, avec leur date de consultation.",
-  },
-  {
-    titre: "On va droit au but",
-    texte:
-      "La réponse arrive dès les premières lignes, puis le détail : étapes numérotées, tableaux de synthèse, FAQ. Tu prends ce dont tu as besoin, et tu repars.",
-  },
-  {
-    titre: "On dit ce qu'on pense",
-    texte:
-      "Un prix abusé, une fonction gadget, une promesse marketing creuse ? On te le dit, même quand la fiche technique brille.",
-  },
-  {
-    titre: "On garde l'article à jour",
-    texte:
-      "Une interface change, une erreur nous est signalée ? On corrige ouvertement, et la date de mise à jour s'affiche en tête d'article.",
+      "Les faits sont contrôlés et les sources citées sous l'article. Un produit qui ne vaut pas son prix ? On te le dit.",
   },
 ];
 
@@ -191,22 +68,22 @@ const FAQ = [
   {
     question: "C'est quoi, Techno Play ?",
     answer:
-      "Un média tech indépendant, en français, qui explique la technologie sans jargon : tutos de dépannage, comparatifs pour bien acheter, décryptages de l'IA et du hardware, et l'actu tech qui te concerne vraiment.",
+      "Le QG des débutants en technologie : un site gratuit, en français, qui explique l'IA, la robotique, la maison connectée, la programmation, tes appareils et la sécurité avec des mots simples et des exemples concrets.",
   },
   {
-    question: "Faut-il être calé en informatique pour suivre les tutos ?",
+    question: "Faut-il s'y connaître pour comprendre les articles ?",
     answer:
-      "Non. Chaque tuto part du principe que tu n'es pas expert : étapes numérotées, menus nommés comme sur ton écran, vocabulaire expliqué au passage. Si une manipulation est risquée, on te prévient avant.",
+      "Non, c'est fait pour ça. Chaque article part de zéro, explique chaque mot technique au passage et commence par un résumé « L'essentiel en 30 secondes ».",
+  },
+  {
+    question: "Par où commencer ?",
+    answer:
+      "Choisis le thème qui t'intéresse dans le menu ou sur cette page, puis ouvre un article. Le résumé en haut te donne l'essentiel, la suite te guide pas à pas.",
   },
   {
     question: "D'où viennent vos informations ?",
     answer:
       "De sources vérifiables : documentation officielle, pages d'assistance des constructeurs et des éditeurs, textes de référence. Elles sont listées en bas de chaque article, avec leur date de consultation.",
-  },
-  {
-    question: "Comment choisissez-vous les produits de vos comparatifs ?",
-    answer:
-      "En partant de ton usage et de ton budget, sur des critères vérifiables : caractéristiques officielles, compatibilité, prix constatés. Les éventuels liens d'affiliation sont signalés et ne changent jamais un classement.",
   },
   {
     question: "Les articles sont-ils gratuits ?",
@@ -215,69 +92,20 @@ const FAQ = [
   {
     question: "Je ne trouve pas la réponse à ma question. Que faire ?",
     answer:
-      "Écris-nous via la page Contact. Si ta question intéresse d'autres lecteurs, elle a de bonnes chances d'inspirer un prochain article.",
+      "Écris-nous via la page Contact. Aucune question n'est trop basique : si elle intéresse d'autres lecteurs, elle deviendra peut-être un article.",
   },
 ];
 
-function SituationCard({ situation, publies }: { situation: Situation; publies: Set<string> }) {
-  const section = getSection(situation.section) as Section;
-  return (
-    <article className="card situation-card">
-      {/* eslint-disable-next-line @next/next/no-img-element -- export statique */}
-      <img
-        className="situation-card__image"
-        {...imgProps(situation.photo, "(min-width: 960px) 600px, 100vw")}
-        loading="lazy"
-        decoding="async"
-      />
-      <div className="situation-card__body">
-        <div className="situation-card__kicker">
-          <span className="icon-tile icon-tile--sm" aria-hidden="true">
-            <Icon name={section.icon} size={18} />
-          </span>
-          <span>{section.title}</span>
-        </div>
-        <h3>
-          <a href={sectionUrl(section)}>{situation.titre}</a>
-        </h3>
-        <p>{situation.texte}</p>
-        <p className="situation-card__label">Par exemple :</p>
-        <ul className="situation-card__examples">
-          {situation.exemples.map((ex) => (
-            <li key={ex.question}>
-              <Icon name="arrow-right" size={16} />
-              {ex.slug && publies.has(ex.slug) ? (
-                <a href={`/${ex.slug}/`}>{ex.question}</a>
-              ) : (
-                <span>{ex.question}</span>
-              )}
-            </li>
-          ))}
-        </ul>
-        <ul className="situation-card__subs" aria-label={`Sous-rubriques de ${section.title}`}>
-          {section.subcategories.map((sub) => (
-            <li key={sub.slug}>
-              <a href={subcategoryUrl(section, sub)}>{sub.title}</a>
-            </li>
-          ))}
-        </ul>
-        <a className="situation-card__cta" href={sectionUrl(section)}>
-          {situation.cta}
-          <Icon name="arrow-right" size={16} />
-        </a>
-      </div>
-    </article>
-  );
-}
-
 export default function HomePage() {
   const posts = getAllPosts();
-  const publies = new Set(posts.map((p) => p.slug));
   const editor = AUTHORS.find((a) => a.slug === DEFAULT_AUTHOR_SLUG);
   const equipe = [editor, ...AUTHORS.filter((a) => a.slug !== DEFAULT_AUTHOR_SLUG)].filter(
     (a): a is NonNullable<typeof a> => Boolean(a)
   );
-  const photos = [...Object.values(P), ...Object.values(T)];
+  // Crédits : uniquement les photos réellement affichées sur cette page.
+  const photos = [
+    ...new Set([P.hero, P.marque, P.cta, ...Object.values(PHOTO_THEME)]),
+  ];
 
   return (
     <>
@@ -288,23 +116,21 @@ export default function HomePage() {
         <div className="hero__text">
           <div className="hero-eyebrow">
             <span className="dot" aria-hidden="true" />
-            <span>Média tech indépendant</span>
+            <span>Le QG des débutants en tech</span>
           </div>
           <h1>
-            <span className="brand">Techno Play</span> — la tech décortiquée,
-            sans jargon ni langue de bois
+            <span className="brand">Techno Play</span> — la tech expliquée
+            simplement, pour les débutants
           </h1>
           <p className="lead">
-            Ton PC rame, ton Wi-Fi fait des siennes, tu hésites entre deux
-            casques ou tu veux enfin comprendre comment marche ChatGPT ? Tu
-            es au bon endroit. Ici, la tech s&apos;explique avec des mots
-            simples, des étapes claires et des avis francs. Un seul
-            objectif : qu&apos;à la fin de l&apos;article, ton problème soit
-            réglé.
+            IA, robots, maison connectée, programmation… Tu débutes et tout
+            te paraît un peu flou ? Tu es au bon endroit. Ici, chaque sujet
+            part de zéro : des mots simples, un exemple concret, des étapes
+            claires. Aucune question n&apos;est bête.
           </p>
           <div className="hero-actions">
-            <a className="btn btn--primary" href="#par-ou-commencer">
-              Trouver une solution
+            <a className="btn btn--primary" href="#sujets">
+              Choisir mon sujet
             </a>
             <a className="btn btn--secondary" href="#derniers-articles">
               Lire les derniers articles
@@ -313,11 +139,11 @@ export default function HomePage() {
           <ul className="hero-proof">
             <li>
               <Icon name="check" size={18} />
-              Sources officielles citées sous chaque article
+              Zéro jargon : chaque mot technique est expliqué
             </li>
             <li>
               <Icon name="check" size={18} />
-              Zéro jargon, zéro langue de bois
+              Un exemple concret dans chaque article
             </li>
             <li>
               <Icon name="check" size={18} />
@@ -340,52 +166,49 @@ export default function HomePage() {
         </figure>
       </section>
 
-      {/* 1 bis. Tendances */}
-      <section className="home-section trends-section" aria-labelledby="tendances-titre">
+      {/* 2. Choisis ton sujet */}
+      <section id="sujets" className="home-section trends-section" aria-labelledby="sujets-titre">
         <div className="container">
-          <p className="kicker">Tendances</p>
-          <h2 id="tendances-titre">La tech qui fait l&apos;actu, décortiquée</h2>
+          <p className="kicker">Six thèmes, pas un de plus</p>
+          <h2 id="sujets-titre">Qu&apos;est-ce que tu aimerais comprendre ?</h2>
           <p className="section-intro">
-            IA, drones, réalité virtuelle, robots… Les technologies dont tout
-            le monde parle, expliquées sans jargon : ce qu&apos;elles font
-            vraiment, ce qu&apos;elles changent pour toi, et ce qui relève du
-            simple buzz.
+            Choisis un thème. Chacun te mène à des articles qui partent de
+            zéro, avec une question de débutant en exemple.
           </p>
-          <ul className="trend-grid">
-            {TENDANCES.map((t) => {
-              const cible = getSubcategory(t.rubrique);
-              const href = cible ? subcategoryUrl(cible.section, cible.sub) : "/";
-              const grande = t.taille === "grande";
-              return (
-                <li key={t.titre} className={`trend-tile${t.taille ? ` trend-tile--${t.taille}` : ""}`}>
-                  {/* eslint-disable-next-line @next/next/no-img-element -- export statique */}
-                  <img
-                    {...imgProps(t.photo, grande ? "(min-width: 960px) 600px, 100vw" : "(min-width: 960px) 300px, (min-width: 600px) 50vw, 100vw")}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                  <div className="trend-tile__body">
-                    {cible ? <span className="trend-tile__tag">{cible.sub.title}</span> : null}
-                    <h3>
-                      <a href={href}>{t.titre}</a>
-                    </h3>
-                    <p>{t.texte}</p>
-                  </div>
-                </li>
-              );
-            })}
+          <ul className="trend-grid trend-grid--themes">
+            {CATEGORIES.map((category) => (
+              <li key={category.slug} className="trend-tile">
+                {/* eslint-disable-next-line @next/next/no-img-element -- export statique */}
+                <img
+                  {...imgProps(PHOTO_THEME[category.slug], "(min-width: 1024px) 400px, (min-width: 600px) 50vw, 100vw")}
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div className="trend-tile__body">
+                  <span className="trend-tile__tag" aria-hidden="true">
+                    <Icon name={category.icon} size={16} />
+                  </span>
+                  <h3>
+                    <a href={categoryUrl(category)}>{category.title}</a>
+                  </h3>
+                  <p>{category.description}</p>
+                  <p className="trend-tile__example">
+                    Par exemple\u00a0: «\u00a0{nbsp(category.questions[0].question)}\u00a0»
+                  </p>
+                </div>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
 
-      {/* 2. Derniers articles */}
+      {/* 3. Derniers articles */}
       <section id="derniers-articles" className="home-section">
         <div className="container">
           <h2>Les derniers articles</h2>
           <p className="section-intro">
-            Fraîchement publiés, vérifiés et datés. Les sources de chaque
-            article sont listées tout en bas : tu peux contrôler par
-            toi-même.
+            Chaque article commence par l&apos;essentiel en 30 secondes, puis
+            explique tout pas à pas. Les sources sont listées tout en bas.
           </p>
           {posts.length === 0 ? (
             <p className="empty-state">Les premiers articles arrivent très vite. Repasse bientôt !</p>
@@ -399,23 +222,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 3. Par où commencer ? */}
-      <section id="par-ou-commencer" className="home-section">
+      {/* 4. Comment on explique les choses */}
+      <section className="engagements-section">
         <div className="container">
-          <h2>Par où commencer ? Dis-nous ce qui t&apos;amène</h2>
+          <p className="kicker">Notre façon d&apos;expliquer</p>
+          <h2>Comment on rend la tech simple</h2>
           <p className="section-intro">
-            Quatre rubriques, quatre situations. Choisis la tienne : chaque
-            carte te mène aux guides qui répondent à ce genre de question.
+            Chaque article suit les mêmes quatre règles. Tu sais donc toujours
+            à quoi t&apos;attendre.
           </p>
-          <div className="situation-grid">
-            {SITUATIONS.map((situation) => (
-              <SituationCard key={situation.section} situation={situation} publies={publies} />
+          <ul className="promise-grid">
+            {ENGAGEMENTS.map((e) => (
+              <li key={e.titre} className="card promise-card">
+                <span className="icon-tile" aria-hidden="true">
+                  <Icon name={e.icon} size={22} />
+                </span>
+                <h3>{e.titre}</h3>
+                <p>{e.texte}</p>
+              </li>
             ))}
+          </ul>
+          <p className="method__note">
+            <strong>Indépendance.</strong> Aucun annonceur ne dicte la ligne
+            éditoriale. Certains guides d&apos;achat peuvent contenir des
+            liens d&apos;affiliation : ils sont signalés, et ne changent
+            jamais un avis.
+          </p>
+          <div className="promise-actions">
+            <a className="btn btn--primary" href="/a-propos/">
+              Notre ligne éditoriale
+            </a>
+            <a className="btn btn--secondary" href="/contact/">
+              Signaler une erreur
+            </a>
           </div>
         </div>
       </section>
 
-      {/* 4. Le nom de marque */}
+      {/* 5. Le nom de marque */}
       <section className="home-section">
         <div className="container brand-story">
           <figure className="brand-story__visual">
@@ -460,55 +304,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. La méthode */}
-      <section className="promise-section method-section">
-        <div className="container method">
-          <figure className="method__visual">
-            {/* eslint-disable-next-line @next/next/no-img-element -- export statique */}
-            <img
-              {...imgProps(P.methode, "(min-width: 960px) 420px, 100vw")}
-              loading="lazy"
-              decoding="async"
-            />
-          </figure>
-          <div className="method__content">
-            <p className="kicker">Notre méthode</p>
-            <h2>Comment on travaille (et pourquoi tu peux nous faire confiance)</h2>
-            <p className="method__intro">
-              Un article Techno Play suit toujours le même chemin, de ta
-              question jusqu&apos;à sa mise à jour.
-            </p>
-            <ol className="method__steps">
-              {METHODE.map((etape, i) => (
-                <li key={etape.titre}>
-                  <span className="method__num" aria-hidden="true">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <div>
-                    <h3>{etape.titre}</h3>
-                    <p>{etape.texte}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-            <p className="method__note">
-              <strong>Indépendance.</strong> Aucun annonceur ne dicte la ligne
-              éditoriale. Certains guides d&apos;achat peuvent contenir des
-              liens d&apos;affiliation : ils sont signalés, et ne changent
-              jamais un classement.
-            </p>
-            <div className="promise-actions">
-              <a className="btn btn--primary" href="/a-propos/">
-                Notre ligne éditoriale
-              </a>
-              <a className="btn btn--secondary" href="/contact/">
-                Signaler une erreur
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* 6. La rédaction */}
       <section className="home-section">
         <div className="container">
@@ -537,7 +332,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. FAQ + appel à proposer un sujet */}
+      {/* 7. FAQ + appel à poser sa question */}
       <section className="home-section">
         <div className="container home-faq">
           <div className="home-faq__head">
@@ -569,13 +364,14 @@ export default function HomePage() {
               decoding="async"
             />
             <div className="cta-band__content">
-              <h2>Une question tech qui te prend la tête ?</h2>
+              <h2>Une question de débutant ? Pose-la.</h2>
               <p>
-                Dis-nous laquelle. Si elle intéresse d&apos;autres lecteurs,
-                on en fera peut-être notre prochain article.
+                Dis-nous ce que tu aimerais comprendre. Il n&apos;y a pas de
+                question bête : si elle intéresse d&apos;autres lecteurs, elle
+                deviendra peut-être notre prochain article.
               </p>
               <a className="btn btn--light" href="/contact/">
-                Proposer un sujet
+                Poser ma question
               </a>
             </div>
           </div>

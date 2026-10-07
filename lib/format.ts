@@ -11,3 +11,8 @@ export function formatDate(iso: string): string {
     timeZone: "UTC",
   }).format(d);
 }
+
+/** Typographie française : espace insécable avant « ? », « ! », « : » et « ; » (évite un point d'interrogation seul en bout de ligne). */
+export function nbsp(text: string): string {
+  return text.replace(/ ([?!:;])/g, "\u00a0$1");
+}

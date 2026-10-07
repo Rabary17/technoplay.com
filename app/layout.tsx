@@ -11,7 +11,7 @@ import {
 } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
-import { SECTIONS, sectionUrl } from "@/lib/categories";
+import { CATEGORIES, categoryUrl } from "@/lib/categories";
 import "./globals.css";
 
 // next/font : auto-hébergé au build (aucune requête vers
@@ -33,7 +33,7 @@ const inter = Inter({
   display: "swap",
 });
 
-// Menu principal = les 4 rubriques (structure du 2026-10-02, voir
+// Menu principal = les 6 thèmes à plat (structure du 2026-10-07, voir
 // lib/categories.ts).
 // Pages E-E-A-T (décision du 2026-09-30) : elles doivent rester
 // atteignables en un clic depuis n'importe où sur le site — elles sont
@@ -99,9 +99,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <span>{SITE_NAME}</span>
             </a>
             <nav className="site-nav" aria-label="Navigation principale">
-              {SECTIONS.map((section) => (
-                <a key={section.slug} href={sectionUrl(section)}>
-                  {section.short}
+              {CATEGORIES.map((category) => (
+                <a key={category.slug} href={categoryUrl(category)}>
+                  {category.short}
                 </a>
               ))}
             </nav>
@@ -119,16 +119,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   <span>{SITE_NAME}</span>
                 </a>
                 <p className="footer-tagline">
-                  Tutos, comparatifs et décryptages : la tech expliquée
-                  simplement.
+                  Le QG des débutants en tech : des explications simples, des
+                  exemples concrets, zéro jargon.
                 </p>
               </div>
-              <nav aria-label="Rubriques">
-                <span className="footer-heading">Rubriques</span>
+              <nav aria-label="Thèmes">
+                <span className="footer-heading">Thèmes</span>
                 <div className="footer-links">
-                  {SECTIONS.map((section) => (
-                    <a key={section.slug} href={sectionUrl(section)}>
-                      {section.title}
+                  {CATEGORIES.map((category) => (
+                    <a key={category.slug} href={categoryUrl(category)}>
+                      {category.title}
                     </a>
                   ))}
                 </div>

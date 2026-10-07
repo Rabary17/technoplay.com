@@ -1,21 +1,13 @@
 {
-  "_doc": "Routage des articles vers un auteur selon sa spécialité, appliqué au moment de la publication (scripts/generation/choisir-auteur.js, npm run new-post). 1) mots-clés du titre/des tags : l'auteur qui cumule le plus de correspondances l'emporte ; 2) sinon, titulaire de la sous-catégorie ; 3) sinon, rédacteur en chef. Le frontmatter `author:` d'un article reste prioritaire et se modifie à la main si besoin.",
+  "_doc": "Routage des articles vers un auteur selon sa spécialité, appliqué au moment de la publication (scripts/generation/choisir-auteur.js, npm run new-post). 1) mots-clés du titre/des tags : l'auteur qui cumule le plus de correspondances l'emporte ; 2) sinon, titulaire du thème (lib/categories.ts) ; 3) sinon, rédacteur en chef. Le frontmatter `author:` d'un article reste prioritaire et se modifie à la main si besoin.",
   "defaut": "andrianina-rabarivelo",
   "categories": {
-    "windows-mac": "andrianina-rabarivelo",
-    "android-ios": "andrianina-rabarivelo",
-    "reseau-stockage": "nekena-judicael",
-    "securite-vpn": "andrianina-rabarivelo",
-    "materiel-pc-composants": "andee-rakotovao",
-    "peripheriques-ecrans": "andee-rakotovao",
-    "audio-mobilite": "felana-rabarivelo",
-    "domotique-maison-connectee": "mialy-andriaharisoa",
     "intelligence-artificielle": "andrianina-rabarivelo",
-    "hardware-innovation": "andee-rakotovao",
-    "culture-tech": "nekena-judicael",
-    "annonces-produits": "nekena-judicael",
-    "cyberattaques-failles": "andrianina-rabarivelo",
-    "logiciels-mises-a-jour": "nekena-judicael"
+    "robotique-drones": "nekena-judicael",
+    "maison-connectee": "mialy-andriaharisoa",
+    "programmation": "andee-rakotovao",
+    "appareils-internet": "nekena-judicael",
+    "securite-vie-privee": "andrianina-rabarivelo"
   },
   "motsCles": {
     "andrianina-rabarivelo": [

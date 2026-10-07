@@ -12,11 +12,15 @@ category: "intelligence-artificielle"
 
 Tu demandes à ChatGPT un e-mail de relance. Il te sort trois paragraphes guindés que personne n'aurait envie de lire. Le problème ne vient pas de l'outil, mais de la consigne. Un prompt vague donne une réponse moyenne, parce que l'IA comble les trous avec des généralités. Bonne nouvelle : quelques réflexes suffisent à transformer le résultat.
 
-**L'essentiel, si tu es pressé :**
+<div class="essentiel">
+
+**L'essentiel, si tu es pressé**
 
 - Donne un **rôle**, du **contexte**, une **tâche**, un **format** et des **limites**.
 - **Itère** : la deuxième réponse est presque toujours meilleure que la première.
 - Pique les **20 prompts** en fin d'article et adapte-les à ton cas.
+
+</div>
 
 ## Pourquoi tes prompts donnent des réponses fades
 

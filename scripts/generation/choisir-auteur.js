@@ -3,12 +3,12 @@
 // unique, lue aussi par le site) :
 //   1. mots-clés du titre et des tags : l'auteur qui cumule le plus de
 //      correspondances l'emporte ;
-//   2. égalité ou aucune correspondance : titulaire de la sous-catégorie ;
+//   2. égalité ou aucune correspondance : titulaire du thème ;
 //   3. sinon : rédacteur en chef (`defaut`).
 // Le frontmatter `author:` reste modifiable à la main après coup.
 //
 // CLI :
-//   node scripts/generation/choisir-auteur.js --categorie android-ios "Titre"
+//   node scripts/generation/choisir-auteur.js --categorie programmation "Titre"
 //   node scripts/generation/choisir-auteur.js --fichier content/posts/x.md [--ecrire]
 "use strict";
 const fs = require("fs");
@@ -58,10 +58,10 @@ function choisirAuteur({ titre = "", categorie = "", tags = [] } = {}, regles = 
     return { auteur: enTete[0], raison: `spécialité (mots-clés : ${trouve[enTete[0]].join(", ")})`, correspondances: trouve };
   }
   if (enTete.length > 1 && titulaire && enTete.includes(titulaire)) {
-    return { auteur: titulaire, raison: `égalité de mots-clés, départagée par la sous-catégorie « ${categorie} »`, correspondances: trouve };
+    return { auteur: titulaire, raison: `égalité de mots-clés, départagée par le thème « ${categorie} »`, correspondances: trouve };
   }
   if (titulaire) {
-    return { auteur: titulaire, raison: `titulaire de la sous-catégorie « ${categorie} »`, correspondances: trouve };
+    return { auteur: titulaire, raison: `titulaire du thème « ${categorie} »`, correspondances: trouve };
   }
   return { auteur: regles.defaut, raison: "aucune spécialité reconnue : rédacteur en chef par défaut", correspondances: trouve };
 }

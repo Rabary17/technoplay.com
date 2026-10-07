@@ -2,39 +2,33 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getAllSlugs, getPostBySlug, getPostsByCategory, resolveCoverImage } from "@/lib/posts";
 import { SITE_URL } from "@/lib/site";
-import {
-  SECTIONS,
-  getSection,
-  resolveCategory,
-  sectionUrl,
-  subcategoryUrl,
-} from "@/lib/categories";
+import { CATEGORIES, getCategory, resolveCategory, categoryUrl } from "@/lib/categories";
 import { resolveAuthor, authorUrl } from "@/lib/authors";
 import { formatDate } from "@/lib/format";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AuthorBox from "@/components/AuthorBox";
 import ArticleCard from "@/components/ArticleCard";
-import SectionHub from "@/components/SectionHub";
+import CategoryHub from "@/components/CategoryHub";
 import { blogPostingSchema } from "@/lib/schema";
 
 // Ce segment sert deux types de pages au premier niveau d'URL :
 //   - les articles (/<slug-article>/), un par fichier content/posts/*.md ;
-//   - les hubs de rubrique (/guides-tutos/, /comparatifs-achats/...), un
-//     par entrée de SECTIONS (lib/categories.ts).
-// Les sous-catégories vivent un niveau plus bas : app/[slug]/[sub]/.
+//   - les pages de thème (/intelligence-artificielle/, /maison-connectee/...),
+//     une par entrée de CATEGORIES (lib/categories.ts) — en `noindex, follow`.
+// Pas de sous-catégories : la structure est volontairement à plat.
 // Export statique : chaque slug connu au build devient un fichier HTML réel
 // (out/<slug>/index.html) — pas de rendu à la demande, voir next.config.ts.
 export function generateStaticParams() {
   const postSlugs = getAllSlugs();
-  const sectionSlugs = SECTIONS.map((s) => s.slug);
-  const clash = postSlugs.filter((slug) => (sectionSlugs as string[]).includes(slug));
+  const categorySlugs = CATEGORIES.map((c) => c.slug);
+  const clash = postSlugs.filter((slug) => (categorySlugs as string[]).includes(slug));
   if (clash.length) {
     throw new Error(
-      `Slug d'article identique à une rubrique (renommer le fichier) : ${clash.join(", ")}`
+      `Slug d'article identique à un thème (renommer le fichier) : ${clash.join(", ")}`
     );
   }
-  return [...postSlugs, ...sectionSlugs].map((slug) => ({ slug }));
+  return [...postSlugs, ...categorySlugs].map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
@@ -44,17 +38,21 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  const section = getSection(slug);
-  if (section) {
+  const category = getCategory(slug);
+  if (category) {
     return {
-      title: section.title,
-      description: section.description,
-      alternates: { canonical: sectionUrl(section) },
+      title: category.title,
+      description: category.description,
+      alternates: { canonical: categoryUrl(category) },
+      // Les thèmes servent à naviguer, pas à se positionner : jamais
+      // indexés (seuls articles, auteurs et pages le sont), mais leurs
+      // liens restent suivis.
+      robots: { index: false, follow: true },
       openGraph: {
-        title: section.title,
-        description: section.description,
-        url: `${SITE_URL}${sectionUrl(section)}`,
-        images: [{ url: `/covers/${section.slug}.png`, width: 1200, height: 630, alt: section.title }],
+        title: category.title,
+        description: category.description,
+        url: `${SITE_URL}${categoryUrl(category)}`,
+        images: [{ url: `/covers/${category.slug}.png`, width: 1200, height: 630, alt: category.title }],
       },
     };
   }
@@ -101,8 +99,8 @@ export default async function SlugPage({
 }) {
   const { slug } = await params;
 
-  const section = getSection(slug);
-  if (section) return <SectionHub section={section} />;
+  const theme = getCategory(slug);
+  if (theme) return <CategoryHub category={theme} />;
 
   const post = getPostBySlug(slug);
   if (!post) notFound();
@@ -112,23 +110,12 @@ export default async function SlugPage({
   const author = resolveAuthor(post.author);
 
   const crumbs = [{ name: "Accueil", href: "/" }];
-  if (category) {
-    crumbs.push({ name: category.section.title, href: sectionUrl(category.section) });
-    if (category.sub) {
-      crumbs.push({ name: category.sub.title, href: subcategoryUrl(category.section, category.sub) });
-    }
-  }
+  if (category) crumbs.push({ name: category.title, href: categoryUrl(category) });
   crumbs.push({ name: post.title, href: `/${post.slug}/` });
 
-  // Maillage interne : jusqu'à 3 articles de la même sous-catégorie, puis
-  // de la même rubrique.
+  // Maillage interne : jusqu'à 3 autres articles du même thème.
   const related = category
-    ? [
-        ...(category.sub ? getPostsByCategory(category.sub.slug) : []),
-        ...getPostsByCategory(category.section.slug),
-      ]
-        .filter((p, i, arr) => p.slug !== post.slug && arr.findIndex((q) => q.slug === p.slug) === i)
-        .slice(0, 3)
+    ? getPostsByCategory(category.slug).filter((p) => p.slug !== post.slug).slice(0, 3)
     : [];
 
   return (
@@ -137,15 +124,8 @@ export default async function SlugPage({
       <article className="post-content">
         <JsonLd data={blogPostingSchema(post)} />
         {category ? (
-          <a
-            className="tag"
-            href={
-              category.sub
-                ? subcategoryUrl(category.section, category.sub)
-                : sectionUrl(category.section)
-            }
-          >
-            {category.sub?.title ?? category.section.title}
+          <a className="tag" href={categoryUrl(category)}>
+            {category.title}
           </a>
         ) : null}
         <h1>{post.title}</h1>

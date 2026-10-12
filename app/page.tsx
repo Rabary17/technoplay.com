@@ -193,7 +193,7 @@ export default function HomePage() {
                   </h3>
                   <p>{category.description}</p>
                   <p className="trend-tile__example">
-                    Par exemple\u00a0: «\u00a0{nbsp(category.questions[0].question)}\u00a0»
+                    {"Par exemple\u00a0: «\u00a0"}{nbsp(category.questions[0].question)}{"\u00a0»"}
                   </p>
                 </div>
               </li>

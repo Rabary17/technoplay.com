@@ -16,8 +16,6 @@ sources:
 sourcesConsultees: "2026-10-12"
 ---
 
-# Intelligence artificielle : le guide complet pour débutants
-
 Tu entends « IA » partout, dans les journaux, sur les réseaux et dans les applications de ton téléphone. Pourtant, le mot recouvre des réalités très différentes. Ce guide t'explique ce qu'est l'intelligence artificielle, comment elle fonctionne sans maths compliquées, à quoi elle sert au quotidien et comment bien commencer, même si tu n'y connais rien.
 
 <div class="essentiel">

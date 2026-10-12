@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "node scripts/generation/verifier-contenu.js && node scripts/generation/verifier-lisibilite.js",
+    "prebuild": "node scripts/generation/choisir-auteur.js --tous && node scripts/generation/verifier-contenu.js && node scripts/generation/verifier-lisibilite.js",
     "build": "next build",
     "start": "npx serve out",
     "lint": "next lint",

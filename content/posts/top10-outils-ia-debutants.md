@@ -32,8 +32,6 @@ sources:
 sourcesConsultees: "2026-10-12"
 ---
 
-# Les 10 meilleurs outils d'IA pour débutants
-
 Tu veux utiliser l'intelligence artificielle sans te perdre dans les dizaines d'applications qui sortent chaque mois ? Cette sélection regroupe dix outils faciles à prendre en main. Pour chacun, tu trouveras ce qu'il fait, à qui il s'adresse et une première idée d'usage pour commencer.
 
 <div class="essentiel">

@@ -10,6 +10,7 @@
 // CLI :
 //   node scripts/generation/choisir-auteur.js --categorie programmation "Titre"
 //   node scripts/generation/choisir-auteur.js --fichier content/posts/x.md [--ecrire]
+//   node scripts/generation/choisir-auteur.js --tous   (attribue un auteur aux articles sans champ author)
 "use strict";
 const fs = require("fs");
 const path = require("path");
@@ -96,6 +97,20 @@ if (require.main === module) {
     const i = args.indexOf(flag);
     return i >= 0 ? args[i + 1] : undefined;
   };
+  if (args.includes("--tous")) {
+    // Attribue un auteur à chaque article du dossier content/posts qui n'a pas de champ `author:`.
+    // Un article qui a déjà un auteur garde le sien.
+    const dossier = path.join(__dirname, "..", "..", "content", "posts");
+    for (const nom of fs.readdirSync(dossier).filter((f) => f.endsWith(".md"))) {
+      const chemin = path.join(dossier, nom);
+      const source = fs.readFileSync(chemin, "utf8");
+      if (/^author:/m.test(source)) continue;
+      const choix = choisirAuteur(lireFrontmatter(source));
+      fs.writeFileSync(chemin, ecrireAuteur(source, choix.auteur), "utf8");
+      console.log(`${nom} → ${choix.auteur} (${choix.raison})`);
+    }
+    process.exit(0);
+  }
   const fichier = val("--fichier");
   let article;
   if (fichier) {

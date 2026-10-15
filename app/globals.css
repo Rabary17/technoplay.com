@@ -585,3 +585,22 @@ a.tag:hover { background: var(--brand); color: var(--on-brand); text-decoration:
   .post-content .attention { border-left-color: #FB923C; }
   .post-content .attention > p:first-child { color: #FDBA74; }
 }
+
+/* Accueil — diaporama de fond du hero : 6 images, une toutes les 4 s (24 s par cycle) */
+.hero-slider { position: relative; width: 100%; aspect-ratio: 4 / 5; max-height: 640px; border-radius: 16px; overflow: hidden; background: #0d1020; }
+.hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; animation: hero-slide-fade 24s infinite; }
+@keyframes hero-slide-fade {
+  0% { opacity: 0; }
+  2% { opacity: 1; }
+  14% { opacity: 1; }
+  17% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@media (max-width: 959px) {
+  .hero-slider { aspect-ratio: 16 / 10; }
+  .hero-slide { background-position: center 25%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide { animation: none; }
+  .hero-slide:first-child { opacity: 1; }
+}

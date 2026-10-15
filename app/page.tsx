@@ -37,6 +37,20 @@ const PHOTO_THEME: Record<CategorySlug, PhotoAccueil> = {
   "securite-vie-privee": T.cyber,
 };
 
+/**
+ * Diaporama du hero : six images (dossier public/images/accueil/hero-accueil-*),
+ * en fond de bloc, qui défilent toutes les 4 secondes (voir .hero-slide dans globals.css).
+ */
+const HERO_SLIDES: { base: string; alt: string }[] = [
+  { base: "/images/accueil/hero-accueil-1-pc-gamer", alt: "Tour de PC gaming aux parois transparentes, éclairage bleu et violet" },
+  { base: "/images/accueil/hero-accueil-2-realite-virtuelle", alt: "Personne qui tient un casque de réalité virtuelle devant le visage" },
+  { base: "/images/accueil/hero-accueil-3-maison-connectee", alt: "Objets connectés blancs (ampoule, capteur, haut-parleur, caméra) posés sur une table" },
+  { base: "/images/accueil/hero-accueil-4-drone", alt: "Drone blanc vu de face, caméra en avant" },
+  { base: "/images/accueil/hero-accueil-5-cyberpunk", alt: "Portrait stylisé d'un personnage cyberpunk aux cheveux roses et aux lunettes métalliques" },
+  { base: "/images/accueil/hero-accueil-6-ia-humanoide", alt: "Visage de femme mi-humain mi-robot, mécanismes apparents autour du cou" },
+];
+const HERO_STEP_SECONDES = 4;
+
 const ENGAGEMENTS: { icon: IconName; titre: string; texte: string }[] = [
   {
     icon: "lightbulb",
@@ -104,7 +118,7 @@ export default function HomePage() {
   );
   // Crédits : uniquement les photos réellement affichées sur cette page.
   const photos = [
-    ...new Set([P.hero, P.marque, P.cta, ...Object.values(PHOTO_THEME)]),
+    ...new Set([P.marque, P.cta, ...Object.values(PHOTO_THEME)]),
   ];
 
   return (
@@ -152,12 +166,20 @@ export default function HomePage() {
           </ul>
         </div>
         <figure className="hero__visual">
-          {/* eslint-disable-next-line @next/next/no-img-element -- export statique */}
-          <img
-            {...imgProps(P.hero, "(min-width: 960px) 520px, 100vw")}
-            fetchPriority="high"
-            decoding="async"
-          />
+          <div className="hero-slider">
+            {HERO_SLIDES.map((slide, i) => (
+              <div
+                key={slide.base}
+                role="img"
+                aria-label={slide.alt}
+                className="hero-slide"
+                style={{
+                  backgroundImage: `image-set(url("${slide.base}-960.webp") 1x, url("${slide.base}-1920.webp") 2x)`,
+                  animationDelay: `${i * HERO_STEP_SECONDES}s`,
+                }}
+              />
+            ))}
+          </div>
           <svg className="hero__mark" viewBox="0 0 64 64" width="72" height="72" aria-hidden="true">
             <rect width="64" height="64" rx="16" fill="#2F45D6" />
             <polygon points="15,17 15,47 37,32" fill="#FFFFFF" stroke="#FFFFFF" strokeWidth="5" strokeLinejoin="round" />

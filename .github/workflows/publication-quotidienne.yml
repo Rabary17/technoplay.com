@@ -1,0 +1,28 @@
+# Publication programmée : relance un déploiement Vercel chaque jour.
+# Les articles datés d'un jour futur sont présents dans le dépôt mais masqués
+# par lib/posts.ts (estPublie) ; ce build les rend visibles le jour J.
+#
+# Secret à créer une seule fois dans GitHub (Settings > Secrets and variables > Actions) :
+#   VERCEL_DEPLOY_HOOK = l'URL du « Deploy Hook » de la branche main (Vercel > Settings > Git > Deploy Hooks)
+
+name: Publication quotidienne
+
+on:
+  schedule:
+    # 05:17 UTC = 08:17 à Antananarivo (décalé de la pleine heure, les départs sont souvent retardés)
+    - cron: "17 5 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  relancer-deploiement:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Déclencher le déploiement Vercel
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$VERCEL_DEPLOY_HOOK" ]; then
+            echo "Secret VERCEL_DEPLOY_HOOK manquant." >&2
+            exit 1
+          fi
+          curl -sS -X POST "$VERCEL_DEPLOY_HOOK"

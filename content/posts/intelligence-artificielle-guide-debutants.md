@@ -1,7 +1,7 @@
 ---
 title: "C'est quoi, l'intelligence artificielle ? Expliqué simplement"
-seoTitle: "C'est quoi, l'intelligence artificielle ? Expliqué simplement"
-description: "C'est quoi l'IA, comment elle apprend et à quoi elle te sert vraiment ? Réponses simples, exemples du quotidien."
+seoTitle: "C'est quoi l'intelligence artificielle ? Expliqué simplement"
+description: "C'est quoi l'IA, comment elle apprend et à quoi elle sert vraiment ? Réponses simples, exemples du quotidien et conseils pour bien débuter."
 date: "2026-10-12"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"

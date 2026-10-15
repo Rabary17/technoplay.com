@@ -1,12 +1,12 @@
 ---
-title: "Intelligence artificielle : le guide complet pour débutants"
-seoTitle: "Intelligence artificielle : guide complet pour débutants"
-description: "C'est quoi l'intelligence artificielle, comment elle marche et à quoi elle sert ? Un guide simple, avec exemples, pour bien commencer."
+title: "C'est quoi, l'intelligence artificielle ? Expliqué simplement"
+seoTitle: "C'est quoi, l'intelligence artificielle ? Expliqué simplement"
+description: "C'est quoi l'IA, comment elle apprend et à quoi elle te sert vraiment ? Réponses simples, exemples du quotidien."
 date: "2026-10-12"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
-image: "/images/articles/intelligence-artificielle-hero.webp"
-imageAlt: "Une personne qui travaille avec un ordinateur portable et un assistant, lumière douce"
+image: "/images/articles/cover-intelligence-artificielle.webp"
+imageAlt: "Une femme au casque devant son ordinateur, texte : C'est quoi, l'intelligence artificielle ?"
 updated: "2026-10-12"
 sources:
   - titre: "CNIL : Intelligence artificielle, les recommandations pour un usage responsable"

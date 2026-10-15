@@ -5,8 +5,8 @@ description: "C'est quoi l'IA, comment elle apprend et à quoi elle sert vraimen
 date: "2026-10-12"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
-image: "/images/articles/cover-intelligence-artificielle.webp"
-imageAlt: "Une femme au casque devant son ordinateur, texte : C'est quoi, l'intelligence artificielle ?"
+image: "/images/articles/intelligence-artificielle-hero.webp"
+imageAlt: "Une personne qui travaille avec un ordinateur portable et un casque, lumière douce"
 updated: "2026-10-12"
 sources:
   - titre: "CNIL : Intelligence artificielle, les recommandations pour un usage responsable"

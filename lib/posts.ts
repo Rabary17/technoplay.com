@@ -72,17 +72,38 @@ function readPost(slug: string): Post {
   };
 }
 
-/** Tous les articles, triés du plus récent au plus ancien. */
+/**
+ * Date du jour au format "AAAA-MM-JJ", en heure de Madagascar (UTC+3).
+ * Le build quotidien tourne tôt le matin : un article daté du jour est publié.
+ */
+export function aujourdhui(): string {
+  const maintenant = new Date(Date.now() + 3 * 60 * 60 * 1000);
+  return maintenant.toISOString().slice(0, 10);
+}
+
+/**
+ * Un article n'est publié qu'à partir de sa date (incluse). Un article daté
+ * d'un jour futur est présent dans le dépôt mais absent du site, des listes,
+ * des pages de thème, des pages auteur et du sitemap, jusqu'au build de son jour.
+ */
+export function estPublie(post: { date: string }, jour: string = aujourdhui()): boolean {
+  return post.date <= jour;
+}
+
+/** Tous les articles publiés, triés du plus récent au plus ancien. */
 export function getAllPosts(): Post[] {
+  const jour = aujourdhui();
   return readSlugs()
     .map(readPost)
+    .filter((post) => estPublie(post, jour))
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-/** Un article précis par son slug (undefined si absent). */
+/** Un article publié par son slug (undefined si absent ou pas encore publié). */
 export function getPostBySlug(slug: string): Post | undefined {
   if (!readSlugs().includes(slug)) return undefined;
-  return readPost(slug);
+  const post = readPost(slug);
+  return estPublie(post) ? post : undefined;
 }
 
 /** Articles d'un thème (slug de lib/categories.ts). */
@@ -95,9 +116,9 @@ export function getPostsByAuthor(authorSlug: string): Post[] {
   return getAllPosts().filter((post) => resolveAuthor(post.author).slug === authorSlug);
 }
 
-/** Tous les slugs — pour generateStaticParams (export statique). */
+/** Tous les slugs d'articles publiés — pour generateStaticParams (export statique). */
 export function getAllSlugs(): string[] {
-  return readSlugs();
+  return getAllPosts().map((post) => post.slug);
 }
 
 /**

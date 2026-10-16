@@ -13,7 +13,6 @@ import {
 import JsonLd from "@/components/JsonLd";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { CATEGORIES, categoryUrl } from "@/lib/categories";
-import { getPostsByCategory } from "@/lib/posts";
 import "./globals.css";
 
 // next/font : auto-hébergé au build (aucune requête vers
@@ -123,28 +122,23 @@ gtag('config', '${GA_MEASUREMENT_ID}');`,
               <span>{SITE_NAME}</span>
             </a>
             <nav className="site-nav" aria-label="Navigation principale">
-              {CATEGORIES.map((category) => {
-                const articles = getPostsByCategory(category.slug);
-                return (
-                  <details key={category.slug} className="menu-item">
-                    <summary>{category.short}</summary>
-                    <div className="menu-panel">
-                      <a className="menu-panel__tout" href={categoryUrl(category)}>
-                        Tout le thème « {category.short} »
-                      </a>
-                      {articles.length > 0 ? (
-                        <ul>
-                          {articles.map((p) => (
-                            <li key={p.slug}>
-                              <a href={`/${p.slug}/`}>{p.title}</a>
-                            </li>
-                          ))}
-                        </ul>
-                      ) : null}
-                    </div>
-                  </details>
-                );
-              })}
+              {CATEGORIES.map((category) => (
+                <details key={category.slug} className="menu-item">
+                  <summary>{category.short}</summary>
+                  <div className="menu-panel">
+                    <ul>
+                      {category.sousCategories.map((sous) => (
+                        <li key={sous.slug}>
+                          <a href={`${categoryUrl(category)}#${sous.slug}`}>{sous.titre}</a>
+                        </li>
+                      ))}
+                      <li className="menu-panel__tout">
+                        <a href={categoryUrl(category)}>Tout le thème</a>
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+              ))}
               <a className="site-nav__atelier" href="/atelier-ia/">Atelier IA</a>
             </nav>
           </div>

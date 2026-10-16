@@ -3,7 +3,7 @@ import ArticleCard from "@/components/ArticleCard";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import { getAllSlugs, getPostsByCategory } from "@/lib/posts";
-import { categoryUrl, type Category } from "@/lib/categories";
+import { ARTICLE_SOUS_CATEGORIE, categoryUrl, type Category } from "@/lib/categories";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { nbsp } from "@/lib/format";
 
@@ -40,36 +40,37 @@ export default function CategoryHub({ category }: { category: Category }) {
         <p className="lead">{category.body}</p>
       </header>
 
-      <section className="hub-section">
-        <h2>Les questions qu&apos;on t&apos;explique ici</h2>
-        <ul className="question-list">
-          {category.questions.map((q) => (
-            <li key={q.question}>
-              <Icon name="arrow-right" size={16} />
-              {q.slug && publies.has(q.slug) ? (
-                <a href={`/${q.slug}/`}>{nbsp(q.question)}</a>
-              ) : (
-                <span>{nbsp(q.question)}</span>
-              )}
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      <section className="hub-section">
-        <h2>Les articles</h2>
-        {posts.length === 0 ? (
-          <p className="empty-state">
-            Les premiers articles de ce thème arrivent très vite. Repasse bientôt !
-          </p>
-        ) : (
-          <div className="article-grid">
-            {posts.map((post) => (
-              <ArticleCard key={post.slug} post={post} />
-            ))}
-          </div>
-        )}
-      </section>
+      {category.sousCategories.map((sous, i) => {
+        const articles = posts.filter((p) => ARTICLE_SOUS_CATEGORIE[p.slug] === sous.slug);
+        return (
+          <section key={sous.slug} id={sous.slug} className="hub-section hub-sous">
+            <h2>
+              <span className="hub-sous__num">{i + 1}</span> {sous.titre}
+            </h2>
+            {sous.questions.length > 0 ? (
+              <ul className="question-list">
+                {sous.questions.map((q) => (
+                  <li key={q.question}>
+                    <Icon name="arrow-right" size={16} />
+                    {q.slug && publies.has(q.slug) ? (
+                      <a href={`/${q.slug}/`}>{nbsp(q.question)}</a>
+                    ) : (
+                      <span>{nbsp(q.question)}</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
+            {articles.length > 0 ? (
+              <div className="article-grid">
+                {articles.map((post) => (
+                  <ArticleCard key={post.slug} post={post} />
+                ))}
+              </div>
+            ) : null}
+          </section>
+        );
+      })}
     </div>
   );
 }

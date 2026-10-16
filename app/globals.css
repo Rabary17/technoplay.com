@@ -630,8 +630,8 @@ a.tag:hover { background: var(--brand); color: var(--on-brand); text-decoration:
 .checkbox-row input { margin-top: 4px; }
 .site-nav__atelier { font-weight: 600; }
 
-/* Menu déroulant par thème : <details> natif (clavier et tactile, sans JS),
-   ouvert aussi au survol sur ordinateur. Les articles de chaque thème y figurent. */
+/* Menu déroulant par thème : <details> natif (clavier, tactile, sans JS).
+   Sur ordinateur, le sous-menu s'ouvre au survol uniquement (un seul à la fois). */
 .menu-item { position: relative; }
 .menu-item summary {
   list-style: none; cursor: pointer; color: var(--fg-2);
@@ -642,27 +642,29 @@ a.tag:hover { background: var(--brand); color: var(--on-brand); text-decoration:
 .menu-item summary:hover, .menu-item[open] summary { color: var(--fg); }
 .menu-panel {
   display: none; position: absolute; top: 100%; left: 0; z-index: 60;
-  min-width: 300px; max-width: min(360px, 92vw); padding: 8px;
+  width: 230px; padding: 8px;
   background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
   box-shadow: 0 10px 28px rgba(0, 0, 0, 0.14);
 }
-.menu-item[open] .menu-panel { display: block; }
-@media (hover: hover) and (min-width: 641px) {
-  .menu-item:hover .menu-panel { display: block; }
-}
+.menu-panel ul { list-style: none; margin: 0; padding: 0; }
 .menu-panel a {
   display: block; padding: 8px 10px; border-radius: 6px;
   color: var(--fg-2); font-size: 0.9375rem; line-height: 1.4;
 }
 .menu-panel a:hover { background: var(--surface-2); color: var(--fg); text-decoration: none; }
-.menu-panel__tout { font-weight: 600; color: var(--brand-hover) !important; margin-bottom: 4px; }
-.menu-panel ul { list-style: none; margin: 0; padding: 0; max-height: 60vh; overflow-y: auto; }
+.menu-panel__tout a { font-weight: 600; color: var(--brand-hover); border-top: 1px solid var(--border); border-radius: 0 0 6px 6px; margin-top: 4px; }
+@media (hover: hover) and (min-width: 641px) {
+  .menu-item .menu-panel { display: none; }
+  .menu-item:hover .menu-panel { display: block; }
+  .menu-item:hover summary { color: var(--fg); }
+}
 @media (max-width: 640px) {
   .site-nav { flex-wrap: wrap; overflow: visible; width: 100%; gap: 0 18px; }
-  .site-nav::-webkit-scrollbar { display: none; }
   .menu-item summary { padding: 8px 0; }
-  .menu-panel { left: 0; min-width: min(300px, 90vw); }
+  .menu-item[open] .menu-panel { display: block; }
+  .menu-panel { left: 0; }
 }
+.hub-sous { scroll-margin-top: 90px; }
 
 /* Page atelier : sommaire, programmes et modules numérotés */
 .atelier-sommaire { display: flex; flex-wrap: wrap; gap: var(--space-3); margin: var(--space-5) 0 var(--space-6); }
@@ -673,19 +675,20 @@ a.tag:hover { background: var(--brand); color: var(--on-brand); text-decoration:
 .atelier-modules li span { color: var(--fg-2); }
 
 /* Accueil : questions de chaque thème, numérotées et cliquables (boutons) */
-.trend-tile__questions { list-style: none; counter-reset: question; margin: var(--space-3) 0 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-.trend-tile__questions li { counter-increment: question; display: flex; gap: 10px; align-items: flex-start; }
+.trend-tile__questions { list-style: none; counter-reset: question; margin: var(--space-4) 0 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.trend-tile__questions li { counter-increment: question; display: flex; gap: 8px; align-items: center; }
 .trend-tile__questions li::before {
   content: counter(question); flex: none; display: grid; place-items: center;
-  width: 24px; height: 24px; border-radius: 50%;
-  background: #F2B33D; color: #0B1220; font-size: 0.8125rem; font-weight: 700;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: #F2B33D; color: #0B1220; font-size: 0.7rem; font-weight: 700;
 }
 .trend-tile__questions .btn-question {
-  display: inline-block; padding: 6px 14px; border-radius: 999px;
-  background: #ffffff; color: #0B1220; font-size: 0.9rem; font-weight: 600; line-height: 1.35;
+  display: inline-block; padding: 4px 12px; border-radius: 999px;
+  background: #ffffff; color: #0B1220; font-size: 0.8125rem; font-weight: 600; line-height: 1.3;
   text-decoration: none; border: 1px solid #ffffff;
 }
 .trend-tile__questions .btn-question:hover, .trend-tile__questions .btn-question:focus-visible {
   background: #F2B33D; border-color: #F2B33D; color: #0B1220;
 }
-.trend-tile__questions span { color: #ffffff; font-size: 0.9rem; line-height: 1.35; padding-top: 2px; }
+
+.hub-sous__num { display: inline-grid; place-items: center; width: 26px; height: 26px; margin-right: 6px; border-radius: 50%; background: #F2B33D; color: #0B1220; font-size: 0.85rem; font-weight: 700; vertical-align: middle; }

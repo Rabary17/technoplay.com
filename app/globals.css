@@ -786,3 +786,15 @@ a.tag:hover { background: var(--brand); color: var(--on-brand); text-decoration:
   .quiz-article__chrono span, .quiz-article__chrono span.is-danger, .quiz-article__option, .quiz-article__retour,
   .quiz-article__fin, .quiz-article__etoiles span.is-on { transition: none !important; animation: none !important; }
 }
+
+/* Sidebar des articles récents : vignette, tag de thème, titre */
+.recent-list li.recent-item { display: grid; grid-template-columns: 96px 1fr; gap: 12px; align-items: start; }
+.recent-item__thumb { display: block; border-radius: 8px; overflow: hidden; aspect-ratio: 16 / 9; background: var(--surface-2); }
+.recent-item__thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.recent-item__corps { min-width: 0; display: flex; flex-direction: column; gap: 4px; }
+.recent-item__tag { align-self: flex-start; display: inline-block; padding: 2px 9px; border-radius: 999px; font-size: 0.72rem; font-weight: 700; line-height: 1.5; background: #FFF4D6; color: #7A4F00; text-decoration: none; }
+.recent-item__tag:hover { background: #F2B33D; color: #0B1220; text-decoration: none; }
+.recent-item__titre { font-weight: 600; font-size: 0.9375rem; line-height: 1.35; color: var(--fg); text-decoration: none; }
+.recent-item__titre:hover { text-decoration: underline; }
+.recent-item__corps time { font-size: var(--fs-small); color: var(--fg-3); }
+.recent-list li.recent-item time { margin-top: 0; }

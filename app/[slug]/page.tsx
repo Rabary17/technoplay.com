@@ -226,12 +226,29 @@ export default async function SlugPage({
       <aside className="post-sidebar" aria-labelledby="articles-recents">
         <h2 id="articles-recents">Articles récents</h2>
         <ol className="recent-list">
-          {recents.map((p) => (
-            <li key={p.slug}>
-              <a href={`/${p.slug}/`}>{p.title}</a>
-              <time dateTime={p.date}>{formatDate(p.date)}</time>
-            </li>
-          ))}
+          {recents.map((p) => {
+            const cover = resolveCoverImage(p);
+            const cat = resolveCategory(p.category);
+            return (
+              <li key={p.slug} className="recent-item">
+                <a className="recent-item__thumb" href={`/${p.slug}/`} tabIndex={-1} aria-hidden="true">
+                  {/* eslint-disable-next-line @next/next/no-img-element -- export statique, voir plus haut */}
+                  <img src={cover.src} alt="" width={160} height={90} loading="lazy" />
+                </a>
+                <div className="recent-item__corps">
+                  {cat ? (
+                    <a className="recent-item__tag" href={categoryUrl(cat)}>
+                      {cat.short}
+                    </a>
+                  ) : null}
+                  <a className="recent-item__titre" href={`/${p.slug}/`}>
+                    {p.title}
+                  </a>
+                  <time dateTime={p.date}>{formatDate(p.date)}</time>
+                </div>
+              </li>
+            );
+          })}
         </ol>
       </aside>
       </div>

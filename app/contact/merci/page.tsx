@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 };
 
 // Page affichée après l'envoi du formulaire de contact : c'est la
-// `returnURL` du formulaire Zoho Web-to-Lead (ZOHO_WEBFORM.returnUrl dans
-// lib/site.ts). noindex : elle n'a aucune raison d'apparaître dans Google.
+// `envoyée par le formulaire de contact une fois le message transmis à
+// Zoho (components/LeadForm.tsx). noindex : elle n'a aucune raison d'apparaître dans Google.
 export default function MerciPage() {
   return (
     <div className="page">

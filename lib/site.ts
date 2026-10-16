@@ -74,73 +74,8 @@ export const COMPANY_PHONE_HREF = `tel:${COMPANY.telephone.replace(/\s+/g, "")}`
 // la création d'un prospect) : l'adresse n'a rien à faire dans ce dépôt,
 // qui est public.
 
-// Zoho CRM — formulaire "Web-to-Lead" (décision du 2026-09-30, remplace
-// Formspree) : POST direct depuis une page statique vers Zoho, sans backend
-// — chaque soumission crée un prospect (Lead) directement dans le CRM.
-// Marche à suivre dans Zoho CRM : Configuration (⚙) > Canaux > Formulaires
-// web (Webforms) > module Prospects (Leads) > Nouveau formulaire. Zoho
-// génère alors un extrait HTML contenant le vrai domaine d'action (selon le
-// centre de données du compte : crm.zoho.com / .eu / .in / .com.cn / ...)
-// et trois champs cachés obligatoires — sa propre documentation prévient
-// que le formulaire cesse de fonctionner s'ils sont retirés ou modifiés.
-// Copier ces valeurs TELLES QUELLES depuis le code généré par Zoho : elles
-// sont propres à ce formulaire/cette organisation et ne peuvent pas être
-// devinées ni réutilisées d'un autre compte.
-export const ZOHO_WEBFORM = {
-  // Valeurs copiées telles quelles du code généré par Zoho CRM le 2026-10-05
-  // (formulaire « Prospect Technoplay », centre de données crm.zoho.com).
-  // Ce sont des identifiants de formulaire, pas des secrets : ils figurent
-  // en clair dans le HTML de la page contact. Ne pas les modifier à la main.
-  actionUrl: "https://crm.zoho.com/crm/WebToLeadForm",
-  xnQsjsdp: "0618c72b947f5dad499a2caea89bbff797a4cbc7c12716b88c7c6e3b6d3f4e21",
-  xmIwtLD: "577f5c42d889ee5c4fc7eb5fd34a501273e49751ddff50f869ae8f5f5510a66860fa73f61f2e6c742db07857d25a826a",
-  actionType: "TGVhZHM=", // base64 de « Leads »
-  // Champ-piège anti-spam de Zoho (base64 de « honeypot ») : caché, doit
-  // rester vide — Zoho écarte les envois où il est rempli.
-  honeypot: "aG9uZXlwb3Q",
-  // Page affichée après soumission (returnURL), identique à celle déclarée
-  // dans Zoho : page de remerciement app/contact/merci/ (le serveur ajoute
-  // la barre finale par redirection).
-  returnUrl: `${SITE_URL}/contact/merci`,
-};
-
-// Profils officiels du média (jamais de lien fictif : les handles @technoplay
-// d'origine n'étaient que des placeholders, retirés le 2026-10-05 — un lien
-// mort nuit plus à la crédibilité qu'une absence). Chaque profil réel ajouté
-// ici, `{ label, url }`, apparaît dans « Nous suivre » du pied de page, sur
-// la page À propos et dans le `sameAs` JSON-LD de l'organisation (lib/schema.ts),
-// y compris celle qui figure en `publisher` des articles et en `worksFor`
-// des auteurs. Page LinkedIn ajoutée le 2026-10-07. Ordre de priorité pour
-// Google : fiche Google Business Profile / Maps d'Anmira Studio, page
-// LinkedIn, chaîne YouTube (seulement si on y publie), puis Facebook et X.
-export const SOCIAL_LINKS: { label: string; url: string }[] = [
-  { label: "LinkedIn", url: "https://www.linkedin.com/company/techno-play-com/" },
-];
-
-// Mentions légales : identité de l'éditeur (Anmira Studio) et de
-// l'hébergeur. Aucune valeur inventée : la forme juridique n'a pas été
-// communiquée, la ligne « Statut » n'existe donc pas ; NIF et STAT
-// s'affichent dès qu'ils sont renseignés dans COMPANY.
-export const LEGAL = {
-  editeur_nom: COMPANY.nom,
-  editeur_adresse: COMPANY_ADDRESS,
-  editeur_telephone: COMPANY.telephone,
-  directeur_publication: "Andrianina RABARIVELO",
-  hebergeur_nom: "Vercel Inc.",
-  // Adresse relevée le 2026-10-05 dans la section « Contact Us » de
-  // vercel.com/legal/privacy-policy (l'ancienne adresse, issue d'un
-  // annuaire tiers, n'y figure plus).
-  hebergeur_adresse: "440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis",
-};
-
-// Formulaire d'abonnement à la newsletter (Zoho CRM, Web-to-Lead) — à créer
-// dans Zoho CRM, puis coller ici les valeurs fournies par Zoho (même principe
-// que ZOHO_WEBFORM). Tant qu'elles valent « TODO », le formulaire n'apparaît pas.
-export const ZOHO_NEWSLETTER = {
-  actionUrl: "https://crm.zoho.com/crm/WebToLeadForm",
-  xnQsjsdp: "TODO",
-  xmIwtLD: "TODO",
-  actionType: "TODO",
-  honeypot: "aG9uZXlwb3Q",
-  returnUrl: "https://techno-play.com/atelier-ia/",
-};
+// Envoi des formulaires (contact et newsletter) : le navigateur appelle la
+// fonction serverless api/lead.js, qui crée le prospect dans Zoho CRM via
+// son API. Les identifiants Zoho ne sont jamais dans ce dépôt : ils sont
+// dans les variables d'environnement du projet Vercel (voir .env.example).
+export const LEAD_ENDPOINT = process.env.NEXT_PUBLIC_LEAD_ENDPOINT || "/api/lead";

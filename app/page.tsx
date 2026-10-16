@@ -215,15 +215,17 @@ export default function HomePage() {
                     <a href={categoryUrl(category)}>{category.title}</a>
                   </h3>
                   <p>{category.description}</p>
-                  <p className="trend-tile__example">
-                    {"Par exemple\u00a0: «\u00a0"}
-                    {category.questions[0].slug ? (
-                      <a href={`/${category.questions[0].slug}/`}>{nbsp(category.questions[0].question)}</a>
-                    ) : (
-                      nbsp(category.questions[0].question)
-                    )}
-                    {"\u00a0»"}
-                  </p>
+                  <ol className="trend-tile__questions" aria-label="Questions de ce thème, dans l’ordre de lecture">
+                    {category.questions.map((q) => (
+                      <li key={q.question}>
+                        {q.slug ? (
+                          <a className="btn-question" href={`/${q.slug}/`}>{nbsp(q.question)}</a>
+                        ) : (
+                          <span>{nbsp(q.question)}</span>
+                        )}
+                      </li>
+                    ))}
+                  </ol>
                 </div>
               </li>
             ))}

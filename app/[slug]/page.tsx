@@ -10,6 +10,8 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import AuthorBox from "@/components/AuthorBox";
 import ArticleCard from "@/components/ArticleCard";
 import CategoryHub from "@/components/CategoryHub";
+import QuizArticle from "@/components/QuizArticle";
+import { QUIZ_PAR_ARTICLE } from "@/lib/quiz-articles";
 import { blogPostingSchema, faqSchema } from "@/lib/schema";
 
 // Questions de la section « FAQ » d'un article (gabarit éducatif) : chaque
@@ -182,6 +184,12 @@ export default async function SlugPage({
             à sanitiser ici comme on le ferait pour du contenu externe/WP. */}
         <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
       </article>
+
+      {QUIZ_PAR_ARTICLE[post.slug] ? (
+        <div className="post-quiz">
+          <QuizArticle questions={QUIZ_PAR_ARTICLE[post.slug]} />
+        </div>
+      ) : null}
 
       {post.sources && post.sources.length > 0 ? (
         <aside className="post-sources" aria-label="Sources">

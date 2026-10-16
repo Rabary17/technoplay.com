@@ -3,6 +3,7 @@ import { getPostBySlug } from "@/lib/posts";
 import { SITE_NAME } from "@/lib/site";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import NewsletterForm from "@/components/NewsletterForm";
+import { ModulesCliquables, MiniQuiz, type QuestionQuiz } from "@/components/AtelierInteractif";
 
 export const metadata: Metadata = {
   title: "Atelier IA pour débutants : parents et lycéens",
@@ -49,6 +50,26 @@ const PROGRAMMES = [
       },
     ],
     liens: ["agent-ia", "chatgpt-ou-gemini", "prompt-chatgpt"],
+    quiz: [
+      {
+        question: "L’IA connaît-elle tout de votre vie privée ?",
+        choix: ["Oui, elle sait tout", "Non, elle ne connaît que ce qu’on lui écrit"],
+        bonne: 1,
+        explication: "Elle ne voit que ce que vous tapez. Évitez donc de lui confier des données sensibles : coordonnées bancaires, mots de passe, documents d’identité.",
+      },
+      {
+        question: "Un calcul de budget donné par l’IA est-il forcément juste ?",
+        choix: ["Oui, l’IA ne se trompe pas", "Non, il faut le vérifier"],
+        bonne: 1,
+        explication: "L’IA peut se tromper avec assurance. Vérifiez les chiffres importants avant de vous fier à un résultat.",
+      },
+      {
+        question: "Votre enfant vous montre un devoir fait avec l’IA. Que faites-vous ?",
+        choix: ["Je lui demande d’expliquer sa démarche", "Je prends la réponse de l’IA telle quelle"],
+        bonne: 0,
+        explication: "Faire expliquer la démarche permet de voir si l’enfant a compris. C’est le meilleur moyen de garder le dialogue sur les usages.",
+      },
+    ] satisfies QuestionQuiz[],
   },
   {
     id: "lyceens",
@@ -84,6 +105,26 @@ const PROGRAMMES = [
       },
     ],
     liens: ["intelligence-artificielle-guide-debutants", "claude-ou-chatgpt", "prompt-chatgpt"],
+    quiz: [
+      {
+        question: "Une IA peut-elle se tromper ?",
+        choix: ["Non, jamais", "Oui, et elle le fait avec assurance"],
+        bonne: 1,
+        explication: "L’IA peut inventer une réponse qui semble sûre. Vérifie toujours avec ton cours ou une source fiable.",
+      },
+      {
+        question: "Peut-on recopier la réponse de l’IA dans un devoir ?",
+        choix: ["Oui, si elle est bien écrite", "Non, il faut respecter les consignes des profs"],
+        bonne: 1,
+        explication: "Un devoir doit montrer ton travail. Respecte les consignes de ton établissement et utilise l’IA pour comprendre, pas pour remplacer ton raisonnement.",
+      },
+      {
+        question: "Pour réviser, quelle demande est la plus utile ?",
+        choix: ["Fais-moi tous les exercices", "Pose-moi des questions et corrige mes réponses"],
+        bonne: 1,
+        explication: "Tu t’entraînes vraiment quand tu réponds toi-même. L’IA devient un bon coach, pas un distributeur de solutions.",
+      },
+    ] satisfies QuestionQuiz[],
   },
 ];
 
@@ -117,14 +158,11 @@ export default function AtelierIAPage() {
           </p>
 
           <h3>Programme</h3>
-          <ol className="atelier-modules">
-            {p.modules.map((m) => (
-              <li key={m.titre}>
-                <strong>{m.titre}</strong>
-                <span>{m.texte}</span>
-              </li>
-            ))}
-          </ol>
+          <p className="atelier-indice">Clique sur une étape pour l’ouvrir.</p>
+          <ModulesCliquables modules={p.modules} />
+
+          <h3>Teste-toi</h3>
+          <MiniQuiz questions={p.quiz} />
 
           <h3>Pour aller plus loin</h3>
           <ul>

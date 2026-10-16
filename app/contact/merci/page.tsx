@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_NAME } from "@/lib/site";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Message envoyé",
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
 export default function MerciPage() {
   return (
     <div className="page">
+      <Breadcrumbs items={[{ name: "Accueil", href: "/" }, { name: "Contact", href: "/contact/" }, { name: "Message envoyé", href: "/contact/merci/" }]} />
       <h1>Message envoyé</h1>
       <p>
         Merci, ton message est bien arrivé. On le lit et on te répond à

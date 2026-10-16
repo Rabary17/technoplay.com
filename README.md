@@ -53,6 +53,7 @@ architecture différente.
   des articles. Les profils des auteurs ne vont jamais dans le `sameAs` de l'organisation :
   `sameAs` désigne la même entité, pas ses membres. Pour ajouter un profil du média (Google
   Business, YouTube…) : une ligne dans `SOCIAL_LINKS`.
+- **Google Analytics 4** (ajouté le 2026-10-13) : balise `gtag.js` dans le `<head>` de `app/layout.tsx`, identifiant `GA_MEASUREMENT_ID` dans `lib/site.ts`. Chargée en production uniquement (rien en `npm run dev`). La section « Mesure d'audience » de `/confidentialite/` la décrit : la garder en phase si l'outil change. Aucun bandeau de consentement n'est en place.
 - HTML sémantique (un seul `h1` par page, hiérarchie de titres propre).
 
 ## Ajouter un article
@@ -182,7 +183,7 @@ rubriques de rubriques. Source de vérité : `lib/categories.ts`. Les articles r
 - **Maison connectée** (`maison-connectee`)
 - **Programmation** (`programmation`)
 - **Appareils & Internet** (`appareils-internet`) : smartphone, ordinateur, box, casque, TV
-- **Sécurité & vie privée** (`securite-vie-privee`)
+- **Cybersécurité** (`cybersecurite`)
 
 Le type d'article (« c'est quoi ? », « comment faire », « lequel choisir ? ») se voit dans le
 titre et dans le gabarit, pas dans l'arborescence. Les anciennes URL de rubriques et de

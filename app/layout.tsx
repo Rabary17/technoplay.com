@@ -8,10 +8,12 @@ import {
   SITE_LANG,
   SOCIAL_LINKS,
   COMPANY,
+  GA_MEASUREMENT_ID,
 } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { CATEGORIES, categoryUrl } from "@/lib/categories";
+import { getPostsByCategory } from "@/lib/posts";
 import "./globals.css";
 
 // next/font : auto-hébergé au build (aucune requête vers
@@ -41,6 +43,7 @@ const inter = Inter({
 const INFO_LINKS = [
   { label: "À propos", href: "/a-propos/" },
   { label: "La rédaction", href: "/a-propos/#la-redaction" },
+  { label: "Atelier IA", href: "/atelier-ia/" },
   { label: "FAQ", href: "/faq/" },
   { label: "Contact", href: "/contact/" },
   { label: "Mentions légales", href: "/mentions-legales/" },
@@ -89,6 +92,27 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang={SITE_LANG} className={`${bricolage.variable} ${inter.variable}`}>
+      <head>
+        {/* Google Analytics 4 (balise gtag.js d'origine, dans le <head> pour
+            que Google la détecte, y compris pour valider la Search Console).
+            Production uniquement : rien n'est chargé en `npm run dev`. */}
+        {GA_MEASUREMENT_ID && process.env.NODE_ENV === "production" && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`,
+              }}
+            />
+          </>
+        )}
+      </head>
       <body>
         <JsonLd data={organizationSchema()} />
         <JsonLd data={websiteSchema()} />
@@ -99,11 +123,29 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <span>{SITE_NAME}</span>
             </a>
             <nav className="site-nav" aria-label="Navigation principale">
-              {CATEGORIES.map((category) => (
-                <a key={category.slug} href={categoryUrl(category)}>
-                  {category.short}
-                </a>
-              ))}
+              {CATEGORIES.map((category) => {
+                const articles = getPostsByCategory(category.slug);
+                return (
+                  <details key={category.slug} className="menu-item">
+                    <summary>{category.short}</summary>
+                    <div className="menu-panel">
+                      <a className="menu-panel__tout" href={categoryUrl(category)}>
+                        Tout le thème « {category.short} »
+                      </a>
+                      {articles.length > 0 ? (
+                        <ul>
+                          {articles.map((p) => (
+                            <li key={p.slug}>
+                              <a href={`/${p.slug}/`}>{p.title}</a>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </div>
+                  </details>
+                );
+              })}
+              <a className="site-nav__atelier" href="/atelier-ia/">Atelier IA</a>
             </nav>
           </div>
         </header>

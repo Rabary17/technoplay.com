@@ -4,7 +4,7 @@ seoTitle: "Gestionnaire de mots de passe gratuit et fiable"
 description: "Gestionnaire de mots de passe gratuit : Bitwarden, Proton Pass, KeePassXC ou celui de Google ou Apple ? Les critères pour bien choisir."
 date: "2026-10-15"
 author: "andrianina-rabarivelo"
-category: "securite-vie-privee"
+category: "cybersecurite"
 image: "/images/articles/gestionnaire-mot-de-passe-gratuit-hero.webp"
 imageAlt: "Un clavier d'ordinateur et un cadenas symbolisant la sécurité"
 updated: "2026-10-15"
@@ -178,4 +178,4 @@ Ses serveurs peuvent être attaqués. Mais ils ne stockent que des coffres chiff
 
 ## Et maintenant ?
 
-Choisis ton gestionnaire, puis migre tes comptes les plus importants en premier. Pour d'autres conseils de sécurité au quotidien, parcours [le thème Sécurité & vie privée](/securite-vie-privee/).
+Choisis ton gestionnaire, puis migre tes comptes les plus importants en premier. Pour d'autres conseils de sécurité au quotidien, parcours [le thème Cybersécurité](/cybersecurite/).

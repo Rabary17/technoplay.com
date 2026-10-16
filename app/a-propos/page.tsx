@@ -4,6 +4,7 @@ import CompanyDetails from "@/components/CompanyDetails";
 import { CATEGORIES, categoryUrl } from "@/lib/categories";
 import { AUTHORS, DEFAULT_AUTHOR_SLUG, getAuthor, authorUrl, type Author } from "@/lib/authors";
 import AuthorBox from "@/components/AuthorBox";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "À propos",
@@ -18,6 +19,7 @@ export default function AboutPage() {
   const team = AUTHORS.filter((a) => a.slug !== DEFAULT_AUTHOR_SLUG);
   return (
     <div className="page">
+      <Breadcrumbs items={[{ name: "Accueil", href: "/" }, { name: "À propos", href: "/a-propos/" }]} />
       <h1>À propos de {SITE_NAME}</h1>
       <p>
         {SITE_NAME}, c&apos;est le QG des débutants en technologie : un

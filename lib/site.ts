@@ -2,6 +2,12 @@
 // description, réutilisée par les métadonnées, le JSON-LD et le sitemap.
 // Même principe que lib/site.ts sur monauto/Techcars.
 export const SITE_URL = "https://techno-play.com";
+
+// Google Analytics 4 (mesure d'audience) — ajouté le 2026-10-13. Le script
+// n'est chargé qu'en production (app/layout.tsx), jamais en `npm run dev`.
+// Vide = aucune mesure. La politique de confidentialité
+// (app/confidentialite/page.tsx) décrit cet outil : à garder en phase.
+export const GA_MEASUREMENT_ID = "G-Y3N6GMWV1F";
 export const SITE_NAME = "Techno Play";
 export const SITE_DESCRIPTION =
   "Techno Play — le QG des débutants en tech : IA, robotique, maison connectée, programmation, appareils et sécurité, expliqués simplement avec des exemples concrets.";
@@ -125,4 +131,16 @@ export const LEGAL = {
   // vercel.com/legal/privacy-policy (l'ancienne adresse, issue d'un
   // annuaire tiers, n'y figure plus).
   hebergeur_adresse: "440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis",
+};
+
+// Formulaire d'abonnement à la newsletter (Zoho CRM, Web-to-Lead) — à créer
+// dans Zoho CRM, puis coller ici les valeurs fournies par Zoho (même principe
+// que ZOHO_WEBFORM). Tant qu'elles valent « TODO », le formulaire n'apparaît pas.
+export const ZOHO_NEWSLETTER = {
+  actionUrl: "https://crm.zoho.com/crm/WebToLeadForm",
+  xnQsjsdp: "TODO",
+  xmIwtLD: "TODO",
+  actionType: "TODO",
+  honeypot: "aG9uZXlwb3Q",
+  returnUrl: "https://techno-play.com/atelier-ia/",
 };

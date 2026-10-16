@@ -4,7 +4,7 @@ seoTitle: "VPN gratuit : comment vérifier qu'il est fiable"
 description: "VPN gratuit : comment il gagne de l'argent, ce qu'il protège vraiment, les critères de fiabilité et les signaux d'alerte avant d'installer."
 date: "2026-10-15"
 author: "andrianina-rabarivelo"
-category: "securite-vie-privee"
+category: "cybersecurite"
 image: "/images/articles/vpn-gratuit-hero.webp"
 imageAlt: "Un ordinateur portable et une icône de cadenas"
 updated: "2026-10-15"
@@ -136,4 +136,4 @@ Rien ne le garantit. Certains services bloquent les VPN, et les offres gratuites
 
 ## Et maintenant ?
 
-Tu sais maintenant comment trier un VPN gratuit. Pour protéger aussi tes comptes, pense à un mot de passe unique et solide pour chacun. Retrouve tous nos conseils dans [le thème Sécurité & vie privée](/securite-vie-privee/).
+Tu sais maintenant comment trier un VPN gratuit. Pour protéger aussi tes comptes, pense à un mot de passe unique et solide pour chacun. Retrouve tous nos conseils dans [le thème Cybersécurité](/cybersecurite/).

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SITE_NAME, COMPANY } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
 import { faqSchema } from "@/lib/schema";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "FAQ",
@@ -56,6 +57,7 @@ const questions = [
 export default function FaqPage() {
   return (
     <div className="page">
+      <Breadcrumbs items={[{ name: "Accueil", href: "/" }, { name: "FAQ", href: "/faq/" }]} />
       <JsonLd data={faqSchema(questions)} />
       <h1>Questions fréquentes</h1>
       <div>

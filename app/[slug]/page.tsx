@@ -10,7 +10,21 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import AuthorBox from "@/components/AuthorBox";
 import ArticleCard from "@/components/ArticleCard";
 import CategoryHub from "@/components/CategoryHub";
-import { blogPostingSchema } from "@/lib/schema";
+import { blogPostingSchema, faqSchema } from "@/lib/schema";
+
+// Questions de la section « FAQ » d'un article (gabarit éducatif) : chaque
+// question est un <h3> suivi de sa réponse en <p>. Sert au balisage FAQPage.
+function extraireFaq(html: string): { question: string; answer: string }[] {
+  const bloc = html.match(/<h2[^>]*>\s*FAQ\s*<\/h2>([\s\S]*?)(?=<h2|$)/i);
+  if (!bloc) return [];
+  const texte = (x: string) =>
+    x.replace(/<[^>]+>/g, "").replace(/&#39;/g, "'").replace(/&quot;/g, '"')
+      .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&amp;/g, "&").trim();
+  return [...bloc[1].matchAll(/<h3[^>]*>([\s\S]*?)<\/h3>\s*<p>([\s\S]*?)<\/p>/g)].map((m) => ({
+    question: texte(m[1]),
+    answer: texte(m[2]),
+  }));
+}
 
 // Ce segment sert deux types de pages au premier niveau d'URL :
 //   - les articles (/<slug-article>/), un par fichier content/posts/*.md ;
@@ -132,6 +146,9 @@ export default async function SlugPage({
       <div className="post-main">
       <article className="post-content">
         <JsonLd data={blogPostingSchema(post)} />
+        {extraireFaq(post.contentHtml).length > 0 ? (
+          <JsonLd data={faqSchema(extraireFaq(post.contentHtml))} />
+        ) : null}
         {category ? (
           <a className="tag" href={categoryUrl(category)}>
             {category.title}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_NAME, SITE_URL, LEGAL, COMPANY, COMPANY_PHONE_HREF } from "@/lib/site";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Mentions légales",
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function MentionsLegalesPage() {
   return (
     <div className="page">
+      <Breadcrumbs items={[{ name: "Accueil", href: "/" }, { name: "Mentions légales", href: "/mentions-legales/" }]} />
       <h1>Mentions légales</h1>
 
       <h2>Éditeur du site</h2>

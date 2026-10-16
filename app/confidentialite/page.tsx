@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { SITE_NAME, COMPANY, COMPANY_ADDRESS, COMPANY_PHONE_HREF } from "@/lib/site";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Politique de confidentialité",
@@ -7,13 +8,15 @@ export const metadata: Metadata = {
   alternates: { canonical: "/confidentialite/" },
 };
 
-// Politique volontairement courte : le site n'a, à ce stade, ni analytics
-// ni compte utilisateur — la seule collecte réelle est le formulaire de
-// contact (Zoho CRM, voir app/contact/page.tsx). À étoffer si un outil de
-// mesure d'audience (Plausible, GA, etc.) est ajouté plus tard.
+// Politique volontairement courte : pas de compte utilisateur ; les seules
+// collectes réelles sont le formulaire de contact (Zoho CRM, voir
+// app/contact/page.tsx) et la mesure d'audience Google Analytics 4 (ajoutée
+// le 2026-10-13, voir GA_MEASUREMENT_ID dans lib/site.ts et app/layout.tsx).
+// Toute modification de l'un doit se refléter dans l'autre.
 export default function ConfidentialitePage() {
   return (
     <div className="page">
+      <Breadcrumbs items={[{ name: "Accueil", href: "/" }, { name: "Confidentialité", href: "/confidentialite/" }]} />
       <h1>Politique de confidentialité</h1>
 
       <p>
@@ -47,11 +50,25 @@ export default function ConfidentialitePage() {
 
       <h2>Mesure d&apos;audience</h2>
       <p>
-        {/* TODO : mettre à jour cette section si un outil d'analytics est
-            ajouté (nom de l'outil, cookies éventuels, durée de
-            conservation). */}
-        Ce site n&apos;utilise actuellement aucun outil de mesure
-        d&apos;audience ni cookie de suivi publicitaire.
+        Ce site utilise Google Analytics 4, un outil de mesure d&apos;audience
+        fourni par Google, pour savoir quelles pages sont lues et améliorer
+        nos contenus. Il dépose dans votre navigateur des cookies (
+        <code>_ga</code> et <code>_ga_</code> suivi d&apos;un identifiant) qui
+        permettent de reconnaître un navigateur d&apos;une visite à l&apos;autre
+        et de produire des statistiques de fréquentation. Les données ainsi
+        collectées sont transmises à Google, qui les traite selon sa{" "}
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">
+          politique de confidentialité
+        </a>
+        .
+      </p>
+      <p>
+        Pour ne pas être mesuré, vous pouvez bloquer ou supprimer les cookies
+        dans les réglages de votre navigateur, ou installer le{" "}
+        <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noreferrer">
+          module de désactivation de Google Analytics
+        </a>
+        .
       </p>
 
       <h2>Vos droits</h2>

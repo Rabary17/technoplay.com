@@ -40,7 +40,7 @@ const CATEGORIES = [
   { slug: "maison-connectee", title: "Maison connectée", icon: "house" },
   { slug: "programmation", title: "Programmation", icon: "code" },
   { slug: "appareils-internet", title: "Appareils & Internet", icon: "smartphone" },
-  { slug: "securite-vie-privee", title: "Sécurité & vie privée", icon: "shield-check" },
+  { slug: "cybersecurite", title: "Cybersécurité", icon: "shield-check" },
 ];
 
 function readIconInner(name) {

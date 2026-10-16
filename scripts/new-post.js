@@ -52,7 +52,7 @@ date: "${today}"
 author: "${choix.auteur}"
 # Thème : un des slugs de lib/categories.ts —
 #   intelligence-artificielle, robotique-drones, maison-connectee,
-#   programmation, appareils-internet, securite-vie-privee
+#   programmation, appareils-internet, cybersecurite
 # Détermine le fil d'Ariane, l'étiquette des cartes et l'image à la une de secours.
 category: "${categorie || "TODO"}"
 # Date de mise à jour (optionnelle) : "AAAA-MM-JJ"

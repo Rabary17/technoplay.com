@@ -34,7 +34,7 @@ const PHOTO_THEME: Record<CategorySlug, PhotoAccueil> = {
   "maison-connectee": T.maison,
   programmation: P.methode,
   "appareils-internet": P.guides,
-  "securite-vie-privee": T.cyber,
+  cybersecurite: T.cyber,
 };
 
 /**
@@ -101,7 +101,8 @@ const FAQ = [
   },
   {
     question: "Les articles sont-ils gratuits ?",
-    answer: "Oui. Tout le site est en accès libre, sans inscription ni abonnement.",
+    answer:
+      "Oui. Tous les articles sont en accès libre, sans inscription. L’abonnement à la newsletter est facultatif : il sert seulement à recevoir nos actualités par email.",
   },
   {
     question: "Je ne trouve pas la réponse à ma question. Que faire ?",
@@ -215,7 +216,13 @@ export default function HomePage() {
                   </h3>
                   <p>{category.description}</p>
                   <p className="trend-tile__example">
-                    {"Par exemple\u00a0: «\u00a0"}{nbsp(category.questions[0].question)}{"\u00a0»"}
+                    {"Par exemple\u00a0: «\u00a0"}
+                    {category.questions[0].slug ? (
+                      <a href={`/${category.questions[0].slug}/`}>{nbsp(category.questions[0].question)}</a>
+                    ) : (
+                      nbsp(category.questions[0].question)
+                    )}
+                    {"\u00a0»"}
                   </p>
                 </div>
               </li>

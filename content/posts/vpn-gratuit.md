@@ -5,6 +5,8 @@ description: "VPN gratuit : comment il gagne de l'argent, ce qu'il protège vrai
 date: "2026-10-15"
 author: "andrianina-rabarivelo"
 category: "securite-vie-privee"
+image: "/images/articles/vpn-gratuit-hero.webp"
+imageAlt: "Un ordinateur portable et une icône de cadenas"
 updated: "2026-10-15"
 sources:
   - titre: "Cybermalveillance.gouv.fr : recommandations de sécurité informatique pour le télétravail"
@@ -34,6 +36,8 @@ Cet article t'explique le principe, la logique économique du gratuit et les cri
 
 Un VPN, ou réseau privé virtuel, crée un tunnel chiffré entre ton appareil et un serveur. Ce qui passe dans ce tunnel est illisible pour les personnes qui écoutent le réseau. Les recommandations de Cybermalveillance.gouv.fr présentent d'ailleurs le VPN comme un moyen de chiffrer les connexions externes.
 
+![Une personne qui travaille dans un café avec son ordinateur](/images/articles/vpn-gratuit-1.webp)
+
 <div class="exemple">
 
 **Un exemple concret**
@@ -53,6 +57,8 @@ La double authentification est un bon réflexe sur tes comptes importants. Cyber
 ## Comment gagne un VPN gratuit ?
 
 Un service gratuit doit trouver de l'argent quelque part. Il existe trois grandes possibilités : la publicité, la revente ou l'exploitation de données, et l'offre payante qui sert de vitrine au gratuit. Les deux premières sont à surveiller de près.
+
+![Un bouclier symbolisant la protection en ligne](/images/articles/vpn-gratuit-2.webp)
 
 Proton VPN, par exemple, indique que son offre gratuite « is supported by paying users », c'est-à-dire qu'elle est financée par ses abonnés payants. C'est une explication claire. Un autre éditeur peut faire un autre choix. Lis sa page avant de faire confiance.
 

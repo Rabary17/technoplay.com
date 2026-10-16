@@ -5,6 +5,8 @@ description: "OLED ou QLED : la différence entre les deux dalles, expliquée si
 date: "2026-10-15"
 author: "nekena-judicael"
 category: "appareils-internet"
+image: "/images/articles/oled-ou-qled-hero.webp"
+imageAlt: "Un salon avec un grand téléviseur allumé"
 updated: "2026-10-15"
 sourcesConsultees: "2026-10-15"
 sources:
@@ -29,6 +31,8 @@ En magasin, les étiquettes se ressemblent. Les prix varient beaucoup, et chaque
 ## C'est quoi, concrètement ?
 
 Le piège vient des noms. Le QLED n'est pas une technologie totalement nouvelle. C'est un écran à cristaux liquides, appelé **LCD**, comme beaucoup de téléviseurs. On y ajoute une couche de **points quantiques**, de minuscules particules qui rendent les couleurs plus vives. Samsung décrit ainsi le fonctionnement : ces points sont éclairés par un rétroéclairage, qui leur permet de diffuser leurs couleurs.
+
+![Une télévision allumée dans une pièce sombre](/images/articles/oled-ou-qled-1.webp)
 
 L'OLED fonctionne autrement. Le sigle signifie *Organic Light Emitting Diode*, soit diode électroluminescente organique. Selon Samsung, cette technologie n'a besoin d'aucune lumière supplémentaire. Chaque **pixel**, c'est-à-dire le plus petit point lumineux de l'image, s'allume tout seul. Un pixel éteint ne donne plus aucune lumière, donc le noir affiché est un vrai noir.
 
@@ -78,6 +82,8 @@ Une chaîne d'information en continu affiche souvent le même bandeau. Si c'est 
 ## Et le Mini LED ?
 
 Tu verras aussi le **Mini LED** en magasin. Si tu hésites entre deux prix proches, compare un QLED et un Mini LED côte à côte.
+
+![Plusieurs téléviseurs exposés dans un magasin](/images/articles/oled-ou-qled-2.webp)
 
 ## Les erreurs de débutant à éviter
 

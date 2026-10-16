@@ -5,6 +5,8 @@ description: "Casque Bluetooth pour le sport : forme, indice IP, maintien et sé
 date: "2026-10-15"
 author: "nekena-judicael"
 category: "appareils-internet"
+image: "/images/articles/casque-bluetooth-sport-hero.webp"
+imageAlt: "Une personne qui court avec des écouteurs sans fil"
 updated: "2026-10-15"
 sources:
   - titre: "Wikipédia (FR) : indice de protection (source citée, non officielle)"
@@ -36,6 +38,8 @@ Cet article t'aide à trier les critères. Il ne cite aucun modèle, car les fic
 
 Un casque Bluetooth se connecte sans fil à ton téléphone. Il existe trois grandes formes. Les écouteurs intra-auriculaires entrent dans le conduit de l'oreille. Le casque couvre l'oreille ou la recouvre. La conduction osseuse, elle, pose des capteurs sur les pommettes : le son passe par l'os jusqu'à l'oreille interne, et ton conduit auditif reste libre.
 
+![Gros plan sur des écouteurs sans fil](/images/articles/casque-bluetooth-sport-1.webp)
+
 <div class="exemple">
 
 **Un exemple concret**
@@ -58,6 +62,8 @@ Ces conseils sont des repères de départ. Ils ne remplacent pas la fiche techni
 ## Résistance à l'eau et à la sueur : comprendre les indices IP
 
 L'indice IP est un code en deux chiffres, défini par la norme CEI 60529, reprise en Europe sous le nom EN 60529. Le premier chiffre concerne les solides, comme la poussière. Le second concerne les liquides. La lettre X signifie que l'appareil n'est pas classé pour ce critère.
+
+![Une personne qui fait du sport en extérieur](/images/articles/casque-bluetooth-sport-2.webp)
 
 - **IPX4** : protection contre les projections d'eau venant de toutes les directions. Utile pour la sueur et la pluie légère.
 - **IP67** : totalement protégé contre la poussière, et protégé contre une immersion temporaire, 30 minutes jusqu'à 1 m de profondeur.

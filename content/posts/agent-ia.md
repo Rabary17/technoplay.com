@@ -5,6 +5,8 @@ description: "Agent IA : la différence avec un chatbot, comment il agit avec de
 date: "2026-10-15"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "/images/articles/agent-ia-hero.webp"
+imageAlt: "Un robot et un ordinateur portable sur un bureau, illustrant un assistant IA"
 updated: "2026-10-15"
 sourcesConsultees: "2026-10-15"
 sources:
@@ -29,6 +31,8 @@ Tu poses une question à un chatbot, et il te répond. Ensuite, c'est à toi de 
 ## C'est quoi, concrètement ?
 
 Imagine un guichet d'information. Tu demandes comment refaire ta carte grise, et l'agent au guichet t'explique la démarche. C'est le principe d'un **chatbot** : il répond, mais c'est toi qui fais le travail.
+
+![Une personne qui travaille devant un écran, avec un assistant IA à côté](/images/articles/agent-ia-1.webp)
 
 Imagine maintenant que tu dises à un assistant : « Occupe-toi de ma carte grise ». Il rassemble les documents, remplit le formulaire et te demande ta validation avant l'envoi. C'est le principe d'un **agent IA** : tu fixes l'objectif, il enchaîne les actions.
 
@@ -56,6 +60,8 @@ Cette boucle « agir, observer, corriger » fait toute la différence avec un ch
 ## Lequel choisir selon ton cas ?
 
 Tu n'as pas toujours besoin d'un agent. Le tableau t'aide à trancher.
+
+![Un carnet et une liste de tâches pour organiser un travail](/images/articles/agent-ia-2.webp)
 
 | Critère | Chatbot | Agent IA |
 |---|---|---|

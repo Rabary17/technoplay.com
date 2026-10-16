@@ -5,6 +5,8 @@ description: "Claude ou ChatGPT ? On compare les offres gratuites et payantes, C
 date: "2026-10-15"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "/images/articles/claude-ou-chatgpt-hero.webp"
+imageAlt: "Une personne qui écrit sur un ordinateur portable"
 updated: "2026-10-15"
 sources:
   - titre: "Claude : plans et tarifs"
@@ -34,6 +36,8 @@ Cet article s'appuie sur les pages officielles consultées le 15 octobre 2026. I
 
 Claude est l'assistant d'Anthropic. ChatGPT est l'assistant d'OpenAI. Les deux s'appuient sur un grand modèle de langage : un programme qui produit du texte à partir de ta demande. Tu lui écris en français, il te répond dans la même langue.
 
+![Une personne qui rédige un texte](/images/articles/claude-ou-chatgpt-1.webp)
+
 <div class="exemple">
 
 **Un exemple concret**
@@ -56,6 +60,8 @@ L'offre gratuite de ChatGPT permet des conversations texte illimitées, sous ré
 | Abonnement de base | Pro : 17 $ par mois avec engagement annuel, ou 20 $ en mensuel. Inclut Claude Code | Plus : offre payante mensuelle, tarif à consulter sur chatgpt.com/pricing |
 | Abonnement haut de gamme | Max : à partir de 100 $ par mois | Pro : offre payante plus avancée, tarif à consulter sur chatgpt.com/pricing |
 | Équipe | Team : 20 $ ou 25 $ par siège et par mois selon l'engagement | Business, à partir de 2 utilisateurs |
+
+![Un carnet et un stylo pour noter ses idées](/images/articles/claude-ou-chatgpt-2.webp)
 
 Les prix de Claude sont affichés en dollars. Le prix en euros n'apparaît pas sur la page consultée. Convertis avec précaution : ton abonnement peut être facturé avec une autre devise et des frais.
 

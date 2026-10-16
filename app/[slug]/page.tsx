@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getAllSlugs, getPostBySlug, getPostsByCategory, resolveCoverImage } from "@/lib/posts";
+import { getAllPosts, getAllSlugs, getPostBySlug, getPostsByCategory, resolveCoverImage } from "@/lib/posts";
 import { SITE_URL } from "@/lib/site";
 import { CATEGORIES, getCategory, resolveCategory, categoryUrl } from "@/lib/categories";
 import { resolveAuthor, authorUrl } from "@/lib/authors";
@@ -118,9 +118,18 @@ export default async function SlugPage({
     ? getPostsByCategory(category.slug).filter((p) => p.slug !== post.slug).slice(0, 3)
     : [];
 
+  // Colonne de droite : les 6 articles disponibles les plus récents
+  // (getAllPosts est déjà trié du plus récent au plus ancien et filtré
+  // sur la date de publication), sans l'article en cours de lecture.
+  const recents = getAllPosts()
+    .filter((p) => p.slug !== post.slug)
+    .slice(0, 6);
+
   return (
     <div className="page">
       <Breadcrumbs items={crumbs} />
+      <div className="post-layout">
+      <div className="post-main">
       <article className="post-content">
         <JsonLd data={blogPostingSchema(post)} />
         {category ? (
@@ -187,6 +196,20 @@ export default async function SlugPage({
           </div>
         </section>
       ) : null}
+      </div>
+
+      <aside className="post-sidebar" aria-labelledby="articles-recents">
+        <h2 id="articles-recents">Articles récents</h2>
+        <ol className="recent-list">
+          {recents.map((p) => (
+            <li key={p.slug}>
+              <a href={`/${p.slug}/`}>{p.title}</a>
+              <time dateTime={p.date}>{formatDate(p.date)}</time>
+            </li>
+          ))}
+        </ol>
+      </aside>
+      </div>
     </div>
   );
 }

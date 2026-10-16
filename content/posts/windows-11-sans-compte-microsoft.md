@@ -5,6 +5,8 @@ description: "Windows 11 sans compte Microsoft : ce qu'apporte un compte local, 
 date: "2026-10-15"
 author: "nekena-judicael"
 category: "appareils-internet"
+image: "/images/articles/windows-11-sans-compte-microsoft-hero.webp"
+imageAlt: "Un ordinateur de bureau dans un espace de travail"
 updated: "2026-10-15"
 sources:
   - titre: "Microsoft Support : passer d'un compte local à un compte Microsoft dans Windows"
@@ -34,6 +36,8 @@ Cet article explique la différence entre les deux types de comptes et la métho
 
 Un compte Microsoft est un identifiant en ligne. Il sert à te connecter à Windows et à plusieurs services de Microsoft. Un compte local est un identifiant qui n'existe que sur cet ordinateur. Tu choisis un nom d'utilisateur et un mot de passe, et Windows les garde en local.
 
+![Une personne qui configure son ordinateur](/images/articles/windows-11-sans-compte-microsoft-1.webp)
+
 <div class="exemple">
 
 **Un exemple concret**
@@ -56,6 +60,8 @@ Le choix dépend de ton usage. Si tu as plusieurs appareils et que tu veux retro
 ## Passer d'un compte Microsoft à un compte local, pas à pas
 
 Microsoft décrit la procédure dans sa page d'aide. Elle se fait depuis les Paramètres, sans réinstaller Windows.
+
+![Un ordinateur de bureau et son écran](/images/articles/windows-11-sans-compte-microsoft-2.webp)
 
 1. Ouvre les **Paramètres**, puis clique sur **Comptes**, puis sur **Vos informations**.
 2. Clique sur **Se connecter avec un compte local**. Ce lien n'apparaît que si tu utilises un compte Microsoft.

@@ -5,6 +5,8 @@ description: "Capture d'écran sur PC : Windows + Maj + S pour choisir une zone,
 date: "2026-10-15"
 author: "nekena-judicael"
 category: "appareils-internet"
+image: "/images/articles/capture-ecran-pc-hero.webp"
+imageAlt: "Un poste de travail avec un ordinateur et un clavier"
 updated: "2026-10-15"
 sources:
   - titre: "Assistance Microsoft — Utiliser l'outil Capture d'écran"
@@ -33,6 +35,8 @@ Une fois la logique comprise, tu ne perdras plus une capture. Un petit conseil :
 ## C'est quoi, concrètement ?
 
 Une capture d'écran est une image de ce qui s'affiche à l'instant où tu la prends. Elle montre exactement ce que tu vois, sans ambiguïté. Le destinataire comprend donc plus vite qu'avec une longue explication. Windows propose plusieurs raccourcis pour cela. Ils se distinguent par deux choses : ce que tu veux capturer, et l'endroit où l'image atterrit.
+
+![Gros plan sur l'écran d'un ordinateur portable](/images/articles/capture-ecran-pc-1.webp)
 
 Le **presse-papiers** est une mémoire temporaire. L'image y attend jusqu'à ce que tu copies autre chose. Pour la récupérer, tu la colles avec **Ctrl + V** dans un e-mail, un document ou une conversation. Aucun logiciel à installer n'est nécessaire : les outils sont déjà dans Windows.
 
@@ -80,6 +84,8 @@ Beaucoup de claviers compacts n'ont pas de touche Impr écran. Pas de panique : 
 ## Où sont enregistrées tes captures ?
 
 Tout dépend du raccourci utilisé.
+
+![Un clavier d'ordinateur](/images/articles/capture-ecran-pc-2.webp)
 
 Avec **Windows + Maj + S**, l'image est copiée et enregistrée dans le dossier **Captures d'écran**. Ce dossier est un sous-dossier de **Images**, soit **Images\Captures d'écran**.
 

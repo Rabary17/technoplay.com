@@ -5,6 +5,8 @@ description: "Gestionnaire de mots de passe gratuit : Bitwarden, Proton Pass, Ke
 date: "2026-10-15"
 author: "andrianina-rabarivelo"
 category: "securite-vie-privee"
+image: "/images/articles/gestionnaire-mot-de-passe-gratuit-hero.webp"
+imageAlt: "Un clavier d'ordinateur et un cadenas symbolisant la sécurité"
 updated: "2026-10-15"
 sources:
   - titre: "Cybermalveillance.gouv.fr — Pourquoi et comment bien gérer ses mots de passe ?"
@@ -43,6 +45,8 @@ Dans ce guide, on explique d'abord comment ça protège tes comptes. Ensuite, on
 ## C'est quoi, concrètement ?
 
 Un gestionnaire de mots de passe est une appli qui range tes identifiants dans un **coffre**. Ce coffre s'ouvre avec un seul mot de passe, appelé **mot de passe maître**. Le gestionnaire fait trois choses. Il **génère** des mots de passe longs et aléatoires. Il les **remplit** à ta place sur les sites. Il les **synchronise** entre ton téléphone et ton ordinateur.
+
+![Une personne qui tape un mot de passe sur un ordinateur](/images/articles/gestionnaire-mot-de-passe-gratuit-1.webp)
 
 Cybermalveillance.gouv.fr rappelle le principe clé : un seul mot de passe à retenir, celui qui ouvre le coffre. Le gestionnaire fait tout le travail.
 
@@ -95,6 +99,8 @@ Côté Apple, l'app **Mots de passe** demande iOS 18 ou une version ultérieure.
 ## Le gestionnaire du navigateur suffit-il ?
 
 Pour beaucoup de personnes, oui. C'est déjà un énorme progrès par rapport au même mot de passe partout.
+
+![Un cadenas symbolisant la protection des comptes](/images/articles/gestionnaire-mot-de-passe-gratuit-2.webp)
 
 Ses atouts sont simples : il est déjà installé, et il est bien intégré. Si tu vis entièrement dans l'écosystème Google ou Apple, l'expérience est fluide.
 

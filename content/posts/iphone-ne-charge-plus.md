@@ -5,6 +5,8 @@ description: "Ton iPhone ne charge plus ou détecte le chargeur sans charger ? L
 date: "2026-10-15"
 author: "nekena-judicael"
 category: "appareils-internet"
+image: "/images/articles/iphone-ne-charge-plus-hero.webp"
+imageAlt: "Un smartphone branché à son chargeur"
 updated: "2026-10-15"
 sourcesConsultees: "2026-10-15"
 sources:
@@ -29,6 +31,8 @@ Le câble est branché, l'écran affiche peut-être l'éclair, mais le pourcenta
 ## C'est quoi, concrètement ?
 
 Quand l'iPhone ne charge plus, la panne peut venir de trois endroits : l'accessoire (câble, adaptateur), le port de charge, ou le logiciel. Apple décrit les vérifications dans cet ordre, du plus simple au plus technique. Tu peux suivre le même chemin.
+
+![Gros plan sur la prise de charge d'un téléphone](/images/articles/iphone-ne-charge-plus-1.webp)
 
 <div class="exemple">
 
@@ -69,6 +73,8 @@ Un connecteur forcé peut se casser, et le port peut être endommagé. Si le câ
 ## Il détecte le chargeur mais ne charge pas
 
 L'éclair apparaît, mais le pourcentage stagne ? Plusieurs explications n'ont rien d'une panne.
+
+![Un chargeur branché sur une prise murale](/images/articles/iphone-ne-charge-plus-2.webp)
 
 **La recharge optimisée.** Cette fonction réduit le temps passé à pleine charge pour ménager la batterie. Apple indique qu'elle apprend ta routine quotidienne. Elle peut dépasser 80 % seulement quand tu vas en avoir besoin.
 

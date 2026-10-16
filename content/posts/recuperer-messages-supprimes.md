@@ -5,6 +5,8 @@ description: "Récupérer des SMS, WhatsApp ou Messenger supprimés : corbeille,
 date: "2026-10-15"
 author: "nekena-judicael"
 category: "appareils-internet"
+image: "/images/articles/recuperer-messages-supprimes-hero.webp"
+imageAlt: "Un téléphone affichant des messages"
 updated: "2026-10-15"
 sources:
   - titre: "Assistance Apple — Récupérer les messages texte supprimés sur votre iPhone ou iPad"
@@ -35,6 +37,8 @@ Si ce n'est pas le cas, les chances sont minces. Mieux vaut le savoir tout de su
 ## C'est quoi, concrètement ?
 
 Quand tu supprimes un message, trois cas sont possibles. Le message part dans une **corbeille**, qui le garde pendant un temps limité. Il existe dans une **sauvegarde** faite avant la suppression. Ou il n'existe plus nulle part sur ton téléphone.
+
+![Une personne qui lit des messages sur son téléphone](/images/articles/recuperer-messages-supprimes-1.webp)
 
 Dans les deux premiers cas, le message n'est pas vraiment effacé. Dans le dernier, il est très probablement perdu. Les smartphones récents **chiffrent** leurs données, ce qui rend la récupération directe très difficile.
 
@@ -95,6 +99,8 @@ Ensuite, demande à ton interlocuteur une capture d'écran. Supprimer une conver
 ## Logiciels de récupération : à quoi t'attendre
 
 Avant de sortir ta carte bancaire, prends ton temps. Tape « récupérer SMS supprimés » dans un moteur de recherche, et tu trouveras beaucoup de logiciels. Le scénario revient souvent. Une analyse gratuite annonce des résultats prometteurs. Ensuite, une licence payante est demandée pour récupérer quoi que ce soit.
+
+![Une corbeille, symbole des fichiers supprimés](/images/articles/recuperer-messages-supprimes-2.webp)
 
 Retiens trois points avant de sortir ta carte bancaire :
 

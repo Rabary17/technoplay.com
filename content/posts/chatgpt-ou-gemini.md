@@ -5,6 +5,8 @@ description: "ChatGPT ou Gemini ? On compare les offres gratuites et payantes, l
 date: "2026-10-15"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "/images/articles/chatgpt-ou-gemini-hero.webp"
+imageAlt: "Un téléphone affichant une interface d'IA"
 updated: "2026-10-15"
 sources:
   - titre: "ChatGPT : offres et tarifs"
@@ -34,6 +36,8 @@ Cet article compare ce que disent les pages officielles de chaque service. Il ne
 
 ChatGPT est l'assistant d'OpenAI. Gemini est l'assistant de Google. Tous les deux s'appuient sur un grand modèle de langage, un programme entraîné sur d'énormes quantités de textes. Il écrit sa réponse mot après mot, en choisissant la suite la plus probable.
 
+![Une personne qui discute avec une IA sur son ordinateur](/images/articles/chatgpt-ou-gemini-1.webp)
+
 <div class="exemple">
 
 **Un exemple concret**
@@ -58,6 +62,8 @@ ChatGPT propose aussi une offre Go, qui peut contenir des publicités. Les prix 
 ## Écrire, résumer, reformuler : lequel choisir ?
 
 Pour ces tâches, la consigne compte plus que l'outil. Plus ta demande est précise, meilleure sera la réponse. Donne un contexte, un objectif et un format. Notre guide des prompts détaille cette méthode.
+
+![Une représentation abstraite de l'intelligence artificielle](/images/articles/chatgpt-ou-gemini-2.webp)
 
 Les deux assistants traitent ces demandes. Aucune page officielle ne dit lequel rédige le mieux. Nous n'avons pas mesuré la qualité des textes produits. Fais donc ton propre test : même consigne, deux réponses, un choix.
 

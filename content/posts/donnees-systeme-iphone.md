@@ -5,6 +5,8 @@ description: "Données système iPhone trop lourdes ? Ce qu'elles contiennent, c
 date: "2026-10-15"
 author: "nekena-judicael"
 category: "appareils-internet"
+image: "/images/articles/donnees-systeme-iphone-hero.webp"
+imageAlt: "Un téléphone posé sur une table, écran allumé"
 updated: "2026-10-15"
 sources:
   - titre: "Assistance Apple — Vérifier l'espace de stockage sur votre iPhone et iPad"
@@ -32,6 +34,8 @@ Dans ce guide, on regarde d'abord ce que ce poste contient. Ensuite, on passe au
 
 En clair, la barre mélange plusieurs types de fichiers. C'est pour cela qu'elle paraît si floue. Apple décrit les Données système comme l'espace occupé par le système d'exploitation. Le système d'exploitation, c'est le logiciel de base de ton iPhone. Il gère les applis, le matériel et d'autres éléments. Apple précise que cet espace varie selon l'appareil et son modèle.
 
+![L'écran d'accueil d'un smartphone avec ses applications](/images/articles/donnees-systeme-iphone-1.webp)
+
 Une partie de ce poste ne se supprime pas. Apple cite les voix de Siri, les polices, les dictionnaires, ainsi que les fichiers d'historique et de cache non supprimables. Un **cache** est une copie gardée en réserve pour aller plus vite. Un **fichier d'historique** garde une trace de ce que le téléphone a fait.
 
 <div class="exemple">
@@ -53,6 +57,8 @@ La barre n'est pas figée. Sa taille change avec ton usage et avec ton modèle d
 ## Comment faire de la place, pas à pas
 
 Commence par regarder la répartition du stockage. Va dans les **Réglages**, puis **Général**, puis **Stockage**. Le titre exact peut varier selon l'appareil.
+
+![Une personne qui utilise son téléphone](/images/articles/donnees-systeme-iphone-2.webp)
 
 Ensuite, suis les recommandations d'Apple dans la section Stockage :
 

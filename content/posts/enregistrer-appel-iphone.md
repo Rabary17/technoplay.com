@@ -5,6 +5,8 @@ description: "Enregistrer un appel sur iPhone ou Android : la manipulation pas �
 date: "2026-10-15"
 author: "nekena-judicael"
 category: "appareils-internet"
+image: "/images/articles/enregistrer-appel-iphone-hero.webp"
+imageAlt: "Une personne qui parle au téléphone"
 updated: "2026-10-15"
 sourcesConsultees: "2026-10-15"
 sources:
@@ -33,6 +35,8 @@ Un rendez-vous dicté au téléphone, une adresse donnée à toute vitesse, un �
 ## C'est quoi, concrètement ?
 
 Enregistrer un appel, c'est garder la conversation sous forme de fichier audio. Sur iPhone, Apple indique que la fonction est disponible à partir d'iOS 18.1. Une fois l'enregistrement lancé, tu retrouves le fichier et la transcription dans l'app Notes.
+
+![Un smartphone affichant une application d'enregistrement](/images/articles/enregistrer-appel-iphone-1.webp)
 
 <div class="exemple">
 
@@ -70,6 +74,8 @@ Sur un Samsung, la fonction peut dépendre du modèle. Cherche une rubrique sur 
 ## Lequel choisir selon ton cas ?
 
 Ton application Téléphone ne propose pas la fonction ? Utilise ce tableau pour savoir où regarder.
+
+![Une main qui tient un smartphone](/images/articles/enregistrer-appel-iphone-2.webp)
 
 | Appareil | Méthode | Interlocuteur prévenu automatiquement ? |
 |---|---|---|

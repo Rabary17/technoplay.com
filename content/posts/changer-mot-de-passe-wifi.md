@@ -5,6 +5,8 @@ description: "Changer le mot de passe Wi-Fi de ta box Freebox, Livebox, SFR ou B
 date: "2026-10-15"
 author: "nekena-judicael"
 category: "appareils-internet"
+image: "/images/articles/changer-mot-de-passe-wifi-hero.webp"
+imageAlt: "Un routeur Wi-Fi posé dans un salon"
 updated: "2026-10-15"
 sources:
   - titre: "Assistance Free — Modifier ma clé Wi-Fi"
@@ -39,6 +41,8 @@ Le hic, c'est que chaque opérateur range l'option à un endroit différent. Fre
 ## C'est quoi, concrètement ?
 
 Ton mot de passe Wi-Fi, aussi appelé **clé Wi-Fi**, est le code qui autorise un appareil à rejoindre ton réseau sans fil. Ta box s'en sert pour **chiffrer** la connexion. Chiffrer veut dire brouiller les données, pour qu'un inconnu ne puisse pas les lire.
+
+![Une personne qui se connecte au Wi-Fi depuis son canapé](/images/articles/changer-mot-de-passe-wifi-1.webp)
 
 Changer la clé, c'est remplacer ce code par un nouveau. Le mot de passe est sensible : ne le partage qu'avec les personnes de confiance. Les appareils qui connaissaient l'ancien doivent saisir le nouveau pour revenir sur le réseau. Un code connu de trop de monde expose ton réseau. Un ancien invité peut encore s'y connecter. Changer la clé coupe son accès d'un coup.
 
@@ -99,6 +103,8 @@ Ouvre l'appli Bouygues Telecom ou l'interface web de ta Bbox. Cherche la partie 
 ## Les erreurs de débutant à éviter
 
 Ces erreurs sont très courantes. Elles se corrigent vite, une fois qu'on les connaît.
+
+![Un routeur avec ses voyants lumineux](/images/articles/changer-mot-de-passe-wifi-2.webp)
 
 - **Chercher le code sous la box.** Après un changement, il ne marche plus, selon Orange.
 - **Oublier un appareil.** Une TV ou une imprimante peut être hors ligne sans qu'on le remarque tout de suite.

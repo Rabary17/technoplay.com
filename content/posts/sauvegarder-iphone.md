@@ -5,6 +5,8 @@ description: "Sauvegarder ton iPhone : iCloud, PC Windows, Mac ou disque dur ext
 date: "2026-10-15"
 author: "nekena-judicael"
 category: "appareils-internet"
+image: "/images/articles/sauvegarder-iphone-hero.webp"
+imageAlt: "Un ordinateur portable et un symbole de nuage pour la sauvegarde"
 updated: "2026-10-15"
 sourcesConsultees: "2026-10-15"
 sources:
@@ -40,6 +42,8 @@ Ton iPhone contient tes photos, tes messages et tes codes de connexion. Le jour 
 
 Une sauvegarde est une copie de tes données et de tes réglages. Si ton iPhone est perdu ou remplacé, tu peux restaurer cette copie sur un nouvel appareil. Apple distingue deux grandes familles : la sauvegarde iCloud, en ligne, et la sauvegarde sur ordinateur, avec un Mac ou un PC Windows.
 
+![Un disque dur externe branché à un ordinateur](/images/articles/sauvegarder-iphone-1.webp)
+
 <div class="exemple">
 
 **Un exemple concret**
@@ -64,6 +68,8 @@ Si tu veux la tranquillité, choisis iCloud. Si ton espace iCloud est plein et q
 ## Comment faire, pas à pas
 
 ### Sauvegarder sur iCloud
+
+![Un téléphone et des photos stockées dans le nuage](/images/articles/sauvegarder-iphone-2.webp)
 
 1. Connecte ton iPhone à un **réseau Wi-Fi**.
 2. Ouvre l'app **Réglages**, touche ton nom, puis **iCloud**.

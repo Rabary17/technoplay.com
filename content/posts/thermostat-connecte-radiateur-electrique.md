@@ -1,7 +1,7 @@
 ---
 title: "Quel thermostat connecté pour un radiateur électrique ?"
 seoTitle: "Thermostat connecté pour radiateur électrique : lequel ?"
-description: "Thermostat connecté pour radiateur électrique : sans fil ou filaire, fonctions utiles, économies possibles et conseils pour bien choisir, sans jargon."
+description: "Thermostat connecté pour radiateur électrique : sans fil ou filaire, fonctions utiles, économies possibles et conseils pour bien choisir."
 date: "2026-10-16"
 author: "mialy-andriaharisoa"
 category: "maison-connectee"

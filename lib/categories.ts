@@ -404,7 +404,7 @@ export const CATEGORIES: Category[] = [
     short: "Cybersécurité",
     icon: "shield-check",
     description:
-      "Mots de passe, VPN, arnaques en ligne : te protéger sur Internet sans paranoïa ni jargon.",
+      "Mots de passe, VPN, arnaques en ligne : te protéger sur Internet sans paranoïa.",
     body: "Se protéger en ligne ne demande pas d'être expert : quelques bons réflexes évitent l'essentiel des problèmes. On t'explique les risques simplement, puis les gestes à adopter, dans le bon ordre.",
     sousCategories: DONNEES_SOUS_CATEGORIES["cybersecurite"],
   },

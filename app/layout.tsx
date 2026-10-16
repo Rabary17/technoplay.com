@@ -156,7 +156,7 @@ gtag('config', '${GA_MEASUREMENT_ID}');`,
                 </a>
                 <p className="footer-tagline">
                   Le QG des débutants en tech : des explications simples, des
-                  exemples concrets, zéro jargon.
+                  exemples concrets.
                 </p>
               </div>
               <nav aria-label="Thèmes">

@@ -117,7 +117,7 @@ function buildDefaultSvg() {
   <text x="80" y="400" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="64" fill="${WHITE}">Techno Play</text>
   <text font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="30" fill="${WHITE}" opacity="0.9">
     <tspan x="80" y="452">Le QG des débutants en tech :</tspan>
-    <tspan x="80" y="490">simple, concret, sans jargon</tspan>
+    <tspan x="80" y="490">simple, concret</tspan>
   </text>
 </svg>`;
 }

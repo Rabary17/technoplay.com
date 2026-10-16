@@ -154,7 +154,7 @@ export default function HomePage() {
           <ul className="hero-proof">
             <li>
               <Icon name="check" size={18} />
-              Zéro jargon : chaque mot technique est expliqué
+              Chaque mot technique est expliqué
             </li>
             <li>
               <Icon name="check" size={18} />

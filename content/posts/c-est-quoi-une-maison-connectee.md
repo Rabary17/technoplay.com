@@ -14,7 +14,7 @@ sources:
 sourcesConsultees: "2026-10-16"
 ---
 
-Une maison connectée est un logement dont certains appareils se commandent depuis un téléphone ou avec la voix. Une ampoule, une prise ou un thermostat peuvent ainsi réagir à distance. Cet article vous explique le principe, sans jargon.
+Une maison connectée est un logement dont certains appareils se commandent depuis un téléphone ou avec la voix. Une ampoule, une prise ou un thermostat peuvent ainsi réagir à distance. Cet article vous explique le principe.
 
 <div class="essentiel">
 

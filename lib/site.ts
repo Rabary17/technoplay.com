@@ -74,6 +74,35 @@ export const COMPANY_PHONE_HREF = `tel:${COMPANY.telephone.replace(/\s+/g, "")}`
 // la création d'un prospect) : l'adresse n'a rien à faire dans ce dépôt,
 // qui est public.
 
+// Profils officiels du média (jamais de lien fictif : les handles @technoplay
+// d'origine n'étaient que des placeholders, retirés le 2026-10-05 — un lien
+// mort nuit plus à la crédibilité qu'une absence). Chaque profil réel ajouté
+// ici, `{ label, url }`, apparaît dans « Nous suivre » du pied de page, sur
+// la page À propos et dans le `sameAs` JSON-LD de l'organisation (lib/schema.ts),
+// y compris celle qui figure en `publisher` des articles et en `worksFor`
+// des auteurs. Page LinkedIn ajoutée le 2026-10-07. Ordre de priorité pour
+// Google : fiche Google Business Profile / Maps d'Anmira Studio, page
+// LinkedIn, chaîne YouTube (seulement si on y publie), puis Facebook et X.
+export const SOCIAL_LINKS: { label: string; url: string }[] = [
+  { label: "LinkedIn", url: "https://www.linkedin.com/company/techno-play-com/" },
+];
+
+// Mentions légales : identité de l'éditeur (Anmira Studio) et de
+// l'hébergeur. Aucune valeur inventée : la forme juridique n'a pas été
+// communiquée, la ligne « Statut » n'existe donc pas ; NIF et STAT
+// s'affichent dès qu'ils sont renseignés dans COMPANY.
+export const LEGAL = {
+  editeur_nom: COMPANY.nom,
+  editeur_adresse: COMPANY_ADDRESS,
+  editeur_telephone: COMPANY.telephone,
+  directeur_publication: "Andrianina RABARIVELO",
+  hebergeur_nom: "Vercel Inc.",
+  // Adresse relevée le 2026-10-05 dans la section « Contact Us » de
+  // vercel.com/legal/privacy-policy (l'ancienne adresse, issue d'un
+  // annuaire tiers, n'y figure plus).
+  hebergeur_adresse: "440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis",
+};
+
 // Envoi des formulaires (contact et newsletter) : le navigateur appelle la
 // fonction serverless api/lead.js, qui crée le prospect dans Zoho CRM via
 // son API. Les identifiants Zoho ne sont jamais dans ce dépôt : ils sont

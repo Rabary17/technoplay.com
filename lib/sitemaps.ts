@@ -69,7 +69,7 @@ export function postEntries(): SitemapEntry[] {
 
 // Pages « de service » indexables. Hors sitemap : /mentions-legales/ et
 // /contact/merci/ (noindex).
-const PAGES = ["/a-propos/", "/faq/", "/contact/", "/confidentialite/"];
+const PAGES = ["/a-propos/", "/faq/", "/contact/", "/confidentialite/", "/atelier-ia/", "/atelier-ia/parents/", "/atelier-ia/lyceens/"];
 
 export function pageEntries(): SitemapEntry[] {
   return [

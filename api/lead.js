@@ -4,7 +4,8 @@
 // variables d'environnement du projet Vercel (voir .env.example).
 // Aucune donnée personnelle n'est écrite dans les journaux.
 
-const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || "https://techno-play.com")
+// Le site répond sur le domaine nu et sur www : les deux sont autorisés par défaut.
+const ALLOWED_ORIGINS = (process.env.ALLOWED_ORIGINS || "https://techno-play.com,https://www.techno-play.com")
   .split(",")
   .map((o) => o.trim())
   .filter(Boolean);

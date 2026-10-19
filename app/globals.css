@@ -798,3 +798,33 @@ a.tag:hover { background: var(--brand); color: var(--on-brand); text-decoration:
 .recent-item__titre:hover { text-decoration: underline; }
 .recent-item__corps time { font-size: var(--fs-small); color: var(--fg-3); }
 .recent-list li.recent-item time { margin-top: 0; }
+
+/* Porte d'entrée des ateliers : deux cartes côte à côte, une par public. */
+.atelier-cartes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+@media (min-width: 641px) {
+  .atelier-cartes { grid-template-columns: 1fr 1fr; }
+}
+.atelier-carte {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface, transparent);
+}
+.atelier-carte h2 { margin: 0; }
+.atelier-carte p { margin: 0; }
+.atelier-carte .btn { align-self: flex-start; margin-top: auto; }
+.atelier-carte__public {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}

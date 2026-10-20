@@ -94,6 +94,42 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
       bonne: 0,
       explication: "Repose ta question autrement, puis compare avec une source fiable avant de t'en servir.",
     },
+    {
+      question: "Une IA ressent-elle des émotions ?",
+      choix: [
+        "Non, elle écrit des phrases polies sans rien ressentir",
+        "Oui, comme un humain",
+      ],
+      bonne: 0,
+      explication: "Une IA est un programme. Elle peut écrire « je suis content », mais elle ne ressent rien et n'est pas vivante.",
+    },
+    {
+      question: "Tu fais tes devoirs avec une IA. Quel est le bon usage ?",
+      choix: [
+        "Lui demander d'expliquer la leçon autrement",
+        "Recopier sa réponse sans la lire",
+      ],
+      bonne: 0,
+      explication: "L'IA peut t'aider à comprendre. Recopier ne t'apprend rien, et sa réponse peut contenir des erreurs.",
+    },
+    {
+      question: "Qu'est-ce qu'un biais dans une IA ?",
+      choix: [
+        "Une idée de travers qui se répète, héritée de ses exemples",
+        "Une panne d'électricité",
+      ],
+      bonne: 0,
+      explication: "Si une IA n'a vu que des pilotes hommes, elle risque de croire qu'un pilote est forcément un homme.",
+    },
+    {
+      question: "Quelle information un enfant ne doit jamais donner à une IA ?",
+      choix: [
+        "Son adresse ou le nom de son école",
+        "Sa couleur préférée",
+      ],
+      bonne: 0,
+      explication: "Ton nom complet, ton adresse, ton école, ton téléphone et tes photos restent privés. Demande à un adulte en cas de doute.",
+    },
   ],
   "choisir-bon-mot-de-passe": [
     {

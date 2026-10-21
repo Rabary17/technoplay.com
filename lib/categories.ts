@@ -259,6 +259,13 @@ const DONNEES_SOUS_CATEGORIES: Record<CategorySlug, SousCategorie[]> = {
   ],
   "appareils-internet": [
     {
+      slug: "comprendre-internet",
+      titre: "Comprendre Internet et ses appareils",
+      questions: [
+        { question: "C'est quoi Internet, et comment marchent nos appareils ?", slug: "c-est-quoi-internet" },
+      ],
+    },
+    {
       slug: "depanner-telephone",
       titre: "Dépanner son téléphone",
       questions: [
@@ -310,6 +317,13 @@ const DONNEES_SOUS_CATEGORIES: Record<CategorySlug, SousCategorie[]> = {
     },
   ],
   cybersecurite: [
+    {
+      slug: "comprendre-la-cybersecurite",
+      titre: "Comprendre la cybersécurité",
+      questions: [
+        { question: "C'est quoi la cybersécurité, et à quoi ça sert ?", slug: "c-est-quoi-la-cybersecurite" },
+      ],
+    },
     {
       slug: "mots-de-passe",
       titre: "Mots de passe",
@@ -412,6 +426,8 @@ export const CATEGORIES: Category[] = [
 
 /** Sous-catégorie de chaque article publié (slug d'article -> slug de sous-catégorie). */
 export const ARTICLE_SOUS_CATEGORIE: Record<string, string> = {
+  "c-est-quoi-internet": "comprendre-internet",
+  "c-est-quoi-la-cybersecurite": "comprendre-la-cybersecurite",
   "intelligence-artificielle-guide-debutants": "comprendre-l-ia",
   "top10-outils-ia-debutants": "comprendre-l-ia",
   "chatgpt-ou-gemini": "utiliser-un-assistant",

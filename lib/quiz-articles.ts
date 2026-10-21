@@ -12,6 +12,26 @@ export interface QuestionQuiz {
 }
 
 export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
+  "c-est-quoi-internet": [
+    { question: "Le Wi-Fi, est-ce la même chose qu'Internet ?", choix: ["Non, le Wi-Fi relie l'appareil à la box, qui est reliée à Internet", "Oui, c'est le même mot"], bonne: 0, explication: "Si la box n'est plus reliée à Internet, le Wi-Fi peut marcher sans qu'aucun site ne s'ouvre." },
+    { question: "Comment une photo voyage-t-elle sur Internet ?", choix: ["Découpée en petits paquets, réassemblés à l'arrivée", "D'un seul bloc, par la poste"], bonne: 0, explication: "Chaque paquet porte une adresse. L'appareil qui reçoit les remet dans l'ordre." },
+    { question: "Qu'est-ce qu'un serveur ?", choix: ["Un ordinateur allumé en permanence qui stocke et envoie des sites ou des fichiers", "Une personne qui apporte les plats au restaurant"], bonne: 0, explication: "Quand tu ouvres un site, ton appareil demande les pages à un serveur." },
+    { question: "Quelle est la différence entre Internet et le Web ?", choix: ["Internet est le réseau, le Web est l'ensemble des sites", "Il n'y en a aucune"], bonne: 0, explication: "Le Web n'est qu'un des usages d'Internet, comme les courriels ou les appels vidéo." },
+    { question: "À quoi sert la box Internet ?", choix: ["Elle apporte Internet chez toi et le distribue aux appareils", "Elle recharge les téléphones"], bonne: 0, explication: "La box fait le lien entre la maison et le reste d'Internet." },
+    { question: "Que fait un enfant s'il voit quelque chose qui le choque en ligne ?", choix: ["Il ferme et en parle à un adulte", "Il le garde pour lui"], bonne: 0, explication: "Il n'a rien fait de mal. Un adulte peut l'aider et régler les outils de protection." },
+    { question: "Pourquoi installer les mises à jour ?", choix: ["Elles corrigent souvent des failles de sécurité", "Elles changent seulement la couleur de l'écran"], bonne: 0, explication: "Un appareil à jour est bien mieux protégé." },
+    { question: "Qu'est-ce que le cloud ?", choix: ["Un espace de stockage sur des serveurs, accessible depuis tes appareils", "Un nuage qui fait tomber la pluie sur la box"], bonne: 0, explication: "Ranger ses fichiers dans le cloud permet de les retrouver depuis un autre appareil." },
+  ],
+  "c-est-quoi-la-cybersecurite": [
+    { question: "Qu'est-ce que l'hameçonnage (phishing) ?", choix: ["Un faux message qui imite un service pour voler tes informations", "Une technique de pêche en mer"], bonne: 0, explication: "Il joue sur l'urgence, la peur ou un cadeau pour te faire cliquer." },
+    { question: "Quel est le meilleur mot de passe ?", choix: ["Un mot de passe long et différent pour chaque compte", "Le même mot de passe partout, pour s'en souvenir"], bonne: 0, explication: "Si un site est piraté, un mot de passe unique évite que les autres comptes tombent aussi." },
+    { question: "Un SMS dit que ton colis est bloqué et demande ta carte bancaire. Que fais-tu ?", choix: ["Je ne clique pas et je vérifie sur le site officiel", "Je paie vite les frais"], bonne: 0, explication: "C'est un piège classique. Vérifie ton colis par l'application ou le site officiel du transporteur." },
+    { question: "À quoi sert une sauvegarde ?", choix: ["À récupérer tes fichiers en cas de problème", "À rendre l'ordinateur plus rapide"], bonne: 0, explication: "Une copie sur un support débranché protège aussi contre les rançongiciels." },
+    { question: "Un site avec un cadenas est-il forcément honnête ?", choix: ["Non, le cadenas veut seulement dire que la connexion est chiffrée", "Oui, toujours"], bonne: 0, explication: "Un faux site peut aussi avoir un cadenas. Vérifie l'adresse et la réputation du site." },
+    { question: "Un jeu te promet un cadeau si tu donnes ton mot de passe. C'est :", choix: ["Un piège pour voler ton compte", "Une vraie offre"], bonne: 0, explication: "Aucun vrai jeu ne demande ton mot de passe pour offrir un cadeau." },
+    { question: "Tu t'es fait piéger. Quelle est la première chose à faire ?", choix: ["Changer le mot de passe du compte concerné", "Attendre que ça passe"], bonne: 0, explication: "Agis vite : change le mot de passe, appelle ta banque si besoin et demande de l'aide." },
+    { question: "Un antivirus suffit-il à te protéger de tout ?", choix: ["Non, il ne bloque pas un faux message qui te pousse à donner ton mot de passe", "Oui, il bloque tout"], bonne: 0, explication: "L'antivirus aide, mais tes réflexes restent la meilleure protection." },
+  ],
   "intelligence-artificielle-guide-debutants": [
     {
       question: "Qu'est-ce qu'une IA générative ?",
@@ -318,6 +338,9 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Que faut-il faire quand un programme affiche une erreur ?", choix: ["Lire le message d'erreur et corriger", "Le relancer dix fois sans rien changer"], bonne: 0, explication: "Les messages d'erreur indiquent souvent où chercher le problème." },
     { question: "Quel est le rôle d'un langage de programmation ?", choix: ["C'est la langue dans laquelle on écrit les instructions", "C'est un antivirus"], bonne: 0, explication: "Chaque langage est adapté à un usage précis, mais tous servent à écrire des instructions." },
     { question: "Pourquoi comprendre la programmation est-il utile même sans devenir développeur ?", choix: ["Pour mieux comprendre les applications et automatiser certaines tâches", "Pour réparer les câbles de la maison"], bonne: 0, explication: "Un petit programme peut renommer des centaines de fichiers. Et comprendre le principe aide à mieux utiliser les outils." },
+    { question: "Qu'est-ce qu'une boucle dans un programme ?", choix: ["Une instruction qui répète une action plusieurs fois", "Un câble enroulé"], bonne: 0, explication: "Par exemple : pour chaque photo du dossier, réduis sa taille." },
+    { question: "Comment appelle-t-on une erreur dans un programme ?", choix: ["Un bug", "Un pixel"], bonne: 0, explication: "Tout le monde fait des bugs. Les chercher et les corriger fait partie du travail." },
+    { question: "Avec quel outil un enfant peut-il commencer à programmer ?", choix: ["Scratch, avec des blocs à assembler", "Un tableur de comptabilité"], bonne: 0, explication: "Scratch permet de programmer en assemblant des blocs de couleur, sans rien taper." },
   ],
   "c-est-quoi-un-robot": [
     { question: "Quelles sont les trois parties d'un robot ?", choix: ["Des capteurs, un programme et des moteurs", "Un écran, un clavier et une souris"], bonne: 0, explication: "Les capteurs observent, le programme décide, les moteurs agissent." },
@@ -328,6 +351,9 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Dans quel ordre fonctionne le cycle d'un robot ?", choix: ["Mesurer, comparer aux règles, choisir, agir", "Agir, puis mesurer, puis dormir"], bonne: 0, explication: "Ce cycle se répète des dizaines de fois par seconde, ce qui donne l'impression d'une réaction rapide." },
     { question: "Un robot est-il forcément intelligent ?", choix: ["Non, beaucoup suivent des règles simples", "Oui, par définition"], bonne: 0, explication: "L'intelligence dépend du programme. Beaucoup de robots font une seule tâche selon des règles fixes." },
     { question: "Parmi ces appareils, lequel est un robot ?", choix: ["Un aspirateur robot", "Un grille-pain"], bonne: 0, explication: "Il perçoit son environnement, décide et agit. Un grille-pain ne le fait pas." },
+    { question: "Un robot ressent-il la douleur ou la peur ?", choix: ["Non, il mesure des choses mais ne ressent rien", "Oui, comme un animal"], bonne: 0, explication: "Un robot est une machine. Ses capteurs mesurent, mais il n'a ni émotions ni sensations." },
+    { question: "Que faut-il faire avant de s'approcher d'un robot en marche ?", choix: ["Demander à un adulte de l'arrêter", "Mettre les doigts près des roues pour voir"], bonne: 0, explication: "Roues, brosses, hélices et lames peuvent blesser. On attend que le robot soit arrêté." },
+    { question: "Quelle est la différence entre un robot et une IA ?", choix: ["Le robot a un corps qui agit, l'IA est une façon de décider", "C'est exactement la même chose"], bonne: 0, explication: "Un robot peut utiliser une IA, mais beaucoup suivent seulement des règles fixes." },
   ],
   "c-est-quoi-une-maison-connectee": [
     { question: "Comment s'appelle l'ensemble des techniques qui automatisent la maison ?", choix: ["La domotique", "La géothermie"], bonne: 0, explication: "La domotique regroupe les techniques qui automatisent et pilotent les équipements de la maison." },
@@ -338,6 +364,9 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Quel est le premier geste pour installer un objet connecté ?", choix: ["L'alimenter, puis le relier à ton Wi-Fi", "Le poser dans le jardin"], bonne: 0, explication: "Une fois alimenté, l'objet se relie à ton réseau, puis tu l'ajoutes dans son application." },
     { question: "Pourquoi une maison connectée peut-elle réduire la consommation d'énergie ?", choix: ["Si on programme les appareils, notamment le chauffage", "Parce qu'elle produit sa propre électricité"], bonne: 0, explication: "Programmer le chauffage permet d'éviter de chauffer une maison vide. Le chauffage est souvent le poste le plus important." },
     { question: "Quel mot de passe faut-il choisir pour un objet connecté ?", choix: ["Un mot de passe long et unique", "Le mot de passe par défaut du fabricant"], bonne: 0, explication: "Le mot de passe par défaut est souvent connu. Un mot de passe long et unique protège bien mieux." },
+    { question: "Qu'est-ce qu'une automatisation dans une maison connectée ?", choix: ["Une règle « si… alors… » que la maison suit seule", "Un appareil qui devine ce que tu veux"], bonne: 0, explication: "Par exemple : si la température descend sous 18 degrés, alors allume le chauffage." },
+    { question: "Où ne faut-il pas installer une caméra connectée ?", choix: ["Dans une chambre d'enfant ou une salle de bain", "Devant la porte d'entrée"], bonne: 0, explication: "Une caméra filme aussi la vie privée de la famille. On la garde loin des pièces intimes." },
+    { question: "Un enfant peut-il faire des achats avec l'enceinte connectée ?", choix: ["Non, il demande toujours à un adulte", "Oui, c'est fait pour ça"], bonne: 0, explication: "Les parents peuvent souvent bloquer les achats à la voix ou exiger un code dans l'application." },
   ],
   "capture-ecran-pc": [
     { question: "Quel raccourci ouvre la sélection de zone pour une capture d'écran sous Windows ?", choix: ["Windows + Maj + S", "Ctrl + Alt + Suppr"], bonne: 0, explication: "Windows + Maj + S permet de choisir une zone de l'écran à capturer." },

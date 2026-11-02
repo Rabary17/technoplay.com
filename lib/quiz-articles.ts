@@ -569,6 +569,16 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Quel outil s'intègre aux logiciels Adobe ?", choix: ["Adobe Firefly", "Krea"], bonne: 0, explication: "Firefly s'intègre à Photoshop et aux autres outils de la suite Adobe." },
     { question: "Que faut-il garder pour progresser avec un générateur d'images ?", choix: ["Une trace de ses meilleurs essais", "Aucune trace, pour ne pas s'encombrer"], bonne: 0, explication: "Garder ses meilleures consignes permet de les réutiliser et de progresser." },
   ],
+  "comment-fonctionne-une-ia": [
+    { question: "Quel composant d'une IA joue le rôle du disque dur ?", choix: ["Les données d'entraînement", "La fenêtre de contexte"], bonne: 0, explication: "L'IA les lit pour apprendre, mais ne les garde pas telles quelles une fois entraînée." },
+    { question: "Où se trouve le savoir d'une IA ?", choix: ["Dans les paramètres de son réseau de neurones", "Dans des fichiers texte qu'elle relit"], bonne: 0, explication: "Ce sont des milliards de nombres réglés pendant l'entraînement." },
+    { question: "Pourquoi les IA tournent-elles sur des GPU ?", choix: ["Ils font des milliers de calculs simples en parallèle", "Ils affichent de plus belles réponses"], bonne: 0, explication: "Un réseau de neurones enchaîne des multiplications sur d'énormes tableaux de nombres." },
+    { question: "À quoi correspond la fenêtre de contexte ?", choix: ["À la mémoire vive : ce que l'IA a sous les yeux pendant l'échange", "Au disque dur de l'IA"], bonne: 0, explication: "Elle est limitée en tokens et se vide à la fin de la conversation." },
+    { question: "Pourquoi une IA semble-t-elle oublier le début d'une longue conversation ?", choix: ["Les éléments anciens sortent de la fenêtre de contexte", "Elle se fatigue"], bonne: 0, explication: "Quand la limite est dépassée, les messages les plus anciens ne sont plus pris en compte." },
+    { question: "Quel est l'équivalent des périphériques pour une IA ?", choix: ["Les outils : recherche web, code, fichiers", "Les paramètres"], bonne: 0, explication: "Ils relient le modèle au monde extérieur, comme le clavier ou la connexion d'un ordinateur." },
+    { question: "Qu'est-ce que l'inférence ?", choix: ["L'utilisation d'un modèle déjà entraîné pour répondre", "La phase où le modèle apprend"], bonne: 0, explication: "L'entraînement a lieu une fois ; l'inférence, à chaque question posée." },
+    { question: "Une IA apprend-elle pendant que tu discutes avec elle ?", choix: ["Non, ses paramètres restent figés", "Oui, à chaque message"], bonne: 0, explication: "Seule une nouvelle phase d'entraînement modifie ses paramètres." },
+  ],
   "histoire-intelligence-artificielle": [
     { question: "Quelle question Alan Turing pose-t-il en 1950 ?", choix: ["Les machines peuvent-elles penser ?", "Comment construire un ordinateur portable ?"], bonne: 0, explication: "Il propose de juger une machine sur sa capacité à passer pour un humain à l'écrit." },
     { question: "Où naît l'expression « intelligence artificielle » ?", choix: ["Au projet de Dartmouth, en 1956", "Dans la Silicon Valley, en 2010"], bonne: 0, explication: "John McCarthy l'emploie dans la proposition du projet, écrite avec Minsky, Rochester et Shannon." },

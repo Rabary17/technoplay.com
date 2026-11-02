@@ -148,4 +148,4 @@ Les chatbots actuels trompent souvent leurs interlocuteurs dans des conversation
 
 ## La suite de la série
 
-Tu connais maintenant les grandes étapes. Pour voir comment ces idées s'appliquent aujourd'hui, reviens au guide [C'est quoi, l'intelligence artificielle ?](/intelligence-artificielle-guide-debutants/). Le prochain article de la série compare les composants d'une IA à ceux d'un ordinateur.
+Tu connais maintenant les grandes étapes. Pour voir comment ces idées s'appliquent aujourd'hui, reviens au guide [C'est quoi, l'intelligence artificielle ?](/intelligence-artificielle-guide-debutants/). Le prochain article de la série explique [comment fonctionne une IA](/comment-fonctionne-une-ia/), en comparant ses composants à ceux d'un ordinateur.

@@ -569,6 +569,15 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Quel outil s'intègre aux logiciels Adobe ?", choix: ["Adobe Firefly", "Krea"], bonne: 0, explication: "Firefly s'intègre à Photoshop et aux autres outils de la suite Adobe." },
     { question: "Que faut-il garder pour progresser avec un générateur d'images ?", choix: ["Une trace de ses meilleurs essais", "Aucune trace, pour ne pas s'encombrer"], bonne: 0, explication: "Garder ses meilleures consignes permet de les réutiliser et de progresser." },
   ],
+  "ou-tourne-une-ia-cloud-ordinateur-telephone": [
+    { question: "Où tourne le modèle quand tu utilises l'application ChatGPT ?", choix: ["Sur les serveurs d'OpenAI", "Dans ton téléphone"], bonne: 0, explication: "L'application n'est qu'une fenêtre : sans connexion, elle ne répond plus." },
+    { question: "Quel est le principal avantage d'une IA dans le cloud ?", choix: ["La meilleure qualité de réponse, sans matériel à acheter", "Elle fonctionne sans Internet"], bonne: 0, explication: "Les centres de données font tourner des modèles trop gros pour un ordinateur personnel." },
+    { question: "Quel est l'avantage d'une IA installée sur ton ordinateur ?", choix: ["Tes données ne quittent pas ta machine", "Elle est toujours plus puissante"], bonne: 0, explication: "Elle est gratuite à l'usage et marche hors connexion, mais ses réponses sont moins bonnes." },
+    { question: "Qu'est-ce qui compte le plus pour faire tourner une IA en local ?", choix: ["La mémoire de l'ordinateur", "La taille de l'écran"], bonne: 0, explication: "Un modèle de 8 milliards de paramètres compressé tient dans 5 à 6 Go." },
+    { question: "Qu'est-ce qu'un NPU ?", choix: ["Une puce spécialisée dans les calculs d'IA, économe en énergie", "Un type d'écran"], bonne: 0, explication: "Apple l'appelle Neural Engine ; on le trouve aussi dans les puces Snapdragon et Tensor." },
+    { question: "Que fait le fonctionnement hybride ?", choix: ["Il traite les demandes simples sur l'appareil et les lourdes sur un serveur", "Il éteint l'IA la nuit"], bonne: 0, explication: "Apple Intelligence fonctionne ainsi, avec ses serveurs Private Cloud Compute." },
+    { question: "Pour résumer un document confidentiel, quelle option est la plus prudente ?", choix: ["Un modèle installé sur ton ordinateur", "Un assistant en ligne gratuit"], bonne: 0, explication: "Rien ne sort de ta machine. Le service en ligne donne de meilleurs résultats, mais le document part chez l'éditeur." },
+  ],
   "entreprises-ia-openai-anthropic-google-mistral": [
     { question: "Quelle entreprise a lancé ChatGPT ?", choix: ["OpenAI", "Google"], bonne: 0, explication: "OpenAI, fondée en 2015 à San Francisco, a ouvert ChatGPT au public en novembre 2022." },
     { question: "Comment s'appelle la famille de modèles d'Anthropic ?", choix: ["Claude", "Gemini"], bonne: 0, explication: "Anthropic décline Claude en trois tailles : Opus, Sonnet et Haiku." },

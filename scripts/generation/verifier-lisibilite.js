@@ -40,7 +40,7 @@ const LISTE_NOIRE = [
   /\bplongeons\b/, /\bdecouvrons\b/, /\bdecryptons\b/,
   /\bil est important de\b/, /\bil convient de\b/, /\bil faut savoir que\b/,
   /\bn'hesite(z)? pas\b/, /\bvous l'aurez compris\b/, /\bune chose est sure\b/,
-  /\ben somme\b/, /\ben definitive\b/, /\bpour resumer\b/, /\ben conclusion\b/, /\bautrement dit\b/,
+  /\ben somme\b/, /\ben definitive\b/, /(?:^|[.!?:]\s+)pour resumer\s*,/m, /\ben conclusion\b/, /\bautrement dit\b/,
   /\bforce est de constater\b/, /\btout l'enjeu\b/, /\bau coeur de\b/,
   /\bincontournable/, /\bpassionnant/, /\brevolutionn/, /\bbooster\b/,
   /\bc'est simple\b/, /\bvoila\b/, /\ble saviez-tu\b/, /\bspoiler\b/, /\bbonne nouvelle\b/,

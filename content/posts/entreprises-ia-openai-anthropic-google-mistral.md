@@ -144,4 +144,4 @@ Non. OpenAI est l'entreprise. ChatGPT est son application de discussion, qui uti
 
 ## La suite de la série
 
-Pour choisir un assistant au quotidien, lis notre comparatif [Claude ou ChatGPT : lequel choisir pour coder et écrire ?](/claude-ou-chatgpt/). L'article précédent décode [les paramètres d'une IA](/parametres-modele-ia/). Le suivant explique où tourne une IA : sur un serveur, sur ton ordinateur ou sur ton téléphone.
+Pour choisir un assistant au quotidien, lis notre comparatif [Claude ou ChatGPT : lequel choisir pour coder et écrire ?](/claude-ou-chatgpt/). L'article précédent décode [les paramètres d'une IA](/parametres-modele-ia/). Le suivant explique [où tourne une IA](/ou-tourne-une-ia-cloud-ordinateur-telephone/) : sur un serveur, sur ton ordinateur ou sur ton téléphone.

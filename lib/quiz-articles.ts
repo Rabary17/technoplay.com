@@ -569,6 +569,16 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Quel outil s'intègre aux logiciels Adobe ?", choix: ["Adobe Firefly", "Krea"], bonne: 0, explication: "Firefly s'intègre à Photoshop et aux autres outils de la suite Adobe." },
     { question: "Que faut-il garder pour progresser avec un générateur d'images ?", choix: ["Une trace de ses meilleurs essais", "Aucune trace, pour ne pas s'encombrer"], bonne: 0, explication: "Garder ses meilleures consignes permet de les réutiliser et de progresser." },
   ],
+  "comment-fabrique-modele-ia": [
+    { question: "Quelle est la première étape de fabrication d'un modèle d'IA ?", choix: ["La collecte des données", "La compression"], bonne: 0, explication: "On rassemble des pages web, des livres, du code et des contenus sous licence." },
+    { question: "Pourquoi nettoyer les données avant l'entraînement ?", choix: ["Des données propres donnent un meilleur modèle", "Pour que l'IA soit plus lourde"], bonne: 0, explication: "On retire doublons, déchets et données personnelles : un modèle entraîné sur du médiocre écrit du médiocre." },
+    { question: "Que fait le modèle pendant le pré-entraînement ?", choix: ["Il apprend à deviner le token suivant d'un texte", "Il discute avec des utilisateurs"], bonne: 0, explication: "Cette tâche répétée des milliards de fois lui apprend la langue, les faits et des formes de raisonnement." },
+    { question: "Que sait faire un modèle de base, juste après le pré-entraînement ?", choix: ["Compléter des textes, sans savoir dialoguer", "Répondre parfaitement à toutes les consignes"], bonne: 0, explication: "Le fine-tuning lui apprend ensuite à suivre une instruction et à tenir une conversation." },
+    { question: "Sur quoi repose le RLHF ?", choix: ["Des humains comparent deux réponses et choisissent la meilleure", "Le modèle lit encore plus de pages web"], bonne: 0, explication: "Le modèle apprend de ces préférences pour rendre ses réponses plus utiles et plus sûres." },
+    { question: "Qu'est-ce que le red teaming ?", choix: ["Des experts cherchent à faire mal se comporter le modèle", "Une couleur d'interface"], bonne: 0, explication: "Chaque faille trouvée donne lieu à de nouveaux ajustements avant la sortie." },
+    { question: "À quoi sert la quantification ?", choix: ["À alléger le modèle en réduisant la précision des paramètres", "À ajouter de nouvelles connaissances"], bonne: 0, explication: "Le fichier pèse deux à quatre fois moins lourd, pour une perte de qualité souvent faible." },
+    { question: "Quelle est la plus grosse dépense dans l'entraînement d'un grand modèle ?", choix: ["Le matériel, surtout les GPU", "Les frais de livraison"], bonne: 0, explication: "Selon Epoch AI, le matériel pèse plus que les salaires, et l'électricité reste une petite part." },
+  ],
   "token-ia-c-est-quoi": [
     { question: "Qu'est-ce qu'un token ?", choix: ["Un morceau de texte, souvent une partie de mot, que l'IA lit et écrit", "Une pièce de monnaie virtuelle"], bonne: 0, explication: "Le modèle ne voit ni lettres ni mots entiers, seulement des morceaux numérotés." },
     { question: "En anglais, combien de caractères fait un token en moyenne ?", choix: ["Environ 4", "Environ 40"], bonne: 0, explication: "Soit environ trois quarts de mot. En français, compte plutôt 3 à 4 caractères." },

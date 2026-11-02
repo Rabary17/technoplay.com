@@ -132,4 +132,4 @@ Oui. Les modèles qui lisent des images les découpent en petits carreaux conver
 
 ## La suite de la série
 
-Tu sais maintenant ce que lit une IA. L'article précédent de la série montre [comment fonctionne une IA, pièce par pièce](/comment-fonctionne-une-ia/). Le suivant raconte comment on fabrique un modèle, de la collecte des données jusqu'à sa sortie.
+Tu sais maintenant ce que lit une IA. L'article précédent de la série montre [comment fonctionne une IA, pièce par pièce](/comment-fonctionne-une-ia/). Le suivant raconte [comment on fabrique un modèle d'IA](/comment-fabrique-modele-ia/), de la collecte des données jusqu'à sa sortie.

@@ -131,4 +131,4 @@ Le modèle, c'est le réseau de neurones et ses paramètres. L'assistant, comme 
 
 ## La suite de la série
 
-Tu as vu les pièces de la machine. L'article précédent de la série retrace [l'histoire de l'intelligence artificielle, de Turing à GPT-6](/histoire-intelligence-artificielle/). Le prochain s'intéresse au token, l'unité qui fait lire, retenir et payer une IA.
+Tu as vu les pièces de la machine. L'article précédent de la série retrace [l'histoire de l'intelligence artificielle, de Turing à GPT-6](/histoire-intelligence-artificielle/). Le prochain explique [ce qu'est un token](/token-ia-c-est-quoi/), l'unité qui fait lire, retenir et payer une IA.

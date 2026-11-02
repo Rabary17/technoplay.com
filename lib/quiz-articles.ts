@@ -569,6 +569,16 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Quel outil s'intègre aux logiciels Adobe ?", choix: ["Adobe Firefly", "Krea"], bonne: 0, explication: "Firefly s'intègre à Photoshop et aux autres outils de la suite Adobe." },
     { question: "Que faut-il garder pour progresser avec un générateur d'images ?", choix: ["Une trace de ses meilleurs essais", "Aucune trace, pour ne pas s'encombrer"], bonne: 0, explication: "Garder ses meilleures consignes permet de les réutiliser et de progresser." },
   ],
+  "token-ia-c-est-quoi": [
+    { question: "Qu'est-ce qu'un token ?", choix: ["Un morceau de texte, souvent une partie de mot, que l'IA lit et écrit", "Une pièce de monnaie virtuelle"], bonne: 0, explication: "Le modèle ne voit ni lettres ni mots entiers, seulement des morceaux numérotés." },
+    { question: "En anglais, combien de caractères fait un token en moyenne ?", choix: ["Environ 4", "Environ 40"], bonne: 0, explication: "Soit environ trois quarts de mot. En français, compte plutôt 3 à 4 caractères." },
+    { question: "Pourquoi une phrase française coûte-t-elle souvent plus de tokens qu'en anglais ?", choix: ["Les dictionnaires de tokens ont été construits surtout sur des textes anglais", "Le français est interdit aux IA"], bonne: 0, explication: "Les mots anglais trouvent plus souvent une entrée complète dans le dictionnaire." },
+    { question: "Pourquoi une IA se trompe-t-elle parfois en comptant les lettres d'un mot ?", choix: ["Elle voit des morceaux de mots, pas des lettres", "Elle ne connaît pas l'alphabet"], bonne: 0, explication: "Le mot « arrière » peut lui arriver en deux morceaux, comme « arr » et « ière »." },
+    { question: "En quoi se mesure la fenêtre de contexte ?", choix: ["En tokens", "En gigaoctets de disque dur"], bonne: 0, explication: "Ta question, l'historique et les documents joints comptent tous dans cette limite." },
+    { question: "Que se passe-t-il quand une conversation dépasse la fenêtre de contexte ?", choix: ["Les tokens les plus anciens sont oubliés", "L'IA devient plus rapide"], bonne: 0, explication: "Elle peut alors contredire une consigne donnée au début de l'échange." },
+    { question: "Quels tokens coûtent en général le plus cher dans une API ?", choix: ["Les tokens de sortie, écrits par le modèle", "Les tokens d'entrée"], bonne: 0, explication: "La sortie coûte souvent quatre à cinq fois plus que l'entrée." },
+    { question: "Avec un abonnement à ChatGPT, les tokens comptent-ils ?", choix: ["Oui, ils déterminent les limites d'usage de la formule", "Non, ils n'existent plus"], bonne: 0, explication: "Tu ne paies pas au token, mais les longues conversations épuisent ton quota plus vite." },
+  ],
   "comment-fonctionne-une-ia": [
     { question: "Quel composant d'une IA joue le rôle du disque dur ?", choix: ["Les données d'entraînement", "La fenêtre de contexte"], bonne: 0, explication: "L'IA les lit pour apprendre, mais ne les garde pas telles quelles une fois entraînée." },
     { question: "Où se trouve le savoir d'une IA ?", choix: ["Dans les paramètres de son réseau de neurones", "Dans des fichiers texte qu'elle relit"], bonne: 0, explication: "Ce sont des milliards de nombres réglés pendant l'entraînement." },

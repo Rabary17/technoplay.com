@@ -436,6 +436,7 @@ export const ARTICLE_SOUS_CATEGORIE: Record<string, string> = {
   "parametres-modele-ia": "comprendre-l-ia",
   "entreprises-ia-openai-anthropic-google-mistral": "comprendre-l-ia",
   "ou-tourne-une-ia-cloud-ordinateur-telephone": "comprendre-l-ia",
+  "installer-ia-locale-ollama-lm-studio": "comprendre-l-ia",
   "chatgpt-ou-gemini": "utiliser-un-assistant",
   "claude-ou-chatgpt": "utiliser-un-assistant",
   "prompt-chatgpt": "utiliser-un-assistant",

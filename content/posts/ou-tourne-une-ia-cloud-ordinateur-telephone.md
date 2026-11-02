@@ -121,4 +121,4 @@ Parce que les centres de données disposent de centaines de gigaoctets de mémoi
 
 ## La suite de la série
 
-Pour savoir quels modèles tu peux installer chez toi, relis [qui fabrique les IA](/entreprises-ia-openai-anthropic-google-mistral/) : les modèles ouverts y sont détaillés. La suite pratique de la série montre comment installer une IA sur ton ordinateur avec Ollama ou LM Studio.
+Pour savoir quels modèles tu peux installer chez toi, relis [qui fabrique les IA](/entreprises-ia-openai-anthropic-google-mistral/) : les modèles ouverts y sont détaillés. La suite pratique de la série montre comment [installer une IA sur ton ordinateur avec Ollama ou LM Studio](/installer-ia-locale-ollama-lm-studio/).

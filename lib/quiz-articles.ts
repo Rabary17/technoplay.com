@@ -569,6 +569,15 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Quel outil s'intègre aux logiciels Adobe ?", choix: ["Adobe Firefly", "Krea"], bonne: 0, explication: "Firefly s'intègre à Photoshop et aux autres outils de la suite Adobe." },
     { question: "Que faut-il garder pour progresser avec un générateur d'images ?", choix: ["Une trace de ses meilleurs essais", "Aucune trace, pour ne pas s'encombrer"], bonne: 0, explication: "Garder ses meilleures consignes permet de les réutiliser et de progresser." },
   ],
+  "installer-ia-locale-ollama-lm-studio": [
+    { question: "Quel logiciel propose une interface graphique pour installer une IA en local ?", choix: ["LM Studio", "Le Gestionnaire des tâches"], bonne: 0, explication: "Tout se fait à la souris : recherche, téléchargement et discussion." },
+    { question: "Quel est le critère décisif pour choisir la taille du modèle ?", choix: ["La mémoire vive de l'ordinateur", "La taille de l'écran"], bonne: 0, explication: "Le modèle doit tenir en entier dans la mémoire pendant qu'il travaille." },
+    { question: "Avec 16 Go de mémoire, quelle taille de modèle viser ?", choix: ["7 à 8 milliards de paramètres", "70 milliards de paramètres"], bonne: 0, explication: "Compressé, un modèle de 8 milliards occupe environ 5 Go, avec une marge pour la conversation." },
+    { question: "Que fait la commande « ollama run » suivie d'un nom de modèle ?", choix: ["Elle télécharge le modèle si besoin et ouvre une discussion", "Elle désinstalle Ollama"], bonne: 0, explication: "Pour quitter la discussion, on tape /bye." },
+    { question: "Où télécharger les logiciels et les modèles ?", choix: ["Uniquement sur les sites officiels", "Sur n'importe quel site de téléchargement"], bonne: 0, explication: "Un faux installateur peut cacher un programme malveillant." },
+    { question: "Comment vérifier que l'IA tourne bien sur ta machine ?", choix: ["Couper le Wi-Fi et voir qu'elle répond toujours", "Redémarrer la box"], bonne: 0, explication: "Une fois le modèle téléchargé, tout fonctionne hors connexion." },
+    { question: "Sur quoi un petit modèle local est-il le plus fiable ?", choix: ["Le travail sur un texte que tu lui fournis", "L'actualité de la semaine"], bonne: 0, explication: "Il connaît moins de faits qu'un grand modèle et n'a pas accès à Internet." },
+  ],
   "ou-tourne-une-ia-cloud-ordinateur-telephone": [
     { question: "Où tourne le modèle quand tu utilises l'application ChatGPT ?", choix: ["Sur les serveurs d'OpenAI", "Dans ton téléphone"], bonne: 0, explication: "L'application n'est qu'une fenêtre : sans connexion, elle ne répond plus." },
     { question: "Quel est le principal avantage d'une IA dans le cloud ?", choix: ["La meilleure qualité de réponse, sans matériel à acheter", "Elle fonctionne sans Internet"], bonne: 0, explication: "Les centres de données font tourner des modèles trop gros pour un ordinateur personnel." },

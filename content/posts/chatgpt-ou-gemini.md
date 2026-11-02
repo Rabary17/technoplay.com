@@ -112,7 +112,7 @@ Ne colle jamais de mot de passe, de numéro de carte bancaire ou de données de 
 
 </div>
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 - **Choisir sur le nom ou la publicité.** Une marque connue ne garantit pas la meilleure réponse pour ta situation.
 - **Payer avant d'avoir testé.** Le gratuit suffit souvent à savoir si tu as besoin d'aller plus loin.

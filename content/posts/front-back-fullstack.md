@@ -23,7 +23,7 @@ Une application web ressemble à un restaurant. La salle, avec le menu et le ser
 
 ## Le front-end : ce qu'on voit
 
-Le front-end utilise HTML, CSS et JavaScript pour construire l'interface. C'est un bon point de départ pour un débutant, car le résultat est visible tout de suite. Les boutons, les formulaires et les animations relèvent de ce domaine.
+Le front-end utilise HTML, CSS et JavaScript pour construire l'interface. C'est un bon point de départ pour apprendre, car le résultat est visible tout de suite. Les boutons, les formulaires et les animations relèvent de ce domaine.
 
 ## Le back-end : ce qu'on ne voit pas
 

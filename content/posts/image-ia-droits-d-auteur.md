@@ -56,7 +56,7 @@ Une image qui montre une personne réelle ou une marque identifiable peut poser 
 
 </div>
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 - **Croire que « généré » veut dire « libre de droits ».** Chaque outil a ses propres règles.
 - **Chercher le style d'un artiste pour gagner du temps.** C'est justement le point le plus risqué.

@@ -7,7 +7,7 @@ author: "andee-rakotovao"
 category: "programmation"
 ---
 
-***Python est souvent conseillé aux débutants, car il se lit presque comme une phrase. Ton premier programme peut tenir en une ligne, et te faire comprendre l'essentiel.***
+***Python est souvent conseillé pour commencer à programmer, car il se lit presque comme une phrase. Ton premier programme peut tenir en une ligne, et te faire comprendre l'essentiel.***
 
 <div class="essentiel">
 

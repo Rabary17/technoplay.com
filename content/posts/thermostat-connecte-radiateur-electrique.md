@@ -75,7 +75,7 @@ Ne touchez jamais aux fils sous tension. Si l'installation demande de travailler
 
 </div>
 
-## Les erreurs de débutant
+## Les erreurs à éviter
 
 Première erreur : choisir un thermostat sans vérifier la compatibilité avec le radiateur. Deuxième erreur : régler une température trop haute en pensant chauffer plus vite. Le réglage ne change pas la vitesse de chauffe.
 

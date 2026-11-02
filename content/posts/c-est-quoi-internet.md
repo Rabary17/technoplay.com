@@ -1,11 +1,11 @@
 ---
 title: "C'est quoi Internet, et comment marchent nos appareils ?"
-seoTitle: "C'est quoi Internet ? Nos appareils expliqués simplement"
-description: "Internet, Wi-Fi, box, smartphone : comment tout ça marche, à quoi ça sert au quotidien et les bons réflexes. Expliqué simplement, sans jargon."
+seoTitle: "C'est quoi Internet ? Réseau, Wi-Fi et appareils expliqués"
+description: "Internet, Wi-Fi, box, smartphone : comment tout ça fonctionne, à quoi ça sert au quotidien et les bons réflexes pour protéger tes appareils."
 date: "2026-10-20"
 author: "nekena-judicael"
 category: "appareils-internet"
-updated: "2026-10-20"
+updated: "2026-11-02"
 sources:
   - titre: "Cybermalveillance.gouv.fr : les 10 mesures essentielles pour votre cybersécurité"
     url: "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/10-mesures-essentielles-assurer-securite-numerique"
@@ -16,8 +16,6 @@ sourcesConsultees: "2026-10-20"
 
 Tu envoies un message à un ami à l'autre bout du pays, et il le reçoit en une seconde. Tu regardes une vidéo stockée très loin de chez toi, sans attendre. Tu payes avec ton téléphone. Derrière tout ça, il y a Internet et les appareils qui s'y connectent. Ce guide t'explique ce qu'est Internet, comment tes appareils y accèdent, à quoi ça sert au quotidien et comment l'utiliser sans risque.
 
-Tu as 10 ans ? Ce guide est aussi pour toi. Lis-le seul ou avec un adulte. Certaines parties ont été écrites en pensant à toi. Cherche « Internet expliqué comme à un enfant », « Enfants et écrans : les règles d'or » et le jeu sans écran.
-
 <div class="essentiel">
 
 **L'essentiel en 30 secondes**
@@ -26,21 +24,15 @@ Internet est un immense réseau qui relie des appareils dans le monde entier. Te
 
 </div>
 
-## Internet expliqué comme à un enfant
-
-Imagine une ville gigantesque, avec des routes qui relient toutes les maisons du monde. Chaque appareil connecté, c'est une maison avec une adresse. Les informations, ce sont des lettres qui circulent sur ces routes.
-
-Quand tu envoies une photo à ta grand-mère, ton téléphone découpe la photo en plein de petits morceaux. Chaque morceau part dans une enveloppe avec l'adresse de ta grand-mère. Les enveloppes prennent parfois des routes différentes. À l'arrivée, son téléphone remet tous les morceaux dans l'ordre, et la photo apparaît.
-
-Les routes, ce sont des câbles sous la terre et même au fond des océans, et des ondes invisibles dans l'air. Les bureaux de poste, ce sont des ordinateurs spéciaux qui aiguillent les enveloppes. Et tout ça va tellement vite que tu ne vois rien du voyage.
-
 ## C'est quoi Internet, concrètement ?
 
-Internet est un **réseau de réseaux**. Ce n'est pas une seule machine, ni une seule entreprise. Ce sont d'innombrables réseaux plus petits, reliés entre eux. Il y a celui de ta maison, celui de ton école, ceux des entreprises et ceux des opérateurs.
+Internet est un **réseau de réseaux**. Ce n'est pas une seule machine, ni une seule entreprise. Ce sont d'innombrables réseaux plus petits, reliés entre eux. Il y a celui de ta maison, celui de ton bureau, ceux des entreprises et ceux des opérateurs.
 
-Pour que tout ce monde se comprenne, les appareils suivent les mêmes règles de communication. On appelle ces règles des **protocoles**. C'est un peu comme une langue commune que toutes les machines parlent.
+Pour que tout ce monde se comprenne, les appareils suivent les mêmes règles de communication. On appelle ces règles des **protocoles**. C'est une sorte de langue commune que toutes les machines parlent.
 
 Chaque appareil connecté reçoit une **adresse IP**, une suite de chiffres qui sert d'adresse postale. Les sites web, eux, sont rangés sur des ordinateurs allumés en permanence, qu'on appelle des **serveurs**. Quand tu ouvres un site, ton appareil demande les pages au serveur, qui te les envoie.
+
+Les données ne voyagent pas d'un bloc. Une photo envoyée est découpée en petits morceaux, les **paquets**, comme des enveloppes portant chacune l'adresse du destinataire. Les paquets prennent parfois des routes différentes : câbles enterrés, câbles sous-marins, ondes radio. Des ordinateurs spécialisés, les routeurs, les aiguillent. À l'arrivée, l'appareil les remet dans l'ordre et redemande ceux qui se sont perdus.
 
 <div class="exemple">
 
@@ -78,7 +70,7 @@ Un appareil connecté, c'est un petit ordinateur. Il a un processeur pour calcul
 |---|---|---|
 | Smartphone | Appeler, écrire, photographier, payer, se repérer | C'est l'appareil le plus personnel : protège-le avec un code |
 | Ordinateur | Travailler, écrire de longs textes, créer, faire ses démarches | Plus confortable pour taper et pour les tâches longues |
-| Tablette | Lire, regarder des vidéos, jouer, dessiner | Grand écran, facile à prendre en main pour les enfants |
+| Tablette | Lire, regarder des vidéos, jouer, dessiner | Grand écran, prise en main rapide |
 | Télévision connectée | Regarder des films, des séries et des vidéos en ligne | Elle a aussi des applications et des mises à jour |
 | Montre connectée | Voir ses notifications, suivre son activité | Elle dépend souvent du téléphone |
 | Objets de la maison | Lumières, prises, enceintes, thermostat | Voir notre guide sur la maison connectée |
@@ -91,7 +83,7 @@ Internet touche presque tous les moments de la journée. Voici les grands usages
 
 - **communiquer** : messages, appels vidéo, courriels avec ta famille, tes amis ou ton travail ;
 - **s'informer** : actualités, météo, horaires de bus, recettes, réponses à tes questions ;
-- **apprendre** : cours en ligne, tutoriels, dictionnaires, devoirs, langues étrangères ;
+- **apprendre** : cours en ligne, tutoriels, dictionnaires, formations, langues étrangères ;
 - **se divertir** : musique, films, séries, jeux, livres numériques ;
 - **acheter et payer** : commandes en ligne, paiement mobile, comparaison de prix ;
 - **faire ses démarches** : banque, impôts, santé, inscriptions, rendez-vous ;
@@ -99,7 +91,7 @@ Internet touche presque tous les moments de la journée. Voici les grands usages
 
 L'utilité d'Internet, c'est de rapprocher les gens et les informations. Une démarche qui demandait un déplacement se fait en quelques clics. Un cours qui n'existait que dans une ville est accessible depuis chez toi.
 
-## Pourquoi c'est utile de comprendre comment ça marche ?
+## Ce que ces bases changent au quotidien
 
 Comprendre les bases t'aide d'abord à **dépanner**. Quand Internet ne marche plus, tu sais quoi vérifier : la box, le Wi-Fi, ou l'appareil lui-même. Souvent, redémarrer la box ou l'appareil règle le problème.
 
@@ -115,45 +107,7 @@ Enfin, ça t'aide à **te protéger**. Tes informations voyagent et sont stocké
 - **« Les mises à jour ne servent qu'à changer l'apparence. »** Faux. Elles corrigent souvent des failles de sécurité.
 - **« Un appareil neuf n'a pas besoin de réglages. »** Faux. Prends quelques minutes pour régler la confidentialité et la sauvegarde.
 
-## Enfants et écrans : les règles d'or
-
-Internet ouvre aux enfants un monde immense pour apprendre et jouer. Il contient aussi des contenus et des personnes dont il faut se méfier. Quelques règles simples aident à en profiter sereinement.
-
-<div class="attention">
-
-**Sur Internet, on ne sait pas toujours qui est derrière l'écran**
-
-Une personne peut mentir sur son âge ou son identité. Un enfant ne doit jamais accepter de rencontrer quelqu'un connu sur Internet, ni envoyer de photos de lui. En cas de doute, il en parle tout de suite à un adulte.
-
-</div>
-
-### Les 5 règles pour les enfants
-
-1. **Ne donne jamais d'informations sur toi** : ton nom complet, ton adresse, ton école, ton numéro ou des photos de toi.
-2. **Garde ton mot de passe secret**, même pour tes meilleurs amis. Seuls tes parents peuvent le connaître.
-3. **Si tu vois quelque chose qui te choque ou te fait peur, ferme et parles-en à un adulte.** Tu n'as rien fait de mal.
-4. **Ne clique pas sur les publicités ou les cadeaux trop beaux pour être vrais.** C'est souvent un piège.
-5. **Fais des pauses.** Les yeux, le corps et la tête ont besoin de temps loin des écrans.
-
-### Pour les parents
-
-Commence par découvrir les applications et les jeux avec ton enfant, avant de le laisser seul. Fixez ensemble des règles claires : où l'appareil est utilisé, combien de temps, et ce qu'on fait quand quelque chose met mal à l'aise.
-
-Les téléphones, les tablettes et les box proposent des outils de contrôle parental. Ils permettent de limiter le temps d'écran ou de filtrer certains contenus. Leur nom et leur place changent selon les appareils. La plateforme officielle [Je protège mon enfant](https://jeprotegemonenfant.gouv.fr/) propose des conseils et des ressources pour t'aider.
-
-## Un jeu sans écran : le voyage des paquets
-
-Ce jeu montre comment une information voyage sur Internet. Il faut au moins quatre joueurs, une feuille, des ciseaux et un crayon.
-
-1. Un joueur, l'« expéditeur », écrit une courte phrase sur une feuille, puis la découpe en quatre morceaux.
-2. Il numérote chaque morceau de 1 à 4, et écrit dessus le prénom du « destinataire ».
-3. Les autres joueurs jouent les « routeurs ». Ils se passent les morceaux de main en main, chacun par un chemin différent.
-4. Le destinataire reçoit les morceaux dans le désordre, puis les remet dans l'ordre grâce aux numéros.
-5. Pour corser le jeu, un routeur « perd » un morceau. Le destinataire doit alors le redemander.
-
-Vous venez de reproduire, en vrai, le fonctionnement d'Internet. Les informations sont découpées en paquets, voyagent par des chemins variés, puis sont réassemblées. Et quand un paquet se perd, l'appareil le redemande.
-
-## Les bons réflexes pour tes appareils
+## Six réflexes pour tes appareils
 
 1. **Installe les mises à jour** du système et des applications dès qu'elles sont proposées.
 2. **Protège chaque appareil par un code**, un schéma ou ton empreinte.
@@ -162,7 +116,11 @@ Vous venez de reproduire, en vrai, le fonctionnement d'Internet. Les information
 5. **Télécharge tes applications uniquement depuis les magasins officiels.**
 6. **Change le mot de passe Wi-Fi par défaut de ta box.**
 
-Ces réflexes reprennent les recommandations officielles de Cybermalveillance.gouv.fr. Pour aller plus loin, lis [Changer le mot de passe Wi-Fi de ta box](/changer-mot-de-passe-wifi/) et [Sauvegarder ton iPhone](/sauvegarder-iphone/).
+Ces réflexes reprennent les recommandations officielles de Cybermalveillance.gouv.fr. Pour la mise en pratique, lis [Changer le mot de passe Wi-Fi de ta box](/changer-mot-de-passe-wifi/) et [Sauvegarder ton iPhone](/sauvegarder-iphone/).
+
+## Et pour les plus jeunes à la maison ?
+
+Si des mineurs utilisent tes appareils, découvre d'abord avec eux les applications et les jeux. Fixez ensemble des règles : où l'appareil est utilisé, combien de temps, et quoi faire face à un contenu ou un contact gênant. Rappelle qu'en ligne, une personne peut mentir sur son âge ou son identité. Téléphones, tablettes et box proposent un contrôle parental pour limiter le temps d'écran ou filtrer des contenus. La plateforme officielle [Je protège mon enfant](https://jeprotegemonenfant.gouv.fr/) réunit conseils et tutoriels.
 
 ## Les mots à connaître
 
@@ -214,10 +172,10 @@ Ce n'est pas obligatoire. Certaines box permettent de couper le Wi-Fi à certain
 
 C'est le fait de ranger tes fichiers sur des serveurs, sur Internet, plutôt que seulement dans ton appareil. Tu peux ainsi les retrouver depuis un autre appareil.
 
-## Et maintenant ?
+## Par où continuer
 
 Tu as maintenant les bases. Si ton téléphone te pose souci, commence par [Ton iPhone ne charge plus ?](/iphone-ne-charge-plus/) ou [Données système sur iPhone : pourquoi ton stockage est plein ?](/donnees-systeme-iphone/). Sur ordinateur, découvre [le raccourci pour faire une capture d'écran](/capture-ecran-pc/).
 
-Pour protéger tes comptes, poursuis avec notre guide [C'est quoi la cybersécurité ?](/c-est-quoi-la-cybersecurite/). Et si tu es parent, essaie le jeu du voyage des paquets avec tes enfants : ils comprendront Internet en un quart d'heure.
+Pour protéger tes comptes, poursuis avec notre guide [C'est quoi la cybersécurité ?](/c-est-quoi-la-cybersecurite/).
 
-Une question ? Pose-la. Un débutant qui demande, c'est exactement le public de Techno Play.
+Une question reste sans réponse ? Pose-la-nous.

@@ -13,13 +13,13 @@ category: "robotique-drones"
 
 **L'essentiel en 30 secondes**
 
-- Arduino est une petite carte électronique programmable, très répandue chez les débutants.
+- Arduino est une petite carte électronique programmable, très répandue pour les premiers projets.
 - Commence par faire clignoter une LED, puis ajoute un moteur et un capteur.
 - Chaque étape doit fonctionner seule avant de passer à la suivante.
 
 </div>
 
-Un robot maker combine trois compétences : assembler, brancher et programmer. Inutile de tout maîtriser dès le départ. Les kits de débutant regroupent souvent la carte, les fils, quelques composants et des exemples prêts à tester.
+Un robot maker combine trois compétences : assembler, brancher et programmer. Inutile de tout maîtriser dès le départ. Les kits de démarrage regroupent souvent la carte, les fils, quelques composants et des exemples prêts à tester.
 
 ## Les étapes du premier projet
 

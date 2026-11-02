@@ -23,7 +23,7 @@ Un drone se pilote avec une télécommande et, souvent, un téléphone. Les prem
 
 ## Les critères à regarder
 
-Le premier critère est le poids. Il conditionne les règles à respecter avant de voler, et il change aussi la sécurité en cas de chute. Le deuxième est la protection des hélices, utile pour un débutant qui va forcément heurter quelque chose un jour. Le troisième est l'autonomie, qui dépend des batteries et de leur état.
+Le premier critère est le poids. Il conditionne les règles à respecter avant de voler, et il change aussi la sécurité en cas de chute. Le deuxième est la protection des hélices, utile pour un premier drone, qui va forcément heurter quelque chose un jour. Le troisième est l'autonomie, qui dépend des batteries et de leur état.
 
 Enfin, regarde la qualité de la caméra si tu veux filmer. Pour apprendre à piler, une image correcte suffit souvent.
 

@@ -8,7 +8,7 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { nbsp } from "@/lib/format";
 
 // Page d'un thème (/<theme>/) : présentation en une phrase simple, les
-// questions de débutant auxquelles le thème répond (liées à l'article dès
+// questions fréquentes auxquelles le thème répond (liées à l'article dès
 // qu'il est publié), puis tous les articles du thème. Page de navigation :
 // en `noindex, follow` (voir app/[slug]/page.tsx).
 export default function CategoryHub({ category }: { category: Category }) {

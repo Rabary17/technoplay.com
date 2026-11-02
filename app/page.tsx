@@ -9,21 +9,20 @@ import JsonLd from "@/components/JsonLd";
 import { AuthorAvatar } from "@/components/AuthorBox";
 import { nbsp } from "@/lib/format";
 
-// Accueil — repositionnement du 2026-10-07 : « le QG des débutants en
-// tech ». Tous les visiteurs sont pris pour des novices, donc une page
-// courte et simple, sur la charte existante (tokens de app/globals.css,
-// Bricolage Grotesque + Inter, bleu #2F45D6 et point jaune #F2B33D du
-// logo). Déroulé :
-//   1. hero : la promesse (QG des débutants) + photo + 3 preuves
+// Accueil — repositionnement grand public du 2026-11-02 (remplace « le QG
+// des débutants en tech » du 2026-10-07) : une page courte et claire,
+// sur la charte existante (tokens de app/globals.css, Bricolage Grotesque +
+// Inter, bleu #2F45D6 et point jaune #F2B33D du logo). Déroulé :
+//   1. hero : la promesse (la tech du quotidien expliquée) + photo + 3 preuves
 //   2. « Choisis ton sujet » : les 6 thèmes (lib/categories.ts), chacun
-//      avec une question de débutant en exemple
+//      avec une question fréquente en exemple
 //   3. derniers articles (6 max)
-//   4. comment on explique les choses (4 engagements pour les novices)
+//   4. comment on explique les choses (4 engagements)
 //   5. le nom de marque : pourquoi « Techno Play »
 //   6. la rédaction (un spécialiste par sujet)
 //   7. FAQ (JSON-LD FAQPage) + appel à poser sa question
 //   8. crédits photos (Unsplash) — uniquement les photos affichées ici
-// Ton : charte de ton du projet (tutoiement, mots simples, aucun terme
+// Ton : charte de ton du projet (tutoiement, mots clairs, aucun terme
 // technique sans explication). Aucun chiffre d'audience ou de volume inventé
 // (garde-fou du site).
 
@@ -54,9 +53,9 @@ const HERO_STEP_SECONDES = 4;
 const ENGAGEMENTS: { icon: IconName; titre: string; texte: string }[] = [
   {
     icon: "lightbulb",
-    titre: "On part de zéro",
+    titre: "Des mots clairs",
     texte:
-      "Aucune connaissance n'est supposée. Chaque mot technique est expliqué dès qu'il apparaît, avec des mots du quotidien.",
+      "Chaque terme technique est expliqué dès qu'il apparaît, avec des mots du quotidien.",
   },
   {
     icon: "rocket",
@@ -82,12 +81,12 @@ const FAQ = [
   {
     question: "C'est quoi, Techno Play ?",
     answer:
-      "Le QG des débutants en technologie : un site gratuit, en français, qui explique l'IA, la robotique, la maison connectée, la programmation, tes appareils et la sécurité avec des mots simples et des exemples concrets.",
+      "Un site gratuit, en français, qui explique l'IA, la robotique, la maison connectée, la programmation, tes appareils et la sécurité avec des mots simples et des exemples concrets.",
   },
   {
     question: "Faut-il s'y connaître pour comprendre les articles ?",
     answer:
-      "Non, c'est fait pour ça. Chaque article part de zéro, explique chaque mot technique au passage et commence par un résumé « L'essentiel en 30 secondes ».",
+      "Non. Chaque article explique les termes techniques au passage et commence par un résumé « L'essentiel en 30 secondes ».",
   },
   {
     question: "Par où commencer ?",
@@ -131,17 +130,16 @@ export default function HomePage() {
         <div className="hero__text">
           <div className="hero-eyebrow">
             <span className="dot" aria-hidden="true" />
-            <span>Le QG des débutants en tech</span>
+            <span>La tech du quotidien, expliquée</span>
           </div>
           <h1>
-            <span className="brand">Techno Play</span> — la tech expliquée
-            simplement, pour les débutants
+            <span className="brand">Techno Play</span> — comprendre la tech
+            qui t&apos;entoure
           </h1>
           <p className="lead">
-            IA, robots, maison connectée, programmation… Tu débutes et tout
-            te paraît un peu flou ? Tu es au bon endroit. Ici, chaque sujet
-            part de zéro : des mots simples, un exemple concret, des étapes
-            claires. Aucune question n&apos;est bête.
+            IA, robots, maison connectée, programmation, sécurité : des
+            réponses claires aux questions que tout le monde se pose, avec
+            un exemple concret et des étapes précises quand il faut agir.
           </p>
           <div className="hero-actions">
             <a className="btn btn--primary" href="#sujets">
@@ -195,8 +193,8 @@ export default function HomePage() {
           <p className="kicker">Six thèmes, pas un de plus</p>
           <h2 id="sujets-titre">Qu&apos;est-ce que tu aimerais comprendre ?</h2>
           <p className="section-intro">
-            Choisis un thème. Chacun te mène à des articles qui partent de
-            zéro, avec une question de débutant en exemple.
+            Choisis un thème. Chacun te mène à ses articles, avec une
+            question fréquente en exemple.
           </p>
           <ul className="trend-grid trend-grid--themes">
             {CATEGORIES.map((category) => (
@@ -391,11 +389,10 @@ export default function HomePage() {
               decoding="async"
             />
             <div className="cta-band__content">
-              <h2>Une question de débutant ? Pose-la.</h2>
+              <h2>Une question ? Pose-la.</h2>
               <p>
-                Dis-nous ce que tu aimerais comprendre. Il n&apos;y a pas de
-                question bête : si elle intéresse d&apos;autres lecteurs, elle
-                deviendra peut-être notre prochain article.
+                Dis-nous ce que tu aimerais comprendre. Si ta question
+                intéresse d&apos;autres lecteurs, elle deviendra peut-être notre prochain article.
               </p>
               <a className="btn btn--light" href="/contact/">
                 Poser ma question

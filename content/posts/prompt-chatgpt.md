@@ -10,7 +10,7 @@ category: "intelligence-artificielle"
 
 ***Un bon prompt ChatGPT n'a rien d'une formule magique : c'est une consigne claire, précise et taillée pour ta demande. Voici la méthode en cinq briques, des exemples avant/après et vingt prompts prêts à copier tout de suite.***
 
-Tu demandes à ChatGPT un e-mail de relance. Il te sort trois paragraphes guindés que personne n'aurait envie de lire. Le problème ne vient pas de l'outil, mais de la consigne. Un prompt vague donne une réponse moyenne, parce que l'IA comble les trous avec des généralités. Bonne nouvelle : quelques réflexes suffisent à transformer le résultat.
+Tu demandes à ChatGPT un e-mail de relance. Il te sort trois paragraphes guindés que personne n'aurait envie de lire. Le problème ne vient pas de l'outil, mais de la consigne. Un prompt vague donne une réponse moyenne, parce que l'IA comble les trous avec des généralités. Quelques réflexes suffisent à transformer le résultat.
 
 <div class="essentiel">
 

@@ -18,12 +18,12 @@ export const metadata: Metadata = {
 const questions = [
   {
     question: `Pour qui est ${SITE_NAME} ?`,
-    answer: `Pour tous ceux qui débutent en technologie : IA, robotique, maison connectée, programmation, appareils du quotidien, sécurité. Chaque article part de zéro, explique les mots techniques au passage et donne un exemple concret. Aucune question n'est bête.`,
+    answer: `Pour tous ceux qui veulent comprendre et bien utiliser la technologie du quotidien : IA, robotique, maison connectée, programmation, appareils, sécurité. Chaque article répond à une question précise, explique les termes techniques au passage et donne un exemple concret.`,
   },
   {
-    question: "Je n'y connais rien : par où commencer ?",
+    question: "Par où commencer sur le site ?",
     answer:
-      "Choisis le thème qui te parle dans le menu (par exemple Intelligence artificielle ou Appareils & Internet), puis ouvre un article. Chaque article commence par un encadré « L'essentiel en 30 secondes » : si ça te suffit, tu peux t'arrêter là ; sinon, la suite explique tout pas à pas.",
+      "Choisis le thème qui te parle dans le menu (par exemple Intelligence artificielle ou Appareils & Internet), puis ouvre un article. Chaque article commence par un encadré « L'essentiel en 30 secondes » : si ça te suffit, tu peux t'arrêter là ; sinon, la suite entre dans le détail.",
   },
   {
     question: `Qui écrit les articles de ${SITE_NAME} ?`,

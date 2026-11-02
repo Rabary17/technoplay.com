@@ -2,7 +2,7 @@
 // Usage : npm run new-post -- --categorie appareils-internet "Titre de l'article"
 // Crée content/posts/<slug>.md avec le frontmatter déjà rempli (date du
 // jour, slug dérivé du titre) — évite les fautes de frappe dans les clés
-// YAML attendues par lib/posts.ts, et le squelette d'article pour débutants
+// YAML attendues par lib/posts.ts, et le squelette d'article
 // (L'essentiel, c'est quoi, exemple, pas à pas, mots à connaître, FAQ — voir
 // README.md, « Structure d'un article »). L'auteur est choisi selon sa
 // spécialité (titre + thème, voir scripts/generation/choisir-auteur.js).
@@ -109,7 +109,7 @@ TODO — à garder seulement si une étape est risquée ou irréversible, ou si 
 
 </div>
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 - TODO — une erreur courante, et comment l'éviter.
 
@@ -123,7 +123,7 @@ TODO — à garder seulement si une étape est risquée ou irréversible, ou si 
 
 ## Questions fréquentes
 
-### TODO — une question que se pose un débutant ?
+### TODO — une question que se pose le lecteur ?
 
 TODO — réponse directe en 50 mots maximum.
 

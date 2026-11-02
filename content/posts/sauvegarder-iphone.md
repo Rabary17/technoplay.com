@@ -117,7 +117,7 @@ Apple le précise : impossible de récupérer une sauvegarde chiffrée sans son 
 
 Une sauvegarde qu'on n'a jamais vérifiée n'est pas une vraie sécurité. Regarde la date de la dernière sauvegarde réussie dans les réglages iCloud, ou dans l'onglet Général du Finder ou de l'app Appareils Apple.
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 **Attendre le dernier moment.** Lance une sauvegarde avant une réparation ou un changement de téléphone, pas après la panne.
 

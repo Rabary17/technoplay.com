@@ -1,7 +1,7 @@
 ---
 title: "Faut-il une autorisation pour faire voler un drone ?"
 seoTitle: "Drone : faut-il une autorisation pour voler en France ?"
-description: "Drone en France : formation gratuite en ligne, enregistrement sur AlphaTango et règles de vol, expliqués simplement aux débutants."
+description: "Drone en France : formation gratuite en ligne, enregistrement sur AlphaTango et règles de vol, expliqués étape par étape."
 date: "2026-10-16"
 author: "nekena-judicael"
 category: "robotique-drones"

@@ -19,7 +19,7 @@ category: "programmation"
 
 </div>
 
-Scratch est un environnement de programmation visuelle, utilisé beaucoup à l'école et par les débutants. Chaque bloc représente une instruction. Tu les assembles comme des pièces de puzzle, et ton programme s'anime à l'écran.
+Scratch est un environnement de programmation visuelle, très utilisé à l'école et pour s'initier. Chaque bloc représente une instruction. Tu les assembles comme des pièces de puzzle, et ton programme s'anime à l'écran.
 
 ## Créer un jeu simple, pas à pas
 
@@ -35,7 +35,7 @@ Chaque étape doit fonctionner avant de passer à la suivante. Si quelque chose 
 
 **Un exemple concret**
 
-Un enfant crée un jeu où un chat attrape des poissons qui tombent du ciel. Chaque poisson attrapé ajoute un point. Il découvre ainsi les boucles, qui font tomber les poissons en continu, et les conditions, qui testent si le chat touche le poisson.
+Tu crées un jeu où un chat attrape des poissons qui tombent du ciel. Chaque poisson attrapé ajoute un point. Tu découvres ainsi les boucles, qui font tomber les poissons en continu, et les conditions, qui testent si le chat touche le poisson.
 
 </div>
 

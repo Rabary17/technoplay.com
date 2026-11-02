@@ -10,7 +10,7 @@ export const SITE_URL = "https://techno-play.com";
 export const GA_MEASUREMENT_ID = "G-Y3N6GMWV1F";
 export const SITE_NAME = "Techno Play";
 export const SITE_DESCRIPTION =
-  "Techno Play — le QG des débutants en tech : IA, robotique, maison connectée, programmation, appareils et sécurité, expliqués simplement avec des exemples concrets.";
+  "Techno Play — la tech du quotidien expliquée clairement : IA, robotique, maison connectée, programmation, appareils et sécurité, avec des exemples concrets.";
 // Locale par défaut du site (balises lang, Open Graph). À changer si le
 // site n'est finalement pas francophone.
 export const SITE_LOCALE = "fr_FR";

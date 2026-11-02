@@ -67,7 +67,7 @@ Il faut aussi connaître ses limites. Les mains, le texte écrit dans l'image et
 
 Firefly est le générateur d'images d'Adobe. Il s'intègre aux logiciels Adobe, ce qui permet de retoucher une image générée dans Photoshop ou de la transformer en visuel dans une autre application de la suite.
 
-Pour un débutant, l'intérêt est la cohérence : tu restes dans un environnement stable, avec des réglages clairs. Commence par une image simple, comme « une tasse de café sur une table en bois, lumière du matin », puis ajoute un style.
+Son intérêt est la cohérence : tu restes dans un environnement stable, avec des réglages clairs. Commence par une image simple, comme « une tasse de café sur une table en bois, lumière du matin », puis ajoute un style.
 
 ## 2. Ideogram
 
@@ -99,7 +99,7 @@ Si tu travailles déjà avec Word, PowerPoint ou Outlook, c'est un point d'entr�
 
 Stable Diffusion est un modèle de génération d'images dont le code est largement disponible. Il peut être utilisé via des interfaces en ligne ou installé sur son propre ordinateur, avec un contrôle très fin sur le résultat.
 
-C'est un outil pour les curieux qui acceptent de passer du temps sur les réglages. Pour un débutant, mieux vaut commencer par une interface en ligne qui l'utilise, plutôt que de l'installer tout de suite.
+C'est un outil pour les curieux qui acceptent de passer du temps sur les réglages. Pour une première prise en main, mieux vaut passer par une interface en ligne qui l'utilise, plutôt que de l'installer tout de suite.
 
 ## 6. Krea
 
@@ -107,7 +107,7 @@ C'est un outil pour les curieux qui acceptent de passer du temps sur les réglag
 
 Krea génère et affine des images avec une interface réactive : tu vois le résultat évoluer pendant que tu modifies la consigne. C'est pratique pour explorer une idée sans multiplier les allers-retours.
 
-Pour un débutant, l'intérêt est d'apprendre vite l'effet de chaque mot : en changeant un seul élément de la consigne, tu vois ce qui change dans l'image.
+Son intérêt est d'apprendre vite l'effet de chaque mot : en changeant un seul élément de la consigne, tu vois ce qui change dans l'image.
 
 ## 7. Playground
 
@@ -123,7 +123,7 @@ Il convient bien pour tester une idée rapidement, avant de passer à un outil p
 
 Recraft produit des illustrations vectorielles, c'est-à-dire des images qui restent nettes à toutes les tailles, ainsi que des logos et des pictogrammes. C'est utile pour une identité visuelle ou une icône.
 
-Pour un débutant, demande un style précis : « icône plate, fond blanc, trois couleurs maximum ». Le résultat sera plus facile à réutiliser.
+Demande un style précis : « icône plate, fond blanc, trois couleurs maximum ». Le résultat sera plus facile à réutiliser.
 
 ## 9. Freepik (générateur d'images IA)
 
@@ -147,7 +147,7 @@ Une consigne efficace contient quatre éléments : le sujet, le style, la lumiè
 
 Garde une trace des consignes qui marchent. Un bon prompt se réutilise facilement, et il est plus rapide de retoucher une consigne qui a fonctionné que d'en écrire une nouvelle.
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 La première erreur est de vouloir obtenir la perfection du premier coup. Les générateurs fonctionnent par essais successifs : génère plusieurs propositions, garde la meilleure, puis affine.
 
@@ -182,4 +182,4 @@ Souvent, oui pour les premiers essais. Les formules payantes ajoutent des images
 
 ## Et maintenant ?
 
-Choisis un outil de cette liste et génère cinq images sur le même sujet, en ne changeant qu'un élément de la consigne à chaque fois. Tu verras vite ce qui compte. Pour mieux formuler tes demandes à un assistant, lis aussi notre guide : [Intelligence artificielle : le guide complet pour débutants](/intelligence-artificielle-guide-debutants/).
+Choisis un outil de cette liste et génère cinq images sur le même sujet, en ne changeant qu'un élément de la consigne à chaque fois. Tu verras vite ce qui compte. Pour mieux formuler tes demandes à un assistant, lis aussi notre guide : [C'est quoi, l'intelligence artificielle ?](/intelligence-artificielle-guide-debutants/).

@@ -98,7 +98,7 @@ Tu as tout essayé, et rien ne change ? Deux pièces sont suspectes.
 
 Dans les deux cas, demande un devis à Apple ou à un réparateur. Apple indique qu'une réparation peut être nécessaire si l'appareil ne se charge toujours pas. Pense à sauvegarder ton iPhone avant de le confier à quelqu'un.
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 Ce n'est pas grave de paniquer. Ces réflexes permettent d'éviter le pire.
 

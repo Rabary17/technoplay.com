@@ -1,7 +1,7 @@
 ---
-title: "VS Code : l'éditeur de code pour débutants"
-seoTitle: "VS Code pour débutants : prise en main"
-description: "VS Code est un éditeur de code gratuit, très utilisé par les débutants. On t'explique comment l'installer et s'y repérer."
+title: "VS Code : prendre en main l'éditeur de code"
+seoTitle: "VS Code : installation et prise en main"
+description: "VS Code est un éditeur de code gratuit, très répandu. On t'explique comment l'installer et s'y repérer."
 date: "2027-01-02"
 author: "andee-rakotovao"
 category: "programmation"
@@ -33,7 +33,7 @@ Installe l'extension correspondant au langage que tu apprends, pour bénéficier
 
 **Un exemple concret**
 
-Une débutante ouvre un fichier HTML. L'éditeur colore les balises et lui signale une balise non fermée, avec un petit soulignement rouge. Elle corrige l'erreur en quelques secondes, sans avoir à chercher pendant une heure.
+Une étudiante ouvre son premier fichier HTML. L'éditeur colore les balises et lui signale une balise non fermée, avec un petit soulignement rouge. Elle corrige l'erreur en quelques secondes, sans avoir à chercher pendant une heure.
 
 </div>
 

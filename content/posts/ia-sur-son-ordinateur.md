@@ -73,4 +73,4 @@ Pas toujours. Certains logiciels proposent une interface simple. D'autres demand
 
 ## Et maintenant ?
 
-Pour choisir un outil en ligne en attendant, lis [Les outils d'IA pour débutants : lesquels tester ?](/top10-outils-ia-debutants/). Pour comprendre le rôle d'un modèle, lis [C'est quoi un agent IA, au juste ?](/agent-ia/).
+Pour choisir un outil en ligne en attendant, lis [Quels outils d'IA tester en premier ?](/top10-outils-ia-debutants/). Pour comprendre le rôle d'un modèle, lis [C'est quoi un agent IA, au juste ?](/agent-ia/).

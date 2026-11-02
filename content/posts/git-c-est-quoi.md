@@ -1,6 +1,6 @@
 ---
 title: "Git, c'est quoi ?"
-seoTitle: "Git : c'est quoi, pour un débutant ?"
+seoTitle: "Git : c'est quoi et à quoi ça sert ?"
 description: "Git garde l'historique de tes fichiers et te permet de revenir en arrière. On t'explique l'idée simplement, avant les commandes."
 date: "2026-12-31"
 author: "andee-rakotovao"

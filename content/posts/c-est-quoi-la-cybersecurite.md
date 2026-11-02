@@ -1,11 +1,11 @@
 ---
 title: "C'est quoi la cybersécurité ? Se protéger au quotidien"
 seoTitle: "C'est quoi la cybersécurité ? Explication simple"
-description: "La cybersécurité, c'est quoi et à quoi ça sert ? Comment protéger tes comptes, tes appareils et ta famille au quotidien, expliqué simplement."
+description: "La cybersécurité, c'est quoi et à quoi ça sert ? Les dangers courants et les gestes qui protègent tes comptes, tes appareils et ta famille."
 date: "2026-10-20"
 author: "andrianina-rabarivelo"
 category: "cybersecurite"
-updated: "2026-10-20"
+updated: "2026-11-02"
 sources:
   - titre: "Cybermalveillance.gouv.fr : les 10 mesures essentielles pour votre cybersécurité"
     url: "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/10-mesures-essentielles-assurer-securite-numerique"
@@ -16,9 +16,7 @@ sources:
 sourcesConsultees: "2026-10-20"
 ---
 
-Un SMS t'annonce un colis bloqué. Un courriel te demande de « confirmer » tes coordonnées bancaires. Ton ami t'écrit sur une messagerie pour te demander de l'argent en urgence, mais ce n'est pas vraiment lui. Ces situations arrivent à tout le monde. La cybersécurité, c'est l'ensemble des gestes et des outils qui te protègent de ces pièges. Ce guide t'explique ce que c'est, à quoi ça sert et comment te protéger, sans jargon.
-
-Tu as 10 ans ? Ce guide est aussi pour toi. Lis-le seul ou avec un adulte. Certaines parties ont été écrites en pensant à toi. Cherche « La cybersécurité expliquée comme à un enfant », « Enfants et sécurité en ligne : les règles d'or », puis le jeu.
+Un SMS t'annonce un colis bloqué. Un courriel te demande de « confirmer » tes coordonnées bancaires. Un ami t'écrit sur une messagerie pour réclamer de l'argent en urgence, mais ce n'est pas lui. Ces situations arrivent à tout le monde. La cybersécurité regroupe les gestes et les outils qui te protègent de ces pièges. Cette page explique ce qu'elle couvre, à quoi elle sert et comment t'y mettre.
 
 <div class="essentiel">
 
@@ -27,14 +25,6 @@ Tu as 10 ans ? Ce guide est aussi pour toi. Lis-le seul ou avec un adulte. Certa
 La cybersécurité, c'est protéger tes appareils, tes comptes et tes informations sur Internet. Les principaux dangers sont les faux messages qui cherchent à te piéger, les mots de passe volés et les logiciels malveillants. Pour te protéger, quatre réflexes suffisent souvent. Un mot de passe solide et différent par compte. Les mises à jour installées. Des sauvegardes régulières. Et de la méfiance face aux messages urgents. Si tu te fais piéger, ce n'est pas une honte : agis vite et demande de l'aide.
 
 </div>
-
-## La cybersécurité expliquée comme à un enfant
-
-Imagine que tes affaires précieuses sont rangées dans une maison. Pour les protéger, tu fermes la porte à clé. Tu ne donnes pas la clé à n'importe qui. Et si quelqu'un sonne en disant « je suis le facteur, ouvre vite ! », tu vérifies avant d'ouvrir.
-
-Sur Internet, c'est pareil. Tes comptes sont des maisons. Ton mot de passe, c'est la clé. Les pirates sont des voleurs qui essaient de deviner ta clé ou de te faire ouvrir la porte avec un mensonge.
-
-La cybersécurité, c'est donc avoir de bonnes clés, bien fermer ses portes et ne pas croire tous ceux qui frappent. Ce n'est pas plus compliqué que ça, même si les adultes utilisent parfois des mots difficiles pour en parler.
 
 ## C'est quoi la cybersécurité, concrètement ?
 
@@ -46,6 +36,8 @@ Le mot vient de « cyber », qui désigne tout ce qui touche à Internet et aux 
 
 **Tes informations** : tes photos, tes documents, tes coordonnées, tes conversations. Il faut éviter qu'elles soient volées, effacées ou rendues publiques.
 
+Une image aide à fixer les idées. Chaque compte est une maison, et ton mot de passe en est la clé. Les pirates cherchent soit à la copier, soit à te faire ouvrir la porte avec un mensonge.
+
 <div class="exemple">
 
 **Un exemple concret**
@@ -54,12 +46,12 @@ Tu reçois un SMS : « Votre colis n'a pas pu être livré. Payez les frais de r
 
 </div>
 
-## Les principaux dangers, expliqués simplement
+## Les principaux dangers
 
 | Danger | Ce que c'est | Comment le reconnaître | Comment te protéger |
 |---|---|---|---|
 | Hameçonnage (phishing) | Un faux message qui imite une banque, un service ou un proche | Urgence, menace, cadeau, lien bizarre, fautes | Ne clique pas, vérifie par un autre moyen |
-| Mot de passe volé | Quelqu'un récupère ou devine ta clé d'accès | Connexion inconnue, message envoyé que tu n'as pas écrit | Un mot de passe long et différent par compte |
+| Mot de passe volé | Quelqu'un récupère ou devine ton mot de passe | Connexion inconnue, message envoyé que tu n'as pas écrit | Un mot de passe long et différent par compte |
 | Logiciel malveillant | Un programme qui espionne, vole ou abîme ton appareil | Appareil lent, publicités partout, applications inconnues | Mises à jour, applications officielles, antivirus |
 | Rançongiciel | Un logiciel qui bloque tes fichiers et réclame de l'argent | Fichiers illisibles, message de demande de rançon | Sauvegardes régulières, sur un support débranché |
 | Faux support technique | Une fenêtre ou un appel qui prétend que ton appareil est infecté | Alerte qui bloque l'écran, numéro à appeler en urgence | Ne rappelle jamais, ferme le navigateur |
@@ -67,7 +59,7 @@ Tu reçois un SMS : « Votre colis n'a pas pu être livré. Payez les frais de r
 
 Tu remarques un point commun ? La plupart de ces attaques ne « cassent » pas ton appareil. Elles comptent sur la surprise, la peur ou la précipitation pour que tu fasses toi-même l'erreur. C'est pour ça que tes réflexes sont ta meilleure protection.
 
-## Comment fonctionne la protection, étape par étape
+## Plusieurs barrières plutôt qu'une
 
 On peut voir la cybersécurité comme plusieurs barrières, l'une derrière l'autre. Si une barrière cède, la suivante te protège encore.
 
@@ -83,25 +75,25 @@ Aucune barrière n'est parfaite à elle seule. C'est leur addition qui rend une 
 
 La cybersécurité n'est pas réservée aux entreprises. Elle te protège dans des moments très ordinaires :
 
-- quand tu te connectes à ta banque ou que tu payes en ligne ;
-- quand tu reçois un message qui te demande de cliquer sur un lien ;
-- quand tu installes une nouvelle application ou un jeu ;
-- quand tu te connectes au Wi-Fi d'un café, d'un hôtel ou d'une gare ;
-- quand tu prêtes ton téléphone ou ton ordinateur à quelqu'un ;
-- quand tu publies une photo ou une information sur un réseau social ;
-- quand ton enfant joue en ligne ou discute avec d'autres joueurs.
+- Quand tu te connectes à ta banque ou que tu payes en ligne.
+- Quand tu reçois un message qui te demande de cliquer sur un lien.
+- Quand tu installes une nouvelle application ou un jeu.
+- Quand tu te connectes au Wi-Fi d'un café, d'un hôtel ou d'une gare.
+- Quand tu prêtes ton téléphone ou ton ordinateur à quelqu'un.
+- Quand tu publies une photo ou une information sur un réseau social.
+- Quand quelqu'un de ton foyer joue en ligne ou discute avec d'autres joueurs.
 
-Son utilité est simple à résumer. Elle t'évite de perdre de l'argent, tes souvenirs, l'accès à tes comptes ou le contrôle de ton image. Elle t'évite aussi beaucoup de stress et de démarches.
+Elle t'évite de perdre de l'argent, tes souvenirs, l'accès à tes comptes ou le contrôle de ton image. Elle t'évite aussi beaucoup de stress et de démarches.
 
-## Pourquoi c'est utile de s'y intéresser, même sans être expert
+## Pourquoi tout le monde est concerné
 
 D'abord, parce que les pièges visent tout le monde. Les pirates envoient le même faux message à un très grand nombre de personnes et attendent que quelques-unes tombent dans le panneau. Tu n'as pas besoin d'être riche ou célèbre pour être visé.
 
-Ensuite, parce que les bons gestes sont simples. Il ne s'agit pas de devenir informaticien. Quelques réflexes, pris une fois pour toutes, bloquent déjà beaucoup d'attaques courantes.
+Ensuite, parce que les gestes efficaces sont peu nombreux. Quelques réflexes, pris une fois pour toutes, bloquent déjà beaucoup d'attaques courantes.
 
 Enfin, parce que tu protèges aussi les autres. Si ta messagerie est piratée, ce sont tes contacts qui reçoivent ensuite de faux messages en ton nom. Te protéger, c'est protéger ta famille et tes amis.
 
-## Les idées reçues sur la cybersécurité
+## Cinq croyances qui facilitent les attaques
 
 - **« Je n'ai rien d'intéressant, personne ne va m'attaquer. »** Faux. Tes comptes, ton carnet d'adresses et ta carte bancaire intéressent les pirates.
 - **« Un antivirus suffit à tout bloquer. »** Faux. Il ne protège pas d'un faux message qui te pousse à donner ton mot de passe.
@@ -109,46 +101,13 @@ Enfin, parce que tu protèges aussi les autres. Si ta messagerie est piratée, c
 - **« Les mises à jour peuvent attendre. »** Faux. Elles corrigent souvent des failles déjà connues des pirates.
 - **« Me faire piéger, c'est être naïf. »** Faux. Les pièges sont conçus par des professionnels. Ce qui compte, c'est de réagir vite.
 
-## Enfants et sécurité en ligne : les règles d'or
+## Et pour les plus jeunes à la maison ?
 
-Les enfants utilisent des jeux, des vidéos et des messageries de plus en plus tôt. Ils peuvent être visés par des arnaques ou des personnes malveillantes, souvent par des messages qui jouent sur la curiosité ou les cadeaux.
+Les jeux en ligne attirent des arnaques ciblées : monnaie virtuelle ou skins « gratuits » contre un mot de passe. Aucun jeu sérieux ne demande ce mot de passe. Active un code sur les appareils partagés et règle les contrôles parentaux. Dis aussi aux plus jeunes qu'ils peuvent te montrer un message inquiétant sans craindre d'être punis. La plateforme officielle [Je protège mon enfant](https://jeprotegemonenfant.gouv.fr/) rassemble des ressources sur ces sujets.
 
-<div class="attention">
+## Les gestes recommandés par Cybermalveillance.gouv.fr
 
-**Un cadeau gratuit dans un jeu ? Méfiance.**
-
-Les messages qui promettent de la monnaie virtuelle, des skins ou des cadeaux gratuits servent souvent à voler un compte. Un enfant ne doit jamais donner son mot de passe pour « recevoir un cadeau ». Aucun vrai jeu ne le demande.
-
-</div>
-
-### Les 5 règles pour les enfants
-
-1. **Ton mot de passe est un secret.** Tu ne le donnes à personne, sauf à tes parents.
-2. **Ne clique pas sur un lien envoyé par quelqu'un que tu ne connais pas**, même s'il promet un cadeau.
-3. **Ne donne jamais d'informations sur toi** : nom complet, adresse, école, téléphone, photos.
-4. **Si un message te fait peur, te menace ou te met mal à l'aise, montre-le à un adulte.** Tu n'as rien fait de mal.
-5. **Demande avant d'installer une application ou un jeu.** Un adulte vérifie qu'il vient d'un magasin officiel.
-
-### Pour les parents
-
-Le plus efficace est d'en parler tôt, simplement, et sans faire peur. Explique à ton enfant qu'il peut toujours venir te voir, même s'il pense avoir fait une bêtise. Un enfant qui craint d'être puni cache le problème, et c'est là que tout se complique.
-
-Active un code sur ses appareils, configure les contrôles parentaux et crée-lui des comptes adaptés à son âge. La plateforme officielle [Je protège mon enfant](https://jeprotegemonenfant.gouv.fr/) rassemble des conseils et des ressources sur ces sujets.
-
-## Un jeu sans écran : le détective du faux message
-
-Ce jeu apprend à repérer un piège. Il se joue en famille, avec une feuille et un crayon.
-
-1. Un adulte écrit à la main deux messages. L'un est un vrai message banal, l'autre un faux message piégé.
-2. Dans le faux message, il cache des indices. Par exemple : une urgence (« dans 24 heures »), une menace (« compte bloqué »), un cadeau trop beau, une faute, un expéditeur bizarre.
-3. Les enfants jouent les détectives. Ils doivent trouver quel message est faux, et entourer tous les indices.
-4. Chaque indice trouvé rapporte un point. On échange ensuite les rôles : les enfants inventent un faux message, et l'adulte cherche les indices.
-
-À la fin, tout le monde retient la règle d'or. Un message qui presse, qui menace ou qui promet trop mérite qu'on s'arrête pour vérifier.
-
-## Les bons réflexes au quotidien
-
-Voici les gestes essentiels. Ils s'inspirent des recommandations officielles de Cybermalveillance.gouv.fr.
+Ces gestes reprennent les recommandations officielles du dispositif national d'assistance.
 
 1. **Utilise un mot de passe solide et différent pour chaque compte**, et active la double authentification quand c'est proposé.
 2. **Installe les mises à jour** de tous tes appareils dès qu'elles sont disponibles.
@@ -201,7 +160,7 @@ Pour t'aider, lis [Comment choisir un bon mot de passe ?](/choisir-bon-mot-de-pa
 
 ### Faut-il un antivirus sur un téléphone ?
 
-Sur un téléphone, les mises à jour, les applications officielles et ta vigilance protègent l'essentiel. Sur un ordinateur, garde l'antivirus à jour, souvent déjà intégré au système.
+Sur un téléphone, les mises à jour, les applications officielles et ta vigilance couvrent la plupart des risques. Sur un ordinateur, garde l'antivirus à jour, souvent déjà intégré au système.
 
 ### Comment savoir si un message est un piège ?
 
@@ -215,14 +174,8 @@ Change le mot de passe du compte, puis active la double authentification. Si tu 
 
 Non. Il protège surtout ta connexion sur un réseau que tu ne maîtrises pas. Il ne bloque ni les faux messages ni les mots de passe trop faibles.
 
-### À quel âge parler de cybersécurité à un enfant ?
+## Par où commencer
 
-Dès qu'il utilise un appareil connecté, même avec un adulte. Les mots changent selon l'âge, mais les règles restent simples : garder ses secrets et parler quand quelque chose inquiète.
+Vérifie dès aujourd'hui un compte important, comme ta messagerie. Pour apprendre à repérer les pièges, lis [Comment reconnaître un faux message (phishing) ?](/reconnaitre-faux-message-phishing/). Et si tu utilises souvent des Wi-Fi publics, découvre [VPN gratuit : peut-on lui faire confiance ?](/vpn-gratuit/).
 
-## Et maintenant ?
-
-Tu as maintenant les bases. La meilleure façon de progresser, c'est de vérifier dès aujourd'hui un premier compte important, comme ta messagerie. Pour apprendre à repérer les pièges, lis [Comment reconnaître un faux message (phishing) ?](/reconnaitre-faux-message-phishing/). Et si tu utilises souvent des Wi-Fi publics, découvre [VPN gratuit : peut-on lui faire confiance ?](/vpn-gratuit/).
-
-Pour comprendre comment voyagent tes informations, lis aussi [C'est quoi Internet, et comment marchent nos appareils ?](/c-est-quoi-internet/). Et si tu es parent, lance le jeu du détective du faux message avec tes enfants.
-
-Une question ? Pose-la. Un débutant qui demande, c'est exactement le public de Techno Play.
+Pour comprendre comment voyagent tes informations, lis aussi [C'est quoi Internet, et comment marchent nos appareils ?](/c-est-quoi-internet/).

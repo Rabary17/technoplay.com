@@ -95,7 +95,7 @@ Au volant, le port d'écouteurs est interdit. À vélo ou à pied, garde une ore
 
 </div>
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 - **Choisir sur le prix seul.** Un casque bon marché qui tombe pendant l'effort ne sert à rien.
 - **Ignorer l'indice IP.** Un casque non étanche peut lâcher sous la pluie ou la sueur.

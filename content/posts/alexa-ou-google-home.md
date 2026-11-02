@@ -75,7 +75,7 @@ Un assistant vocal enregistre vos demandes pour les traiter. Désactivez le micr
 
 </div>
 
-## Les erreurs de débutant
+## Les erreurs à éviter
 
 Première erreur : acheter une enceinte avant de savoir quels appareils elle pilotera. Deuxième erreur : laisser les réglages de partage par défaut. Prenez cinq minutes pour les vérifier.
 

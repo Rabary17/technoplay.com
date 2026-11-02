@@ -100,7 +100,7 @@ Ouvre l'appli Bouygues Telecom ou l'interface web de ta Bbox. Cherche la partie 
 
 </div>
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 Ces erreurs sont très courantes. Elles se corrigent vite, une fois qu'on les connaît.
 

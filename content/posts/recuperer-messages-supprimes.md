@@ -114,7 +114,7 @@ Retiens trois points avant de sortir ta carte bancaire :
 
 </div>
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 Ces erreurs sont très fréquentes. Elles se corrigent vite, une fois connues.
 

@@ -23,7 +23,7 @@ Un drone est un petit appareil volant. Il peut blesser quelqu'un, endommager un 
 
 ## Avant de décoller
 
-Contrôle les hélices : pas de fissure, pas de jeu, bien fixées. Vérifie que la batterie est chargée et correctement installée. Regarde la météo : le vent fort et la pluie compliquent le vol, surtout pour un débutant. Enfin, repère le lieu de décollage et une zone d'atterrissage dégagée.
+Contrôle les hélices : pas de fissure, pas de jeu, bien fixées. Vérifie que la batterie est chargée et correctement installée. Regarde la météo : le vent fort et la pluie compliquent le vol, surtout les premières fois. Enfin, repère le lieu de décollage et une zone d'atterrissage dégagée.
 
 ## Pendant le vol
 

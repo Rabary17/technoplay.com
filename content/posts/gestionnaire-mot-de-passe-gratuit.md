@@ -110,7 +110,7 @@ Retiens surtout ceci : ton coffre dépend alors de ton compte Google ou Apple. S
 
 ## Migrer ses mots de passe sans rien perdre
 
-Bonne nouvelle : tu n'as pas à tout ressaisir à la main.
+Inutile de tout ressaisir à la main.
 
 1. **Exporte** tes mots de passe depuis ton ancien gestionnaire ou ton navigateur, au format **CSV** ou **JSON**.
 2. **Importe** ce fichier dans ton nouveau gestionnaire. Bitwarden accepte notamment les exports de Chrome, Firefox, Edge, LastPass ou KeePass.

@@ -105,7 +105,7 @@ Les raccourcis Windows capturent ce qui est visible à l'écran. Une page web tr
 
 </div>
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 Ces petites erreurs arrivent à tout le monde. Elles se corrigent vite.
 

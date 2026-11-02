@@ -78,7 +78,7 @@ Ne branchez pas une prise connectée sur un appareil qui consomme plus que sa pu
 
 </div>
 
-## Les erreurs de débutant
+## Les erreurs à éviter
 
 Première erreur : acheter plusieurs marques qui ne fonctionnent pas ensemble. Choisissez un écosystème et tenez-vous-y au début. Deuxième erreur : oublier de changer le mot de passe par défaut.
 

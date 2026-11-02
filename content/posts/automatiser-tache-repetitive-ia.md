@@ -56,7 +56,7 @@ N'autorise jamais une IA à envoyer, supprimer ou payer sans validation. Une err
 
 </div>
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 - **Tout automatiser d'un coup.** Une tâche à la fois, sinon tu ne sais plus ce qui marche.
 - **Confier des données sensibles.** Ne mets pas de mots de passe, de coordonnées bancaires ou de dossiers personnels dans l'outil.

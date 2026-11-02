@@ -106,7 +106,7 @@ Une annonce automatique, comme celle que Google décrit, ne remplace pas une vra
 
 </div>
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 **Enregistrer sans prévenir.** C'est l'erreur la plus fréquente, et la plus risquée. Une phrase d'introduction évite le problème.
 

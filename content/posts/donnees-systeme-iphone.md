@@ -92,7 +92,7 @@ Tu fais le ménage, et la barre regrossit en quelques jours ? Vérifie d'abord l
 
 Si rien n'y fait, sauvegarde ton iPhone avant toute autre action. Puis demande l'aide de l'assistance Apple, car un souci plus profond peut être en cause.
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 Ces erreurs sont fréquentes, et elles se corrigent facilement.
 

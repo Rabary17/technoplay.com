@@ -67,4 +67,4 @@ Ils demandent un peu de temps au début, mais ils font gagner beaucoup de temps 
 
 ## Et maintenant ?
 
-Pour publier un projet testé, lis [Mettre une application en ligne](/mettre-application-en-ligne/). Pour les outils qui t'accompagnent, lis [VS Code : l'éditeur de code pour débutants](/vs-code-debutant/).
+Pour publier un projet testé, lis [Mettre une application en ligne](/mettre-application-en-ligne/). Pour les outils qui t'accompagnent, lis [VS Code : prendre en main l'éditeur de code](/vs-code-debutant/).

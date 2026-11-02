@@ -1,6 +1,6 @@
 ---
 title: "C'est quoi le HTML et le CSS ?"
-seoTitle: "HTML et CSS : c'est quoi ? Explication pour débutants"
+seoTitle: "HTML et CSS : c'est quoi et comment ça marche ?"
 description: "HTML et CSS, c'est quoi ? Le HTML pose le contenu d'une page web, le CSS le met en forme. Explication simple, avec un exemple à essayer."
 date: "2026-10-16"
 author: "andee-rakotovao"

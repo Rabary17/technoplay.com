@@ -48,7 +48,7 @@ Comprendre ce mécanisme t'aide à lire les réponses avec un regard critique. U
 
 Ça t'aide aussi à mieux écrire tes demandes. Plus tu donnes de contexte, moins il y a de suites possibles, et plus la réponse colle à ton besoin. C'est le principe de base d'un bon prompt.
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 - **Croire qu'il comprend comme un humain.** Il manipule des probabilités de mots. Il ne vit pas l'expérience qu'il décrit.
 - **Penser qu'il vérifie tout en direct.** Un modèle seul écrit à partir de ce qu'il a appris. Certains assistants ont une option de recherche sur le web, à activer quand c'est utile.

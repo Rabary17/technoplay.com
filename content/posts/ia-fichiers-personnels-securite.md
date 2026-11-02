@@ -56,7 +56,7 @@ Un accès qui reste ouvert pendant des mois peut être exploité si ton compte e
 
 </div>
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 - **Accepter les réglages par défaut sans les lire.** Prends deux minutes pour les vérifier.
 - **Connecter tout son disque.** Plus l'accès est large, plus le risque grandit.

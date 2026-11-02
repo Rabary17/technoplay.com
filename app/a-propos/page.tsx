@@ -8,7 +8,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "À propos",
-  description: `${SITE_NAME}, le QG des débutants en tech : pour qui, comment on écrit, qui est derrière le site et la rédaction.`,
+  description: `${SITE_NAME}, la tech du quotidien expliquée clairement : pour qui, comment on écrit, qui est derrière le site et la rédaction.`,
   alternates: { canonical: "/a-propos/" },
 };
 
@@ -22,24 +22,22 @@ export default function AboutPage() {
       <Breadcrumbs items={[{ name: "Accueil", href: "/" }, { name: "À propos", href: "/a-propos/" }]} />
       <h1>À propos de {SITE_NAME}</h1>
       <p>
-        {SITE_NAME}, c&apos;est le QG des débutants en technologie : un
-        endroit où tu peux découvrir l&apos;IA, la robotique, la maison
-        connectée, la programmation ou la sécurité sans jamais te sentir
-        perdu. Ici, tout le monde est considéré comme un débutant, et aucune
-        question n&apos;est bête.
+        {SITE_NAME} explique la technologie du quotidien : l&apos;IA, la
+        robotique, la maison connectée, la programmation, tes appareils et
+        la sécurité. Le site s&apos;adresse à tous ceux qui veulent
+        comprendre ces outils et bien les utiliser, quel que soit leur
+        niveau.
       </p>
 
-      <h2>Comment on écrit pour les débutants</h2>
+      <h2>Comment on écrit</h2>
       <p>
         Chaque article part d&apos;une question précise et doit y répondre
-        complètement. Pour que tout reste simple, on s&apos;impose quelques
-        règles :
+        complètement. On s&apos;impose quelques règles :
       </p>
       <ul>
         <li>
-          <strong>On part de zéro.</strong> Aucune connaissance n&apos;est
-          supposée, et chaque mot technique est expliqué dès qu&apos;il
-          apparaît.
+          <strong>Des mots clairs.</strong> Chaque terme technique est
+          expliqué dès qu&apos;il apparaît.
         </li>
         <li>
           <strong>L&apos;essentiel d&apos;abord.</strong> La réponse tient

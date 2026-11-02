@@ -90,7 +90,7 @@ Une réponse proposée par un personnel externe à Microsoft suggère deux étap
 
 Des guides en ligne décrivent des méthodes pour éviter le compte Microsoft pendant l'installation de Windows 11. Nous ne les avons pas vérifiées : la page officielle consultée n'en parle pas. La méthode la plus sûre reste celle de la section précédente.
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 - **Supprimer le compte Microsoft avant d'avoir un compte administrateur.** Vérifie que ton compte local a les droits d'administrateur, pour garder la main sur ton PC.
 - **Oublier le disque de réinitialisation.** Sans lui, un mot de passe perdu bloque l'accès au PC.

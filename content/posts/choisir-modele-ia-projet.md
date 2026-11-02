@@ -80,4 +80,4 @@ Pour un usage personnel ou une petite équipe, des tests simples suffisent. Pour
 
 ## Et maintenant ?
 
-Pour te lancer sans budget, lis [Les outils d'IA pour débutants : lesquels tester ?](/top10-outils-ia-debutants/). Pour comparer deux assistants grand public, lis [ChatGPT ou Gemini : lequel choisir pour débuter ?](/chatgpt-ou-gemini/).
+Pour te lancer sans budget, lis [Quels outils d'IA tester en premier ?](/top10-outils-ia-debutants/). Pour comparer deux assistants grand public, lis [ChatGPT ou Gemini : lequel choisir ?](/chatgpt-ou-gemini/).

@@ -1,10 +1,9 @@
-// Thèmes du site — structure du 2026-10-07, repositionnement « QG des
-// débutants en tech » : tous les visiteurs sont pris pour des novices, donc
-// une structure la plus simple possible.
+// Thèmes du site — structure du 2026-10-07, gardée lors du repositionnement
+// grand public du 2026-11-02 : une structure la plus simple possible.
 //
 // 6 thèmes, chacun découpé en 2 à 3 sous-catégories (menu déroulant et page
 // du thème, ancres /<theme>/#<sous-catégorie>). Un seul niveau d'URL : les
-// sous-catégories ne créent pas de pages. Un débutant choisit son sujet
+// sous-catégories ne créent pas de pages. Le lecteur choisit son sujet
 // (IA, robots, maison connectée…), puis la sous-catégorie, puis son article.
 // Le type d'article (« c'est quoi ? », « comment faire », « lequel
 // choisir ? ») se voit dans le titre et dans le gabarit d'article, pas dans
@@ -36,7 +35,7 @@ export type CategorySlug =
   | "appareils-internet"
   | "cybersecurite";
 
-/** Une question de débutant à laquelle le thème répond (liée à l'article s'il est publié). */
+/** Une question fréquente à laquelle le thème répond (liée à l'article s'il est publié). */
 export interface Question {
   question: string;
   /** Slug de l'article qui répond à la question, s'il existe ou existera. */
@@ -47,7 +46,7 @@ export interface Question {
 export interface SousCategorie {
   slug: string;
   titre: string;
-  /** Questions de débutant de cette sous-catégorie (liées à l'article quand il existe). */
+  /** Questions fréquentes de cette sous-catégorie (liées à l'article quand il existe). */
   questions: Question[];
 }
 
@@ -73,7 +72,7 @@ const DONNEES_SOUS_CATEGORIES: Record<CategorySlug, SousCategorie[]> = {
       titre: "Comprendre l'IA",
       questions: [
         { question: "C'est quoi une IA, concrètement ?", slug: "intelligence-artificielle-guide-debutants" },
-        { question: "Les outils d'IA pour débutants : lesquels tester ?", slug: "top10-outils-ia-debutants" },
+        { question: "Quels outils d'IA tester en premier ?", slug: "top10-outils-ia-debutants" },
         { question: "Qu'est-ce qu'un modèle de langage ?", slug: "modele-de-langage-c-est-quoi" },
         { question: "Pourquoi l'IA se trompe-t-elle parfois ?", slug: "pourquoi-ia-se-trompe" },
       ],
@@ -243,7 +242,7 @@ const DONNEES_SOUS_CATEGORIES: Record<CategorySlug, SousCategorie[]> = {
       titre: "Les outils du développeur",
       questions: [
         { question: "Git, c'est quoi ?", slug: "git-c-est-quoi" },
-        { question: "VS Code : l'éditeur de code pour débutants", slug: "vs-code-debutant" },
+        { question: "VS Code : comment prendre en main l'éditeur de code ?", slug: "vs-code-debutant" },
         { question: "C'est quoi une API ?", slug: "c-est-quoi-une-api" },
       ],
     },
@@ -369,7 +368,7 @@ export const CATEGORIES: Category[] = [
     icon: "brain-circuit",
     description:
       "ChatGPT, Gemini, agents, prompts : l'IA expliquée simplement, ce qu'elle sait faire, comment t'en servir et où elle se trompe.",
-    body: "Tout le monde parle d'IA, peu de gens t'expliquent calmement de quoi il s'agit. Ici, on part de zéro : c'est quoi une IA, à quoi elle peut te servir concrètement, comment lui poser une bonne question, et dans quels cas elle se trompe.",
+    body: "Tout le monde parle d'IA, peu de gens t'expliquent calmement de quoi il s'agit. Ici, on reprend les bases : c'est quoi une IA, à quoi elle peut te servir concrètement, comment lui poser une bonne question, et dans quels cas elle se trompe.",
     sousCategories: DONNEES_SOUS_CATEGORIES["intelligence-artificielle"],
   },
   {

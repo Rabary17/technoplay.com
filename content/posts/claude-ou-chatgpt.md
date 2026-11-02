@@ -91,7 +91,7 @@ Payer deux abonnements complets n'a souvent pas de sens au départ. Utilise les 
 
 Avant de coller un texte personnel ou professionnel, lis la politique de confidentialité de chaque service. Ne partage pas de données de clients, de mots de passe ou de documents confidentiels, sauf si ton entreprise l'autorise.
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 - **Choisir pour le nom.** Le meilleur outil est celui qui sert ton usage, pas celui dont on parle le plus.
 - **Comparer les prix sans les devises.** Un tarif en dollars ne se lit pas comme un tarif en euros.

@@ -1,9 +1,10 @@
 # Techno Play
 
-Techno Play, **le QG des débutants en tech** ([techno-play.com](https://techno-play.com)) :
-IA, robotique, maison connectée, programmation, appareils, sécurité — expliqués simplement,
-avec des exemples concrets. Tous les visiteurs sont pris pour des novices (repositionnement du
-2026-10-07).
+Techno Play, **la tech du quotidien expliquée clairement** ([techno-play.com](https://techno-play.com)) :
+IA, robotique, maison connectée, programmation, appareils, sécurité, avec des exemples concrets.
+Le site s'adresse au grand public adulte (repositionnement du 2026-11-02, qui remplace « le QG
+des débutants en tech » du 2026-10-07) : pas de contenu destiné aux enfants, pas de lecteur
+traité en novice.
 
 ## Pourquoi un export statique
 
@@ -63,7 +64,7 @@ npm run new-post -- --categorie programmation "Titre du nouvel article"
 ```
 
 Crée `content/posts/<slug-derive-du-titre>.md` avec le frontmatter pré-rempli, l'auteur choisi
-selon sa spécialité et le **squelette d'article pour débutants** (voir plus bas). Remplacer les
+selon sa spécialité et le **squelette d'article** (voir plus bas). Remplacer les
 `TODO`, supprimer les blocs inutiles, puis `npm run build` : l'article apparaît automatiquement
 sur l'accueil, dans sa page de thème et dans le sitemap.
 
@@ -80,11 +81,11 @@ category: "intelligence-artificielle"   # slug d'un des 6 thèmes, voir lib/cate
 ---
 ```
 
-### Structure d'un article (débutants)
+### Structure d'un article
 
 Chaque article suit le même fil, pour que le lecteur sache toujours où il en est :
 
-1. **Titre = la question du débutant** (« Comment… ? », « C'est quoi… ? », « Lequel choisir… ? »).
+1. **Titre = la question du lecteur** (« Comment… ? », « C'est quoi… ? », « Lequel choisir… ? »).
 2. **L'essentiel en 30 secondes** — la réponse en 2 phrases maximum, dans un encadré.
 3. **Introduction** — la situation que le lecteur reconnaît, 2 à 3 phrases.
 4. **C'est quoi, concrètement ?** — une définition en une phrase + une comparaison avec la vie
@@ -92,7 +93,7 @@ Chaque article suit le même fil, pour que le lecteur sache toujours où il en e
 5. **Comment faire, pas à pas** (liste numérotée, une action par étape) — ou, pour un
    comparatif, **Lequel choisir selon ton cas ?** (un cas = un conseil).
 6. **Attention** (encadré, seulement si une étape est risquée ou irréversible).
-7. **Les erreurs de débutant à éviter.**
+7. **Les erreurs à éviter** (intertitre à adapter au sujet).
 8. **Les mots à connaître** (encadré lexique : une définition = une phrase).
 9. **Questions fréquentes** (réponses de 50 mots maximum) et **Et maintenant ?** (la suite
    logique, avec un lien vers un autre article).
@@ -257,8 +258,8 @@ articles). Directeur de la publication : Andrianina RABARIVELO.
 
 ## Accueil et photos
 
-`app/page.tsx` (refonte du 2026-10-07, la plus simple possible) : hero (« Le QG des débutants
-en tech »), « Qu'est-ce que tu aimerais comprendre ? » (les 6 thèmes avec un exemple de
+`app/page.tsx` (refonte du 2026-10-07, la plus simple possible) : hero (« La tech du quotidien,
+expliquée »), « Qu'est-ce que tu aimerais comprendre ? » (les 6 thèmes avec un exemple de
 question chacun), derniers articles, « Comment on rend la tech simple » (les engagements
 envers le lecteur), « Pourquoi Techno Play ? » (le nom de marque), la rédaction, une FAQ
 (JSON-LD `FAQPage`), un appel à poser une question et les crédits photos. Les exemples de
@@ -309,8 +310,10 @@ tel quel dans un autre pipeline de génération.
 ## Ton éditorial
 
 Tutoiement, ton direct et légèrement décalé, honnête sur les défauts — voir
-la « Charte de ton » dans les docs du projet Claude. Depuis le 2026-10-07, la cible est le
-**débutant complet** : pédagogique sans jamais condescendre. Les textes du site (thèmes,
+la « Charte de ton » dans les docs du projet Claude. Depuis le 2026-11-02, la cible est le
+**grand public adulte** : clair et précis, sans infantiliser ni s'adresser aux enfants. Les
+expressions à proscrire sont dans `_strategie/liste-noire-redaction.md` et signalées par
+`npm run lisibilite`. Les textes du site (thèmes,
 accueil, À propos, FAQ, bio) la suivent déjà ; les pages légales restent au vouvoiement.
 
 ## Structure

@@ -94,7 +94,7 @@ Ne télécharge pas un VPN depuis un lien reçu par message ou par publicité. P
 
 Un VPN payant n'est pas automatiquement fiable. Le même principe s'applique : vérifie l'éditeur, la politique de données et la date des audits. Le prix ne remplace pas la vérification.
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 - **Installer le premier VPN trouvé.** Le premier résultat d'une recherche est souvent une publicité.
 - **Croire qu'il protège de tout.** Il chiffre la connexion, rien de plus.

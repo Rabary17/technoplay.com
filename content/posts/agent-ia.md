@@ -90,7 +90,7 @@ Un agent qui envoie un message, paie un achat ou supprime un fichier fait une ac
 
 </div>
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 Ce n'est pas grave de s'y perdre au début. Voici les pièges les plus fréquents.
 

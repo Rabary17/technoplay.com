@@ -49,7 +49,7 @@ export const AUTHORS: Author[] = [
     bio: [
       "Andrianina RABARIVELO est le rédacteur en chef de Techno Play. Développeur et responsable technique, il passe ses journées à la croisée du web, du référencement et de l'intelligence artificielle : sites WordPress et Next.js, scripts d'automatisation en Python et Node.js, extensions Chrome, infra cloud. Bref, la tech, il ne se contente pas d'en parler : il la fait tourner.",
       "Les grands modèles de langage, il travaille avec tous les jours : ChatGPT, Claude, Gemini et consorts font partie de sa boîte à outils, pour le référencement sur Google comme sur les moteurs de réponse génératifs. De quoi nourrir directement le thème Intelligence artificielle : comment ces outils fonctionnent, ce qu'ils font bien, et là où ils se plantent.",
-      "Sur Techno Play, il fixe la ligne éditoriale, choisit les sujets et veille à ce que chaque article réponde à une vraie question de débutant, avec des infos vérifiées. Son critère, simple et sans pitié : un bon tuto se juge à une seule chose — est-ce que tu as réglé ton problème à la fin ?",
+      "Sur Techno Play, il fixe la ligne éditoriale, choisit les sujets et veille à ce que chaque article réponde à une vraie question de lecteur, avec des infos vérifiées. Son critère, simple et sans pitié : un bon tuto se juge à une seule chose — est-ce que tu as réglé ton problème à la fin ?",
       "Quand il lâche le clavier, c'est souvent pour prendre sa guitare : Andrianina est aussi guitariste.",
       "Tu peux aussi suivre ses analyses tech et IA, en français et en anglais, sur LinkedIn, X et YouTube.",
     ],
@@ -104,7 +104,7 @@ export const AUTHORS: Author[] = [
       "Andee RAKOTOVAO couvre pour Techno Play le design, le graphisme, la photographie, le développement et les jeux vidéo. Écrans, PC, périphériques, logiciels de création : chaque produit est jugé sur ce qui compte quand on crée ou qu'on joue, pour t'aider à choisir sans payer pour du marketing.",
     bio: [
       "Andee RAKOTOVAO est spécialiste design, jeux vidéo et création chez Techno Play. Graphisme, photographie, développement, gaming : ces sujets ont un point commun, ils demandent du bon matériel et des outils bien choisis.",
-      "Sur le site, Andee décortique les écrans, les composants PC, les périphériques et les innovations hardware, avec les critères qui comptent vraiment quand on retouche des photos, qu'on code ou qu'on enchaîne les parties. Andee suit aussi la programmation pour débutants et les innovations hardware, des robots aux drones. Les fiches techniques gonflées et le marketing « gamer » n'ont qu'à bien se tenir.",
+      "Sur le site, Andee décortique les écrans, les composants PC, les périphériques et les innovations hardware, avec les critères qui comptent vraiment quand on retouche des photos, qu'on code ou qu'on enchaîne les parties. Andee suit aussi la programmation et les innovations hardware, des robots aux drones. Les fiches techniques gonflées et le marketing « gamer » n'ont qu'à bien se tenir.",
       "Tu peux suivre Andee sur Instagram, TikTok, LinkedIn et Facebook.",
     ],
     expertise: [

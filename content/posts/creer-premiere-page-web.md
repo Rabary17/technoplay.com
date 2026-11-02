@@ -45,7 +45,7 @@ Une personne crée une page qui présente son club de lecture. Elle écrit le no
 
 **Enregistre souvent**
 
-Beaucoup de débutants oublient d'enregistrer le fichier avant de rafraîchir la page. Si rien ne change, vérifie d'abord la sauvegarde.
+On oublie souvent d'enregistrer le fichier avant de rafraîchir la page. Si rien ne change, vérifie d'abord la sauvegarde.
 
 </div>
 

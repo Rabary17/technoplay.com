@@ -85,7 +85,7 @@ Tu verras aussi le **Mini LED** en magasin. Si tu hésites entre deux prix proch
 
 ![Plusieurs téléviseurs exposés dans un magasin](/images/articles/oled-ou-qled-2.webp)
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 Ce n'est pas grave de s'y tromper. Ces pièges reviennent très souvent.
 

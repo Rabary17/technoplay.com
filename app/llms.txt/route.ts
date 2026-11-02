@@ -11,7 +11,7 @@ export function GET() {
   lignes.push(`# ${SITE_NAME}`);
   lignes.push("");
   lignes.push(
-    "> Le QG des débutants en tech : l'intelligence artificielle, la robotique, la maison connectée, la programmation, les appareils et la sécurité, expliqués simplement, avec des exemples concrets. Chaque article commence par une réponse courte (« L'essentiel en 30 secondes »). Édité par Anmira Studio, Antananarivo, Madagascar."
+    "> La tech du quotidien expliquée clairement : l'intelligence artificielle, la robotique, la maison connectée, la programmation, les appareils et la sécurité, avec des exemples concrets. Chaque article commence par une réponse courte (« L'essentiel en 30 secondes »). Édité par Anmira Studio, Antananarivo, Madagascar."
   );
   lignes.push("");
   lignes.push("## Thèmes");
@@ -29,7 +29,7 @@ export function GET() {
   lignes.push("## Pages utiles");
   lignes.push("");
   lignes.push(`- [À propos](${SITE_URL}/a-propos/): qui fait Techno Play et comment les articles sont écrits`);
-  lignes.push(`- [Questions fréquentes](${SITE_URL}/faq/): les questions que se posent les débutants`);
+  lignes.push(`- [Questions fréquentes](${SITE_URL}/faq/): les questions fréquentes sur le site`);
   lignes.push(`- [Contact](${SITE_URL}/contact/): poser une question`);
   lignes.push("");
   return new Response(lignes.join("\n"), {

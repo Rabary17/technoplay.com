@@ -18,7 +18,7 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Qu'est-ce qu'un serveur ?", choix: ["Un ordinateur allumé en permanence qui stocke et envoie des sites ou des fichiers", "Une personne qui apporte les plats au restaurant"], bonne: 0, explication: "Quand tu ouvres un site, ton appareil demande les pages à un serveur." },
     { question: "Quelle est la différence entre Internet et le Web ?", choix: ["Internet est le réseau, le Web est l'ensemble des sites", "Il n'y en a aucune"], bonne: 0, explication: "Le Web n'est qu'un des usages d'Internet, comme les courriels ou les appels vidéo." },
     { question: "À quoi sert la box Internet ?", choix: ["Elle apporte Internet chez toi et le distribue aux appareils", "Elle recharge les téléphones"], bonne: 0, explication: "La box fait le lien entre la maison et le reste d'Internet." },
-    { question: "Que fait un enfant s'il voit quelque chose qui le choque en ligne ?", choix: ["Il ferme et en parle à un adulte", "Il le garde pour lui"], bonne: 0, explication: "Il n'a rien fait de mal. Un adulte peut l'aider et régler les outils de protection." },
+    { question: "Le Wi-Fi s'affiche mais aucun site ne s'ouvre. D'où vient souvent la panne ?", choix: ["De la box, qui n'est plus reliée à Internet", "Du téléphone, forcément cassé"], bonne: 0, explication: "Le Wi-Fi relie seulement l'appareil à la box. Redémarrer la box règle souvent le problème." },
     { question: "Pourquoi installer les mises à jour ?", choix: ["Elles corrigent souvent des failles de sécurité", "Elles changent seulement la couleur de l'écran"], bonne: 0, explication: "Un appareil à jour est bien mieux protégé." },
     { question: "Qu'est-ce que le cloud ?", choix: ["Un espace de stockage sur des serveurs, accessible depuis tes appareils", "Un nuage qui fait tomber la pluie sur la box"], bonne: 0, explication: "Ranger ses fichiers dans le cloud permet de les retrouver depuis un autre appareil." },
   ],
@@ -124,13 +124,13 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
       explication: "Une IA est un programme. Elle peut écrire « je suis content », mais elle ne ressent rien et n'est pas vivante.",
     },
     {
-      question: "Tu fais tes devoirs avec une IA. Quel est le bon usage ?",
+      question: "Pour apprendre avec une IA, quel est le bon usage ?",
       choix: [
         "Lui demander d'expliquer la leçon autrement",
         "Recopier sa réponse sans la lire",
       ],
       bonne: 0,
-      explication: "L'IA peut t'aider à comprendre. Recopier ne t'apprend rien, et sa réponse peut contenir des erreurs.",
+      explication: "L'IA peut aider à comprendre. Recopier n'apprend rien, et sa réponse peut contenir des erreurs.",
     },
     {
       question: "Qu'est-ce qu'un biais dans une IA ?",
@@ -140,15 +140,6 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
       ],
       bonne: 0,
       explication: "Si une IA n'a vu que des pilotes hommes, elle risque de croire qu'un pilote est forcément un homme.",
-    },
-    {
-      question: "Quelle information un enfant ne doit jamais donner à une IA ?",
-      choix: [
-        "Son adresse ou le nom de son école",
-        "Sa couleur préférée",
-      ],
-      bonne: 0,
-      explication: "Ton nom complet, ton adresse, ton école, ton téléphone et tes photos restent privés. Demande à un adulte en cas de doute.",
     },
   ],
   "choisir-bon-mot-de-passe": [
@@ -332,7 +323,7 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
   "c-est-quoi-la-programmation": [
     { question: "Qu'est-ce qu'un programme informatique ?", choix: ["Une suite d'instructions que l'ordinateur suit à la lettre", "Un objet électronique qu'on branche"], bonne: 0, explication: "C'est une recette très précise, étape après étape. L'ordinateur n'invente rien." },
     { question: "Un ordinateur devine-t-il ce que l'on veut ?", choix: ["Non, il exécute exactement ce qui est écrit", "Oui, il comprend toujours l'intention"], bonne: 0, explication: "Même une erreur est exécutée. D'où l'importance d'écrire des instructions claires." },
-    { question: "Faut-il être bon en maths pour débuter la programmation ?", choix: ["Non, un peu de logique suffit", "Oui, il faut maîtriser l'algèbre avancée"], bonne: 0, explication: "Les maths avancées servent dans des domaines spécialisés. Pour débuter, la logique suffit." },
+    { question: "Faut-il être bon en maths pour commencer à programmer ?", choix: ["Non, un peu de logique suffit", "Oui, il faut maîtriser l'algèbre avancée"], bonne: 0, explication: "Les maths avancées servent dans des domaines spécialisés. Pour débuter, la logique suffit." },
     { question: "Que désigne une « condition » dans un programme ?", choix: ["Une règle du type « si… alors… sinon »", "Un type de câble"], bonne: 0, explication: "Les conditions permettent au programme de choisir une action selon la situation." },
     { question: "Quelle est la bonne façon de commencer ?", choix: ["Un programme qui affiche un message", "Un projet complet dès le premier jour"], bonne: 0, explication: "On progresse par petits projets : un message, puis une condition, puis une répétition." },
     { question: "Que faut-il faire quand un programme affiche une erreur ?", choix: ["Lire le message d'erreur et corriger", "Le relancer dix fois sans rien changer"], bonne: 0, explication: "Les messages d'erreur indiquent souvent où chercher le problème." },
@@ -340,7 +331,7 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Pourquoi comprendre la programmation est-il utile même sans devenir développeur ?", choix: ["Pour mieux comprendre les applications et automatiser certaines tâches", "Pour réparer les câbles de la maison"], bonne: 0, explication: "Un petit programme peut renommer des centaines de fichiers. Et comprendre le principe aide à mieux utiliser les outils." },
     { question: "Qu'est-ce qu'une boucle dans un programme ?", choix: ["Une instruction qui répète une action plusieurs fois", "Un câble enroulé"], bonne: 0, explication: "Par exemple : pour chaque photo du dossier, réduis sa taille." },
     { question: "Comment appelle-t-on une erreur dans un programme ?", choix: ["Un bug", "Un pixel"], bonne: 0, explication: "Tout le monde fait des bugs. Les chercher et les corriger fait partie du travail." },
-    { question: "Avec quel outil un enfant peut-il commencer à programmer ?", choix: ["Scratch, avec des blocs à assembler", "Un tableur de comptabilité"], bonne: 0, explication: "Scratch permet de programmer en assemblant des blocs de couleur, sans rien taper." },
+    { question: "Quel outil permet de programmer sans rien taper au clavier ?", choix: ["Scratch, avec des blocs à assembler", "Un tableur de comptabilité"], bonne: 0, explication: "Scratch permet de programmer en assemblant des blocs de couleur, sans rien taper." },
   ],
   "c-est-quoi-un-robot": [
     { question: "Quelles sont les trois parties d'un robot ?", choix: ["Des capteurs, un programme et des moteurs", "Un écran, un clavier et une souris"], bonne: 0, explication: "Les capteurs observent, le programme décide, les moteurs agissent." },
@@ -352,13 +343,13 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Un robot est-il forcément intelligent ?", choix: ["Non, beaucoup suivent des règles simples", "Oui, par définition"], bonne: 0, explication: "L'intelligence dépend du programme. Beaucoup de robots font une seule tâche selon des règles fixes." },
     { question: "Parmi ces appareils, lequel est un robot ?", choix: ["Un aspirateur robot", "Un grille-pain"], bonne: 0, explication: "Il perçoit son environnement, décide et agit. Un grille-pain ne le fait pas." },
     { question: "Un robot ressent-il la douleur ou la peur ?", choix: ["Non, il mesure des choses mais ne ressent rien", "Oui, comme un animal"], bonne: 0, explication: "Un robot est une machine. Ses capteurs mesurent, mais il n'a ni émotions ni sensations." },
-    { question: "Que faut-il faire avant de s'approcher d'un robot en marche ?", choix: ["Demander à un adulte de l'arrêter", "Mettre les doigts près des roues pour voir"], bonne: 0, explication: "Roues, brosses, hélices et lames peuvent blesser. On attend que le robot soit arrêté." },
+    { question: "Que faut-il faire avant de s'approcher d'un robot en marche ?", choix: ["L'arrêter ou attendre qu'il ait fini", "Mettre les doigts près des roues pour voir"], bonne: 0, explication: "Roues, brosses, hélices et lames peuvent blesser. On attend que le robot soit arrêté." },
     { question: "Quelle est la différence entre un robot et une IA ?", choix: ["Le robot a un corps qui agit, l'IA est une façon de décider", "C'est exactement la même chose"], bonne: 0, explication: "Un robot peut utiliser une IA, mais beaucoup suivent seulement des règles fixes." },
   ],
   "c-est-quoi-une-maison-connectee": [
     { question: "Comment s'appelle l'ensemble des techniques qui automatisent la maison ?", choix: ["La domotique", "La géothermie"], bonne: 0, explication: "La domotique regroupe les techniques qui automatisent et pilotent les équipements de la maison." },
     { question: "Quelles sont les trois parties d'un objet connecté ?", choix: ["Un élément qui agit ou mesure, une liaison sans fil et une application", "Un écran, une batterie et un clavier"], bonne: 0, explication: "Un objet connecté combine un capteur ou un moteur, une connexion sans fil et une application pour le commander." },
-    { question: "Faut-il tout changer dans la maison pour commencer ?", choix: ["Non, un seul appareil suffit pour débuter", "Oui, il faut tout remplacer d'un coup"], bonne: 0, explication: "Commence par un appareil qui te rend service, puis ajoute-en d'autres si tu veux." },
+    { question: "Faut-il tout changer dans la maison pour commencer ?", choix: ["Non, un seul appareil suffit pour commencer", "Oui, il faut tout remplacer d'un coup"], bonne: 0, explication: "Commence par un appareil qui te rend service, puis ajoute-en d'autres si tu veux." },
     { question: "Un objet connecté est-il forcément sécurisé ?", choix: ["Non, il faut changer son mot de passe et mettre à jour son logiciel", "Oui, par défaut il est parfaitement protégé"], bonne: 0, explication: "Un objet mal sécurisé peut donner accès à ton réseau. Change le mot de passe par défaut et installe les mises à jour." },
     { question: "Que faut-il faire avant de revendre un objet connecté ?", choix: ["Effacer ses données et le compte lié", "Le laisser connecté pour le nouvel acheteur"], bonne: 0, explication: "Tes données et ton compte pourraient rester accessibles à la personne qui le récupère." },
     { question: "Quel est le premier geste pour installer un objet connecté ?", choix: ["L'alimenter, puis le relier à ton Wi-Fi", "Le poser dans le jardin"], bonne: 0, explication: "Une fois alimenté, l'objet se relie à ton réseau, puis tu l'ajoutes dans son application." },
@@ -366,7 +357,7 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Quel mot de passe faut-il choisir pour un objet connecté ?", choix: ["Un mot de passe long et unique", "Le mot de passe par défaut du fabricant"], bonne: 0, explication: "Le mot de passe par défaut est souvent connu. Un mot de passe long et unique protège bien mieux." },
     { question: "Qu'est-ce qu'une automatisation dans une maison connectée ?", choix: ["Une règle « si… alors… » que la maison suit seule", "Un appareil qui devine ce que tu veux"], bonne: 0, explication: "Par exemple : si la température descend sous 18 degrés, alors allume le chauffage." },
     { question: "Où ne faut-il pas installer une caméra connectée ?", choix: ["Dans une chambre d'enfant ou une salle de bain", "Devant la porte d'entrée"], bonne: 0, explication: "Une caméra filme aussi la vie privée de la famille. On la garde loin des pièces intimes." },
-    { question: "Un enfant peut-il faire des achats avec l'enceinte connectée ?", choix: ["Non, il demande toujours à un adulte", "Oui, c'est fait pour ça"], bonne: 0, explication: "Les parents peuvent souvent bloquer les achats à la voix ou exiger un code dans l'application." },
+    { question: "Comment éviter les achats involontaires avec une enceinte connectée ?", choix: ["Bloquer les achats à la voix ou exiger un code", "Laisser les réglages par défaut"], bonne: 0, explication: "L'application de l'enceinte permet souvent de désactiver les achats vocaux ou de les protéger par un code." },
   ],
   "capture-ecran-pc": [
     { question: "Quel raccourci ouvre la sélection de zone pour une capture d'écran sous Windows ?", choix: ["Windows + Maj + S", "Ctrl + Alt + Suppr"], bonne: 0, explication: "Windows + Maj + S permet de choisir une zone de l'écran à capturer." },
@@ -506,7 +497,7 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Pourquoi commencer par un seul appareil ?", choix: ["Pour limiter le risque financier et comprendre l'application", "Parce que la loi l'impose"], bonne: 0, explication: "Un petit premier achat permet de comprendre le fonctionnement et de limiter la dépense." },
     { question: "Qu'est-ce qu'une prise connectée ?", choix: ["Une prise qu'on pilote depuis une application", "Une prise qui charge plus vite"], bonne: 0, explication: "Elle se branche entre le mur et l'appareil, et s'utilise via une application." },
     { question: "Avant de brancher une prise connectée, que faut-il vérifier ?", choix: ["Que l'appareil ne dépasse pas la puissance maximale", "Que la prise est rouge"], bonne: 0, explication: "Un appareil qui consomme plus que la puissance indiquée peut causer des problèmes." },
-    { question: "Quelle erreur de débutant l'article déconseille-t-il ?", choix: ["Acheter plusieurs marques qui ne fonctionnent pas ensemble", "Acheter une seule prise connectée"], bonne: 0, explication: "Mieux vaut choisir un écosystème et s'y tenir au début." },
+    { question: "Quelle erreur l'article déconseille-t-il ?", choix: ["Acheter plusieurs marques qui ne fonctionnent pas ensemble", "Acheter une seule prise connectée"], bonne: 0, explication: "Mieux vaut choisir un écosystème et s'y tenir au début." },
   ],
   "prompt-chatgpt": [
     { question: "Quelles sont les cinq briques d'un bon prompt ?", choix: ["Rôle, contexte, tâche, format, contraintes", "Titre, image, couleur, police, lien"], bonne: 0, explication: "Ces cinq briques donnent à l'IA les informations dont elle a besoin pour répondre de façon précise." },
@@ -519,9 +510,9 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Que dit l'article sur la longueur d'un prompt ?", choix: ["Il ne faut pas écrire un roman, mais donner les bonnes informations", "Il faut toujours écrire le plus long possible"], bonne: 0, explication: "L'enjeu est la pertinence des informations, pas la longueur." },
   ],
   "quel-langage-apprendre-en-premier": [
-    { question: "Quel langage est souvent conseillé aux débutants ?", choix: ["Python", "Un langage réservé aux experts"], bonne: 0, explication: "Python est souvent conseillé, car sa syntaxe se lit presque comme une phrase." },
+    { question: "Quel langage est souvent conseillé pour commencer ?", choix: ["Python", "Un langage réservé aux experts"], bonne: 0, explication: "Python est souvent conseillé, car sa syntaxe se lit presque comme une phrase." },
     { question: "Qu'est-ce qui doit guider le choix d'un premier langage ?", choix: ["Son objectif : site, automatisation, données ou jeu", "La couleur du logo"], bonne: 0, explication: "Le bon langage dépend surtout de ce que tu veux faire." },
-    { question: "Quel est le piège fréquent des débutants ?", choix: ["Comparer les langages sans jamais écrire de code", "Écrire trop de code"], bonne: 0, explication: "Rester à comparer bloque la progression. Il vaut mieux commencer par un petit projet." },
+    { question: "Quel est le piège fréquent quand on commence ?", choix: ["Comparer les langages sans jamais écrire de code", "Écrire trop de code"], bonne: 0, explication: "Rester à comparer bloque la progression. Il vaut mieux commencer par un petit projet." },
     { question: "Que signifie « syntaxe » ?", choix: ["Les règles d'écriture d'un langage", "Un type de clavier"], bonne: 0, explication: "La syntaxe, ce sont les règles d'écriture qu'il faut respecter." },
     { question: "Que permet de faire Python avec 200 photos à renommer ?", choix: ["Le faire en quelques lignes, au lieu de tout faire à la main", "Retoucher les couleurs automatiquement"], bonne: 0, explication: "Un petit programme automatise les tâches répétitives." },
     { question: "Que retrouve-t-on dans presque tous les langages ?", choix: ["Conditions, répétitions et variables", "Uniquement des couleurs"], bonne: 0, explication: "Ces notions de base se retrouvent dans presque tous les langages." },
@@ -743,7 +734,7 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
   "quel-drone-pour-debuter": [
     { question: "Quelle qualité recherchée pour un premier drone ?", choix: ["Un pilotage simple et des hélices protégées", "Une caméra professionnelle"], bonne: 0, explication: "Pour débuter, la stabilité et la protection comptent davantage." },
     { question: "Pourquoi le poids du drone est-il important ?", choix: ["Il détermine les règles applicables avant de voler", "Il change la couleur du drone"], bonne: 0, explication: "Le poids influe sur les règles à respecter, à vérifier avant le vol." },
-    { question: "À quoi sert la stabilisation ?", choix: ["À maintenir le drone en position sans commande", "À accélérer la charge"], bonne: 0, explication: "Elle rend le vol plus facile pour un débutant." },
+    { question: "À quoi sert la stabilisation ?", choix: ["À maintenir le drone en position sans commande", "À accélérer la charge"], bonne: 0, explication: "Elle rend le vol plus facile, surtout les premières fois." },
     { question: "Une caméra de qualité est-elle indispensable pour apprendre ?", choix: ["Non, seulement si tu veux filmer ou photographier", "Oui, pour tout apprendre"], bonne: 0, explication: "Pour apprendre à piloter, une image correcte suffit." },
     { question: "Pourquoi se méfier des drones d'occasion mal entretenus ?", choix: ["Ils peuvent perdre le contrôle", "Ils coûtent toujours plus cher"], bonne: 0, explication: "Un défaut non détecté peut provoquer une perte de contrôle." },
     { question: "Le GPS remplace-t-il l'apprentissage du pilotage ?", choix: ["Non, il aide mais ne remplace pas l'entraînement", "Oui, totalement"], bonne: 0, explication: "Le GPS facilite le vol, mais il faut toujours apprendre à piloter." },
@@ -931,14 +922,14 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Faut-il savoir coder pour décrire un algorithme ?", choix: ["Non, des phrases simples ou un schéma suffisent", "Oui, obligatoirement"], bonne: 0, explication: "Le code vient ensuite, comme une traduction." },
   ],
   "apprendre-coder-gratuitement": [
-    { question: "Quel est le plus grand piège pour un débutant ?", choix: ["Collectionner les tutoriels sans coder soi-même", "Choisir un seul cours"], bonne: 0, explication: "Il faut pratiquer, pas seulement regarder." },
+    { question: "Quel est le plus grand piège quand on apprend ?", choix: ["Collectionner les tutoriels sans coder soi-même", "Choisir un seul cours"], bonne: 0, explication: "Il faut pratiquer, pas seulement regarder." },
     { question: "Pourquoi se fixer un petit projet ?", choix: ["Il donne une direction et montre les progrès", "Il remplace les exercices"], bonne: 0, explication: "Un projet concret rend l'apprentissage plus clair." },
     { question: "Faut-il un ordinateur très puissant ?", choix: ["Non, un ordinateur ordinaire suffit", "Oui, toujours"], bonne: 0, explication: "Pour débuter, la puissance n'est pas un frein." },
     { question: "Quelle ressource est une référence utile ?", choix: ["La documentation officielle du langage", "Une rumeur sur un forum"], bonne: 0, explication: "Elle décrit précisément le fonctionnement du langage." },
     { question: "Peut-on devenir développeur en une semaine ?", choix: ["Non, cela demande de la régularité", "Oui, facilement"], bonne: 0, explication: "Les promesses rapides sont à prendre avec prudence." },
     { question: "Pourquoi choisir un seul parcours ?", choix: ["Pour éviter de changer de cours sans cesse", "Pour éviter de pratiquer"], bonne: 0, explication: "La cohérence aide à avancer." },
     { question: "Que peut apporter une communauté d'entraide ?", choix: ["Débloquer les moments difficiles", "Faire le travail à votre place"], bonne: 0, explication: "On y pose des questions et on apprend des autres." },
-    { question: "Quel langage accessible est souvent conseillé ?", choix: ["Python", "Un langage très ancien et peu documenté"], bonne: 0, explication: "Python est réputé lisible pour les débutants." },
+    { question: "Quel langage accessible est souvent conseillé ?", choix: ["Python", "Un langage très ancien et peu documenté"], bonne: 0, explication: "Python est réputé pour sa lisibilité." },
   ],
   "creer-premiere-page-web": [
     { question: "Que structure le HTML ?", choix: ["Le contenu de la page", "Les couleurs uniquement"], bonne: 0, explication: "Le HTML décrit les éléments : titre, paragraphe, liste." },
@@ -961,7 +952,7 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Quelle précaution pour partager un projet ?", choix: ["Ne pas donner d'informations personnelles", "Publier son adresse"], bonne: 0, explication: "Les commentaires peuvent être publics." },
   ],
   "python-premier-programme": [
-    { question: "Pourquoi Python est-il conseillé aux débutants ?", choix: ["Il se lit presque comme une phrase", "Il ne fait rien d'utile"], bonne: 0, explication: "Sa lisibilité facilite l'apprentissage." },
+    { question: "Pourquoi Python est-il conseillé pour commencer ?", choix: ["Il se lit presque comme une phrase", "Il ne fait rien d'utile"], bonne: 0, explication: "Sa lisibilité facilite l'apprentissage." },
     { question: "Comment un programme s'exécute-t-il ?", choix: ["De haut en bas, instruction par instruction", "Au hasard"], bonne: 0, explication: "L'ordre des lignes compte." },
     { question: "Que fait la fonction print ?", choix: ["Afficher un message", "Supprimer un fichier"], bonne: 0, explication: "Elle affiche le texte demandé." },
     { question: "Que permet input ?", choix: ["Demander une saisie à l'utilisateur", "Installer Python"], bonne: 0, explication: "Elle attend une réponse tapée par la personne." },
@@ -1004,7 +995,7 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Que gère le front-end ?", choix: ["Ce que l'utilisateur voit et touche", "Les serveurs de données uniquement"], bonne: 0, explication: "Il construit l'interface visible." },
     { question: "Que gère le back-end ?", choix: ["Les données, la logique et les échanges serveur", "Les couleurs de la page"], bonne: 0, explication: "Il traite les demandes et stocke l'information." },
     { question: "Que fait un profil full-stack ?", choix: ["Il travaille sur le front-end et le back-end", "Il ne fait que des tests"], bonne: 0, explication: "Il couvre l'ensemble du projet, avec une profondeur variable." },
-    { question: "Quel domaine est souvent un bon point de départ ?", choix: ["Le front-end, car le résultat est visible vite", "Le back-end, sans exception"], bonne: 0, explication: "Le retour visuel motive les débutants." },
+    { question: "Quel domaine est souvent un bon point de départ ?", choix: ["Le front-end, car le résultat est visible vite", "Le back-end, sans exception"], bonne: 0, explication: "Le retour visuel aide à rester motivé." },
     { question: "Pourquoi le back-end demande-t-il de la rigueur ?", choix: ["Les erreurs peuvent exposer des informations", "Il ne demande aucune rigueur"], bonne: 0, explication: "La sécurité des données est un enjeu majeur." },
     { question: "Qu'est-ce qu'une base de données ?", choix: ["Un espace qui organise et stocke les informations", "Un écran d'accueil"], bonne: 0, explication: "Elle permet de retrouver les données facilement." },
     { question: "Que faut-il regarder avant de choisir ?", choix: ["Les tâches décrites et ce qui motive vraiment", "Le titre seul de l'offre"], bonne: 0, explication: "Les titres sont parfois flous dans les annonces." },

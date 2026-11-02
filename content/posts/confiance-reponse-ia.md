@@ -55,7 +55,7 @@ Une réponse très précise, avec des chiffres et des références, mérite plus
 
 </div>
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 - **Copier une réponse sans la relire.** Tu deviens responsable de ce qu'elle contient.
 - **Croire qu'une source citée est réelle.** Vérifie qu'elle existe et qu'elle dit bien ce qui est écrit.

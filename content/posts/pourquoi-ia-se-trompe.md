@@ -47,7 +47,7 @@ Il y a aussi un effet de style. Une réponse nette et bien tournée donne une im
 4. Cherche le point clé sur un site officiel ou une source reconnue.
 5. Ne publie et ne décide rien sur un point non vérifié.
 
-## Les erreurs de débutant à éviter
+## Les erreurs à éviter
 
 - **Demander une source puis la croire sur parole.** Une source peut être inventée, avec un titre et une adresse qui semblent réels.
 - **Insister pour obtenir une réponse.** Si tu répètes la question, l'IA peut changer d'avis sans raison valable.

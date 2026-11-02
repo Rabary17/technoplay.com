@@ -128,4 +128,4 @@ Les paramètres forment le modèle lui-même, fixé après l'entraînement. Les 
 
 ## La suite de la série
 
-Tu sais maintenant lire la fiche technique d'un modèle. L'article précédent explique [comment on fabrique un modèle d'IA](/comment-fabrique-modele-ia/), étape par étape. Le suivant présente les entreprises qui les fabriquent : OpenAI, Anthropic, Google, Mistral, DeepSeek et les autres.
+Tu sais maintenant lire la fiche technique d'un modèle. L'article précédent explique [comment on fabrique un modèle d'IA](/comment-fabrique-modele-ia/), étape par étape. Le suivant présente [les entreprises qui fabriquent les IA](/entreprises-ia-openai-anthropic-google-mistral/) : OpenAI, Anthropic, Google, Mistral, DeepSeek et les autres.

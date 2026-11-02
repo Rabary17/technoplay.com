@@ -569,6 +569,16 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Quel outil s'intègre aux logiciels Adobe ?", choix: ["Adobe Firefly", "Krea"], bonne: 0, explication: "Firefly s'intègre à Photoshop et aux autres outils de la suite Adobe." },
     { question: "Que faut-il garder pour progresser avec un générateur d'images ?", choix: ["Une trace de ses meilleurs essais", "Aucune trace, pour ne pas s'encombrer"], bonne: 0, explication: "Garder ses meilleures consignes permet de les réutiliser et de progresser." },
   ],
+  "entreprises-ia-openai-anthropic-google-mistral": [
+    { question: "Quelle entreprise a lancé ChatGPT ?", choix: ["OpenAI", "Google"], bonne: 0, explication: "OpenAI, fondée en 2015 à San Francisco, a ouvert ChatGPT au public en novembre 2022." },
+    { question: "Comment s'appelle la famille de modèles d'Anthropic ?", choix: ["Claude", "Gemini"], bonne: 0, explication: "Anthropic décline Claude en trois tailles : Opus, Sonnet et Haiku." },
+    { question: "Où se trouve le siège de Mistral AI ?", choix: ["À Paris", "À San Francisco"], bonne: 0, explication: "Fondée en 2023 par trois chercheurs français, c'est la référence européenne du secteur." },
+    { question: "Qu'est-ce qu'un modèle ouvert (open weight) ?", choix: ["Un modèle dont le fichier de paramètres est téléchargeable", "Un modèle gratuit dans une application"], bonne: 0, explication: "Chacun peut l'installer sur sa machine ou ses serveurs, selon la licence." },
+    { question: "Lequel de ces modèles est fermé ?", choix: ["GPT-6", "Mistral Large 4"], bonne: 0, explication: "OpenAI ne publie ni les paramètres ni la taille de GPT-6." },
+    { question: "Quel avantage offre un modèle ouvert installé chez soi ?", choix: ["Les données restent en local", "Il est toujours plus puissant"], bonne: 0, explication: "Rien ne part sur les serveurs d'un éditeur, mais il faut le matériel adapté." },
+    { question: "Où l'application officielle de DeepSeek stocke-t-elle les conversations ?", choix: ["En Chine", "Sur ton téléphone uniquement"], bonne: 0, explication: "Plusieurs autorités européennes s'en sont inquiétées. Le modèle installé en local, lui, ne transmet rien." },
+    { question: "Quelle est la famille de modèles ouverts de Meta ?", choix: ["Llama", "Grok"], bonne: 0, explication: "Llama a popularisé les modèles téléchargeables. Grok est l'assistant de xAI." },
+  ],
   "parametres-modele-ia": [
     { question: "Que signifie « 8B » dans le nom d'un modèle ?", choix: ["8 milliards de paramètres", "8 billions d'octets"], bonne: 0, explication: "B vient de l'anglais « billion », qui veut dire milliard." },
     { question: "Qu'est-ce qu'un paramètre ?", choix: ["Un nombre réglé pendant l'entraînement", "Un réglage de l'application que tu choisis"], bonne: 0, explication: "Tout le savoir du modèle tient dans ces milliards de nombres." },

@@ -429,6 +429,7 @@ export const ARTICLE_SOUS_CATEGORIE: Record<string, string> = {
   "c-est-quoi-la-cybersecurite": "comprendre-la-cybersecurite",
   "intelligence-artificielle-guide-debutants": "comprendre-l-ia",
   "top10-outils-ia-debutants": "comprendre-l-ia",
+  "histoire-intelligence-artificielle": "comprendre-l-ia",
   "chatgpt-ou-gemini": "utiliser-un-assistant",
   "claude-ou-chatgpt": "utiliser-un-assistant",
   "prompt-chatgpt": "utiliser-un-assistant",

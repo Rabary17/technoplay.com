@@ -4,6 +4,29 @@ import type { QuestionQuiz } from "@/components/AtelierInteractif";
 // Deux programmes distincts : « L’IA au quotidien » (parents) et « Cap sur
 // les études avec l’IA » (lycéens). Les dates et le lieu n’étant pas encore
 // communiqués, les pages n’en affichent aucun.
+
+// Série « Comprendre l’IA » (8 articles, le 8e facultatif) : lue dans l’ordre,
+// elle sert de support au module « Comprendre comment fonctionne une IA » des
+// deux ateliers. Un article non publié n’est pas affiché (voir
+// components/AtelierProgramme.tsx) : il apparaît dès que son fichier existe.
+export const SERIE_COMPRENDRE_IA = [
+  "histoire-intelligence-artificielle",
+  "comment-fonctionne-une-ia",
+  "token-ia-c-est-quoi",
+  "comment-fabrique-modele-ia",
+  "parametres-modele-ia",
+  "entreprises-ia-openai-anthropic-google-mistral",
+  "ou-tourne-une-ia-cloud-ordinateur-telephone",
+  "installer-ia-locale-ollama-lm-studio",
+];
+
+const MODULE_COMPRENDRE_IA = {
+  titre: "Comprendre comment fonctionne une IA",
+  texte:
+    "Retracer l’histoire de l’IA, de Turing aux assistants actuels. Comparer ses composants à ceux d’un ordinateur, comprendre ce que sont un token et un paramètre, voir comment un modèle est fabriqué, par qui, et où il tourne.",
+  liens: SERIE_COMPRENDRE_IA,
+};
+
 export const PROGRAMMES = [
   {
     id: "parents",
@@ -17,6 +40,7 @@ export const PROGRAMMES = [
         texte:
           "Comprendre simplement ce qu’est une IA générative, ce qu’elle peut faire et ses limites. Découvrir l’interface d’un assistant, écrire une première demande et poursuivre une conversation.",
       },
+      MODULE_COMPRENDRE_IA,
       {
         titre: "Apprendre à bien formuler ses demandes",
         texte:
@@ -72,6 +96,7 @@ export const PROGRAMMES = [
         texte:
           "Comprendre le fonctionnement général d’un assistant IA et ses limites. Découvrir l’interface, poser une première question, relancer et commencer une nouvelle conversation.",
       },
+      MODULE_COMPRENDRE_IA,
       {
         titre: "Poser des questions utiles pour apprendre",
         texte:

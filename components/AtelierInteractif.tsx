@@ -10,6 +10,8 @@ import { useState } from "react";
 export interface ModuleAtelier {
   titre: string;
   texte: string;
+  /** Articles publiés du module, dans l'ordre de lecture. */
+  articles?: { titre: string; href: string }[];
 }
 
 export function ModulesCliquables({ modules }: { modules: ModuleAtelier[] }) {
@@ -33,6 +35,15 @@ export function ModulesCliquables({ modules }: { modules: ModuleAtelier[] }) {
             <div className="atelier-carte-module__corps">
               <div>
                 <p>{m.texte}</p>
+                {m.articles?.length ? (
+                  <ol className="atelier-carte-module__articles">
+                    {m.articles.map((a) => (
+                      <li key={a.href}>
+                        <a href={a.href}>{a.titre}</a>
+                      </li>
+                    ))}
+                  </ol>
+                ) : null}
               </div>
             </div>
           </li>

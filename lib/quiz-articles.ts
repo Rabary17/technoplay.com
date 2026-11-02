@@ -569,6 +569,16 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Quel outil s'intègre aux logiciels Adobe ?", choix: ["Adobe Firefly", "Krea"], bonne: 0, explication: "Firefly s'intègre à Photoshop et aux autres outils de la suite Adobe." },
     { question: "Que faut-il garder pour progresser avec un générateur d'images ?", choix: ["Une trace de ses meilleurs essais", "Aucune trace, pour ne pas s'encombrer"], bonne: 0, explication: "Garder ses meilleures consignes permet de les réutiliser et de progresser." },
   ],
+  "histoire-intelligence-artificielle": [
+    { question: "Quelle question Alan Turing pose-t-il en 1950 ?", choix: ["Les machines peuvent-elles penser ?", "Comment construire un ordinateur portable ?"], bonne: 0, explication: "Il propose de juger une machine sur sa capacité à passer pour un humain à l'écrit." },
+    { question: "Où naît l'expression « intelligence artificielle » ?", choix: ["Au projet de Dartmouth, en 1956", "Dans la Silicon Valley, en 2010"], bonne: 0, explication: "John McCarthy l'emploie dans la proposition du projet, écrite avec Minsky, Rochester et Shannon." },
+    { question: "Que faisait ELIZA, en 1966 ?", choix: ["Il imitait un psychothérapeute en reformulant les phrases", "Il traduisait des livres entiers"], bonne: 0, explication: "Il ne comprenait rien, mais des utilisateurs lui confiaient leurs soucis : c'est l'« effet ELIZA »." },
+    { question: "Qu'est-ce qu'un « hiver de l'IA » ?", choix: ["Une période de baisse des financements après des promesses déçues", "Une panne des ordinateurs à cause du froid"], bonne: 0, explication: "Il y en a eu deux : dans les années 1970, puis à la fin des années 1980." },
+    { question: "Comment Deep Blue a-t-il battu Kasparov en 1997 ?", choix: ["En calculant des millions de positions par seconde", "En apprenant seul à partir de photos"], bonne: 0, explication: "Il appliquait des règles écrites par des ingénieurs, avec une énorme puissance de calcul." },
+    { question: "Qu'est-ce qui change avec le deep learning en 2012 ?", choix: ["La machine découvre seule les règles dans des millions d'exemples", "Les programmes deviennent plus petits"], bonne: 0, explication: "Données d'Internet et cartes graphiques rendent possible l'entraînement de grands réseaux de neurones." },
+    { question: "Que désigne le « T » de GPT ?", choix: ["Transformer, une architecture publiée par Google en 2017", "Téléphone"], bonne: 0, explication: "Le Transformer analyse les liens entre tous les mots d'un texte à la fois." },
+    { question: "Quand ChatGPT a-t-il été ouvert au public ?", choix: ["Le 30 novembre 2022", "En 1997"], bonne: 0, explication: "Pour la première fois, tout le monde pouvait discuter avec un modèle de langage." },
+  ],
   "top10-outils-ia-debutants": [
     { question: "Par quel type d'outil conseille-t-on de commencer ?", choix: ["Un assistant conversationnel comme ChatGPT, Claude ou Gemini", "Un logiciel de montage vidéo"], bonne: 0, explication: "Un assistant conversationnel est le point de départ le plus simple." },
     { question: "Quel outil est cité pour chercher et citer ses sources ?", choix: ["Perplexity", "DeepL"], bonne: 0, explication: "Perplexity est présenté pour les recherches précises, avec des sources." },

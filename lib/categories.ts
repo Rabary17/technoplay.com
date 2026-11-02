@@ -433,6 +433,7 @@ export const ARTICLE_SOUS_CATEGORIE: Record<string, string> = {
   "comment-fonctionne-une-ia": "comprendre-l-ia",
   "token-ia-c-est-quoi": "comprendre-l-ia",
   "comment-fabrique-modele-ia": "comprendre-l-ia",
+  "parametres-modele-ia": "comprendre-l-ia",
   "chatgpt-ou-gemini": "utiliser-un-assistant",
   "claude-ou-chatgpt": "utiliser-un-assistant",
   "prompt-chatgpt": "utiliser-un-assistant",

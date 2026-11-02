@@ -140,4 +140,4 @@ Non. Ses paramètres sont figés à la livraison. Pour intégrer de nouvelles co
 
 ## La suite de la série
 
-Tu connais maintenant la chaîne de fabrication. L'article précédent explique [ce qu'est un token](/token-ia-c-est-quoi/), l'unité que le modèle apprend à prédire. Le suivant décode les fameux chiffres 8B ou 70B : que signifient les paramètres d'une IA ?
+Tu connais maintenant la chaîne de fabrication. L'article précédent explique [ce qu'est un token](/token-ia-c-est-quoi/), l'unité que le modèle apprend à prédire. Le suivant décode les fameux chiffres 8B ou 70B : [que signifient les paramètres d'une IA](/parametres-modele-ia/) ?

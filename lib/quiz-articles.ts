@@ -569,6 +569,16 @@ export const QUIZ_PAR_ARTICLE: Record<string, QuestionQuiz[]> = {
     { question: "Quel outil s'intègre aux logiciels Adobe ?", choix: ["Adobe Firefly", "Krea"], bonne: 0, explication: "Firefly s'intègre à Photoshop et aux autres outils de la suite Adobe." },
     { question: "Que faut-il garder pour progresser avec un générateur d'images ?", choix: ["Une trace de ses meilleurs essais", "Aucune trace, pour ne pas s'encombrer"], bonne: 0, explication: "Garder ses meilleures consignes permet de les réutiliser et de progresser." },
   ],
+  "parametres-modele-ia": [
+    { question: "Que signifie « 8B » dans le nom d'un modèle ?", choix: ["8 milliards de paramètres", "8 billions d'octets"], bonne: 0, explication: "B vient de l'anglais « billion », qui veut dire milliard." },
+    { question: "Qu'est-ce qu'un paramètre ?", choix: ["Un nombre réglé pendant l'entraînement", "Un réglage de l'application que tu choisis"], bonne: 0, explication: "Tout le savoir du modèle tient dans ces milliards de nombres." },
+    { question: "Que désigne la lettre T dans « 1T » ?", choix: ["Mille milliards de paramètres", "Un téraoctet de textes"], bonne: 0, explication: "« Trillion » en anglais correspond à mille milliards, un billion en français." },
+    { question: "Dans un mélange d'experts, que mesurent les paramètres actifs ?", choix: ["Le calcul fait pour chaque token", "La taille totale du fichier"], bonne: 0, explication: "Mistral Large 4 compte environ 1 000 milliards de paramètres, dont une cinquantaine de milliards actifs par token." },
+    { question: "Combien de paramètres compte GPT-4 ?", choix: ["On ne sait pas : OpenAI ne le publie pas", "Exactement 175 milliards"], bonne: 0, explication: "Depuis GPT-4, OpenAI garde la taille de ses modèles secrète. 175 milliards, c'était GPT-3." },
+    { question: "Combien de mémoire faut-il pour un modèle de 8 milliards compressé sur 4 bits ?", choix: ["Environ 5 Go", "Environ 500 Go"], bonne: 0, explication: "Un demi-octet par paramètre, plus une marge : un ordinateur portable récent suffit." },
+    { question: "Un modèle plus gros est-il toujours meilleur ?", choix: ["Non, les données et l'entraînement comptent autant", "Oui, toujours"], bonne: 0, explication: "Un petit modèle récent dépasse souvent un modèle bien plus gros de quelques années plus tôt." },
+    { question: "Pourquoi les modèles ouverts publient-ils leur taille ?", choix: ["Chacun peut télécharger le fichier et compter les paramètres", "La loi l'interdit aux autres"], bonne: 0, explication: "Meta, Mistral AI, DeepSeek ou Alibaba publient leurs fichiers de paramètres." },
+  ],
   "comment-fabrique-modele-ia": [
     { question: "Quelle est la première étape de fabrication d'un modèle d'IA ?", choix: ["La collecte des données", "La compression"], bonne: 0, explication: "On rassemble des pages web, des livres, du code et des contenus sous licence." },
     { question: "Pourquoi nettoyer les données avant l'entraînement ?", choix: ["Des données propres donnent un meilleur modèle", "Pour que l'IA soit plus lourde"], bonne: 0, explication: "On retire doublons, déchets et données personnelles : un modèle entraîné sur du médiocre écrit du médiocre." },

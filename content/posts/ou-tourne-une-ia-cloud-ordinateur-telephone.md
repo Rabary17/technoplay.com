@@ -59,7 +59,7 @@ Faire tourner une IA **en local**, c'est télécharger un modèle ouvert et le f
 
 Ce qui compte le plus, c'est la **mémoire**. Un modèle de 7 à 8 milliards de paramètres, compressé, tient dans 5 à 6 gigaoctets. Un ordinateur portable récent avec 16 Go de mémoire le fait tourner correctement. Pour un modèle de 70 milliards, il faut une station de travail ou un Mac très bien équipé. La correspondance entre taille et matériel est détaillée dans [Paramètres d'une IA : que signifient 8B, 70B ou 1 000 milliards ?](/parametres-modele-ia/).
 
-Les avantages sont précieux : tes textes ne quittent pas ta machine, l'usage est gratuit et marche hors connexion. En échange, les réponses sont moins bonnes que celles des grands modèles en ligne, surtout pour le raisonnement complexe.
+Les avantages sont précieux : tes textes ne quittent pas ta machine, l'usage est gratuit et marche hors connexion. En échange, les réponses sont moins bonnes que celles des grands modèles en ligne, surtout pour le raisonnement complexe. Pour savoir si ta machine suffit, lis [peut-on faire tourner une IA sur son propre ordinateur ?](/ia-sur-son-ordinateur/)
 
 ## Sur ton téléphone : le rôle du NPU
 

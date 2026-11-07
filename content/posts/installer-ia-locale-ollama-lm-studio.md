@@ -39,6 +39,8 @@ Une **carte graphique** accélère beaucoup les réponses. Sur un PC, une carte 
 
 Prévois enfin de la **place sur le disque** : de 2 à 10 Go par modèle pour les tailles courantes. LM Studio exige un Mac à puce Apple avec macOS 14 ou plus récent. Sur PC, il faut un processeur compatible AVX2, ce qui est le cas de presque tous les modèles vendus depuis dix ans. Ollama fonctionne sur Windows, macOS et Linux.
 
+Pour un tour d'horizon des usages et des limites avant de te lancer, lis [peut-on faire tourner une IA sur son propre ordinateur ?](/ia-sur-son-ordinateur/)
+
 ## Quel modèle choisir selon ta machine ?
 
 La règle vient de notre article sur [les paramètres d'une IA](/parametres-modele-ia/) : un modèle compressé occupe environ un demi-octet par paramètre, plus une marge. Les logiciels proposent presque toujours ces versions compressées, notées Q4 ou « 4-bit ».

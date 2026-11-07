@@ -1,6 +1,14 @@
 #!/usr/bin/env node
 // Usage : npm run generate-covers
 //
+// Génère aussi une vignette par article dans
+// public/covers/articles/<slug>.webp pour chaque article sans champ
+// `image` (articles programmés compris) : même fond, icône et nom du thème
+// en haut, titre de l'article en grand. lib/posts.ts (resolveCoverImage)
+// l'utilise si le fichier existe. À relancer après l'ajout ou le
+// changement de titre d'un article — en local, et pas au build : le rendu
+// du texte dépend des polices installées (Arial ici), absentes sur Vercel.
+//
 // Génère une image de couverture de secours par thème dans
 // public/covers/<slug>.png (1200×630, ratio Open Graph standard) :
 // fond couleur de marque + icône Lucide du thème + titre. Utilisée
@@ -25,6 +33,7 @@
 const fs = require("fs");
 const path = require("path");
 const sharp = require("sharp");
+const matter = require("gray-matter");
 
 const ICONS_DIR = path.join(__dirname, "lucide-icons");
 const BRAND = "#2F45D6";
@@ -116,10 +125,58 @@ function buildDefaultSvg() {
   </g>
   <text x="80" y="400" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="64" fill="${WHITE}">Techno Play</text>
   <text font-family="Arial, Helvetica, sans-serif" font-weight="400" font-size="30" fill="${WHITE}" opacity="0.9">
-    <tspan x="80" y="452">Le QG des débutants en tech :</tspan>
-    <tspan x="80" y="490">simple, concret</tspan>
+    <tspan x="80" y="452">La tech du quotidien</tspan>
+    <tspan x="80" y="490">expliquée clairement</tspan>
   </text>
 </svg>`;
+}
+
+// Vignette d'un article : icône + nom du thème en haut, titre en grand.
+// La taille du titre baisse d'un cran tant qu'il dépasse 4 lignes.
+function buildArticleSvg(post, category) {
+  const iconInner = readIconInner(category.icon);
+  let fontSize = 64;
+  let lines = wrapTitle(post.title, 27);
+  while (lines.length > 4 && fontSize > 44) {
+    fontSize -= 6;
+    lines = wrapTitle(post.title, Math.floor((27 * 64) / fontSize));
+  }
+  const lineHeight = Math.round(fontSize * 1.18);
+  // Bloc de titre centré verticalement entre le bandeau (y 170) et le pied (y 520).
+  const firstY = Math.round(345 - ((lines.length - 1) * lineHeight) / 2 + fontSize * 0.35);
+  const titleTspans = lines
+    .map((line, i) => `<tspan x="80" y="${firstY + i * lineHeight}">${escapeXml(line)}</tspan>`)
+    .join("");
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="${BRAND}"/>
+  <circle cx="1060" cy="80" r="260" fill="${BRAND_HOVER}" opacity="0.55"/>
+  <g transform="translate(80,64) scale(3.2)" fill="none" stroke="${WHITE}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    ${iconInner}
+  </g>
+  <circle cx="148" cy="132" r="9" fill="${SIGNAL}"/>
+  <text x="176" y="117" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="28" letter-spacing="2" fill="${WHITE}" opacity="0.9">${escapeXml(category.title.toUpperCase())}</text>
+  <text font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="${fontSize}" fill="${WHITE}">${titleTspans}</text>
+  <text x="80" y="570" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="26" letter-spacing="2" fill="${WHITE}" opacity="0.75">TECHNO PLAY</text>
+</svg>`;
+}
+
+async function generateArticleCovers() {
+  const postsDir = path.join(__dirname, "..", "content", "posts");
+  const outDir = path.join(__dirname, "..", "public", "covers", "articles");
+  fs.mkdirSync(outDir, { recursive: true });
+  let count = 0;
+  for (const file of fs.readdirSync(postsDir).filter((f) => f.endsWith(".md"))) {
+    const { data } = matter(fs.readFileSync(path.join(postsDir, file), "utf8"));
+    if (data.image) continue;
+    const category = CATEGORIES.find((c) => c.slug === data.category);
+    if (!category || !data.title) continue;
+    const slug = data.slug || file.replace(/.md$/, "");
+    const svg = buildArticleSvg({ title: data.title }, category);
+    await sharp(Buffer.from(svg)).webp({ quality: 82 }).toFile(path.join(outDir, `${slug}.webp`));
+    count++;
+  }
+  console.log(`Généré : ${count} vignettes d'articles dans public/covers/articles/`);
 }
 
 async function main() {
@@ -136,6 +193,8 @@ async function main() {
   const defaultSvg = buildDefaultSvg();
   await sharp(Buffer.from(defaultSvg)).png().toFile(path.join(outDir, "default.png"));
   console.log("Généré : public/covers/default.png");
+
+  await generateArticleCovers();
 }
 
 main().catch((err) => {

@@ -123,16 +123,20 @@ export function getAllSlugs(): string[] {
 
 /**
  * Image à la une résolue pour un article : la photo fournie en
- * frontmatter si elle existe, sinon la couverture de secours de son thème
+ * frontmatter si elle existe, sinon sa vignette générée
+ * (public/covers/articles/<slug>.webp), sinon la couverture de son thème
  * (public/covers/<slug>.png — voir scripts/generate-covers.js), sinon le
  * visuel générique du site. Toujours une image valide : aucune
  * carte ni page article ne se retrouve sans visuel.
  */
 export function resolveCoverImage(
-  post: Pick<Post, "image" | "imageAlt" | "category" | "title">
+  post: Pick<Post, "image" | "imageAlt" | "category" | "title" | "slug">
 ): { src: string; alt: string } {
   if (post.image) {
     return { src: post.image, alt: post.imageAlt || post.title };
+  }
+  if (fs.existsSync(path.join(process.cwd(), "public", "covers", "articles", `${post.slug}.webp`))) {
+    return { src: `/covers/articles/${post.slug}.webp`, alt: post.title };
   }
   const category = resolveCategory(post.category);
   if (category) {

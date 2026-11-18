@@ -20,6 +20,7 @@
 // Variables d'environnement : ANTHROPIC_API_KEY, GENERATION_MODEL (optionnel).
 "use strict";
 const fs = require("fs");
+const { spawnSync } = require("child_process");
 const {
   resoudreCutoff,
   blocSysteme,
@@ -36,21 +37,50 @@ function aujourdhui() {
   return new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric" }).format(new Date());
 }
 
+// Deux chemins d'appel au modèle :
+//   - ANTHROPIC_API_KEY présente : API Anthropic directe (facturée à l'usage — utilisé en CI,
+//     où aucune session interactive/abonnement n'est disponible).
+//   - sinon : CLI Claude Code en mode headless (`claude -p`), authentifiée par l'abonnement
+//     déjà connecté sur ce poste (pas de facturation séparée). Le prompt passe par stdin
+//     (jamais en argument de ligne de commande) pour éviter tout souci d'échappement
+//     (apostrophes, guillemets) et toute injection de commande.
 async function appelBrut({ model, system, messages, max_tokens }) {
+  if (messages.length !== 1 || messages[0].role !== "user") {
+    throw new Error("appelBrut : un seul message utilisateur attendu (CLI headless et API ne gèrent qu'un tour ici)");
+  }
   const cle = process.env.ANTHROPIC_API_KEY;
-  if (!cle) throw new Error("ANTHROPIC_API_KEY manquante");
-  const res = await fetch(API_URL, {
-    method: "POST",
-    headers: {
-      "content-type": "application/json",
-      "x-api-key": cle,
-      "anthropic-version": "2023-06-01",
-    },
-    body: JSON.stringify({ model, max_tokens, ...(system ? { system } : {}), messages }),
+  if (cle) {
+    const res = await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        "x-api-key": cle,
+        "anthropic-version": "2023-06-01",
+      },
+      body: JSON.stringify({ model, max_tokens, ...(system ? { system } : {}), messages }),
+    });
+    if (!res.ok) throw new Error(`API ${res.status} : ${await res.text()}`);
+    const data = await res.json();
+    return (data.content || []).filter((b) => b.type === "text").map((b) => b.text).join("");
+  }
+
+  const args = ["-p", "--restricted", "--output-format", "json", "--model", model];
+  if (system) args.push("--system-prompt", system);
+  const res = spawnSync("claude", args, {
+    input: messages[0].content,
+    encoding: "utf8",
+    maxBuffer: 50 * 1024 * 1024,
   });
-  if (!res.ok) throw new Error(`API ${res.status} : ${await res.text()}`);
-  const data = await res.json();
-  return (data.content || []).filter((b) => b.type === "text").map((b) => b.text).join("");
+  if (res.error) throw new Error(`Échec du lancement de la CLI claude : ${res.error.message}`);
+  if (res.status !== 0) throw new Error(`claude -p a échoué (code ${res.status}) : ${res.stderr}`);
+  let data;
+  try {
+    data = JSON.parse(res.stdout);
+  } catch {
+    throw new Error(`Sortie CLI illisible (JSON attendu) : ${res.stdout.slice(0, 500)}`);
+  }
+  if (data.is_error) throw new Error(`claude -p : ${data.result || "erreur inconnue"}`);
+  return data.result || "";
 }
 
 // Date de coupure résolue une fois par modèle et par exécution.

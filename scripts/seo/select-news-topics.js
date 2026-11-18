@@ -63,7 +63,12 @@ async function appelModeleLeger(prompt, { model = "claude-haiku-5-5", system = "
   const res = spawnSync("claude", args, { input: prompt, encoding: "utf8", maxBuffer: 10 * 1024 * 1024 });
   if (res.error) throw new Error(`Échec du lancement de la CLI claude : ${res.error.message}`);
   if (res.status !== 0) throw new Error(`claude -p a échoué (code ${res.status}) : ${res.stderr}`);
-  const data = JSON.parse(res.stdout);
+  let data;
+  try {
+    data = JSON.parse(res.stdout);
+  } catch {
+    throw new Error(`Sortie CLI illisible (JSON attendu) : ${res.stdout.slice(0, 500) || "(vide)"} — stderr : ${res.stderr.slice(0, 300)}`);
+  }
   if (data.is_error) throw new Error(`claude -p : ${data.result || "erreur inconnue"}`);
   enregistrerUsage({ phase: "classification-actu", model, usage: data.usage, coutUsd: data.total_cost_usd, source: "cli-abonnement" });
   return data.result || "";

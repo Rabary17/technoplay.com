@@ -16,6 +16,7 @@ require("dotenv").config({ path: path.join(__dirname, "..", "..", ".env.local") 
 
 const { generer, appelBrut, MODELE_PAR_DEFAUT } = require("../generation/llm");
 const { reinitialiser: reinitialiserUsage, resumer: resumerUsage, resumerHistorique } = require("../generation/usage-tracker");
+const { ajouterLigneJournal } = require("./journal-sheet");
 const { choisirAuteur } = require("../generation/choisir-auteur");
 const { selectionnerSujetsSeo } = require("./select-keyword-topics");
 const { selectionnerActusDuJour } = require("./select-news-topics");
@@ -330,6 +331,43 @@ async function main() {
 
   rapport.usage = resumerUsage();
   rapport.usageDepuisLeDebut = resumerHistorique();
+
+  // Journal lisible (Google Sheet) en plus du rapport JSON brut — seulement pour
+  // un run réel, pas un --dry-run de test. Ne fait jamais échouer le pipeline :
+  // le rapport JSON reste la source de vérité si le Sheet est indisponible.
+  if (!dryRun) {
+    try {
+      for (const a of rapport.articles) {
+        const relatif = path.relative(ROOT, a.fichier).replace(/\\/g, "/");
+        const lien = rapport.commit
+          ? `https://github.com/Rabary17/technoplay.com/blob/${rapport.commit}/${relatif}`
+          : relatif;
+        await ajouterLigneJournal({ type: "contenu", action: `Article publié (${a.type})`, detail: a.titre, lien });
+      }
+      if (rapport.articles.length === 0) {
+        await ajouterLigneJournal({
+          type: "contenu",
+          action: "Aucun article publié",
+          detail: rapport.echecs.map((e) => `${e.titre || e.slug} : ${e.raison}`).join(" | ") || "—",
+        });
+      }
+      if (rapport.verification && !rapport.verification.ok) {
+        await ajouterLigneJournal({
+          type: "erreur",
+          action: "Vérification build échouée — rien commité",
+          detail: (rapport.verification.sortie || "").slice(0, 300),
+        });
+      }
+      await ajouterLigneJournal({
+        type: "résumé",
+        action: `Run quotidien : ${rapport.articles.length} publié(s), ${rapport.echecs.length} échec(s)`,
+        detail: rapport.erreurs.join(" | ") || "—",
+        coutUsd: rapport.usage.coutUsd,
+      });
+    } catch (err) {
+      console.error(`Journal Sheet indisponible (${err.message}) — le rapport JSON reste la source de vérité.`);
+    }
+  }
 
   fs.mkdirSync(RAPPORTS_DIR, { recursive: true });
   const nomRapport = `${new Date().toISOString().slice(0, 10)}.json`;

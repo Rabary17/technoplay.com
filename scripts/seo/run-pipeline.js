@@ -14,7 +14,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 require("dotenv").config({ path: path.join(__dirname, "..", "..", ".env.local") });
 
-const { generer } = require("../generation/llm");
+const { generer, appelBrut, MODELE_PAR_DEFAUT } = require("../generation/llm");
 const { reinitialiser: reinitialiserUsage, resumer: resumerUsage, resumerHistorique } = require("../generation/usage-tracker");
 const { choisirAuteur } = require("../generation/choisir-auteur");
 const { selectionnerSujetsSeo } = require("./select-keyword-topics");
@@ -119,6 +119,56 @@ function separerTitreEtCorps(texte, titreDeSecours) {
   return { titre: titreDeSecours, corps: t };
 }
 
+// Agent qualité : relit l'article APRÈS le garde-fou anti-hallucination (donc
+// sur un texte déjà validé factuellement) et corrige UNIQUEMENT la forme —
+// grammaire, orthographe, ton, structure. Interdiction explicite de toucher au
+// fond (aucun chiffre/date/fait ajouté, retiré ou modifié). Appel direct à
+// appelBrut (pas generer()) : la relecture n'a rien à voir avec le garde-fou
+// date de coupure, et ce dernier risquerait de marquer [À VÉRIFIER] à
+// l'intérieur du JSON de réponse attendu ici.
+const CONSIGNE_RELECTURE = `Tu es relecteur qualité pour un site grand public francophone (techno-play.com).
+Relis cet article et corrige UNIQUEMENT :
+- les fautes de grammaire, d'orthographe et de syntaxe (accords, mots manquants comme "de"/"le"/"la"...)
+- les répétitions ou phrases mal formées
+- le respect du ton : tutoiement, phrases courtes (20 mots en moyenne, 25 max), jamais "il suffit de" /
+  "évidemment", jamais de tiret cadratin (—)
+- le respect de la structure Markdown déjà en place (encadrés <div>, titres ##, listes) — ne la change pas,
+  corrige juste ce qui est mal écrit à l'intérieur
+Ne change RIEN au fond : n'ajoute, ne retire et ne modifie aucune affirmation, chiffre, date ou fait — UNIQUEMENT
+la forme. Corrige aussi le titre s'il contient une faute (ex. mot manquant).
+Réponds UNIQUEMENT par un JSON strict, sans texte avant ni après :
+  {"ok": true} si rien à corriger
+  {"ok": false, "titre": "...", "corps": "..."} avec la version corrigée complète sinon`;
+
+async function relireQualite({ titre, corps }) {
+  const user = `TITRE :\n${titre}\n\nCORPS (Markdown) :\n${corps}`;
+  let texte;
+  try {
+    texte = await appelBrut({
+      model: MODELE_PAR_DEFAUT,
+      system: CONSIGNE_RELECTURE,
+      messages: [{ role: "user", content: user }],
+      max_tokens: 6000,
+      phase: "relecture-qualite",
+    });
+  } catch (err) {
+    console.error(`Relecture qualité indisponible (${err.message}) — article conservé tel quel.`);
+    return { ok: true };
+  }
+  const match = texte.match(/\{[\s\S]*\}/);
+  if (!match) return { ok: true }; // réponse illisible : on garde l'original plutôt que de tout casser
+  try {
+    const verdict = JSON.parse(match[0]);
+    if (verdict.ok) return { ok: true };
+    if (typeof verdict.titre === "string" && typeof verdict.corps === "string") {
+      return { ok: false, titre: verdict.titre, corps: verdict.corps };
+    }
+  } catch (err) {
+    console.error(`Relecture qualité : JSON invalide (${err.message}) — article conservé tel quel.`);
+  }
+  return { ok: true };
+}
+
 async function construireArticle(sujet) {
   const { theme } = sujet;
 
@@ -133,19 +183,27 @@ async function construireArticle(sujet) {
     brief: sujet.keyword ? `Mot-clé cible (SEO) : ${sujet.keyword}, volume estimé ${sujet.volume}/mois.` : "",
   });
 
-  const { titre, corps } = separerTitreEtCorps(resultat.texte, sujet.titre);
+  const { titre: titreGenere, corps } = separerTitreEtCorps(resultat.texte, sujet.titre);
   resultat.texte = retirerBalisesSources(corps);
+
+  if (resultat.audit.bloquant) {
+    return { ok: false, slug: slugify(titreGenere), raison: `garde-fou : ${resultat.audit.violations.length} violation(s)`, audit: resultat.audit };
+  }
+  if (resultat.texte.includes("[À VÉRIFIER")) {
+    return { ok: false, slug: slugify(titreGenere), raison: "marqueur [À VÉRIFIER] non résolu (info non sourcée) — à corriger ou sourcer" };
+  }
+
+  // Relecture qualité (forme uniquement) — seulement sur un texte déjà validé
+  // factuellement ci-dessus. Peut légèrement changer le titre (faute corrigée).
+  const relecture = await relireQualite({ titre: titreGenere, corps: resultat.texte });
+  const titre = relecture.ok ? titreGenere : relecture.titre;
+  resultat.texte = relecture.ok ? resultat.texte : relecture.corps;
+  if (!relecture.ok) console.log(`Relecture qualité : corrections appliquées pour "${titreGenere}"`);
+
   const slug = slugify(titre);
   const fichier = path.join(POSTS_DIR, `${slug}.md`);
   if (fs.existsSync(fichier)) {
     return { ok: false, slug, raison: "fichier déjà existant" };
-  }
-
-  if (resultat.audit.bloquant) {
-    return { ok: false, slug, raison: `garde-fou : ${resultat.audit.violations.length} violation(s)`, audit: resultat.audit };
-  }
-  if (resultat.texte.includes("[À VÉRIFIER")) {
-    return { ok: false, slug, raison: "marqueur [À VÉRIFIER] non résolu (info non sourcée) — à corriger ou sourcer" };
   }
 
   const choix = choisirAuteur({ titre, categorie: theme });

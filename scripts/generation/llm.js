@@ -129,7 +129,7 @@ async function generer({ phase, consigne, brief = "", sources = [], instructions
   return { phase, model, cutoff: info, texte: audit.texteMarque, texteBrut: brut, audit };
 }
 
-module.exports = { generer, cutoffPour, PHASES, MODELE_PAR_DEFAUT };
+module.exports = { generer, appelBrut, cutoffPour, PHASES, MODELE_PAR_DEFAUT };
 
 // --- CLI -----------------------------------------------------------------
 if (require.main === module) {

@@ -15,6 +15,7 @@ const { execSync } = require("child_process");
 require("dotenv").config({ path: path.join(__dirname, "..", "..", ".env.local") });
 
 const { generer } = require("../generation/llm");
+const { reinitialiser: reinitialiserUsage, resumer: resumerUsage, resumerHistorique } = require("../generation/usage-tracker");
 const { choisirAuteur } = require("../generation/choisir-auteur");
 const { selectionnerSujetsSeo } = require("./select-keyword-topics");
 const { selectionnerActusDuJour } = require("./select-news-topics");
@@ -216,6 +217,7 @@ async function main() {
   const dryRun = args.includes("--dry-run");
   const push = args.includes("--push");
 
+  reinitialiserUsage();
   const rapport = { date: new Date().toISOString(), articles: [], echecs: [], erreurs: [] };
 
   console.log(`Sélection : ${nSeo} sujet(s) SEO, ${nActu} actu(s)...`);
@@ -268,6 +270,9 @@ async function main() {
     }
   }
 
+  rapport.usage = resumerUsage();
+  rapport.usageDepuisLeDebut = resumerHistorique();
+
   fs.mkdirSync(RAPPORTS_DIR, { recursive: true });
   const nomRapport = `${new Date().toISOString().slice(0, 10)}.json`;
   fs.writeFileSync(path.join(RAPPORTS_DIR, nomRapport), JSON.stringify(rapport, null, 2), "utf8");
@@ -277,6 +282,10 @@ async function main() {
   for (const a of rapport.articles) console.log(`  - [${a.type}] ${a.titre} (${a.fichier})`);
   console.log(`Échecs : ${rapport.echecs.length}`);
   for (const e of rapport.echecs) console.log(`  - ${e.titre || e.slug} : ${e.raison}`);
+  console.log(`\n=== Usage Claude (ce run) ===`);
+  console.log(`Appels : ${rapport.usage.appels} · input : ${rapport.usage.inputTokens} tokens · output : ${rapport.usage.outputTokens} tokens`);
+  console.log(`Coût équivalent API${rapport.usage.coutConnu ? "" : " (non disponible)"} : $${rapport.usage.coutUsd.toFixed(4)}`);
+  console.log(`Coût cumulé depuis le début : $${rapport.usageDepuisLeDebut.coutUsd.toFixed(4)} sur ${rapport.usageDepuisLeDebut.appels} appel(s)`);
   console.log(`Rapport détaillé : ${path.join(RAPPORTS_DIR, nomRapport)}`);
 }
 

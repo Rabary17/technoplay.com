@@ -6,6 +6,7 @@ const path = require("path");
 require("dotenv").config({ path: path.join(__dirname, "..", "..", ".env.local") });
 const { getValues, updateValues } = require("./sheets-client");
 const { spawnSync } = require("child_process");
+const { enregistrer: enregistrerUsage, coutEstime } = require("../generation/usage-tracker");
 
 const SPREADSHEET_ID = process.env.VEILLE_SHEET_ID || "1EBgO2wj8Tw2e9ZGkjRc3stOIEKhkjwVlwl0p6ckUf8g";
 
@@ -54,6 +55,7 @@ async function appelModeleLeger(prompt, { model = "claude-haiku-5-5", system = "
     });
     if (!res.ok) throw new Error(`API ${res.status} : ${await res.text()}`);
     const data = await res.json();
+    enregistrerUsage({ phase: "classification-actu", model, usage: data.usage, coutUsd: coutEstime(model, data.usage), source: "api" });
     return (data.content || []).map((b) => b.text).join("");
   }
   const args = ["-p", "--restricted", "--output-format", "json", "--model", model];
@@ -63,6 +65,7 @@ async function appelModeleLeger(prompt, { model = "claude-haiku-5-5", system = "
   if (res.status !== 0) throw new Error(`claude -p a échoué (code ${res.status}) : ${res.stderr}`);
   const data = JSON.parse(res.stdout);
   if (data.is_error) throw new Error(`claude -p : ${data.result || "erreur inconnue"}`);
+  enregistrerUsage({ phase: "classification-actu", model, usage: data.usage, coutUsd: data.total_cost_usd, source: "cli-abonnement" });
   return data.result || "";
 }
 

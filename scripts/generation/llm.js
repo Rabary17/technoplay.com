@@ -28,6 +28,7 @@ const {
   formaterSources,
   CUTOFFS_OFFICIELS,
 } = require("./garde-fou-cutoff");
+const { enregistrer: enregistrerUsage, coutEstime } = require("./usage-tracker");
 
 const MODELE_PAR_DEFAUT = process.env.GENERATION_MODEL || "claude-sonnet-5-5";
 const PHASES = Object.freeze(["plan", "premier-jet", "faq", "meta", "titre", "reecriture"]);
@@ -44,7 +45,7 @@ function aujourdhui() {
 //     déjà connecté sur ce poste (pas de facturation séparée). Le prompt passe par stdin
 //     (jamais en argument de ligne de commande) pour éviter tout souci d'échappement
 //     (apostrophes, guillemets) et toute injection de commande.
-async function appelBrut({ model, system, messages, max_tokens }) {
+async function appelBrut({ model, system, messages, max_tokens, phase = "non-categorise" }) {
   if (messages.length !== 1 || messages[0].role !== "user") {
     throw new Error("appelBrut : un seul message utilisateur attendu (CLI headless et API ne gèrent qu'un tour ici)");
   }
@@ -61,6 +62,7 @@ async function appelBrut({ model, system, messages, max_tokens }) {
     });
     if (!res.ok) throw new Error(`API ${res.status} : ${await res.text()}`);
     const data = await res.json();
+    enregistrerUsage({ phase, model, usage: data.usage, coutUsd: coutEstime(model, data.usage), source: "api" });
     return (data.content || []).filter((b) => b.type === "text").map((b) => b.text).join("");
   }
 
@@ -80,6 +82,7 @@ async function appelBrut({ model, system, messages, max_tokens }) {
     throw new Error(`Sortie CLI illisible (JSON attendu) : ${res.stdout.slice(0, 500)}`);
   }
   if (data.is_error) throw new Error(`claude -p : ${data.result || "erreur inconnue"}`);
+  enregistrerUsage({ phase, model, usage: data.usage, coutUsd: data.total_cost_usd, source: "cli-abonnement" });
   return data.result || "";
 }
 
@@ -88,7 +91,7 @@ const cacheCutoff = new Map();
 async function cutoffPour(model) {
   if (!cacheCutoff.has(model)) {
     const info = await resoudreCutoff(model, (question) =>
-      appelBrut({ model, messages: [{ role: "user", content: question }], max_tokens: 20 })
+      appelBrut({ model, messages: [{ role: "user", content: question }], max_tokens: 20, phase: "cutoff" })
     );
     console.error(
       `[garde-fou] ${model} — officiel : ${info.officiel || "inconnu"} · déclaré : ${info.declare || "illisible"} → retenu : ${info.cutoff} (${info.retenu}), zone grise dès ${info.zoneGriseDebut}`
@@ -121,7 +124,7 @@ async function generer({ phase, consigne, brief = "", sources = [], instructions
     .filter(Boolean)
     .join("\n\n");
   const user = [brief && `BRIEF :\n${brief}`, consigne].filter(Boolean).join("\n\n");
-  const brut = await appelBrut({ model, system, messages: [{ role: "user", content: user }], max_tokens });
+  const brut = await appelBrut({ model, system, messages: [{ role: "user", content: user }], max_tokens, phase });
   const audit = auditer(brut, { cutoff: info.cutoff, sources, brief });
   return { phase, model, cutoff: info, texte: audit.texteMarque, texteBrut: brut, audit };
 }

@@ -16,7 +16,21 @@ const KEY_PATH =
 const SCOPES = ["https://www.googleapis.com/auth/spreadsheets"];
 
 function getClient() {
-  const key = JSON.parse(fs.readFileSync(KEY_PATH, "utf8"));
+  let contenu;
+  try {
+    contenu = fs.readFileSync(KEY_PATH, "utf8");
+  } catch (err) {
+    throw new Error(`Compte de service Sheets introuvable (${KEY_PATH}) : ${err.message}`);
+  }
+  if (!contenu.trim()) {
+    throw new Error(`Compte de service Sheets vide (${KEY_PATH}) — secret SHEETS_SERVICE_ACCOUNT_JSON absent ou vide en CI ?`);
+  }
+  let key;
+  try {
+    key = JSON.parse(contenu);
+  } catch (err) {
+    throw new Error(`Compte de service Sheets illisible (${KEY_PATH}, JSON attendu) : ${err.message}`);
+  }
   return new JWT({ email: key.client_email, key: key.private_key, scopes: SCOPES });
 }
 
@@ -30,8 +44,8 @@ function erreurDetaillee(err, contexte) {
 }
 
 async function getValues(spreadsheetId, range) {
-  const client = getClient();
   try {
+    const client = getClient();
     const res = await client.request({
       url: `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${encodeURIComponent(range)}`,
     });
@@ -42,8 +56,8 @@ async function getValues(spreadsheetId, range) {
 }
 
 async function updateValues(spreadsheetId, range, values) {
-  const client = getClient();
   try {
+    const client = getClient();
     const res = await client.request({
       url: `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${encodeURIComponent(
         range

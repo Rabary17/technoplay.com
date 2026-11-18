@@ -5,7 +5,11 @@
 #
 # Secrets à créer une seule fois dans GitHub (Settings > Secrets and variables > Actions) :
 #   DATAFORSEO_LOGIN, DATAFORSEO_PASSWORD   — dataforseo.com
-#   ANTHROPIC_API_KEY                        — console.anthropic.com (génération des articles)
+#   CLAUDE_CODE_OAUTH_TOKEN                  — généré en local via `claude setup-token`
+#                                               (authentifie la CLI avec l'abonnement Claude,
+#                                               jamais l'API payante — ne JAMAIS mettre
+#                                               ANTHROPIC_API_KEY dans ce workflow, elle serait
+#                                               prioritaire sur ce token)
 #   UNSPLASH_ACCESS_KEY, PEXELS_API_KEY, PIXABAY_API_KEY  — images libres de droit
 #   GSC_SERVICE_ACCOUNT_JSON                 — contenu complet du fichier .secrets/gsc-service-account.json
 #   SHEETS_SERVICE_ACCOUNT_JSON               — contenu complet du fichier .secrets/sheets-service-account.json
@@ -50,6 +54,11 @@ jobs:
       - name: Installer les dépendances
         run: npm ci
 
+      - name: Installer la CLI Claude Code (auth par abonnement, pas l'API)
+        run: |
+          curl -fsSL https://claude.ai/install.sh | bash
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
+
       - name: Restaurer les comptes de service GSC et Sheets
         run: |
           mkdir -p .secrets
@@ -68,7 +77,7 @@ jobs:
         env:
           DATAFORSEO_LOGIN: ${{ secrets.DATAFORSEO_LOGIN }}
           DATAFORSEO_PASSWORD: ${{ secrets.DATAFORSEO_PASSWORD }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}

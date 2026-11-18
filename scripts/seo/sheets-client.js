@@ -20,24 +20,41 @@ function getClient() {
   return new JWT({ email: key.client_email, key: key.private_key, scopes: SCOPES });
 }
 
+// Enrichit l'erreur avec le statut HTTP et le corps brut — "Unexpected end of
+// JSON input" seul (erreur générique de gaxios sur une réponse vide/HTML) ne
+// dit pas pourquoi la requête a échoué (quota, auth, onglet inexistant...).
+function erreurDetaillee(err, contexte) {
+  const statut = err.response?.status;
+  const corps = err.response?.data ? JSON.stringify(err.response.data).slice(0, 500) : err.message;
+  return new Error(`${contexte} (HTTP ${statut ?? "?"}) : ${corps}`);
+}
+
 async function getValues(spreadsheetId, range) {
   const client = getClient();
-  const res = await client.request({
-    url: `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${encodeURIComponent(range)}`,
-  });
-  return res.data.values || [];
+  try {
+    const res = await client.request({
+      url: `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${encodeURIComponent(range)}`,
+    });
+    return res.data.values || [];
+  } catch (err) {
+    throw erreurDetaillee(err, `Sheets getValues(${range})`);
+  }
 }
 
 async function updateValues(spreadsheetId, range, values) {
   const client = getClient();
-  const res = await client.request({
-    url: `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${encodeURIComponent(
-      range
-    )}?valueInputOption=RAW`,
-    method: "PUT",
-    data: { range, values, majorDimension: "ROWS" },
-  });
-  return res.data;
+  try {
+    const res = await client.request({
+      url: `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${encodeURIComponent(
+        range
+      )}?valueInputOption=RAW`,
+      method: "PUT",
+      data: { range, values, majorDimension: "ROWS" },
+    });
+    return res.data;
+  } catch (err) {
+    throw erreurDetaillee(err, `Sheets updateValues(${range})`);
+  }
 }
 
 module.exports = { getValues, updateValues };

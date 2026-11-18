@@ -79,7 +79,11 @@ Source : ${row.sourceUrl}`;
   const texte = await appelModeleLeger(prompt);
   const match = texte.match(/\{[\s\S]*\}/);
   if (!match) return { retenir: false, raison: "réponse illisible" };
-  return JSON.parse(match[0]);
+  try {
+    return JSON.parse(match[0]);
+  } catch (err) {
+    throw new Error(`classifier : JSON invalide (${err.message}) — réponse brute : ${texte.slice(0, 300)}`);
+  }
 }
 
 // Parcourt l'onglet jusqu'à trouver `max` actus retenues (pas juste `max` lignes évaluées) —

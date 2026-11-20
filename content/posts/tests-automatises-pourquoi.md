@@ -5,6 +5,8 @@ description: "Un test automatisé vérifie que ton programme fait encore ce qu'i
 date: "2027-01-10"
 author: "andee-rakotovao"
 category: "programmation"
+image: "https://images.unsplash.com/photo-1626958390943-a70309376444?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw1fHxkJUMzJUE5dmVsb3BwZXVyJTIwY2xhdmllcnxlbnwwfDB8fHwxNzk1MTU5NzIzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "black and red computer keyboard"
 ---
 
 ***Ajouter une fonctionnalité casse parfois une autre partie du projet, sans qu'on s'en rende compte. Les tests automatisés vérifient régulièrement que tout fonctionne encore, à chaque modification.***

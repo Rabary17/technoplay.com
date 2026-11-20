@@ -5,6 +5,8 @@ description: "Beaucoup d'appareils passent par des serveurs distants. Garder cer
 date: "2026-12-17"
 author: "mialy-andriaharisoa"
 category: "maison-connectee"
+image: "https://images.unsplash.com/photo-1504270997636-07ddfbd48945?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw0fHxtYWlzb24lMjBjb25uZWN0JUMzJUE5ZXxlbnwwfDB8fHwxNzk1MTU5NjkwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "person using black iPad"
 ---
 
 ***Quand une lampe s'allume grâce à un serveur situé à l'autre bout du monde, il faut une connexion Internet et la disponibilité du fabricant. Le fonctionnement local offre une autre voie.***

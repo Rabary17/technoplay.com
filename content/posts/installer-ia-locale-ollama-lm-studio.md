@@ -5,6 +5,8 @@ description: "Installer une IA sur ton ordinateur avec Ollama ou LM Studio : le 
 date: "2026-11-02"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.unsplash.com/photo-1694903089438-bf28d4697d9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBmdXR1cmlzdGV8ZW58MHwwfHx8MTc5NTE1OTcyNnww&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "robot and human hands reaching toward ai text"
 sources:
   - titre: "Ollama : page de téléchargement"
     url: "https://ollama.com/download"

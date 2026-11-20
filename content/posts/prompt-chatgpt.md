@@ -5,6 +5,8 @@ description: "Prompt ChatGPT : la méthode en 5 briques pour obtenir de vraies b
 date: "2026-10-03"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.unsplash.com/photo-1675865254433-6ba341f0f00b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxQcm9tcHQlMjBDaGF0R1BUJTIwJTNBJTIwbGElMjBtJUMzJUE5dGhvZGUlMjBwb3VyJTIwJUMzJUE5Y3JpcmUlMjBkZSUyMGJvbnMlMjBwcm9tcHRzJTIwJTI4JTJCJTIwZXhlbXBsZXMlMjAlQzMlQTAlMjBjb3BpZXIlMjl8ZW58MHwwfHx8MTc5NTE1OTczNnww&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "The ChatGPT interface showing examples, capabilities, and limitations on a dark blue screen"
 ---
 
 

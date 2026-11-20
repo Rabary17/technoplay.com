@@ -5,6 +5,8 @@ description: "Un téléphone tiède est normal, mais une chaleur persistante peu
 date: "2027-01-12"
 author: "nekena-judicael"
 category: "appareils-internet"
+image: "https://images.unsplash.com/photo-1609177336889-4e69aa3b1ff6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw0fHxzbWFydHBob25lJTIwb3JkaW5hdGV1cnxlbnwwfDB8fHwxNzk1MTU5Njk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "man in black shirt holding black iphone 5"
 ---
 
 ***Un téléphone tiède pendant un appel ou une recharge est courant. Mais s'il devient brûlant sans raison, il faut regarder de plus près, car la chaleur peut user la batterie.***

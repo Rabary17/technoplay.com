@@ -5,6 +5,8 @@ description: "Wi-Fi, Zigbee, Bluetooth : chaque technologie change la portée, l
 date: "2026-12-01"
 author: "mialy-andriaharisoa"
 category: "maison-connectee"
+image: "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxtYWlzb24lMjBjb25uZWN0JUMzJUE5ZXxlbnwwfDB8fHwxNzk1MTU5NjkwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "landscape photo of 2-storey house"
 ---
 
 ***Une ampoule connectée peut se relier à ta box en Wi-Fi, à un petit pont Zigbee ou directement en Bluetooth. Le choix influence la portée, la stabilité et ce que tu pourras piloter ensuite.***

@@ -5,6 +5,8 @@ description: "Home Assistant réunit les appareils de la maison dans une seule i
 date: "2026-12-15"
 author: "mialy-andriaharisoa"
 category: "maison-connectee"
+image: "https://images.unsplash.com/photo-1595678816704-9c82fbe792ea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxvYmpldHMlMjBjb25uZWN0JUMzJUE5cyUyMGludCVDMyVBOXJpZXVyfGVufDB8MHx8fDE3OTUxNTk3MjF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "black and white pendant lamp"
 ---
 
 ***Quand une maison compte des appareils de marques différentes, chacun a sa propre application. Home Assistant est une plateforme qui les réunit, et qui laisse une grande liberté pour créer des automatisations.***

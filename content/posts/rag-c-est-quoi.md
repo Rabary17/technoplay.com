@@ -5,6 +5,8 @@ description: "Le RAG permet à une IA de chercher dans tes documents avant de r�
 date: "2026-11-01"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.pexels.com/photos/11213237/pexels-photo-11213237.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+imageAlt: "Red neon sign 'Plats à Emporter' reflected in city window, urban street vibe."
 ---
 
 ***Un assistant IA répond mieux quand il peut consulter tes propres documents. C'est le principe du RAG, une technique très utilisée dans les outils professionnels.***

@@ -5,6 +5,8 @@ description: "Une carte Arduino, quelques capteurs et un moteur suffisent pour c
 date: "2026-11-23"
 author: "nekena-judicael"
 category: "robotique-drones"
+image: "https://images.pexels.com/photos/6019019/pexels-photo-6019019.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+imageAlt: "A futuristic humanoid robot with glowing green eyes in a modern setting."
 ---
 
 ***Construire un petit robot est un très bon moyen de comprendre l'électronique et la programmation en même temps. Avec Arduino, tu peux commencer avec un budget modeste et du matériel simple.***

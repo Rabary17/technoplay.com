@@ -5,6 +5,8 @@ description: "Localisation, suivi publicitaire, autorisations : l'iPhone propose
 date: "2027-01-16"
 author: "nekena-judicael"
 category: "appareils-internet"
+image: "https://images.unsplash.com/photo-1426024084828-5da21e13f5dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwzfHxzbWFydHBob25lJTIwb3JkaW5hdGV1cnxlbnwwfDB8fHwxNzk1MTU5Njk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "MacBook Pro beside iPad and iPhone turned on"
 ---
 
 ***Ton iPhone en sait beaucoup sur toi. Les réglages de confidentialité permettent de décider quelles applications accèdent à ta position, à tes photos ou à tes contacts. Un tour d'horizon rapide suffit souvent.***

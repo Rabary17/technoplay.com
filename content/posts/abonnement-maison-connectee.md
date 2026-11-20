@@ -5,6 +5,8 @@ description: "Certains appareils connectés fonctionnent sans abonnement, d'autr
 date: "2026-11-29"
 author: "mialy-andriaharisoa"
 category: "maison-connectee"
+image: "https://images.unsplash.com/photo-1558002038-1055907df827?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxtYWlzb24lMjBjb25uZWN0JUMzJUE5ZXxlbnwwfDB8fHwxNzk1MTU5NjkwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "gold Apple iPhone smartphone held at the door"
 ---
 
 ***Une ampoule ou une caméra connectée coûte un prix à l'achat. Mais certaines fonctions se paient ensuite, sous forme d'abonnement mensuel. Mieux vaut le savoir avant de tout installer.***

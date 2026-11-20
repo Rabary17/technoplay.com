@@ -5,6 +5,8 @@ description: "Le chiffrement rend une information illisible pour qui n'a pas la 
 date: "2027-01-26"
 author: "andrianina-rabarivelo"
 category: "cybersecurite"
+image: "https://images.unsplash.com/photo-1633265486064-086b219458ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwzfHxzJUMzJUE5Y3VyaXQlQzMlQTklMjBpbmZvcm1hdGlxdWUlMjBjYWRlbmFzfGVufDB8MHx8fDE3OTUxNTk2OTR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "a golden padlock sitting on top of a keyboard"
 ---
 
 ***Tu entends le mot chiffrement dans les messageries ou sur les téléphones. Derrière ce terme, il y a une idée simple : transformer une information pour qu'elle ne soit lisible que par la personne autorisée.***

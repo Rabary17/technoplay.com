@@ -5,6 +5,8 @@ description: "Cadrage, vitesse, lumière et trajectoire : les bases pour réalis
 date: "2026-11-21"
 author: "nekena-judicael"
 category: "robotique-drones"
+image: "https://images.pexels.com/photos/8294792/pexels-photo-8294792.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+imageAlt: "Close-up of a futuristic toy robot with blue eyes, showcasing modern technology indoors."
 ---
 
 ***Un drone offre des plans qu'on ne peut pas obtenir autrement. Mais une vidéo aérienne réussie repose surtout sur des mouvements lents, une bonne lumière et un cadrage réfléchi.***

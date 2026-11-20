@@ -5,6 +5,8 @@ description: "La cybersécurité, c'est quoi et à quoi ça sert ? Les dangers c
 date: "2026-10-20"
 author: "andrianina-rabarivelo"
 category: "cybersecurite"
+image: "https://images.unsplash.com/photo-1614064548237-096f735f344f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxzJUMzJUE5Y3VyaXQlQzMlQTklMjBpbmZvcm1hdGlxdWUlMjBjYWRlbmFzfGVufDB8MHx8fDE3OTUxNTk2OTR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "padlock on laptop with light trails"
 updated: "2026-11-02"
 sources:
   - titre: "Cybermalveillance.gouv.fr : les 10 mesures essentielles pour votre cybersécurité"

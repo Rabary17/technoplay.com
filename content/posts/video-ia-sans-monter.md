@@ -5,6 +5,8 @@ description: "Sous-titres automatiques, clips courts, présentations animées : 
 date: "2026-10-26"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.unsplash.com/photo-1694878873245-de1db825e20f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxQZXV0LW9uJTIwZmFpcmUlMjB1bmUlMjB2aWQlQzMlQTlvJTIwYXZlYyUyMGwlMjdJQSUyMHNhbnMlMjBzYXZvaXIlMjBtb250ZXIlMjAlM0Z8ZW58MHwwfHx8MTc5NTE1OTc1MXww&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "a hand holding a white paper cut out of a video play button"
 ---
 
 ***Un sous-titre automatique, un clip court, une présentation animée : l'IA sait déjà faire pas mal de choses en vidéo. Ce qu'elle peut faire pour toi, et ce qui reste difficile.***

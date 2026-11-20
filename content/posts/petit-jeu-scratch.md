@@ -5,6 +5,8 @@ description: "Scratch permet de programmer en assemblant des blocs colorés. On 
 date: "2026-12-27"
 author: "andee-rakotovao"
 category: "programmation"
+image: "https://images.unsplash.com/photo-1547394765-185e1e68f34e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwzfHxkJUMzJUE5dmVsb3BwZXVyJTIwY2xhdmllcnxlbnwwfDB8fHwxNzk1MTU5NzIzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "closeup photo of computer keyboard"
 ---
 
 ***Avant d'écrire du code, on peut apprendre la logique avec des blocs à glisser. Scratch est conçu pour cela, et un petit jeu permet de voir immédiatement ce que fait ton programme.***

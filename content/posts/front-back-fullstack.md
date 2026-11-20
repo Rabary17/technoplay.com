@@ -5,6 +5,8 @@ description: "Front-end, back-end, full-stack : ces rôles ne demandent pas les 
 date: "2027-01-06"
 author: "andee-rakotovao"
 category: "programmation"
+image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw1fHxjb2RlJTIwb3JkaW5hdGV1ciUyMCVDMyVBOWNyYW58ZW58MHwwfHx8MTc5NTE1OTY5MXww&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "turned-on MacBook Pro wit programming codes display"
 ---
 
 ***Dans le développement web, on parle de front-end, de back-end et de full-stack. Ces mots décrivent des rôles différents, qui se complètent. Savoir ce qui t'attire aide à choisir par où commencer.***

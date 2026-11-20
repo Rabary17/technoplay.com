@@ -5,6 +5,8 @@ description: "Faux colis, faux remboursements, faux comptes bloqués : les SMS f
 date: "2027-01-22"
 author: "andrianina-rabarivelo"
 category: "cybersecurite"
+image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxzJUMzJUE5Y3VyaXQlQzMlQTklMjBpbmZvcm1hdGlxdWUlMjBjYWRlbmFzfGVufDB8MHx8fDE3OTUxNTk2OTR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "red padlock on black computer keyboard"
 ---
 
 ***Un SMS annonce un colis bloqué ou un remboursement en attente, avec un lien à cliquer vite. Ce type de message est très répandu, et il vise à te faire agir dans la précipitation.***

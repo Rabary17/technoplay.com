@@ -11,7 +11,7 @@ import {
   GA_MEASUREMENT_ID,
 } from "@/lib/site";
 import JsonLd from "@/components/JsonLd";
-import { organizationSchema, websiteSchema } from "@/lib/schema";
+import { homepageSchema } from "@/lib/schema";
 import { CATEGORIES, categoryUrl } from "@/lib/categories";
 import "./globals.css";
 
@@ -113,8 +113,7 @@ gtag('config', '${GA_MEASUREMENT_ID}');`,
         )}
       </head>
       <body>
-        <JsonLd data={organizationSchema()} />
-        <JsonLd data={websiteSchema()} />
+        <JsonLd data={homepageSchema()} />
         <header className="site-header">
           <div className="container">
             <a className="site-logo" href="/" aria-label={`${SITE_NAME}, accueil`}>

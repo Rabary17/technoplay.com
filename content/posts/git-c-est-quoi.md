@@ -5,6 +5,8 @@ description: "Git garde l'historique de tes fichiers et te permet de revenir en 
 date: "2026-12-31"
 author: "andee-rakotovao"
 category: "programmation"
+image: "https://images.unsplash.com/photo-1574012716378-0ca6f4c18c08?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxkJUMzJUE5dmVsb3BwZXVyJTIwY2xhdmllcnxlbnwwfDB8fHwxNzk1MTU5NzIzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "black computer keyboard"
 ---
 
 ***Tu modifies ton projet, ça casse, et tu ne sais plus ce qui a changé. Git est l'outil qui garde la trace de chaque modification, pour revenir en arrière quand c'est nécessaire.***

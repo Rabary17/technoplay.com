@@ -5,6 +5,8 @@ description: "Python est un langage lisible, idéal pour débuter. On t'explique
 date: "2026-12-29"
 author: "andee-rakotovao"
 category: "programmation"
+image: "https://images.unsplash.com/photo-1529236183275-4fdcf2bc987e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw0fHxkJUMzJUE5dmVsb3BwZXVyJTIwY2xhdmllcnxlbnwwfDB8fHwxNzk1MTU5NzIzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "white computer keyboard"
 ---
 
 ***Python est souvent conseillé pour commencer à programmer, car il se lit presque comme une phrase. Ton premier programme peut tenir en une ligne, et te faire comprendre l'essentiel.***

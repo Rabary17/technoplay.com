@@ -5,6 +5,8 @@ description: "Un robot, un automate et un cobot ne font pas le même travail. On
 date: "2026-11-07"
 author: "nekena-judicael"
 category: "robotique-drones"
+image: "https://images.unsplash.com/photo-1514043454212-14c181f46583?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw0fHxkcm9uZSUyMHZvbCUyMGV4dCVDMyVBOXJpZXVyfGVufDB8MHx8fDE3OTUxNTk3MzN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "tilt shift lens photo of mini drone"
 ---
 
 ***Dans les médias, on parle de robots pour tout et n'importe quoi. Pourtant, un automate, un robot et un cobot ne se programment ni ne se côtoient de la même façon.***

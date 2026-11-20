@@ -5,6 +5,8 @@ description: "Des robots à forme humaine marchent et saisissent des objets. Que
 date: "2026-11-27"
 author: "nekena-judicael"
 category: "robotique-drones"
+image: "https://images.unsplash.com/photo-1716191299980-a6e8827ba10b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxyb2JvdCUyMGF1dG9tYXRpc2F0aW9uJTIwaW5kdXN0cmllfGVufDB8MHx8fDE3OTUxNTk3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "blue industrial robot arm in factory"
 ---
 
 ***Des robots à forme humaine marchent, saisissent des objets et font des démonstrations spectaculaires. Mais une vidéo réussie ne dit pas tout de leur usage réel.***

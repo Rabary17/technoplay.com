@@ -5,6 +5,8 @@ description: "Un bon premier drone doit être simple à piloter, bien protégé 
 date: "2026-11-15"
 author: "nekena-judicael"
 category: "robotique-drones"
+image: "https://images.unsplash.com/photo-1507582020474-9a35b7d455d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwzfHxkcm9uZSUyMHZvbCUyMGV4dCVDMyVBOXJpZXVyfGVufDB8MHx8fDE3OTUxNTk3MzN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "black DJI Mavi quadcopter near body of water"
 ---
 
 ***Il existe des drones pour tous les budgets, du jouet léger au modèle professionnel. Pour débuter, mieux vaut un appareil simple, robuste et adapté à ce que tu veux vraiment faire.***

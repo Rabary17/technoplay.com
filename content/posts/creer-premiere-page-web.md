@@ -5,6 +5,8 @@ description: "Une page web se construit avec du HTML, un peu de CSS et beaucoup 
 date: "2026-12-25"
 author: "andee-rakotovao"
 category: "programmation"
+image: "https://images.unsplash.com/photo-1607706189992-eae578626c86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw0fHxjb2RlJTIwb3JkaW5hdGV1ciUyMCVDMyVBOWNyYW58ZW58MHwwfHx8MTc5NTE1OTY5MXww&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "Computer screen displaying HTML code for a web development project"
 ---
 
 ***Écrire une page web est souvent le premier vrai pas vers la programmation. Tu verras ton texte prendre forme dans le navigateur, et c'est une récompense immédiate.***

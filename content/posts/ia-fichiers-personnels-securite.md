@@ -5,6 +5,8 @@ description: "L'IA peut lire tes documents et retrouver une facture. Donner acc�
 date: "2026-10-30"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw0fHxyJUMzJUE5c2VhdSUyMGRlJTIwbmV1cm9uZXMlMjB0ZWNobm9sb2dpZXxlbnwwfDB8fHwxNzk1MTU5NzE5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "a group of cubes that are on a black surface"
 ---
 
 ***L'IA peut lire tes documents, résumer tes notes et retrouver une facture. Mais donner accès à tes fichiers, c'est aussi leur ouvrir une porte. Comment réfléchir avant de le faire.***

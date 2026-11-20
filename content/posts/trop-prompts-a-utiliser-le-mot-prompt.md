@@ -4,8 +4,8 @@ description: "Carte d'identité Définition: requête en langage naturel adress�
 date: "2026-11-19"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
-image: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBvcmRpbmF0ZXVyfGVufDB8MHx8fDE3OTUxMDIyMzV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "a computer chip with the letter a on top of it"
+image: "https://images.unsplash.com/photo-1686412960975-27b19e57a5b5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxUcm9wJTIwcHJvbXB0cyUyMCVDMyVBMCUyMHV0aWxpc2VyJTIwbGUlMjBtb3QlMjBwcm9tcHQlMjAlM0Z8ZW58MHwwfHx8MTc5NTE1OTc0OXww&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "a close up of a sign with a plant in the background"
 sources:
   - titre: "Trop prompts à utiliser le mot prompt ?"
     url: "https://www.lapresse.ca/dialogue/2026-11-15/le-fin-mot/trop-prompts-a-utiliser-le-mot-prompt.php"

@@ -5,6 +5,8 @@ description: "Capteurs, cartes et calculs : un robot se repère grâce à plusie
 date: "2026-11-09"
 author: "nekena-judicael"
 category: "robotique-drones"
+image: "https://images.unsplash.com/photo-1647427060118-4911c9821b82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMGF1dG9tYXRpc2F0aW9uJTIwaW5kdXN0cmllfGVufDB8MHx8fDE3OTUxNTk3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "a factory filled with lots of orange machines"
 ---
 
 ***Un aspirateur robot contourne ton canapé, évite le chat et rentre tout seul à sa base. Derrière cette petite routine, il y a un travail de repérage bien organisé.***

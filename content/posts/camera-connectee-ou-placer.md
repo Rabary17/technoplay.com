@@ -5,6 +5,8 @@ description: "Entrée, jardin, intérieur : où placer une caméra connectée, q
 date: "2026-12-09"
 author: "mialy-andriaharisoa"
 category: "maison-connectee"
+image: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwzfHxtYWlzb24lMjBjb25uZWN0JUMzJUE5ZXxlbnwwfDB8fHwxNzk1MTU5NjkwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "A modern house with glass walls beside a swimming pool on a sunny day"
 ---
 
 ***Une caméra connectée peut dissuader les intrusions et te permettre de vérifier ta maison à distance. Mal placée, elle filme aussi ce qu'elle ne devrait pas, et crée des problèmes avec les voisins.***

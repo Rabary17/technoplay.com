@@ -5,6 +5,8 @@ description: "Avant ton premier vol, quelques règles simples protègent les aut
 date: "2026-11-17"
 author: "nekena-judicael"
 category: "robotique-drones"
+image: "https://images.unsplash.com/photo-1521405924368-64c5b84bec60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMHZvbCUyMGV4dCVDMyVBOXJpZXVyfGVufDB8MHx8fDE3OTUxNTk3MzN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "selective focus photography of DJI Phantom 3 Professional quadcopter drone"
 ---
 
 ***Le premier vol impressionne toujours. Mais avant de décoller, quelques vérifications évitent la plupart des accidents, et les mauvaises surprises avec les autres.***

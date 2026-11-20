@@ -5,6 +5,8 @@ description: "Tri de mails, classement de fichiers, rappels : l'IA peut prendre 
 date: "2026-10-28"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBvcmRpbmF0ZXVyfGVufDB8MHx8fDE3OTUxNTkwNzd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "a computer chip with the letter a on top of it"
 ---
 
 ***Chaque semaine, tu refais les mêmes gestes : trier les mails, copier les mêmes infos, relancer les mêmes personnes. Une IA peut prendre une partie de ce travail. Comment repérer la bonne tâche et démarrer prudemment.***

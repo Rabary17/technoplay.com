@@ -4,8 +4,8 @@ description: "Le projet a vu le jour au tout début de l'année 2026 dans les us
 date: "2026-11-19"
 author: "nekena-judicael"
 category: "robotique-drones"
-image: "https://images.pexels.com/photos/6019019/pexels-photo-6019019.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-imageAlt: "A futuristic humanoid robot with glowing green eyes in a modern setting."
+image: "https://images.pexels.com/photos/36606029/pexels-photo-36606029.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+imageAlt: "Two white robotic delivery systems located in a modern indoor room with soft lighting."
 sources:
   - titre: "Avec Gallop, Asus installe dès à présent un robot humanoïde dans ses usines"
     url: "https://www.generation-nt.com/actualites/asus-gallop-robot-humanoide-travail-usine-electronique-2084473"

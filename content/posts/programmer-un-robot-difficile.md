@@ -5,6 +5,8 @@ description: "Programmer un robot demande logique et patience, sans être réser
 date: "2026-11-25"
 author: "nekena-judicael"
 category: "robotique-drones"
+image: "https://images.unsplash.com/photo-1508444845599-5c89863b1c44?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxkcm9uZSUyMHZvbCUyMGV4dCVDMyVBOXJpZXVyfGVufDB8MHx8fDE3OTUxNTk3MzN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "turned-on drone"
 ---
 
 ***Beaucoup pensent qu'il faut être ingénieur pour faire bouger un robot. En réalité, les premiers programmes sont à la portée de tout le monde. La difficulté vient ensuite, avec les capteurs et l'imprévu.***

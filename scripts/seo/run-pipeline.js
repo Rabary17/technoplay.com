@@ -21,6 +21,8 @@ const { choisirAuteur } = require("../generation/choisir-auteur");
 const { selectionnerSujetsSeo } = require("./select-keyword-topics");
 const { selectionnerActusDuJour } = require("./select-news-topics");
 const { findImage } = require("./image-client");
+const { voixPour } = require("../generation/voix-auteurs");
+const { choisirParmi, entier } = require("../generation/variation");
 
 const ROOT = path.join(__dirname, "..", "..");
 const POSTS_DIR = path.join(ROOT, "content", "posts");
@@ -35,18 +37,36 @@ function slugify(s) {
     .replace(/(^-|-$)/g, "");
 }
 
-const CONSIGNE_STRUCTURE = `Rédige un article complet au format Markdown, prêt à coller dans le corps d'un
+// Variation structurelle : sans ça, tous les articles d'un même lot suivent le
+// gabarit identique au mot près (même nombre de questions FAQ, même section
+// finale systématique) — ça ressemble vite à du contenu produit en série,
+// un signal que Google surveille (abus de contenu à grande échelle). Chaque
+// appel tire sa propre combinaison ; la structure de fond (encadrés, ordre
+// général) reste la même, seuls ces quelques réglages bougent.
+function tirerVariation() {
+  return {
+    nbFaq: entier(2, 4),
+    inclureEtMaintenant: Math.random() < 0.7,
+    angleOuverture: choisirParmi([
+      "une situation concrète que le lecteur vit en ce moment",
+      "une question directe posée au lecteur",
+      "un constat sur ce qui a changé récemment sur ce sujet",
+    ]),
+  };
+}
+
+function construireConsigneStructure(variation) {
+  return `Rédige un article complet au format Markdown, prêt à coller dans le corps d'un
 fichier (sans frontmatter). Ta réponse doit commencer PAR LE TITRE, seul sur la première
 ligne, sans dièse ni guillemets ni gras (ex. : Comment choisir un assistant IA pour discuter ?),
 suivi d'une ligne vide, puis le corps de l'article. Le titre doit être la question du
 lecteur (« Comment… ? », « C'est quoi… ? », « Lequel choisir… ? »), jamais le mot-clé brut.
 Ne mets JAMAIS de bloc de code (\`\`\`) autour de ta réponse, et n'ajoute AUCUN commentaire,
 note ou explication avant ou après l'article — seulement le titre puis le corps, rien d'autre.
-Le corps suit EXACTEMENT ce fil, dans cet ordre (voir README du
-projet « Structure d'un article ») :
+Le corps suit ce fil, dans cet ordre (voir README du projet « Structure d'un article ») :
 1. Un encadré "essentiel" (<div class="essentiel">...texte markdown...</div>, avec une
    ligne vide après la balise ouvrante et avant la fermante) : la réponse en 2 phrases max.
-2. Une introduction (2-3 phrases, la situation que le lecteur reconnaît).
+2. Une introduction (2-3 phrases) qui part de ${variation.angleOuverture}.
 3. "## C'est quoi, concrètement ?" : une définition en une phrase + comparaison avec la
    vie de tous les jours, puis un encadré <div class="exemple">...</div> (scène réaliste).
 4. "## Comment faire, pas à pas" (liste numérotée) OU "## Lequel choisir selon ton cas ?"
@@ -54,11 +74,12 @@ projet « Structure d'un article ») :
 5. Si une étape est risquée : <div class="attention">...</div>.
 6. "## Les erreurs à éviter" (liste à puces).
 7. "## Les mots à connaître" : <div class="lexique">...</div> (définitions d'une phrase).
-8. "## Questions fréquentes" (3 questions en ### , réponses 50 mots max).
-9. "## Et maintenant ?" (lien vers un autre article pertinent du site si pertinent).
+8. "## Questions fréquentes" (${variation.nbFaq} questions en ### , réponses 50 mots max).
+${variation.inclureEtMaintenant ? '9. "## Et maintenant ?" (lien vers un autre article pertinent du site si pertinent).' : ""}
 Règles : tutoiement, phrases courtes (20 mots en moyenne, 25 max), un mot technique =
 une explication au moment où il apparaît, un exemple concret par idée, aucune formule qui
 infantilise ("il suffit de", "évidemment"...), jamais de tiret cadratin (—).`;
+}
 
 const CONSIGNE_RESTER_DANS_LA_SOURCE = `
 Important : tu ne disposes que d'un résumé court de la source (pas l'article complet).
@@ -70,10 +91,12 @@ mais entièrement sourcé à un article plus complet mais à moitié incertain.
 Ne mets JAMAIS de balise [S1], [S2]... dans le texte : ce site n'affiche pas ces
 renvois, ils apparaîtraient tels quels, en texte brut visible, ce qui a l'air cassé.`;
 
-async function genererArticle({ titre, theme, sources = [], brief = "" }) {
+async function genererArticle({ titre, theme, sources = [], brief = "", voix = "" }) {
+  const variation = tirerVariation();
   const resultat = await generer({
     phase: "premier-jet",
-    consigne: CONSIGNE_STRUCTURE + (sources.length > 0 ? CONSIGNE_RESTER_DANS_LA_SOURCE : ""),
+    consigne: construireConsigneStructure(variation) + (sources.length > 0 ? CONSIGNE_RESTER_DANS_LA_SOURCE : ""),
+    instructions: voix,
     brief: `Titre de l'article : "${titre}"\nThème : ${theme}\n${brief}`,
     sources,
     max_tokens: 6000,
@@ -137,6 +160,8 @@ Relis cet article et corrige UNIQUEMENT :
   corrige juste ce qui est mal écrit à l'intérieur
 Ne change RIEN au fond : n'ajoute, ne retire et ne modifie aucune affirmation, chiffre, date ou fait — UNIQUEMENT
 la forme. Corrige aussi le titre s'il contient une faute (ex. mot manquant).
+Ne lisse PAS le style propre de l'auteur (rythme de phrase, tournures récurrentes) vers un style
+neutre générique — corrige seulement les vraies fautes, en gardant sa voix reconnaissable.
 Réponds UNIQUEMENT par un JSON strict, sans texte avant ni après :
   {"ok": true} si rien à corriger
   {"ok": false, "titre": "...", "corps": "..."} avec la version corrigée complète sinon`;
@@ -170,6 +195,59 @@ async function relireQualite({ titre, corps }) {
   return { ok: true };
 }
 
+// Le titre complet (souvent avec une marque, ex. "DJI Romo P2") fait dériver la recherche
+// d'image vers un produit non lié au sujet réel (ex. un drone au lieu d'un aspirateur) —
+// on préfère un terme générique par thème pour les actus. Plusieurs synonymes par thème
+// (pas un seul) : avec une seule requête fixe, deux articles du même thème sans mot-clé
+// (cas fréquent des actus) retombent sur le même résultat #1 — exactement le bug observé
+// (deux articles IA avec la même photo, deux articles robotique avec la même photo).
+const SYNONYMES_IMAGE_PAR_THEME = {
+  "intelligence-artificielle": [
+    "intelligence artificielle ordinateur",
+    "réseau de neurones technologie",
+    "intelligence artificielle futuriste",
+  ],
+  "robotique-drones": ["robot maison", "drone vol extérieur", "robot automatisation industrie"],
+  "maison-connectee": ["maison connectée", "objets connectés intérieur", "domotique smartphone"],
+  programmation: ["code ordinateur écran", "développeur clavier", "lignes de code moniteur"],
+  "appareils-internet": ["smartphone ordinateur", "wifi réseau technologie", "appareils électroniques bureau"],
+  cybersecurite: ["sécurité informatique cadenas", "cybersécurité ordinateur", "protection données numériques"],
+};
+
+// Toutes les URLs d'image déjà utilisées dans les articles existants — relu à chaque
+// appel (pas mis en cache) pour voir aussi les images choisies plus tôt dans CE run.
+function imagesDejaUtilisees() {
+  const urls = new Set();
+  if (!fs.existsSync(POSTS_DIR)) return urls;
+  for (const f of fs.readdirSync(POSTS_DIR).filter((f) => f.endsWith(".md"))) {
+    const m = fs.readFileSync(path.join(POSTS_DIR, f), "utf8").match(/^image:\s*"([^"]+)"/m);
+    if (m) urls.add(m[1]);
+  }
+  return urls;
+}
+
+// Essaie plusieurs requêtes dans l'ordre (mot-clé SEO d'abord si connu, puis les synonymes
+// du thème) et prend le premier résultat qui n'est PAS déjà utilisé par un autre article.
+// En dernier recours (tout épuisé), accepte un doublon plutôt que de laisser l'article
+// sans image — mais ça ne devrait arriver qu'à très forte densité d'articles par thème.
+async function choisirImage({ keyword, theme, titre }) {
+  const dejaUtilisees = imagesDejaUtilisees();
+  const requetes = [keyword, ...(SYNONYMES_IMAGE_PAR_THEME[theme] || []), titre].filter(Boolean);
+  let premierResultatVu = null;
+  for (const requete of requetes) {
+    try {
+      const resultats = await findImage(requete);
+      if (!premierResultatVu && resultats.length > 0) premierResultatVu = resultats[0];
+      const libre = resultats.find((r) => !dejaUtilisees.has(r.url));
+      if (libre) return libre;
+    } catch (err) {
+      console.error(`Recherche image échouée pour "${requete}" : ${err.message}`);
+    }
+  }
+  if (premierResultatVu) console.error(`Toutes les images candidates pour "${titre}" sont déjà utilisées — doublon accepté par défaut.`);
+  return premierResultatVu;
+}
+
 async function construireArticle(sujet) {
   const { theme } = sujet;
 
@@ -177,11 +255,16 @@ async function construireArticle(sujet) {
     ? [{ url: sujet.sourceUrl, date: sujet.date || "", texte: `${sujet.titre} — ${sujet.resume || ""}` }]
     : [];
 
+  // Auteur choisi AVANT la génération (sur le sujet, pas le titre généré) pour
+  // que son style soit injecté dans le prompt — voir voix-auteurs.js.
+  const choixAuteur = choisirAuteur({ titre: sujet.titre, categorie: theme });
+
   const resultat = await genererArticle({
     titre: sujet.titre,
     theme,
     sources,
     brief: sujet.keyword ? `Mot-clé cible (SEO) : ${sujet.keyword}, volume estimé ${sujet.volume}/mois.` : "",
+    voix: voixPour(choixAuteur.auteur),
   });
 
   const { titre: titreGenere, corps } = separerTitreEtCorps(resultat.texte, sujet.titre);
@@ -207,28 +290,10 @@ async function construireArticle(sujet) {
     return { ok: false, slug, raison: "fichier déjà existant" };
   }
 
-  const choix = choisirAuteur({ titre, categorie: theme });
+  const choix = choixAuteur;
   const today = new Date().toISOString().slice(0, 10);
 
-  // Le titre complet (souvent avec une marque, ex. "DJI Romo P2") fait dériver la recherche
-  // d'image vers un produit non lié au sujet réel (ex. un drone au lieu d'un aspirateur) —
-  // on préfère un terme générique par thème pour les actus.
-  const REQUETE_IMAGE_PAR_THEME = {
-    "intelligence-artificielle": "intelligence artificielle ordinateur",
-    "robotique-drones": "robot maison",
-    "maison-connectee": "maison connectée",
-    programmation: "code ordinateur écran",
-    "appareils-internet": "smartphone ordinateur",
-    cybersecurite: "sécurité informatique cadenas",
-  };
-  let image = null;
-  try {
-    const requeteImage = sujet.keyword || REQUETE_IMAGE_PAR_THEME[theme] || titre;
-    const resultats = await findImage(requeteImage);
-    image = resultats[0] || null;
-  } catch (err) {
-    console.error(`Image non trouvée pour "${titre}" : ${err.message}`);
-  }
+  const image = await choisirImage({ keyword: sujet.keyword, theme, titre });
 
   const frontmatterLignes = [
     "---",

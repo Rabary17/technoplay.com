@@ -5,6 +5,8 @@ description: "Collecte, nettoyage, pré-entraînement, fine-tuning, alignement, 
 date: "2026-11-02"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.unsplash.com/photo-1694903089438-bf28d4697d9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwzfHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBvcmRpbmF0ZXVyfGVufDB8MHx8fDE3OTUxNTkwNzd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "robot and human hands reaching toward ai text"
 sources:
   - titre: "Meta : The Llama 3 Herd of Models (2024)"
     url: "https://arxiv.org/abs/2407.21783"

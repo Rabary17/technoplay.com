@@ -4,8 +4,8 @@ description: "Cofondateur et directeur scientifique d' Entalpic, Alexandre Duval
 date: "2026-11-18"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
-image: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBvcmRpbmF0ZXVyfGVufDB8MHx8fDE3OTQ5ODY2NjF8MA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "a computer chip with the letter a on top of it"
+image: "https://images.unsplash.com/photo-1709120395858-92f1c7c577f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw1fHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBvcmRpbmF0ZXVyfGVufDB8MHx8fDE3OTUxNTkwNzd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "The letters AI in white 3D block font on a dark teal circuit board"
 sources:
   - titre: "Alexandre Duval, ou comment l'IA conçoit des molécules pour rendre l'industrie plus propre"
     url: "https://www.futura-sciences.com/tech/actualites/intelligence-artificielle-alexandre-duval-ia-concoit-molecules-rendre-industrie-plus-propre-138273/"

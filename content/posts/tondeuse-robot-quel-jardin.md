@@ -5,6 +5,8 @@ description: "Surface, pente, obstacles : on t'aide à savoir si une tondeuse ro
 date: "2026-11-11"
 author: "nekena-judicael"
 category: "robotique-drones"
+image: "https://images.unsplash.com/photo-1655393001768-d946c97d6fd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwzfHxyb2JvdCUyMGF1dG9tYXRpc2F0aW9uJTIwaW5kdXN0cmllfGVufDB8MHx8fDE3OTUxNTk3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "white robotic arm in display showroom"
 ---
 
 ***Une tondeuse robot promet une pelouse entretenue sans effort. Mais tous les jardins ne se valent pas, et certains demandent plus de préparation que d'autres.***

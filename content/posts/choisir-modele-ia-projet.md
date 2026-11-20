@@ -5,6 +5,8 @@ description: "Qualité, coût, confidentialité, langue : les critères simples 
 date: "2026-11-03"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBvcmRpbmF0ZXVyfGVufDB8MHx8fDE3OTUxNTkwNzd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "a computer circuit board with a brain on it"
 ---
 
 ***Entre les noms de modèles, les tarifs et les conditions d'utilisation, on s'y perd vite. Pour choisir, pose-toi quelques questions simples, dans le bon ordre.***

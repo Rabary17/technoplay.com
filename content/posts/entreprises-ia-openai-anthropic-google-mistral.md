@@ -5,6 +5,8 @@ description: "OpenAI, Anthropic, Google, Mistral, DeepSeek, Meta, xAI, Alibaba :
 date: "2026-11-02"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.unsplash.com/photo-1545987796-200677ee1011?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxyJUMzJUE5c2VhdSUyMGRlJTIwbmV1cm9uZXMlMjB0ZWNobm9sb2dpZXxlbnwwfDB8fHwxNzk1MTU5NzE5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "low-angle photography of metal structure"
 sources:
   - titre: "OpenAI : GPT-6 and Intelligent UI for everyone (octobre 2026)"
     url: "https://openai.com/index/gpt-6-for-everyone/"

@@ -5,6 +5,8 @@ description: "Tu as créé un site ou une application à partager ? On t'expliqu
 date: "2027-01-08"
 author: "andee-rakotovao"
 category: "programmation"
+image: "https://images.unsplash.com/photo-1587829741301-dc798b83add3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxkJUMzJUE5dmVsb3BwZXVyJTIwY2xhdmllcnxlbnwwfDB8fHwxNzk1MTU5NzIzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "silver and white computer keyboard"
 ---
 
 ***Un projet qui ne tourne que sur ton ordinateur ne sert pas à grand-chose pour les autres. Le passage en ligne demande de préparer l'hébergement, le nom de domaine et la sécurité.***

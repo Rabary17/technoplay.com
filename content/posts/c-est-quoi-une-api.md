@@ -5,6 +5,8 @@ description: "Une API permet à deux logiciels de se parler selon des règles pr
 date: "2027-01-04"
 author: "andee-rakotovao"
 category: "programmation"
+image: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwzfHxjb2RlJTIwb3JkaW5hdGV1ciUyMCVDMyVBOWNyYW58ZW58MHwwfHx8MTc5NTE1OTY5MXww&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "lines of HTML codes"
 ---
 
 ***Quand une application affiche la météo ou un itinéraire, elle va souvent chercher l'information ailleurs. L'API est le passage qui organise cet échange entre deux logiciels.***

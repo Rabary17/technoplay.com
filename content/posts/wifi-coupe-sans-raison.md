@@ -5,6 +5,8 @@ description: "Un Wi-Fi qui tombe sans prévenir est frustrant. On t'explique les
 date: "2027-01-14"
 author: "nekena-judicael"
 category: "appareils-internet"
+image: "https://images.unsplash.com/photo-1610664921890-ebad05086414?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw1fHxzbWFydHBob25lJTIwb3JkaW5hdGV1cnxlbnwwfDB8fHwxNzk1MTU5Njk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "black iphone 7 on macbook pro"
 ---
 
 ***Le Wi-Fi qui coupe au milieu d'une visio ou d'un film est agaçant. Le problème vient rarement d'un seul endroit : il peut s'agir de la box, de l'emplacement, de l'appareil ou du fournisseur.***

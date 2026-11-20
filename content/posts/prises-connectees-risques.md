@@ -5,6 +5,8 @@ description: "Une prise connectée pilote tes appareils à distance, mais elle b
 date: "2026-12-03"
 author: "mialy-andriaharisoa"
 category: "maison-connectee"
+image: "https://images.unsplash.com/photo-1722152253464-4ad8cbec563f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw0fHxvYmpldHMlMjBjb25uZWN0JUMzJUE5cyUyMGludCVDMyVBOXJpZXVyfGVufDB8MHx8fDE3OTUxNTk3MjF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "A bedroom with a bed and shelves filled with plants"
 ---
 
 ***Allumer une lampe ou une machine à café depuis son téléphone, c'est pratique. Mais une prise connectée reste un appareil électrique, relié à ton réseau domestique. Il faut donc la choisir et l'installer avec soin.***

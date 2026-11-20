@@ -5,6 +5,8 @@ description: "Ouvrir sa porte avec son téléphone ou un code séduit. Mais une 
 date: "2026-12-13"
 author: "mialy-andriaharisoa"
 category: "maison-connectee"
+image: "https://images.unsplash.com/photo-1756109726755-5740473869d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw1fHxvYmpldHMlMjBjb25uZWN0JUMzJUE5cyUyMGludCVDMyVBOXJpZXVyfGVufDB8MHx8fDE3OTUxNTk3MjF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "Smart home devices connected wirelessly to a central hub"
 ---
 
 ***Une serrure connectée remplace la clé par un code, une application ou un badge. C'est pratique pour les allers-retours, mais elle touche à ce qui protège ta maison : la porte d'entrée.***

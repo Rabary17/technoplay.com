@@ -5,6 +5,8 @@ description: "Un token, c'est le morceau de texte que lit une IA. Il mesure auss
 date: "2026-11-02"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.unsplash.com/photo-1628671752092-5e375c760e67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxDJTI3ZXN0JTIwcXVvaSUyMHVuJTIwdG9rZW4lMjAlM0YlMjBMJTI3dW5pdCVDMyVBOSUyMHF1aSUyMGZhaXQlMjBsaXJlJTJDJTIwcmV0ZW5pciUyMGV0JTIwcGF5ZXIlMjB1bmUlMjBJQXxlbnwwfDB8fHwxNzk1MTU5NzQ3fDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "text"
 sources:
   - titre: "OpenAI : What are tokens and how to count them?"
     url: "https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them"

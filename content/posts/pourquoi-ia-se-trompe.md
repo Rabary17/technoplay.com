@@ -5,6 +5,8 @@ description: "Une IA peut répondre avec assurance et se tromper. On t'explique 
 date: "2026-10-20"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.unsplash.com/photo-1630442198990-d248446ca6ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxQb3VycXVvaSUyMGwlMjdJQSUyMHNlJTIwdHJvbXBlLXQtZWxsZSUyMHBhcmZvaXMlMjAlM0Z8ZW58MHwwfHx8MTc5NTE1OTczMXww&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "gray wooden quote board on green grass near body of water during daytime"
 ---
 
 ***Tu demandes une date, un titre de livre ou une règle, et l'IA répond avec aplomb. Sauf que c'est faux. On t'explique pourquoi cela arrive, et les réflexes pour ne pas te faire piéger.***

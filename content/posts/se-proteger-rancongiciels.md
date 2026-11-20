@@ -5,6 +5,8 @@ description: "Un rançongiciel bloque tes fichiers jusqu'au paiement d'une ranç
 date: "2027-01-30"
 author: "andrianina-rabarivelo"
 category: "cybersecurite"
+image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxjeWJlcnMlQzMlQTljdXJpdCVDMyVBOSUyMG9yZGluYXRldXJ8ZW58MHwwfHx8MTc5NTE1OTc0NXww&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "red padlock on black computer keyboard"
 ---
 
 ***Un rançongiciel chiffre tes fichiers et réclame de l'argent pour les récupérer. Ce risque touche aussi les particuliers, et la meilleure défense reste une combinaison simple : sauvegardes, mises à jour et prudence.***

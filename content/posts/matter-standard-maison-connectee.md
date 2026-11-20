@@ -5,6 +5,8 @@ description: "Matter est un standard pensé pour que des appareils de marques di
 date: "2026-12-19"
 author: "mialy-andriaharisoa"
 category: "maison-connectee"
+image: "https://images.unsplash.com/photo-1630648990570-629765b3be43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwzfHxvYmpldHMlMjBjb25uZWN0JUMzJUE5cyUyMGludCVDMyVBOXJpZXVyfGVufDB8MHx8fDE3OTUxNTk3MjF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "green potted plant on white table"
 ---
 
 ***Acheter une ampoule d'une marque, une prise d'une autre et un capteur d'une troisième, sans savoir si tout va marcher ensemble : c'est le problème que Matter veut résoudre.***

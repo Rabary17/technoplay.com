@@ -5,6 +5,8 @@ description: "Charge, stockage, température : quelques gestes simples prolongen
 date: "2026-11-19"
 author: "nekena-judicael"
 category: "robotique-drones"
+image: "https://images.pexels.com/photos/9028919/pexels-photo-9028919.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+imageAlt: "A robotic helper cracks an egg into a bowl in a contemporary kitchen setting, showcasing automation in cooking."
 ---
 
 ***La batterie est le point faible de la plupart des drones. Bien la charger et la ranger évite de perdre de l'autonomie trop vite, et même de finir avec un appareil inutilisable.***

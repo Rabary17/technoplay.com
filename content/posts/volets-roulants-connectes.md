@@ -5,6 +5,8 @@ description: "Ouvrir ses volets à distance ou selon la luminosité séduit. On 
 date: "2026-12-07"
 author: "mialy-andriaharisoa"
 category: "maison-connectee"
+image: "https://images.unsplash.com/photo-1483478550801-ceba5fe50e8e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxkb21vdGlxdWUlMjBzbWFydHBob25lfGVufDB8MHx8fDE3OTUxNTk3NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "person holding smartphone"
 ---
 
 ***Des volets qui s'ouvrent au lever du soleil et se ferment à la tombée de la nuit, sans que tu bouges, ça attire. Reste à savoir si le confort supplémentaire justifie le prix.***

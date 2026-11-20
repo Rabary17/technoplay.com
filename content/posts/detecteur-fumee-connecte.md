@@ -5,6 +5,8 @@ description: "Un détecteur de fumée connecté envoie une alerte sur ton télé
 date: "2026-12-11"
 author: "mialy-andriaharisoa"
 category: "maison-connectee"
+image: "https://images.unsplash.com/photo-1706808849802-8f876ade0d1f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw1fHxtYWlzb24lMjBjb25uZWN0JUMzJUE5ZXxlbnwwfDB8fHwxNzk1MTU5NjkwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "a rendering of a modern house with a patio"
 ---
 
 ***Un détecteur de fumée doit avant tout fonctionner, et réveiller les occupants. Quand il est connecté, il peut en plus prévenir une personne absente. Reste à savoir si cette fonction compte vraiment.***

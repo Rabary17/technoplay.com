@@ -5,6 +5,8 @@ description: "La double authentification ajoute une vérification à ton mot de 
 date: "2027-01-20"
 author: "andrianina-rabarivelo"
 category: "cybersecurite"
+image: "https://images.unsplash.com/photo-1618060932014-4deda4932554?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw0fHxzJUMzJUE5Y3VyaXQlQzMlQTklMjBpbmZvcm1hdGlxdWUlMjBjYWRlbmFzfGVufDB8MHx8fDE3OTUxNTk2OTR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "An open padlock surrounded by scattered black computer keyboard keys under red and green light"
 ---
 
 ***Un mot de passe seul peut être deviné, volé ou récupéré dans une fuite de données. La double authentification ajoute une deuxième preuve, pour que ton compte reste à toi, même si quelqu'un connaît ton mot de passe.***

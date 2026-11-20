@@ -5,6 +5,8 @@ description: "Certains modèles d'IA tournent en local, sans envoyer tes donnée
 date: "2026-11-05"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw1fHxyJUMzJUE5c2VhdSUyMGRlJTIwbmV1cm9uZXMlMjB0ZWNobm9sb2dpZXxlbnwwfDB8fHwxNzk1MTU5NzE5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "an abstract image of a sphere with dots and lines"
 ---
 
 ***La plupart des assistants IA fonctionnent sur des serveurs distants. Mais certains modèles peuvent aussi tourner directement sur ton ordinateur, sans connexion.***

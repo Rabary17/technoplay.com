@@ -5,6 +5,8 @@ description: "Une réponse d'IA peut être utile sans être fiable. On t'expliqu
 date: "2026-10-22"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.unsplash.com/photo-1644325349124-d1756b79dd42?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxyJUMzJUE5c2VhdSUyMGRlJTIwbmV1cm9uZXMlMjB0ZWNobm9sb2dpZXxlbnwwfDB8fHwxNzk1MTU5NzE5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "a blue abstract background with lines and dots"
 ---
 
 ***L'IA répond vite, bien et sans hésiter. Mais rapidité et clarté ne veulent pas dire exactitude. On t'explique comment doser ta confiance selon ce que tu lui demandes.***

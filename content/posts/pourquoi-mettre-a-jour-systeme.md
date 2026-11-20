@@ -5,6 +5,8 @@ description: "Les mises à jour corrigent souvent des failles de sécurité. On 
 date: "2027-01-28"
 author: "andrianina-rabarivelo"
 category: "cybersecurite"
+image: "https://images.unsplash.com/photo-1654588831193-0285dab84d5a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw1fHxzJUMzJUE5Y3VyaXQlQzMlQTklMjBpbmZvcm1hdGlxdWUlMjBjYWRlbmFzfGVufDB8MHx8fDE3OTUxNTk2OTR8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "a computer keyboard with a padlock on top of it"
 ---
 
 ***Une mise à jour qui apparaît au mauvais moment agace souvent. Pourtant, beaucoup de failles de sécurité sont corrigées par ces mises à jour, et les laisser de côté laisse une porte ouverte.***

@@ -5,6 +5,8 @@ description: "Mesurer, programmer, automatiser : une maison connectée peut réd
 date: "2026-12-05"
 author: "mialy-andriaharisoa"
 category: "maison-connectee"
+image: "https://images.unsplash.com/photo-1611073692953-8cdb0106db65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxvYmpldHMlMjBjb25uZWN0JUMzJUE5cyUyMGludCVDMyVBOXJpZXVyfGVufDB8MHx8fDE3OTUxNTk3MjF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "white and black floral ceramic bowl on orange plastic tray"
 ---
 
 ***Une maison connectée promet de faire des économies d'énergie. Dans les faits, les gains viennent surtout de deux choses : voir ce qui consomme, et automatiser les bons réglages.***

@@ -5,6 +5,8 @@ description: "Réinstaller Windows peut effacer tes documents si tu n'y prends p
 date: "2027-01-18"
 author: "nekena-judicael"
 category: "appareils-internet"
+image: "https://images.unsplash.com/photo-1480694313141-fce5e697ee25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxzbWFydHBob25lJTIwb3JkaW5hdGV1cnxlbnwwfDB8fHwxNzk1MTU5Njk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "silver Android smartphone"
 ---
 
 ***Réinstaller Windows remet l'ordinateur à neuf, mais certaines options effacent tout. Avant de commencer, une sauvegarde soigneuse et le bon choix dans le menu évitent de perdre tes documents et tes photos.***

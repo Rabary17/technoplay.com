@@ -5,6 +5,8 @@ description: "Données, réseau de neurones, GPU, fenêtre de contexte, outils :
 date: "2026-11-02"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.unsplash.com/photo-1737644467636-6b0053476bb2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw0fHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBvcmRpbmF0ZXVyfGVufDB8MHx8fDE3OTUxNTkwNzd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "A white robot is standing in front of a black background"
 sources:
   - titre: "IBM : What is a neural network?"
     url: "https://www.ibm.com/think/topics/neural-networks"

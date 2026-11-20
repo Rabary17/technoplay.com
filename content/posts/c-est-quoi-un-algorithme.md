@@ -5,6 +5,8 @@ description: "Un algorithme est une suite d'étapes claires pour résoudre un pr
 date: "2026-12-21"
 author: "andee-rakotovao"
 category: "programmation"
+image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxjb2RlJTIwb3JkaW5hdGV1ciUyMCVDMyVBOWNyYW58ZW58MHwwfHx8MTc5NTE1OTY5MXww&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "a computer screen with a bunch of code on it"
 ---
 
 ***Tu entends ce mot partout, du fil d'actualité aux recettes de cuisine. Un algorithme est pourtant une idée simple : une suite d'étapes précises qui mène à un résultat.***

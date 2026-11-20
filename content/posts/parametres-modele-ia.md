@@ -5,6 +5,8 @@ description: "8B, 70B, 1 000 milliards : ce que mesurent les paramètres d'une I
 date: "2026-11-02"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
+image: "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw1fHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBmdXR1cmlzdGV8ZW58MHwwfHx8MTc5NTE1OTcyNnww&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "white and black typewriter with white printer paper"
 sources:
   - titre: "Mistral AI : Introducing Mistral Large 4 (octobre 2026)"
     url: "https://mistral.ai/news/mistral-large-4/"

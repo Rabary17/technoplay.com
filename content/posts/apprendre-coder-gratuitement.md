@@ -5,6 +5,8 @@ description: "Cours en ligne, exercices, communautés : de nombreuses ressources
 date: "2026-12-23"
 author: "andee-rakotovao"
 category: "programmation"
+image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxjb2RlJTIwb3JkaW5hdGV1ciUyMCVDMyVBOWNyYW58ZW58MHwwfHx8MTc5NTE1OTY5MXww&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "monitor showing Java programming"
 ---
 
 ***Apprendre à coder ne coûte pas forcément cher. Beaucoup de ressources sont gratuites. Le plus dur n'est pas de trouver un cours, mais de rester régulier et de pratiquer.***

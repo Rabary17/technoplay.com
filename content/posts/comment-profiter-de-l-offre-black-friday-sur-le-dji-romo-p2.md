@@ -4,8 +4,8 @@ description: "L'excellent DJI Romo P2, qui occupe la première place de notre cl
 date: "2026-11-18"
 author: "nekena-judicael"
 category: "robotique-drones"
-image: "https://images.pexels.com/photos/6019019/pexels-photo-6019019.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-imageAlt: "A futuristic humanoid robot with glowing green eyes in a modern setting."
+image: "https://images.pexels.com/photos/9028873/pexels-photo-9028873.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+imageAlt: "A robotic arm carefully pouring ingredients into a mixing bowl in a modern kitchen setting."
 sources:
   - titre: "10, le meilleur aspirateur robot du moment roule sous les 1 000 € lors du Black Friday — Frandroid"
     url: "https://www.frandroid.com/bons-plans/3322533_dji-romo-p2-note-10-10-le-meilleur-aspirateur-robot-du-moment-roule-sous-les-1-000-e-lors-du-black-friday"

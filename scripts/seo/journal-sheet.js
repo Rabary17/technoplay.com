@@ -16,12 +16,14 @@ function maintenant() {
 
 // Ajoute une ligne à la fin du "Journal quotidien" — une invocation par action
 // notable (pas une par appel Claude, voir usage-tracker.js pour ce niveau de détail).
-async function ajouterLigneJournal({ type, action, detail = "", lien = "", coutUsd = null }) {
+// Deux liens séparés : la page réelle du site (ce qu'on veut voir en premier) et
+// le fichier source sur GitHub (pour vérifier le contenu/historique).
+async function ajouterLigneJournal({ type, action, detail = "", lienSite = "", lienCode = "", coutUsd = null }) {
   const { date, heure } = maintenant();
   const lignes = await getValues(JOURNAL_SHEET_ID, "Journal quotidien!A:A");
   const prochaineRow = lignes.length + 1;
-  await updateValues(JOURNAL_SHEET_ID, `Journal quotidien!A${prochaineRow}:G${prochaineRow}`, [
-    [date, heure, type, action, detail, lien, coutUsd != null ? coutUsd.toFixed(4) : ""],
+  await updateValues(JOURNAL_SHEET_ID, `Journal quotidien!A${prochaineRow}:H${prochaineRow}`, [
+    [date, heure, type, action, detail, lienSite, lienCode, coutUsd != null ? coutUsd.toFixed(4) : ""],
   ]);
 }
 

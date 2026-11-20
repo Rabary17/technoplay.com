@@ -404,10 +404,16 @@ async function main() {
     try {
       for (const a of rapport.articles) {
         const relatif = path.relative(ROOT, a.fichier).replace(/\\/g, "/");
-        const lien = rapport.commit
+        const lienCode = rapport.commit
           ? `https://github.com/Rabary17/technoplay.com/blob/${rapport.commit}/${relatif}`
           : relatif;
-        await ajouterLigneJournal({ type: "contenu", action: `Article publié (${a.type})`, detail: a.titre, lien });
+        await ajouterLigneJournal({
+          type: "contenu",
+          action: `Article publié (${a.type})`,
+          detail: a.titre,
+          lienSite: `https://techno-play.com/${a.slug}/`,
+          lienCode,
+        });
       }
       if (rapport.articles.length === 0) {
         await ajouterLigneJournal({

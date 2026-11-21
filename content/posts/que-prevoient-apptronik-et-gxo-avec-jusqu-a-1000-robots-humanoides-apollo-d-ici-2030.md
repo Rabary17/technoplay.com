@@ -4,7 +4,7 @@ description: "La start-up américaine de robotique humanoïde étend son partena
 date: "2026-11-20"
 author: "nekena-judicael"
 category: "robotique-drones"
-image: "https://images.unsplash.com/photo-1521405924368-64c5b84bec60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMHZvbCUyMGV4dCVDMyVBOXJpZXVyfGVufDB8MHx8fDE3OTUxODczNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
+image: "https://images.unsplash.com/photo-1535378917042-10a22c95931a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
 imageAlt: "selective focus photography of DJI Phantom 3 Professional quadcopter drone"
 sources:
   - titre: "Apptronik veut installer jusqu'à 1000 robots humanoïdes Apollo dans les entrepôts logistiques de GXO d'ici 2030"

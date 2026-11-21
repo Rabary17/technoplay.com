@@ -5,7 +5,7 @@ description: "Un modèle de langage, c'est le moteur caché des assistants IA. O
 date: "2026-10-18"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
-image: "https://images.unsplash.com/photo-1709120395858-92f1c7c577f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwzfHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBmdXR1cmlzdGV8ZW58MHwwfHx8MTc5NTE1OTcyNnww&ixlib=rb-4.1.0&q=80&w=1080"
+image: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
 imageAlt: "The letters AI in white 3D block font on a dark teal circuit board"
 ---
 

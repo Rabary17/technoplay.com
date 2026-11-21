@@ -4,7 +4,7 @@ description: "Le procureur de Californie Rob Bonta a assigné lundi en justice O
 date: "2026-11-20"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
-image: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBvcmRpbmF0ZXVyfGVufDB8MHx8fDE3OTUxODczMzh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
 imageAlt: "a computer chip with the letter a on top of it"
 sources:
   - titre: "La Californie attaque OpenAI en justice pour défaut de sécurisation"

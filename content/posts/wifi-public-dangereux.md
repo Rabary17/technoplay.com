@@ -5,7 +5,7 @@ description: "Un Wi-Fi gratuit dans un café ou une gare peut exposer tes donné
 date: "2027-01-24"
 author: "andrianina-rabarivelo"
 category: "cybersecurite"
-image: "https://images.unsplash.com/photo-1614064548237-096f735f344f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxjeWJlcnMlQzMlQTljdXJpdCVDMyVBOSUyMG9yZGluYXRldXJ8ZW58MHwwfHx8MTc5NTE1OTc0NXww&ixlib=rb-4.1.0&q=80&w=1080"
+image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
 imageAlt: "padlock on laptop with light trails"
 ---
 

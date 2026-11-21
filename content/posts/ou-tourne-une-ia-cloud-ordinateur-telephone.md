@@ -5,7 +5,7 @@ description: "Serveur, ordinateur ou téléphone : où tourne une IA, avec quels
 date: "2026-11-02"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
-image: "https://images.unsplash.com/photo-1737644467636-6b0053476bb2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw0fHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBmdXR1cmlzdGV8ZW58MHwwfHx8MTc5NTE1OTcyNnww&ixlib=rb-4.1.0&q=80&w=1080"
+image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
 imageAlt: "A white robot is standing in front of a black background"
 sources:
   - titre: "Apple Security Research : Private Cloud Compute (2024)"

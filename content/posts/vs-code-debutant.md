@@ -5,7 +5,7 @@ description: "VS Code est un éditeur de code gratuit, très répandu. On t'expl
 date: "2027-01-02"
 author: "andee-rakotovao"
 category: "programmation"
-image: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxsaWduZXMlMjBkZSUyMGNvZGUlMjBtb25pdGV1cnxlbnwwfDB8fHwxNzk1MTU5NzUzfDA&ixlib=rb-4.1.0&q=80&w=1080"
+image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
 imageAlt: "a computer screen with a bunch of code on it"
 ---
 

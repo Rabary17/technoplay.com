@@ -55,7 +55,7 @@ Sous le capot, un agent tourne en boucle sur quatre temps.
 3. **Les outils.** C'est la vraie nouveauté. L'agent peut chercher sur le web, lire des documents, utiliser une application ou appeler un service en ligne. IBM cite des jeux de données externes, des recherches web et des interfaces de programmation (API).
 4. **La vérification.** Après chaque action, l'agent regarde le résultat et ajuste son plan. Si une étape échoue, il relit l'erreur et tente autre chose.
 
-Cette boucle « agir, observer, corriger » fait toute la différence avec un chatbot.
+Cette boucle « agir, observer, corriger » fait toute la différence avec un chatbot. Pour revoir les bases du fonctionnement d'un modèle d'IA avant d'aller plus loin, notre article [comment fonctionne une IA](/comment-fonctionne-une-ia/) détaille ses composants.
 
 ## Lequel choisir selon ton cas ?
 
@@ -70,7 +70,7 @@ Tu n'as pas toujours besoin d'un agent. Le tableau t'aide à trancher.
 | Intervention de ta part | À chaque message | Surtout au début et à la validation |
 | Idéal pour | Une question, une idée, une explication | Une tâche longue et répétitive |
 
-Pour une question simple, un chatbot suffit largement. Pense à lui comme à un bon conseiller au téléphone. Pour une mission longue, pense plutôt à un assistant qui travaille à ta place pendant que tu fais autre chose, sous ton contrôle. Pour une mission qui demande plusieurs recherches et plusieurs actions, un agent est alors bien plus utile. Dans tous les cas, commence petit.
+Pour une question simple, un chatbot suffit largement. Pense à lui comme à un bon conseiller au téléphone. Pour une mission longue, pense plutôt à un assistant qui travaille à ta place pendant que tu fais autre chose, sous ton contrôle. Pour une mission qui demande plusieurs recherches et plusieurs actions, un agent est alors bien plus utile. Dans tous les cas, commence petit. Si tu veux déléguer une tâche précise et répétitive plutôt qu'une mission complexe, regarde plutôt notre article sur [automatiser une tâche répétitive avec l'IA](/automatiser-tache-repetitive-ia/).
 
 ## Des exemples simples d'agents IA
 
@@ -96,7 +96,7 @@ Ce n'est pas grave de s'y perdre au début. Voici les pièges les plus fréquent
 
 **Donner trop d'accès.** Un agent qui trie tes mails n'a pas besoin de ton compte bancaire. Limite chaque outil à ce qui est strictement nécessaire.
 
-**Ne pas relire le résultat.** L'agent peut paraître sûr de lui et se tromper. Vérifie les chiffres, les dates et les sources avant de t'en servir.
+**Ne pas relire le résultat.** L'agent peut paraître sûr de lui et se tromper, pour les mêmes raisons qu'une IA classique : notre article explique [pourquoi l'IA se trompe parfois](/pourquoi-ia-se-trompe/). Vérifie les chiffres, les dates et les sources avant de t'en servir, comme on te le conseille pour [faire confiance à une réponse de l'IA](/confiance-reponse-ia/).
 
 **Laisser tourner sans surveiller.** Un agent peut tourner en rond et relancer le même outil sans progresser. Sur un service payant, cela peut coûter cher. Surveille les premières exécutions.
 

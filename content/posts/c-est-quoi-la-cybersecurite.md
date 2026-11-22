@@ -7,7 +7,7 @@ author: "andrianina-rabarivelo"
 category: "cybersecurite"
 image: "https://images.unsplash.com/photo-1614064548237-096f735f344f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxzJUMzJUE5Y3VyaXQlQzMlQTklMjBpbmZvcm1hdGlxdWUlMjBjYWRlbmFzfGVufDB8MHx8fDE3OTUxNTk2OTR8MA&ixlib=rb-4.1.0&q=80&w=1080"
 imageAlt: "padlock on laptop with light trails"
-updated: "2026-11-02"
+updated: "2026-11-22"
 sources:
   - titre: "Cybermalveillance.gouv.fr : les 10 mesures essentielles pour votre cybersécurité"
     url: "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/10-mesures-essentielles-assurer-securite-numerique"
@@ -114,7 +114,7 @@ Ces gestes reprennent les recommandations officielles du dispositif national d'a
 1. **Utilise un mot de passe solide et différent pour chaque compte**, et active la double authentification quand c'est proposé.
 2. **Installe les mises à jour** de tous tes appareils dès qu'elles sont disponibles.
 3. **Sauvegarde tes données régulièrement**, dont une copie sur un support débranché.
-4. **Télécharge tes applications uniquement depuis les magasins ou sites officiels.**
+4. **Télécharge tes applications** uniquement depuis les magasins ou sites officiels.
 5. **Méfie-toi des messages inattendus ou alarmistes**, et vérifie par un autre moyen avant d'agir.
 6. **Vérifie un site marchand avant d'acheter**, surtout si les prix semblent trop bas.
 7. **Règle la confidentialité de tes réseaux sociaux**, et ne relaie pas d'informations non vérifiées.
@@ -127,10 +127,10 @@ Pour t'aider, lis [Comment choisir un bon mot de passe ?](/choisir-bon-mot-de-pa
 Ça peut arriver à tout le monde. L'important est d'agir vite, sans paniquer.
 
 1. **Change tout de suite le mot de passe** du compte concerné, puis ceux qui utilisaient le même.
-2. **Si tu as donné tes coordonnées bancaires, appelle ta banque** pour faire opposition.
+2. Si tu as donné tes coordonnées bancaires, **appelle ta banque** pour faire opposition.
 3. **Préviens tes contacts** si ton compte a envoyé des messages à ta place.
 4. **Garde les preuves** : captures d'écran, messages, adresses.
-5. **Demande de l'aide.** Le site officiel [Cybermalveillance.gouv.fr](https://www.cybermalveillance.gouv.fr/) aide les victimes à faire un diagnostic et propose des conseils adaptés.
+5. **Demande de l'aide** : le site officiel [Cybermalveillance.gouv.fr](https://www.cybermalveillance.gouv.fr/) aide les victimes à faire un diagnostic et propose des conseils adaptés.
 
 ## Les mots à connaître
 

@@ -7,7 +7,7 @@ author: "andee-rakotovao"
 category: "programmation"
 image: "/images/articles/c-est-quoi-la-programmation-hero.webp"
 imageAlt: "Gros plan sur du code coloré affiché sur un écran sombre"
-updated: "2026-11-02"
+updated: "2026-11-22"
 sources:
   - titre: "Python : tutoriel officiel (documentation Python)"
     url: "https://docs.python.org/3/tutorial/"
@@ -90,7 +90,7 @@ Tu profites de la programmation toute la journée, souvent sans y penser :
 - Un jeu vidéo réagit à chaque bouton que tu presses.
 - Un site de vente te propose des produits proches de ceux que tu as regardés.
 
-Programmer soi-même sert aussi dans la vie courante. Un petit programme peut renommer des centaines de photos en quelques secondes. Il peut trier un fichier, envoyer un rappel ou remplir un tableau à ta place.
+Programmer soi-même sert aussi dans la vie courante. Un petit programme peut renommer des centaines de photos en quelques secondes. Il peut trier un fichier, envoyer un rappel ou remplir un tableau à ta place. Si l'envie te vient de t'y mettre, [plusieurs ressources gratuites](/apprendre-coder-gratuitement/) permettent de commencer sans dépenser un centime.
 
 ## Pourquoi c'est utile d'apprendre, même sans devenir développeur
 
@@ -111,11 +111,11 @@ Enfin, c'est une compétence recherchée dans beaucoup de métiers. Un comptable
 ## Écrire ton premier programme
 
 1. **Choisis un but modeste**, comme afficher ton prénom à l'écran.
-2. **Choisis un outil** : Scratch si tu préfères assembler des blocs, Python pour écrire du code.
-3. **Écris un programme qui affiche un message**, puis lance-le.
+2. **Choisis un outil** : Scratch si tu préfères assembler des blocs, Python pour écrire du code. [Ton premier programme en Python](/python-premier-programme/) détaille les toutes premières lignes à taper.
+3. **Écris un programme** qui affiche un message, puis lance-le.
 4. **Ajoute une condition**, puis une boucle, une brique à la fois.
 5. **Lis les messages d'erreur** : ils indiquent souvent la ligne où chercher.
-6. **Essaie de comprendre chaque ligne** avant de copier du code trouvé ailleurs.
+6. **Essaie de comprendre** chaque ligne avant de copier du code trouvé ailleurs.
 
 <div class="attention">
 
@@ -125,7 +125,9 @@ Ne lance pas un programme trouvé sur Internet sans comprendre ce qu'il fait. Un
 
 </div>
 
-**Et pour les plus jeunes à la maison ?** Pas besoin de savoir programmer pour accompagner quelqu'un sur Scratch. Demande-lui d'expliquer chaque bloc et laisse-le chercher ses erreurs. Sur les plateformes qui publient les projets en ligne, vérifiez ensemble ce qui est partagé : ni photo ni information personnelle.
+## Et pour les plus jeunes à la maison ?
+
+Pas besoin de savoir programmer pour accompagner quelqu'un sur Scratch. Demande-lui d'expliquer chaque bloc et laisse-le chercher ses erreurs. Sur les plateformes qui publient les projets en ligne, vérifiez ensemble ce qui est partagé : ni photo ni information personnelle.
 
 Tu préfères créer un site sans écrire de code ? C'est possible aussi : lis [Peut-on créer un site sans savoir coder ?](/creer-site-sans-savoir-coder/).
 

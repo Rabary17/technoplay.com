@@ -7,7 +7,7 @@ author: "nekena-judicael"
 category: "appareils-internet"
 image: "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxzbWFydHBob25lJTIwb3JkaW5hdGV1cnxlbnwwfDB8fHwxNzk1MTU5Njk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
 imageAlt: "person holding black iphone 4"
-updated: "2026-11-02"
+updated: "2026-11-22"
 sources:
   - titre: "Cybermalveillance.gouv.fr : les 10 mesures essentielles pour votre cybersécurité"
     url: "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/10-mesures-essentielles-assurer-securite-numerique"
@@ -115,8 +115,8 @@ Enfin, ça t'aide à **te protéger**. Tes informations voyagent et sont stocké
 2. **Protège chaque appareil par un code**, un schéma ou ton empreinte.
 3. **Utilise des mots de passe solides et différents** pour chaque compte important.
 4. **Sauvegarde tes photos et tes fichiers** régulièrement, sur un disque externe ou en ligne.
-5. **Télécharge tes applications uniquement depuis les magasins officiels.**
-6. **Change le mot de passe Wi-Fi par défaut de ta box.**
+5. **Télécharge tes applications** uniquement depuis les magasins officiels.
+6. **Change le mot de passe Wi-Fi par défaut** de ta box.
 
 Ces réflexes reprennent les recommandations officielles de Cybermalveillance.gouv.fr. Pour la mise en pratique, lis [Changer le mot de passe Wi-Fi de ta box](/changer-mot-de-passe-wifi/) et [Sauvegarder ton iPhone](/sauvegarder-iphone/).
 

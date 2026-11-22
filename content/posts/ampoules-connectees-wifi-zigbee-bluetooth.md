@@ -7,74 +7,96 @@ author: "mialy-andriaharisoa"
 category: "maison-connectee"
 image: "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxtYWlzb24lMjBjb25uZWN0JUMzJUE5ZXxlbnwwfDB8fHwxNzk1MTU5NjkwfDA&ixlib=rb-4.1.0&q=80&w=1080"
 imageAlt: "landscape photo of 2-storey house"
+updated: "2026-11-22"
 ---
 
-***Une ampoule connectée peut se relier à ta box en Wi-Fi, à un petit pont Zigbee ou directement en Bluetooth. Le choix influence la portée, la stabilité et ce que tu pourras piloter ensuite.***
+***Une ampoule connectée se relie en Wi-Fi via ta box, en Zigbee via un petit pont dédié, ou en Bluetooth directement depuis ton téléphone. Le choix change la portée, la stabilité et le nombre d'ampoules que tu pourras piloter sans souci.***
 
 <div class="essentiel">
 
 **L'essentiel en 30 secondes**
 
-- Le Wi-Fi est pratique, mais il sature vite le réseau si tu en ajoutes beaucoup.
-- Zigbee passe par un pont dédié et consomme peu d'énergie. Il est très stable pour un grand nombre d'appareils.
-- Le Bluetooth est simple, mais sa portée est limitée et il convient mieux à une ou deux ampoules.
+- Le **Wi-Fi** ne demande aucun matériel en plus, mais sature vite ta box si tu ajoutes beaucoup d'ampoules.
+- **Zigbee** passe par un pont dédié, consomme peu d'énergie et reste stable même avec une quinzaine d'appareils.
+- Le **Bluetooth** convient à une ou deux ampoules, sans pont, mais sa portée reste limitée.
 
 </div>
 
-Les trois technologies envoient des signaux sans fil, mais elles ne sont pas faites pour les mêmes usages. Le bon choix dépend du nombre d'ampoules, de la taille du logement et de l'écosystème que tu veux utiliser.
+Les trois technologies envoient toutes un signal sans fil, mais elles ne visent pas le même usage. Le bon choix dépend du nombre d'ampoules prévu, de la taille du logement et de l'écosystème déjà en place chez toi.
 
-## Le Wi-Fi
+## C'est quoi la différence, concrètement ?
 
-Le Wi-Fi ne demande aucun matériel supplémentaire, puisque ta box suffit. C'est donc le plus simple à mettre en place. En revanche, chaque ampoule occupe la connexion, et un logement avec beaucoup d'appareils peut voir sa qualité baisser.
+Le Wi-Fi, le Zigbee et le Bluetooth sont trois façons différentes d'envoyer une commande à une ampoule. Le Wi-Fi utilise ta box, le Zigbee utilise un petit boîtier intermédiaire, et le Bluetooth relie directement le téléphone à l'ampoule.
 
-## Zigbee
-
-Zigbee utilise un pont, un petit boîtier qui relie les appareils à ta box. Les ampoules se parlent entre elles et forment un réseau maillé. Il est stable, économe et adapté à un grand nombre d'appareils, mais il faut acheter le pont.
-
-## Bluetooth
-
-Le Bluetooth ne demande pas de pont et se pilote depuis le téléphone à proximité. Il convient pour une ou deux ampoules. Si tu veux piloter depuis l'extérieur de la maison, il faudra un autre appareil relais.
+Imagine trois façons d'envoyer un message chez des voisins. Le Wi-Fi, c'est un appel qui passe par le standard téléphonique de l'immeuble : pratique, mais la ligne sature si tout le monde appelle en même temps. Le Zigbee, c'est un **réseau maillé** de talkies-walkies qui se relaient le message de voisin en voisin. Le Bluetooth, c'est crier directement par la fenêtre : ça marche, mais seulement de près.
 
 <div class="exemple">
 
 **Un exemple concret**
 
-Pour quatre ampoules dans un petit appartement, le Bluetooth peut suffire. Pour une maison avec une quinzaine d'appareils répartis sur deux étages, un réseau Zigbee avec un pont évite de surcharger le Wi-Fi.
+Pour quatre ampoules dans un studio, le Bluetooth suffit largement. Pour une maison de quinze ampoules sur deux étages, un pont Zigbee évite de surcharger le Wi-Fi et garde chaque ampoule réactive, même loin de la box.
 
 </div>
+
+## Lequel choisir selon ton cas ?
+
+Le choix dépend surtout du nombre d'ampoules et de ta tolérance à acheter un boîtier supplémentaire.
+
+1. **Une à deux ampoules, budget serré** : le Bluetooth suffit. Aucun pont à acheter, configuration en quelques minutes depuis l'application du fabricant.
+2. **Trois à huit ampoules, logement simple** : le Wi-Fi reste simple, à condition que ta box gère bien le nombre d'appareils connectés sans ralentir.
+3. **Plus de dix ampoules, ou plusieurs pièces éloignées** : Zigbee s'impose. Le réseau maillé renforce la portée à chaque ampoule ajoutée, contrairement au Wi-Fi qui se dégrade.
+4. **Maison déjà équipée en [Home Assistant](/home-assistant-c-est-quoi/) ou en domotique avancée** : Zigbee s'intègre le plus facilement à un hub central, et certaines ampoules supportent aussi désormais le standard [Matter](/matter-standard-maison-connectee/).
+
+| Technologie | Matériel en plus | Nombre d'ampoules conseillé | Portée |
+|---|---|---|---|
+| Wi-Fi | Aucun (ta box suffit) | 1 à 8 | Bonne, dépend du débit disponible |
+| Zigbee | Un pont dédié | 10 et plus | Excellente grâce au réseau maillé |
+| Bluetooth | Aucun | 1 à 2 | Limitée à quelques mètres |
 
 <div class="attention">
 
-**Vérifie la compatibilité**
+**Vérifie la compatibilité avant d'acheter**
 
-Avant d'acheter, regarde si les ampoules sont compatibles avec ton assistant vocal ou ton application. Une bonne compatibilité évite de racheter du matériel plus tard.
+Une ampoule Zigbee ne fonctionne pas forcément avec n'importe quel pont. Regarde si le pont et l'ampoule partagent le même écosystème, ou cherche la mention Matter, qui unifie une partie de ces appareils.
 
 </div>
 
+## Les erreurs à éviter
+
+Acheter des ampoules Wi-Fi par dizaines sans vérifier la capacité de ta box est l'erreur la plus fréquente. Chaque ampoule garde une connexion active en permanence, et un routeur grand public tient rarement plus d'une vingtaine d'appareils sans ralentir.
+
+Mélanger les marques sans vérifier la compatibilité pose aussi problème. Une ampoule Zigbee d'un fabricant ne rejoint pas toujours le pont d'un autre, même si les deux utilisent le même protocole de base.
+
+Enfin, négliger la portée du Bluetooth déçoit souvent les nouveaux utilisateurs. Deux pièces séparées par un mur épais suffisent à couper la connexion, sans message d'erreur clair.
+
+## Les mots à connaître
+
 <div class="lexique">
 
-**Les mots à connaître**
-
-- **Pont** : boîtier qui relie les appareils Zigbee au réseau de la maison.
-- **Réseau maillé** : appareils qui se relaient les messages entre eux.
-- **Portée** : distance maximale à laquelle le signal reste fiable.
+- **Pont (ou hub)** : boîtier qui relie les appareils Zigbee au reste de ton réseau.
+- **Réseau maillé** : les appareils relaient le signal entre eux, ce qui étend la portée globale.
+- **Portée** : distance maximale à laquelle le signal reste fiable et stable.
 
 </div>
 
 ## Questions fréquentes
 
-### Le Zigbee consomme-t-il plus d'électricité ?
+### Le Zigbee consomme-t-il plus d'électricité que le Wi-Fi ?
 
-Il est généralement économe. C'est l'un de ses atouts, en plus de sa stabilité.
+Non, c'est l'inverse. Le Zigbee est conçu pour consommer peu, ce qui explique sa popularité pour les appareils sur batterie comme les capteurs.
 
-### Peut-on mélanger les technologies ?
+### Peut-on mélanger les trois technologies dans une même maison ?
 
-Oui, dans une même maison, mais il faut que ton application ou ton assistant gère chacune d'elles.
+Oui. Beaucoup de foyers combinent du Wi-Fi pour quelques appareils et du Zigbee pour le reste, à condition que l'application ou l'assistant vocal gère les deux.
 
-### Faut-il un pont pour commencer ?
+### Faut-il un pont dès le début ?
 
-Pas forcément. Pour une ou deux ampoules, le Wi-Fi ou le Bluetooth suffisent souvent.
+Pas forcément. Pour une ou deux ampoules, le Wi-Fi ou le Bluetooth suffisent. Le pont Zigbee devient utile à partir d'une dizaine d'appareils.
+
+### Le Bluetooth fonctionne-t-il si je suis absent de la maison ?
+
+Rarement sans appareil relais. Le Bluetooth se limite à une portée courte, contrairement au Wi-Fi ou au Zigbee qui passent par ta box pour un pilotage à distance.
 
 ## Et maintenant ?
 
-Pour savoir par où commencer, lis [Par quoi commencer : ampoule, prise ou enceinte ?](/par-quoi-commencer-maison-connectee/). Pour le principe de base, lis [C'est quoi une maison connectée ?](/c-est-quoi-une-maison-connectee/).
+Pour structurer tes premiers achats, lis [Par quoi commencer : ampoule, prise ou enceinte ?](/par-quoi-commencer-maison-connectee/). Pour comprendre le principe général avant d'étendre ton installation, [c'est quoi une maison connectée](/c-est-quoi-une-maison-connectee/) pose les bases, et [les abonnements liés à la maison connectée](/abonnement-maison-connectee/) complètent le budget à prévoir.

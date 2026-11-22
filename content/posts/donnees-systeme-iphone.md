@@ -7,7 +7,7 @@ author: "nekena-judicael"
 category: "appareils-internet"
 image: "/images/articles/donnees-systeme-iphone-hero.webp"
 imageAlt: "Un téléphone posé sur une table, écran allumé"
-updated: "2026-10-15"
+updated: "2026-11-22"
 sources:
   - titre: "Assistance Apple — Vérifier l'espace de stockage sur votre iPhone et iPad"
     url: "https://support.apple.com/fr-fr/108429"
@@ -78,11 +78,13 @@ Tu as très peu de photos, et le stockage déborde quand même ? Regarde du côt
 
 **Les podcasts et la musique téléchargés.** Des épisodes écoutés il y a des mois peuvent dormir encore sur ton téléphone. Supprime ceux que tu as déjà écoutés.
 
-**Les fichiers téléchargés.** L'appli Fichiers peut cacher de gros documents oubliés dans ses téléchargements.
+**Les fichiers téléchargés.** L'appli Fichiers peut cacher de gros documents oubliés dans ses téléchargements, parmi lesquels d'anciens [enregistrements d'appels](/enregistrer-appel-iphone/) ou des exports de messages.
+
+**Les sauvegardes locales d'anciennes conversations.** Si tu as déjà cherché à [récupérer des messages supprimés](/recuperer-messages-supprimes/), des copies temporaires ont pu rester sur l'appareil.
 
 <div class="attention">
 
-**Ne remets pas ton iPhone à zéro sans sauvegarde.** Effacer l'iPhone puis restaurer une sauvegarde est une solution lourde. Fais une sauvegarde complète, vérifie-la, et seulement ensuite envisage une remise à zéro. Une erreur à cette étape peut coûter tes photos et tes messages.
+**Ne remets pas ton iPhone à zéro sans sauvegarde.** Effacer l'iPhone puis restaurer une sauvegarde est une solution lourde. Fais une [sauvegarde complète](/sauvegarder-iphone/), vérifie-la, et seulement ensuite envisage une remise à zéro. Une erreur à cette étape peut coûter tes photos et tes messages.
 
 </div>
 
@@ -139,4 +141,4 @@ Non, ce n'est pas la première solution. Commence par le tri. Si tu envisages un
 
 ## Et maintenant ?
 
-Pour éviter de revivre la même situation, pense à sauvegarder ton iPhone régulièrement. Pour d'autres guides pratiques sur tes appareils, parcours [le thème Appareils & Internet](/appareils-internet/).
+Pour éviter de revivre la même situation, pense à [sauvegarder ton iPhone](/sauvegarder-iphone/) régulièrement. Si ton téléphone chauffe en plus d'être plein, lis [mon téléphone chauffe trop, que faire ?](/telephone-chauffe-trop/) Pense aussi à vérifier [les réglages de confidentialité de l'iPhone](/reglages-confidentialite-iphone/), qui influencent aussi ce que ton appareil stocke. Pour d'autres guides pratiques sur tes appareils, parcours [le thème Appareils & Internet](/appareils-internet/).

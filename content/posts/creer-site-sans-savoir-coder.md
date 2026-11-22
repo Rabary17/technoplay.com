@@ -7,112 +7,100 @@ author: "andee-rakotovao"
 category: "programmation"
 image: "/images/articles/creer-site-sans-savoir-coder-hero.webp"
 imageAlt: "Un espace de travail avec un ordinateur portable et des écrans affichant un logiciel de création"
-updated: "2026-10-16"
+updated: "2026-11-22"
 sources:
   - titre: "Wix : comment créer un site internet gratuitement (guide Wix)"
     url: "https://fr.wix.com/blog/comment-creer-un-site-internet"
-sourcesConsultees: "2026-10-16"
+sourcesConsultees: "2026-11-22"
 ---
-
-Oui, vous pouvez créer un site sans savoir coder. Les outils « sans code » proposent des modèles et des blocs à glisser. La vraie difficulté reste de savoir ce que vous voulez dire et à qui.
 
 <div class="essentiel">
 
 **L'essentiel en 30 secondes**
 
-- Les constructeurs de site proposent des modèles prêts à l'emploi et des blocs à déplacer.
-- Pour un site simple (présentation, portfolio, petite boutique), c'est suffisant.
-- Pour un site très personnalisé, un peu de code devient utile.
+Oui, tu peux créer un site sans savoir coder. Les outils **no-code** proposent des modèles prêts et des blocs à glisser. La vraie difficulté reste de savoir ce que tu veux dire, et à qui.
 
 </div>
 
-## C'est quoi un site sans code, concrètement ?
+Tu veux un site pour te présenter, vendre un produit ou partager un savoir-faire, mais le code te semble hors de portée. Des outils existent depuis longtemps pour s'en passer, et ils sont devenus très simples à prendre en main.
 
-Un constructeur de site, ou outil « no-code », fonctionne comme un traitement de texte pour les pages web. Vous choisissez un modèle, remplacez les textes et les images, puis déplacez les blocs. Le code est écrit pour vous en arrière-plan.
+## C'est quoi, concrètement ?
+
+Un **constructeur de site**, ou outil no-code, fonctionne comme un traitement de texte pour les pages web. Tu choisis un modèle, remplaces les textes et les images par les tiens, puis déplaces les blocs où tu veux. Le code est écrit pour toi en arrière-plan, sans que tu aies besoin de le lire.
 
 ![Une personne qui tape sur un ordinateur portable dans un bureau à domicile](/images/articles/creer-site-sans-savoir-coder-1.webp)
 
-### Les mots à connaître
+<div class="exemple">
 
-- **No-code** : outil qui permet de créer sans écrire de code.
-- **Nom de domaine** : l'adresse du site, par exemple techno-play.com.
-- **Hébergement** : espace où le site est stocké pour être visible en ligne.
+**Un exemple concret**
 
-## Pourquoi c'est important ?
+Tu veux présenter ton activité de couture. Tu prends un modèle de site « portfolio », tu ajoutes tes créations, une page « à propos » et un formulaire de contact. En une soirée, sans écrire une ligne de code, ton site est en ligne et accessible à tes clients.
 
-Un site permet de vous présenter, de partager un savoir-faire ou de vendre un produit. Beaucoup de personnes n'ont pas le temps ou l'envie d'apprendre le code. Les outils sans code répondent à ce besoin.
+</div>
 
-Ils vous font aussi gagner du temps. Un site simple peut être en ligne en une soirée.
+## Comment faire, pas à pas
 
-Enfin, cela permet de tester une idée avant d'investir davantage.
-
-## Comment ça marche, étape par étape
-
-1. Écrivez ce que le visiteur doit faire : vous appeler, acheter ou lire.
-2. Choisissez un constructeur et un modèle proche de votre besoin.
-3. Remplacez les textes et les images par les vôtres.
-4. Vérifiez l'affichage sur téléphone, puis publiez.
+1. **Écris ce que le visiteur doit faire.** T'appeler, acheter un produit, lire un article : précise l'objectif avant de choisir l'outil.
+2. **Choisis un constructeur et un modèle proche de ton besoin.** Un portfolio, une boutique et un blog ne demandent pas le même point de départ.
+3. **Remplace les textes et les images par les tiens.** Garde des phrases courtes, surtout sur la page d'accueil.
+4. **Vérifie l'affichage sur téléphone,** car la majorité des visites viennent du mobile.
+5. **Publie le site**, puis teste chaque lien et chaque bouton toi-même, comme un visiteur le ferait.
 
 ![Un croquis de maquette de site web tracé à la main sur papier](/images/articles/creer-site-sans-savoir-coder-2.webp)
 
-## Un exemple du quotidien
+## Lequel choisir selon ton cas ?
 
-Vous voulez présenter votre activité de couture. Vous prenez un modèle de site « portfolio », ajoutez vos créations, une page « à propos » et un formulaire de contact. En une soirée, le site est en ligne.
+| Ton besoin | Outil adapté | Ce qu'il faut savoir |
+|---|---|---|
+| Page de présentation ou portfolio simple | Wix, Canva Sites | Modèles rapides, bonne liberté visuelle |
+| Blog ou site de contenu | WordPress.com | Plus souple pour publier régulièrement |
+| Boutique en ligne | Shopify, Wix eCommerce | Pense aux frais sur chaque vente en plus de l'abonnement |
+| Site très personnalisé, animations poussées | Webflow | Demande un peu plus de temps d'apprentissage |
 
-## Vrai ou faux ? Les idées reçues
+Pour la plupart des besoins personnels, un outil no-code généraliste comme Wix suffit largement. Si ton projet grandit, tu pourras toujours migrer vers une solution plus technique plus tard.
 
-- **« Un site sans code n'est pas professionnel. »** : Faux pour beaucoup d'usages. Le contenu et la clarté comptent davantage.
-- **« C'est gratuit, donc sans limite. »** : Faux. Les offres gratuites ont souvent des restrictions.
-- **« Il faut savoir coder pour être référencé. »** : Faux. Un bon contenu compte davantage.
+<div class="attention">
 
-## Les bons réflexes à retenir
+**Les offres gratuites ont des limites**
 
-1. Lisez le détail des tarifs avant de vous engager.
-2. Vérifiez que vous pouvez récupérer vos contenus.
-3. Choisissez un modèle adapté à votre activité, pas seulement le plus joli.
-4. Testez le site sur téléphone avant de le publier.
+Une offre gratuite impose souvent un nom de domaine imposé, de la publicité ou un stockage réduit. Lis le détail des tarifs avant de t'engager, surtout si tu comptes utiliser ton propre nom de domaine.
 
-## Exercice pratique (30 minutes)
+</div>
 
-**Matériel :** un ordinateur, une connexion internet, quelques textes et photos.
+## Les erreurs à éviter
 
-**Déroulement :**
+- **Choisir l'outil avant l'objectif.** Un joli modèle ne compense pas un message flou. Définis d'abord ce que ton site doit accomplir.
+- **Ignorer l'affichage mobile.** La majorité de tes visiteurs arriveront depuis un téléphone, pas un ordinateur.
+- **Oublier de vérifier la récupération des contenus.** Certains outils compliquent l'export si tu veux changer de plateforme plus tard.
+- **Penser qu'un site sans code n'est pas professionnel.** Le contenu et la clarté comptent bien plus que l'outil utilisé pour le construire.
+- **Croire qu'il faut savoir coder pour être bien référencé.** Un bon contenu, structuré et à jour, compte davantage que le langage utilisé.
 
-1. Notez les trois pages dont votre site a besoin.
-2. Comparez deux constructeurs gratuits, en notant leurs limites.
-3. Écrivez le texte de la page d'accueil en trois phrases.
-
-**Ce que vous retenez :** un bon site commence par un objectif clair, avant le choix de l'outil.
-
-## Mini-quiz : avez-vous bien compris ?
-
-1. Que signifie « no-code » ? → *Réponse : un outil qui permet de créer sans écrire de code.*
-2. Une offre gratuite a-t-elle des limites ? → *Réponse : souvent, oui.*
-3. Faut-il commencer par l'outil ou par l'objectif ? → *Réponse : par l'objectif.*
-
-## FAQ
-
-### Un site sans code est-il professionnel ?
-
-Oui, pour beaucoup d'usages. Ce qui compte, c'est le contenu, la clarté et la lecture sur téléphone.
-
-### Faut-il payer ?
-
-Des offres gratuites existent, mais elles ont des limites. Un abonnement modeste est souvent nécessaire pour un site sérieux.
-
-### Peut-on passer plus tard à un site personnalisé ?
-
-Oui. Vous pouvez commencer avec un outil sans code, puis apprendre le HTML et le CSS si le besoin grandit.
-
-## Pour aller plus loin
-
-- [C'est quoi le HTML et le CSS ?](/html-css-c-est-quoi/)
-- [Quel langage de programmation apprendre en premier ?](/quel-langage-apprendre-en-premier/)
+## Les mots à connaître
 
 <div class="lexique">
 
-- **Modèle** : page déjà dessinée que vous adaptez à votre contenu.
-- **Glisser-déposer** : technique qui consiste à déplacer un élément avec la souris.
+- **No-code** : outil qui permet de créer un site sans écrire de code.
+- **Modèle** : page déjà dessinée que tu adaptes à ton contenu.
+- **Nom de domaine** : l'adresse de ton site, par exemple techno-play.com.
+- **Hébergement** : espace où le site est stocké pour être visible en ligne.
 - **Référencement** : ensemble des moyens qui aident un site à être trouvé dans les moteurs de recherche.
 
 </div>
+
+## Questions fréquentes
+
+**Un site sans code est-il professionnel ?**
+Oui, pour la plupart des usages. Ce qui compte, c'est le contenu, la clarté et une bonne lecture sur téléphone, pas le code derrière la page.
+
+**Faut-il payer pour créer un site sans coder ?**
+Des offres gratuites existent, mais elles ont des limites : nom de domaine imposé, publicité ou stockage réduit. Un abonnement modeste est souvent nécessaire pour un site sérieux.
+
+**Peut-on passer plus tard à un site codé soi-même ?**
+Oui. Tu peux commencer avec un outil no-code, puis apprendre le [HTML et le CSS](/html-css-c-est-quoi/) si ton besoin grandit ou se complexifie.
+
+**Combien de temps faut-il pour un premier site ?**
+Compte une soirée pour un site simple de quelques pages. Il faut avoir déjà réfléchi à ton objectif et rassemblé tes textes et photos.
+
+## Et maintenant ?
+
+Pour comprendre ce qui se cache derrière ces outils, lis [créer sa première page web](/creer-premiere-page-web/) et [c'est quoi le HTML et le CSS ?](/html-css-c-est-quoi/) Si tu veux apprendre à coder toi-même, regarde [quel langage de programmation apprendre en premier](/quel-langage-apprendre-en-premier/). Et une fois ton site prêt, lis [mettre une application en ligne](/mettre-application-en-ligne/) pour la partie hébergement.

@@ -53,7 +53,7 @@ Le calcul est réparti sur des milliers de GPU reliés entre eux. Meta indique a
 
 ## Étapes 4 et 5 : fine-tuning et alignement
 
-Le modèle de base ressemble à un érudit sans savoir-vivre. Il complète les textes, mais ne répond pas aux demandes.
+Le modèle de base ressemble à un érudit sans savoir-vivre. Il complète les textes, mais ne répond pas aux demandes. C'est tout l'inverse d'un [agent IA](/agent-ia/), capable d'enchaîner des actions avec des outils : ici, le modèle brut ne fait encore que prédire du texte.
 
 <div class="exemple">
 
@@ -75,7 +75,7 @@ Avant toute sortie, le modèle passe une batterie d'**évaluations**. On mesure 
 
 On teste aussi ses défauts. Le **red teaming** consiste à confier le modèle à des équipes chargées de le pousser à mal se comporter. Elles essaient de lui faire écrire des instructions dangereuses, de contourner ses règles ou de lui soutirer des données. Pour GPT-4, OpenAI a fait appel à plus de cinquante experts extérieurs, en cybersécurité, chimie ou désinformation.
 
-Chaque faille trouvée renvoie le modèle vers une nouvelle série d'ajustements. Les éditeurs publient ensuite une **fiche technique**, souvent appelée « system card ». Elle décrit les tests menés, les risques repérés et les protections mises en place. Ces fiches sont la meilleure source pour comprendre les limites d'un modèle.
+Chaque faille trouvée renvoie le modèle vers une nouvelle série d'ajustements. Les éditeurs publient ensuite une **fiche technique**, souvent appelée « system card ». Elle décrit les tests menés, les risques repérés et les protections mises en place. Ces fiches sont la meilleure source pour comprendre les limites d'un modèle. Elles expliquent aussi [pourquoi l'IA se trompe parfois](/pourquoi-ia-se-trompe/) malgré tous ces tests.
 
 ## Étape 7 : compression et livraison
 
@@ -83,7 +83,7 @@ Un modèle tout juste entraîné est énorme et lent. La dernière étape consis
 
 La **quantification** stocke chaque paramètre avec moins de précision, par exemple sur 8 ou 4 bits au lieu de 16. Le fichier pèse deux à quatre fois moins lourd, pour une perte de qualité souvent faible. La **distillation** entraîne un petit modèle à imiter les réponses d'un grand. C'est ainsi que naissent les versions « mini » ou « légères » des grands assistants.
 
-Le modèle livré n'est au fond qu'un **fichier de paramètres**, accompagné d'un programme pour l'exécuter. Les éditeurs le déploient sur leurs serveurs et l'ouvrent au public par une application ou une API. Certains, comme Meta ou Mistral AI, publient aussi ce fichier pour que chacun puisse l'installer sur sa propre machine.
+Le modèle livré n'est au fond qu'un **fichier de paramètres**, accompagné d'un programme pour l'exécuter. Les éditeurs le déploient sur leurs serveurs et l'ouvrent au public par une application ou une API. Certains, comme Meta ou Mistral AI, publient aussi ce fichier pour que chacun puisse l'installer sur sa propre machine. Notre article [où tourne une IA, sur un serveur ou sur ton ordinateur](/ou-tourne-une-ia-cloud-ordinateur-telephone/) détaille cette option.
 
 ## Combien de temps et d'argent faut-il ?
 

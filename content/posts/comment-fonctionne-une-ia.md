@@ -79,7 +79,7 @@ Sans clavier, écran ni connexion à Internet, ton ordinateur ne servirait pas �
 
 Seul, un modèle de langage ne peut qu'écrire du texte à partir de ce qu'il a appris. Il ne connaît pas l'actualité et calcule mal les grands nombres. Les outils comblent ces trous. Quand tu demandes la météo de demain, l'assistant lance une recherche, lit le résultat, puis rédige sa réponse.
 
-Ce sont ces outils qui transforment un chatbot en **agent**, capable d'enchaîner plusieurs actions pour accomplir une tâche. Le modèle décide quel outil utiliser et quand. Mais c'est un programme classique, à côté, qui exécute l'action et lui renvoie le résultat.
+Ce sont ces outils qui transforment un chatbot en [agent IA](/agent-ia/), capable d'enchaîner plusieurs actions pour accomplir une tâche. Le modèle décide quel outil utiliser et quand. Mais c'est un programme classique, à côté, qui exécute l'action et lui renvoie le résultat.
 
 ## Entraînement et inférence : les deux vies d'une IA
 
@@ -87,7 +87,7 @@ Ton ordinateur a été fabriqué en usine avant d'arriver chez toi. Une IA suit 
 
 L'**entraînement**, c'est l'usine. Le réseau de neurones lit ses données et ajuste ses paramètres pendant des semaines, voire des mois. Cette phase mobilise des milliers de GPU et coûte des dizaines, voire des centaines de millions de dollars pour les plus grands modèles. À la fin, les paramètres sont figés.
 
-L'**inférence**, c'est l'usage au quotidien. Chaque fois que tu poses une question, le modèle figé calcule une réponse, sans rien apprendre de nouveau sur le fond. Une requête coûte peu, mais les assistants en traitent des centaines de millions par jour. C'est pour ça qu'un modèle ignore les événements postérieurs à son entraînement, sauf s'il fait une recherche sur le web.
+L'**inférence**, c'est l'usage au quotidien. Chaque fois que tu poses une question, le modèle figé calcule une réponse, sans rien apprendre de nouveau sur le fond. Une requête coûte peu, mais les assistants en traitent des centaines de millions par jour. C'est pour ça qu'un modèle ignore les événements postérieurs à son entraînement, sauf s'il fait une recherche sur le web. C'est aussi pour ça qu'il [se trompe parfois](/pourquoi-ia-se-trompe/) sur des faits précis. Pour savoir où tournent ces calculs, lis [où tourne une IA, sur un serveur ou sur ton ordinateur](/ou-tourne-une-ia-cloud-ordinateur-telephone/).
 
 ## Ordinateur et IA : le tableau de correspondance
 
@@ -133,4 +133,4 @@ Le modèle, c'est le réseau de neurones et ses paramètres. L'assistant, comme 
 
 ## La suite de la série
 
-Tu as vu les pièces de la machine. L'article précédent de la série retrace [l'histoire de l'intelligence artificielle, de Turing à GPT-6](/histoire-intelligence-artificielle/). Le prochain explique [ce qu'est un token](/token-ia-c-est-quoi/), l'unité qui fait lire, retenir et payer une IA.
+Tu as vu les pièces de la machine. L'article précédent de la série retrace [l'histoire de l'intelligence artificielle, de Turing à GPT-6](/histoire-intelligence-artificielle/). Le suivant explique [comment on fabrique un modèle d'IA](/comment-fabrique-modele-ia/), de la collecte des données jusqu'à sa sortie. Un autre détaille [ce qu'est un token](/token-ia-c-est-quoi/), l'unité qui fait lire, retenir et payer une IA.

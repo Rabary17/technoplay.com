@@ -21,7 +21,7 @@ Tu entends souvent que l'IA va changer la science, sans savoir ce que cela donne
 
 ## C'est quoi, concrètement ?
 
-Un catalyseur est une substance qui facilite une réaction chimique sans être consommée par elle. L'IA, ici, sert à concevoir de nouvelles molécules de ce type plus vite qu'à la main.
+Un catalyseur est une substance qui facilite une réaction chimique sans être consommée par elle. L'IA, ici, sert à concevoir de nouvelles molécules de ce type plus vite qu'à la main. Ce n'est qu'un exemple parmi d'autres : pour une vue d'ensemble, notre article [comment fonctionne une IA](/comment-fonctionne-une-ia/) détaille ce que sait vraiment faire un modèle.
 
 Pense à un col de montagne. Sans lui, tu escalades le sommet et tu dépenses beaucoup d'énergie. Avec lui, tu arrives de l'autre côté avec bien moins d'effort. Le catalyseur joue ce rôle pour une réaction : elle demande moins d'énergie pour avancer.
 
@@ -41,7 +41,7 @@ Voici comment lire ce type d'actualité sans te perdre.
 2. **Comprends le rôle du catalyseur.** Il facilite une réaction, donc il peut réduire l'énergie nécessaire.
 3. **Identifie ce que l'IA apporte.** Elle vise à accélérer la mise au point de ces catalyseurs.
 4. **Regarde qui porte le projet.** Alexandre Duval est cofondateur et directeur scientifique d'Entalpic. Il est diplômé de l'université de Warwick, puis du MSc Artificial Intelligence de CentraleSupélec.
-5. **Cherche les preuves.** Une promesse n'est pas un résultat. Pour juger des résultats, il faut lire l'article complet et les publications de l'entreprise.
+5. **Cherche les preuves.** Une promesse n'est pas un résultat. Pour juger des résultats, lis l'article complet et les publications de l'entreprise, avec la même prudence que pour [faire confiance à une réponse de l'IA](/confiance-reponse-ia/).
 
 <div class="attention">
 
@@ -51,10 +51,10 @@ Le résumé disponible ne donne ni résultats chiffrés ni partenaires industrie
 
 ## Les erreurs à éviter
 
-- Croire que l'IA remplace les chimistes. Elle aide à explorer, les tests restent nécessaires.
+- Croire que l'IA remplace les chimistes. Elle aide à explorer, les tests restent nécessaires, comme pour un [agent IA](/agent-ia/) qui propose des pistes mais ne décide pas seul.
 - Confondre un objectif (rendre l'industrie plus propre) avec un résultat déjà obtenu.
 - Penser qu'un catalyseur est un carburant. Il facilite la réaction, il n'est pas consommé par elle.
-- Retenir un chiffre sans en connaître la source.
+- Retenir un chiffre sans en connaître la source, un piège fréquent détaillé dans [pourquoi l'IA se trompe parfois](/pourquoi-ia-se-trompe/).
 
 ## Les mots à connaître
 
@@ -88,4 +88,4 @@ L'idée est de l'utiliser pour proposer et trier des candidates plus vite. Le ti
 
 ## Et maintenant ?
 
-Lis l'article complet de Futura Sciences consacré à Alexandre Duval pour connaître son parcours et sa démarche en détail. Ensuite, repère sur le site les autres articles qui expliquent comment l'IA sert la recherche scientifique.
+Lis l'article complet de Futura Sciences consacré à Alexandre Duval pour connaître son parcours et sa démarche en détail. Pour comprendre les bases qui rendent ce genre de projet possible, lis aussi [comment on fabrique un modèle d'IA](/comment-fabrique-modele-ia/) et [qui fabrique les IA](/entreprises-ia-openai-anthropic-google-mistral/) aujourd'hui.

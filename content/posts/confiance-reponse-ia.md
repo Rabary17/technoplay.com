@@ -25,7 +25,7 @@ Tu as besoin d'un résumé, d'un plan ou d'une idée de cadeau. L'IA te répond 
 
 ## C'est quoi, concrètement ?
 
-La confiance se mesure à l'usage. Une IA est fiable pour un travail de forme : rédiger, corriger, reformuler, classer des idées. Elle l'est moins pour un travail de fond, où chaque détail doit être exact. Une même réponse peut donc être utile pour un brouillon et dangereuse pour une déclaration.
+La confiance se mesure à l'usage. Une IA est fiable pour un travail de forme : rédiger, corriger, reformuler, classer des idées. Elle l'est moins pour un travail de fond, où chaque détail doit être exact. Une même réponse peut donc être utile pour un brouillon et dangereuse pour une déclaration. Notre article [comment fonctionne une IA](/comment-fonctionne-une-ia/) explique cette limite : elle reconstruit l'information à partir de régularités apprises, sans la relire dans une base vérifiée.
 
 <div class="exemple">
 
@@ -45,9 +45,14 @@ Tu demandes à l'IA de rédiger un message poli pour reporter un rendez-vous. Tu
 
 ## Lequel choisir selon ton cas ?
 
-- **Tu écris un texte personnel** : relis, adapte le ton, et fais confiance à ta propre lecture.
-- **Tu prépares un exposé** : utilise l'IA pour le plan, mais vérifie chaque fait et chaque citation.
-- **Tu prends une décision d'argent ou de santé** : l'IA peut t'aider à préparer tes questions. La réponse doit venir d'un professionnel.
+| Ton usage | Niveau de confiance | Ce qu'il faut faire |
+|---|---|---|
+| Texte personnel, message, relecture | Élevé | Relis le ton, ajuste si besoin |
+| Exposé, article, synthèse | Moyen | Garde le plan, vérifie chaque fait et chaque citation |
+| Décision d'argent, de santé ou de droit | Faible seul | Prépare tes questions avec l'IA, confirme avec un professionnel |
+| Agent IA qui agit à ta place | Variable | Valide toute action irréversible, comme on le détaille dans [agent IA, c'est quoi](/agent-ia/) |
+
+Pour une décision qui t'engage vraiment, l'IA reste un bon point de départ, jamais un point final.
 
 <div class="attention">
 
@@ -60,8 +65,9 @@ Une réponse très précise, avec des chiffres et des références, mérite plus
 ## Les erreurs à éviter
 
 - **Copier une réponse sans la relire.** Tu deviens responsable de ce qu'elle contient.
-- **Croire qu'une source citée est réelle.** Vérifie qu'elle existe et qu'elle dit bien ce qui est écrit.
+- **Croire qu'une source citée est réelle.** Vérifie qu'elle existe et qu'elle dit bien ce qui est écrit, un piège fréquent détaillé dans [pourquoi l'IA se trompe parfois](/pourquoi-ia-se-trompe/).
 - **Changer de sujet sans prévenir.** Une conversation longue peut mélanger des faits justes et faux.
+- **Poser une question floue et attendre une réponse précise.** Une consigne claire réduit le risque d'erreur : notre méthode pour [bien rédiger un prompt](/prompt-chatgpt/) t'aide à cadrer ta demande.
 
 <div class="lexique">
 

@@ -21,7 +21,7 @@ Tu as sans doute déjà vu des vidéos de robots qui marchent, sautent ou dansen
 
 ## C'est quoi, concrètement ?
 
-Gallop est un robot humanoïde, c'est-à-dire une machine dont le corps rappelle celui d'un humain, installée dans les usines EMS du groupe Asus à Taïwan. Les usines EMS (Electronics Manufacturing Services) fabriquent des produits électroniques en sous-traitance pour d'autres entreprises.
+Gallop est un [robot humanoïde](/robots-humanoides-ou-en-est-on/), c'est-à-dire une machine dont le corps rappelle celui d'un humain, installée dans les usines EMS du groupe Asus à Taïwan. Les usines EMS (Electronics Manufacturing Services) fabriquent des produits électroniques en sous-traitance pour d'autres entreprises.
 
 Pense à un nouvel employé qui arrive en équipe de nuit. Pour qu'on lui fasse confiance, il doit tenir tout son horaire sans qu'un collègue reste derrière lui. Gallop doit faire la même preuve, mais en version machine.
 
@@ -41,7 +41,7 @@ Voici comment lire ce type d'annonce, pour juger si un robot est vraiment prêt 
 2. **Regarde la durée.** L'enjeu est un quart de travail complet, pas une démonstration de quelques minutes.
 3. **Vérifie l'autonomie.** La question est de savoir si le robot travaille sans surveillance constante.
 4. **Cherche les résultats.** Demande-toi si l'entreprise donne des mesures précises. Dans le résumé disponible, elles ne figurent pas.
-5. **Compare avec le quotidien.** Un robot utile doit rendre service sur la durée, pas seulement impressionner.
+5. **Compare avec le quotidien.** Un robot utile doit rendre service sur la durée, pas seulement impressionner, comme un [robot, automate ou cobot](/robot-automate-cobot/) déjà installé en usine.
 
 <div class="attention">
 
@@ -54,7 +54,7 @@ Une annonce montre une intention, pas un bilan. Le projet vise à prouver qu'un 
 - Croire qu'un robot humanoïde en usine remplace déjà les équipes humaines.
 - Confondre démonstration de quelques minutes et quart de travail complet.
 - Penser que « autonome » signifie « sans aucune supervision » dans tous les cas.
-- Tirer des conclusions sur les performances sans résultats publiés.
+- Tirer des conclusions sur les performances sans résultats publiés. C'est l'erreur la plus fréquente face à ce type d'annonce, qu'il s'agisse de Gallop ou des [robots humanoïdes Apollo annoncés par Apptronik et GXO](/que-prevoient-apptronik-et-gxo-avec-jusqu-a-1000-robots-humanoides-apollo-d-ici-2030/).
 
 ## Les mots à connaître
 
@@ -84,4 +84,4 @@ L'objectif est de se passer d'une surveillance mobilisée en continu. Le résum�
 
 ## Et maintenant ?
 
-Tu peux suivre les prochaines annonces d'Asus et chercher des retours de terrain sur Gallop. Pour t'y retrouver, compare toujours ce que promet une entreprise avec les résultats qu'elle publie.
+Tu peux suivre les prochaines annonces d'Asus et chercher des retours de terrain sur Gallop. Pour comprendre où en est vraiment cette technologie, lis [les robots humanoïdes, où en est-on ?](/robots-humanoides-ou-en-est-on/) et [c'est quoi un robot, exactement ?](/c-est-quoi-un-robot/) Pour t'y retrouver, compare toujours ce que promet une entreprise avec les résultats qu'elle publie.

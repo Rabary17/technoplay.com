@@ -78,7 +78,18 @@ Le corps suit ce fil, dans cet ordre (voir README du projet « Structure d'un ar
 ${variation.inclureEtMaintenant ? '9. "## Et maintenant ?" (lien vers un autre article pertinent du site si pertinent).' : ""}
 Règles : tutoiement, phrases courtes (20 mots en moyenne, 25 max), un mot technique =
 une explication au moment où il apparaît, un exemple concret par idée, aucune formule qui
-infantilise ("il suffit de", "évidemment"...), jamais de tiret cadratin (—).`;
+infantilise ("il suffit de", "évidemment"...), jamais de tiret cadratin (—). Mets en **gras**
+(Markdown, \`**...**\`) 2 à 4 passages par section ##, des groupes de 1 à 4 mots liés au
+mot-clé ou au vocabulaire technique du sujet (pas seulement des chiffres) : jamais une phrase
+entière en gras, jamais le même terme mis en gras à deux endroits différents de l'article.
+Dans "## C'est quoi, concrètement ?" et dans "## Comment faire, pas à pas" (ou "## Lequel
+choisir selon ton cas ?"), qui sont déjà des formulations de question, la toute première
+phrase qui suit le titre doit répondre directement à la question, en 1-2 phrases courtes,
+avant toute mise en contexte ou tout développement. Si l'article compare des chiffres, des
+prix ou des caractéristiques, présente-les dans un vrai tableau Markdown ou une liste :
+jamais une donnée compréhensible seulement via l'image d'illustration choisie à côté. Si tu
+recommandes un outil, une app ou un produit précis, explique en une phrase pourquoi ce choix
+plutôt qu'un autre — jamais de recommandation sans justification.`;
 }
 
 const CONSIGNE_RESTER_DANS_LA_SOURCE = `
@@ -90,6 +101,10 @@ sur ce point) plutôt que d'écrire un marqueur [À VÉRIFIER] : préfère un ar
 mais entièrement sourcé à un article plus complet mais à moitié incertain.
 Ne mets JAMAIS de balise [S1], [S2]... dans le texte : ce site n'affiche pas ces
 renvois, ils apparaîtraient tels quels, en texte brut visible, ce qui a l'air cassé.`;
+
+// Au-delà de ce volume de recherche mensuel, le sujet mérite un développement plus complet
+// (plus d'exemples, une section en plus si pertinent) plutôt qu'un traitement minimal.
+const SEUIL_VOLUME_DEVELOPPEMENT = 500;
 
 async function genererArticle({ titre, theme, sources = [], brief = "", voix = "" }) {
   const variation = tirerVariation();
@@ -158,6 +173,13 @@ Relis cet article et corrige UNIQUEMENT :
   "évidemment", jamais de tiret cadratin (—)
 - le respect de la structure Markdown déjà en place (encadrés <div>, titres ##, listes) — ne la change pas,
   corrige juste ce qui est mal écrit à l'intérieur
+Vérifie aussi deux points de forme en plus des fautes :
+- le gras sémantique (**...**) est bien présent (2 à 4 passages par section ##, jamais une
+  phrase entière, jamais le même terme en gras à deux endroits) — ajoute-le ou retire l'excès
+  si besoin, mais sans changer le fond ;
+- qu'aucune réponse à une section-question ("## C'est quoi, concrètement ?", "## Comment
+  faire, pas à pas", "## Lequel choisir selon ton cas ?") ne commence par une longue mise en
+  contexte avant de répondre à la question.
 Ne change RIEN au fond : n'ajoute, ne retire et ne modifie aucune affirmation, chiffre, date ou fait — UNIQUEMENT
 la forme. Corrige aussi le titre s'il contient une faute (ex. mot manquant).
 Ne lisse PAS le style propre de l'auteur (rythme de phrase, tournures récurrentes) vers un style
@@ -263,7 +285,14 @@ async function construireArticle(sujet) {
     titre: sujet.titre,
     theme,
     sources,
-    brief: sujet.keyword ? `Mot-clé cible (SEO) : ${sujet.keyword}, volume estimé ${sujet.volume}/mois.` : "",
+    brief: sujet.keyword
+      ? `Mot-clé cible (SEO) : ${sujet.keyword}, volume estimé ${sujet.volume}/mois.` +
+        (sujet.volume > SEUIL_VOLUME_DEVELOPPEMENT
+          ? ` Ce volume est notable : développe davantage (plus d'exemples, une section
+supplémentaire si pertinent) plutôt qu'un traitement minimal — sans gonfler artificiellement
+un sujet simple.`
+          : "")
+      : "",
     voix: voixPour(choixAuteur.auteur),
   });
 

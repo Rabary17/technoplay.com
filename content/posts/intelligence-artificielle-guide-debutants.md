@@ -7,22 +7,22 @@ author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
 image: "/images/articles/intelligence-artificielle-hero.webp"
 imageAlt: "Une personne qui travaille avec un ordinateur portable et un casque, lumière douce"
-updated: "2026-11-02"
+updated: "2026-11-22"
 sources:
   - titre: "CNIL : Intelligence artificielle, les recommandations pour un usage responsable"
     url: "https://www.cnil.fr/fr/intelligence-artificielle"
   - titre: "Commission européenne : règlement européen sur l'intelligence artificielle (AI Act)"
     url: "https://digital-strategy.ec.europa.eu/fr/policies/regulatory-framework-ai"
-sourcesConsultees: "2026-10-12"
+sourcesConsultees: "2026-11-22"
 ---
 
 Tu entends « IA » partout, dans les journaux, sur les réseaux et dans les applications de ton téléphone. Pourtant, le mot recouvre des réalités très différentes. Cet article explique ce qu'est l'intelligence artificielle et comment elle fonctionne, sans maths. Tu verras aussi à quoi elle sert au quotidien, où sont ses limites et comment t'y mettre.
 
 <div class="essentiel">
 
-**L'essentiel en 30 secondes**
+**L'essentiel, si tu es pressé**
 
-L'intelligence artificielle (IA), ce sont des logiciels qui font des tâches demandant normalement de l'intelligence humaine. Par exemple : comprendre une phrase, reconnaître un visage, traduire un texte. La plupart des IA actuelles ne suivent pas une liste de règles écrites à la main. Elles apprennent à partir d'énormes quantités d'exemples. Une IA ne pense pas et ne ressent rien : c'est un outil, pas une personne. Pour commencer, choisis un assistant conversationnel, pose-lui une vraie question de ta vie et vérifie toujours ce qu'il répond.
+L'intelligence artificielle (IA), ce sont des logiciels qui **apprennent à partir d'exemples** pour comprendre une phrase, reconnaître un visage ou traduire un texte. Une IA ne pense pas et ne ressent rien : c'est un **outil** à vérifier, pas une personne.
 
 </div>
 

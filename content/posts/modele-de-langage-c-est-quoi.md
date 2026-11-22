@@ -7,6 +7,7 @@ author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
 image: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
 imageAlt: "The letters AI in white 3D block font on a dark teal circuit board"
+updated: "2026-11-22"
 ---
 
 ***Derrière chaque réponse de ChatGPT, Gemini ou Claude, il y a un modèle de langage. Ce qu'il fait vraiment, et pourquoi il peut sembler juste tout en se trompant.***
@@ -50,6 +51,12 @@ Comprendre ce mécanisme t'aide à lire les réponses avec un regard critique. U
 
 Ça t'aide aussi à mieux écrire tes demandes. Plus tu donnes de contexte, moins il y a de suites possibles, et plus la réponse colle à ton besoin. C'est le principe de base d'un bon prompt.
 
+## Pourquoi deux modèles répondent différemment à la même question
+
+Après l'entraînement sur du texte brut, les éditeurs ajustent encore le modèle avec des exemples de bonnes réponses, choisies ou notées par des personnes. Cette étape, appelée réglage fin, façonne le ton, la politesse et les règles de sécurité du modèle. C'est elle qui explique pourquoi ChatGPT, Claude ou Gemini ont chacun leur propre style, alors qu'ils reposent tous sur le même principe de prédiction de mots.
+
+La quantité et la qualité des textes d'entraînement comptent aussi. Un modèle entraîné sur beaucoup de code répond mieux en programmation. Un modèle entraîné surtout en anglais peut rester moins précis en français. Ces choix, faits par chaque éditeur, expliquent une bonne partie des différences de qualité entre les modèles.
+
 ## Les erreurs à éviter
 
 - **Croire qu'il comprend comme un humain.** Il manipule des probabilités de mots. Il ne vit pas l'expérience qu'il décrit.
@@ -82,4 +89,4 @@ Les éditeurs publient des versions successives, avec des réglages différents.
 
 ## Et maintenant ?
 
-Pour donner au modèle les bonnes informations, lis [Prompt ChatGPT : la méthode pour écrire de bons prompts](/prompt-chatgpt/). Et pour une vue d'ensemble, [C'est quoi, l'intelligence artificielle ?](/intelligence-artificielle-guide-debutants/).
+Pour donner au modèle les bonnes informations, lis [Prompt ChatGPT : la méthode pour écrire de bons prompts](/prompt-chatgpt/). Pour comprendre ce que mesure sa taille, lis [Paramètres d'une IA : que signifient 8B, 70B ou 1 000 milliards ?](/parametres-modele-ia/). Pour aller plus loin sur l'unité de calcul du texte, lis [Un token en IA, c'est quoi ?](/token-ia-c-est-quoi/). Et pour une vue d'ensemble, [C'est quoi, l'intelligence artificielle ?](/intelligence-artificielle-guide-debutants/).

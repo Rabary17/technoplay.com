@@ -7,8 +7,8 @@ author: "nekena-judicael"
 category: "appareils-internet"
 image: "/images/articles/iphone-ne-charge-plus-hero.webp"
 imageAlt: "Un smartphone branché à son chargeur"
-updated: "2026-10-15"
-sourcesConsultees: "2026-10-15"
+updated: "2026-11-22"
+sourcesConsultees: "2026-11-22"
 sources:
   - titre: "Assistance Apple — Si votre iPhone ou iPod touch ne se charge pas"
     url: "https://support.apple.com/fr-fr/108805"
@@ -142,4 +142,4 @@ Quand le port est abîmé ou que la batterie semble fatiguée, malgré les véri
 
 ## Et maintenant ?
 
-Tu as maintenant les bons réflexes pour un iPhone qui ne charge plus. Avant toute réparation, lis aussi notre guide pour [sauvegarder ton iPhone](/sauvegarder-iphone/). Et pour d'autres pannes ou réglages, consulte [le thème Appareils & Internet](/appareils-internet/).
+Tu as maintenant les bons réflexes pour un iPhone qui ne charge plus. Avant toute réparation, lis aussi notre guide pour [sauvegarder ton iPhone](/sauvegarder-iphone/). Si la chaleur revient souvent, lis [Pourquoi ton téléphone chauffe-t-il trop ?](/telephone-chauffe-trop/). Pour vérifier l'état de ta batterie et du stockage, consulte [Les données système sur iPhone, c'est quoi ?](/donnees-systeme-iphone/). Et pour d'autres pannes ou réglages, consulte [le thème Appareils & Internet](/appareils-internet/).

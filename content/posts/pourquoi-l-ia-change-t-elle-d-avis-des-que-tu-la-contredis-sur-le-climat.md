@@ -4,8 +4,8 @@ description: "Selon un rapport publié par l'Unesco et l'UCL, les modèles d'IA 
 date: "2026-11-21"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
-image: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBvcmRpbmF0ZXVyfGVufDB8MHx8fDE3OTUyNzA2ODR8MA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "a computer chip with the letter a on top of it"
+image: "https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+imageAlt: "fumée de pollution industrielle s'échappant d'une usine au-dessus de l'eau"
 sources:
   - titre: "Climat : comment l'IA retourne sa veste à la première contradiction"
     url: "https://www.tf1info.fr/environnement-ecologie/climat-intelligence-artificielle-comment-l-ia-retourne-sa-veste-a-la-premiere-contradiction-2476171.html"

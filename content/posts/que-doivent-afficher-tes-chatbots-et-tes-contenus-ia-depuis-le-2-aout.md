@@ -4,8 +4,8 @@ description: "L'article 50 de l'AI Act s'applique depuis le 2 août 2026, sans a
 date: "2026-11-21"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
-image: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBvcmRpbmF0ZXVyfGVufDB8MHx8fDE3OTUyNzEyNjd8MA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "a computer chip with the letter a on top of it"
+image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+imageAlt: "deux ordinateurs portables ouverts avec des documents papier annotés sur un bureau"
 sources:
   - titre: "AI Act article 50 : ce que vos chatbots et contenus IA doivent afficher depuis le 2 août"
     url: "https://www.journaldunet.com/intelligence-artificielle/1557993-ai-act-article-50-ce-que-vos-chatbots-et-contenus-ia-doivent-afficher-depuis-le-2-aout/"

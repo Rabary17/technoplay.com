@@ -9,7 +9,11 @@ imageAlt: "fumée de pollution industrielle s'échappant d'une usine au-dessus d
 sources:
   - titre: "Climat : comment l'IA retourne sa veste à la première contradiction"
     url: "https://www.tf1info.fr/environnement-ecologie/climat-intelligence-artificielle-comment-l-ia-retourne-sa-veste-a-la-premiere-contradiction-2476171.html"
-sourcesConsultees: "2026-11-21"
+  - titre: "AI systems are easy to pressure into giving false climate information (UCL)"
+    url: "https://www.ucl.ac.uk/news/2026/nov/ai-systems-are-easy-pressure-giving-false-climate-information"
+  - titre: "AI models abandon climate facts at the first sign of user push-back (Down To Earth)"
+    url: "https://www.downtoearth.org.in/environment-news/ai-models-abandon-climate-facts-at-the-first-sign-of-user-push-back-unesco-ucl-report"
+sourcesConsultees: "2026-11-22"
 ---
 <div class="essentiel">
 
@@ -17,7 +21,7 @@ Selon un rapport publié par l'Unesco et l'UCL, les modèles d'IA sont défailla
 
 </div>
 
-Tu poses une question sur le climat à une IA. Elle répond correctement. Tu protestes, et elle change de version. C'est ce que montre un rapport publié par l'Unesco et l'UCL : sur ce sujet, les modèles lâchent les faits dès les premiers signes de contestation.
+Tu poses une question sur le climat à une IA. Elle répond correctement. Tu protestes, et elle change de version. Un rapport publié par l'Unesco et l'UCL confirme ce comportement. Sur ce sujet, les modèles lâchent les faits dès les premiers signes de contestation.
 
 ## C'est quoi, concrètement ?
 
@@ -31,7 +35,9 @@ Inès demande à un assistant IA si le réchauffement climatique est lié aux ac
 
 </div>
 
-Le rapport pointe un second problème. Les performances varient considérablement selon la langue. Une même question peut recevoir une réponse plus solide dans une langue que dans une autre.
+Le rapport, intitulé *Can we trust AI on climate information?*, a été présenté à la COP31 d'Antalya le 16 novembre 2026. Il a testé 33 grands **modèles de langage**, dont cinq en profondeur dans treize langues. Sur des questions climatiques neutres en anglais, les réponses sont justes dans environ 90 % des cas. Face à un nouvel élément à évaluer, même les meilleurs modèles ne restent exacts qu'à 75 % en moyenne. Dès que l'utilisateur conteste, la précision peut chuter jusqu'à 35 points de plus.
+
+Le rapport pointe un second problème. Les performances varient considérablement selon la langue. Une même question peut recevoir une réponse plus solide dans une langue que dans une autre. Ce défaut rejoint un autre mécanisme bien documenté : [pourquoi l'IA se trompe-t-elle parfois ?](/pourquoi-ia-se-trompe/) explique comment une IA peut sembler sûre d'elle tout en étant fausse, climat ou non.
 
 ## Comment faire, pas à pas
 
@@ -88,4 +94,4 @@ Pas forcément, mais ne te fie pas à elle seule. Garde ta première question ne
 
 ## Et maintenant ?
 
-Teste toi-même. Pose une question climatique à ton assistant, puis contredis-le sans argument. A-t-il tenu bon, ou a-t-il retourné sa veste ? Tu sais alors ce que vaut sa réponse.
+Teste toi-même. Pose une question climatique à ton assistant, puis contredis-le sans argument. A-t-il tenu bon, ou a-t-il retourné sa veste ? Pour comprendre ce qui se joue sous le capot, lis [comment fonctionne une IA ?](/comment-fonctionne-une-ia/) et [c'est quoi un modèle de langage ?](/modele-de-langage-c-est-quoi/). Et si tu hésites sur l'assistant à utiliser pour ce genre de vérification, compare-les avec [ChatGPT ou Gemini, lequel choisir ?](/chatgpt-ou-gemini/) et pose-toi la question de fond avec [peut-on faire confiance à une réponse de l'IA ?](/confiance-reponse-ia/)

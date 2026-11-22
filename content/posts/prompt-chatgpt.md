@@ -24,6 +24,14 @@ Tu demandes à ChatGPT un e-mail de relance. Il te sort trois paragraphes guind�
 
 </div>
 
+<div class="exemple">
+
+**Un exemple concret**
+
+Tu demandes « Écris un post LinkedIn sur le télétravail » : tu obtiens un texte poli et générique. Tu précises le rôle, le contexte, la tâche, le format et les contraintes : tu obtiens un texte prêt à publier, sans aller-retour. La méthode complète arrive juste après.
+
+</div>
+
 ## Pourquoi tes prompts donnent des réponses fades
 
 ChatGPT ne lit pas dans tes pensées. Il prédit la suite de texte la plus plausible à partir de ce que tu lui donnes. Si ta demande tient en une ligne, il remplit les blancs avec la réponse la plus **générique** possible. C'est logique : sans indice, la moyenne gagne.
@@ -66,7 +74,7 @@ Une fois les cinq briques en place, quelques techniques font passer tes réponse
 
 **Fais-le se relire.** Après une réponse, écris : « Relis ta réponse, liste ses trois faiblesses, puis propose une version corrigée ». L'auto-critique corrige souvent les approximations et le ton trop scolaire.
 
-**Itère sans complexe.** « Plus court », « plus drôle », « garde seulement le deuxième paragraphe » : affiner fait partie du jeu. Un bon résultat se construit rarement en une seule fois.
+**Itère sans complexe.** « Plus court », « plus drôle », « garde seulement le deuxième paragraphe » : affiner fait partie du jeu. Un bon résultat se construit rarement en une seule fois. Et si tu sens que tu abuses du mot « prompt » dans tes consignes, [faut-il arrêter d'utiliser le mot prompt ?](/trop-prompts-a-utiliser-le-mot-prompt/) remet les choses en perspective.
 
 ## 20 prompts ChatGPT prêts à copier
 
@@ -108,7 +116,15 @@ Remplace simplement ce qui est entre crochets.
 
 **Tout demander d'un coup.** Un prompt qui mélange cinq tâches donne cinq réponses bâclées. Une tâche par message, c'est plus rapide au final.
 
-**Croire aveuglément les chiffres.** ChatGPT peut inventer une statistique, une date ou une source avec un aplomb désarmant. On appelle ça une **hallucination**. Pour tout chiffre important, vérifie à la source. Et si le sujet est récent, méfie-toi doublement : un modèle ne connaît que ce qui précède sa date de coupure.
+**Croire aveuglément les chiffres.** ChatGPT peut inventer une statistique, une date ou une source avec un aplomb désarmant. On appelle ça une **hallucination**. Pour tout chiffre important, vérifie à la source. Et si le sujet est récent, méfie-toi doublement : un modèle ne connaît que ce qui précède sa date de coupure. [Pourquoi l'IA se trompe-t-elle parfois ?](/pourquoi-ia-se-trompe/) détaille ce mécanisme et les réflexes pour ne pas te faire piéger.
+
+<div class="attention">
+
+**Ne confonds jamais un ton assuré et une information vérifiée**
+
+Une réponse bien écrite n'est pas forcément exacte. Pour les chiffres, les dates et les faits récents, recoupe toujours avec une source fiable avant de republier ou de décider.
+
+</div>
 
 **Partager des données sensibles.** Mots de passe, données clients, documents confidentiels : n'envoie rien que tu ne publierais pas. Vérifie aussi les réglages de confidentialité de ton compte.
 
@@ -120,11 +136,22 @@ Remplace simplement ce qui est entre crochets.
 
 Oui. Les cinq briques marchent avec tous les assistants conversationnels. Le principe est le même partout : plus la consigne est claire, meilleure est la réponse. Tu peux copier les vingt prompts ci-dessus dans n'importe lequel.
 
-Les différences tiennent surtout aux fonctions autour du chat : recherche web, analyse de fichiers, intégration dans tes outils de travail. Certains assistants suivent aussi mieux que d'autres les consignes de format ou de ton. Le meilleur test est simple : envoie le même prompt à deux assistants, puis compare.
+Les différences tiennent surtout aux fonctions autour du chat : recherche web, analyse de fichiers, intégration dans tes outils de travail. Certains assistants suivent aussi mieux que d'autres les consignes de format ou de ton. Le meilleur test est simple : envoie le même prompt à deux assistants, puis compare. Les comparatifs [ChatGPT ou Gemini, lequel choisir ?](/chatgpt-ou-gemini/) et [Claude ou ChatGPT ?](/claude-ou-chatgpt/) détaillent ces écarts.
 
 Si tu hésites entre plusieurs outils, garde la méthode et change d'IA selon la tâche. Un bon prompt voyage très bien d'un assistant à l'autre.
 
-## FAQ
+<div class="lexique">
+
+**Les mots à connaître**
+
+- **Prompt** : la consigne que tu écris à une IA pour obtenir une réponse.
+- **Itérer** : reformuler ou préciser un prompt à partir de la réponse obtenue, pour l'améliorer par étapes.
+- **Hallucination** : réponse fausse que l'IA présente avec la même assurance qu'une réponse exacte.
+- **Token** : unité de texte que le modèle traite pour lire ta demande et construire sa réponse. [C'est quoi un token en IA ?](/token-ia-c-est-quoi/) détaille cette notion.
+
+</div>
+
+## Questions fréquentes
 
 **C'est quoi un prompt ?**
 Un prompt, c'est la consigne que tu écris à une IA comme ChatGPT. Il peut tenir en une question ou en plusieurs paragraphes. Sa qualité détermine directement celle de la réponse.

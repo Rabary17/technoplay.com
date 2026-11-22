@@ -9,7 +9,11 @@ imageAlt: "selective focus photography of DJI Phantom 3 Professional quadcopter 
 sources:
   - titre: "Apptronik veut installer jusqu'à 1000 robots humanoïdes Apollo dans les entrepôts logistiques de GXO d'ici 2030"
     url: "https://www.usine-digitale.fr/intelligence-artificielle/robotique/apptronik-veut-installer-jusqua-1000-robots-humanoides-apollo-dans-les-entrepots-logistiques-de-gxo-dici-2030.GAACV52A7JDS5EHVH6D37LOELE.html"
-sourcesConsultees: "2026-11-20"
+  - titre: "GXO could deploy 1,000 Apptronik humanoid robots over four years (DC Velocity)"
+    url: "https://www.dcvelocity.com/material-handling/robotics/gxo-could-deploy-1000-apptronik-humanoid-robots-over-four-years"
+  - titre: "GXO Eyes 1,000 Apollo Humanoids: Trials Will Decide the Rollout (eWeek)"
+    url: "https://www.eweek.com/news/gxo-apptronik-apollo-humanoid-robots-1000-trials/"
+sourcesConsultees: "2026-11-22"
 ---
 <div class="essentiel">
 
@@ -21,7 +25,9 @@ Pendant longtemps, les robots d'entrepôt se sont limités à des tâches très 
 
 ## C'est quoi, concrètement ?
 
-Un robot humanoïde est une machine dont le corps imite celui d'une personne, avec des bras, des jambes et une posture debout. Apollo est celui d'Apptronik. L'idée est de le faire travailler dans des lieux pensés pour des humains, sans tout reconstruire.
+Un [robot humanoïde](/c-est-quoi-un-robot/) est une machine dont le corps imite celui d'une personne, avec des bras, des jambes et une posture debout. Apollo, celui d'Apptronik, mesure environ 1,70 mètre, porte jusqu'à 30 kilos et fonctionne avec des batteries échangeables. L'idée est de le faire travailler dans des lieux pensés pour des humains, sans tout reconstruire.
+
+Le partenariat entre les deux entreprises ne date pas d'hier. Il a démarré en 2024 par une simple preuve de concept. En novembre 2026, il s'est élargi à une lettre d'intention. Celle-ci ouvre la voie à un modèle de **location de robots**, plutôt qu'à un achat direct.
 
 Pense à un nouvel employé polyvalent plutôt qu'à une machine spécialisée. Un convoyeur ne fait qu'une chose. Un humanoïde est censé pouvoir passer d'un poste à l'autre. Pour un entrepôt, cela évite de réaménager les allées à chaque nouvelle tâche, ce qui pèse sur le budget.
 
@@ -36,8 +42,8 @@ Imagine un entrepôt où l'on prépare des commandes. Le matin, le robot prélè
 Le partenariat vise à tester davantage de tâches en entrepôt. Voici comment lire cette annonce sans la surinterpréter.
 
 1. **Retiens le périmètre.** Le partenariat est étendu. Les tâches testées vont de la préparation des commandes à l'emballage et au tri. Cela donne une idée des postes visés en priorité.
-2. **Repère la date clé.** Le premier déploiement est attendu fin 2027, en Amérique du Nord. Avant cette échéance, on parle de tests, pas d'un usage à grande échelle.
-3. **Lis le chiffre avec prudence.** Le texte parle de « jusqu'à » 1000 robots d'ici 2030. C'est un plafond d'intention, pas un engagement ferme sur le nombre final.
+2. **Repère la date clé.** Un premier déploiement serait attendu en Amérique du Nord fin 2027. Cette échéance ne figure que dans une partie de la presse spécialisée. Avant toute confirmation officielle, on parle de tests, pas d'un usage à grande échelle.
+3. **Lis le chiffre avec prudence.** Le texte parle de « jusqu'à » 1000 robots sur un horizon de quelques années. C'est un plafond conditionnel, pas un engagement ferme sur le nombre final. La lettre d'intention signée par les deux entreprises lie explicitement ce chiffre à la réussite des essais.
 4. **Surveille les retours d'expérience.** Les résultats des premiers essais diront si ces robots tiennent la cadence demandée. C'est ce qui décidera de la suite du déploiement.
 
 <div class="attention">
@@ -62,6 +68,8 @@ Un objectif annoncé n'est pas un résultat mesuré. Tant que les premiers dépl
 - **Logisticien** : entreprise qui stocke, prépare et expédie des marchandises pour le compte d'autres sociétés.
 - **Préparation de commandes** : étape où l'on rassemble les articles d'une commande avant l'expédition.
 - **Tri** : opération qui consiste à répartir les colis selon leur destination.
+- **Lettre d'intention** : accord qui fixe une direction commune, sans engagement ferme sur les volumes ou les délais.
+- **Location de robots** : modèle où l'entreprise paie un service d'usage du robot plutôt que de l'acheter.
 
 </div>
 
@@ -77,4 +85,4 @@ Le partenariat étendu cible la préparation des commandes, l'emballage et le tr
 
 ## Et maintenant ?
 
-Si le sujet t'intéresse, suis les prochaines annonces d'Apptronik et de GXO sur les premiers essais. Cherche aussi nos autres articles sur la robotique : ils t'aideront à comparer ces humanoïdes aux robots d'entrepôt plus classiques.
+Si le sujet t'intéresse, suis les prochaines annonces d'Apptronik et de GXO sur les premiers essais. Pour comparer ces humanoïdes aux robots d'entrepôt plus classiques, lis [robot, automate, cobot : quelles différences ?](/robot-automate-cobot/) Pour voir où en est le secteur dans son ensemble, consulte [robots humanoïdes : où en est-on ?](/robots-humanoides-ou-en-est-on/) et [comment un robot humanoïde peut-il travailler dans une usine électronique ?](/comment-un-robot-humanoide-peut-il-travailler-dans-une-usine-electronique/) D'autres acteurs avancent sur des usages très différents : regarde [les robots humanoïdes militaires prévus par Rheinmetall](/rheinmetall-veut-des-robots-humanoides-militaires-prets-d-ici-un-an-et-demi/).

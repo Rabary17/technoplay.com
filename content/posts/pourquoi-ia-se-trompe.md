@@ -25,7 +25,7 @@ Une erreur de l'IA ne ressemble pas à une erreur humaine. Elle est souvent bien
 
 ## C'est quoi, concrètement ?
 
-L'IA écrit en choisissant, mot après mot, la suite la plus probable. Elle s'appuie sur ce qu'elle a appris pendant son entraînement. Si l'information est bien représentée dans ses données, la réponse est souvent juste. Si elle est rare, floue ou absente, elle complète avec quelque chose de plausible.
+L'IA écrit en choisissant, mot après mot, la suite la plus probable. Elle s'appuie sur ce qu'elle a appris pendant son entraînement. Pour comprendre ce mécanisme en détail, [comment fonctionne une IA ?](/comment-fonctionne-une-ia/) décrit ce calcul pas à pas. Si l'information est bien représentée dans ses données, la réponse est souvent juste. Si elle est rare, floue ou absente, elle complète avec quelque chose de plausible.
 
 <div class="exemple">
 
@@ -40,6 +40,8 @@ Tu demandes les coordonnées d'un petit restaurant de ta ville. L'IA te donne un
 Plusieurs causes se cumulent. L'information peut être trop rare dans les textes d'apprentissage. Elle peut aussi être trop récente pour avoir été intégrée. Enfin, la question peut être ambiguë, et l'IA choisit une lecture parmi d'autres sans te le signaler.
 
 Il y a aussi un effet de style. Une réponse nette et bien tournée donne une impression de sérieux. Or la forme ne garantit rien sur le fond.
+
+Certains outils réduisent ce risque en allant chercher l'information dans des documents réels avant de répondre, plutôt que de tout générer de mémoire. Cette technique porte un nom : [c'est quoi le RAG ?](/rag-c-est-quoi/) explique comment elle limite les réponses inventées, sans les supprimer totalement.
 
 ## Comment repérer une erreur, étape par étape
 
@@ -89,4 +91,4 @@ Non. Elle est très utile pour reformuler, résumer ou trouver des idées. Il fa
 
 ## Et maintenant ?
 
-Pour savoir ce que fait réellement le moteur derrière ces réponses, lis [Qu'est-ce qu'un modèle de langage ?](/modele-de-langage-c-est-quoi/). Et pour comparer les assistants, consulte [ChatGPT ou Gemini : lequel choisir ?](/chatgpt-ou-gemini/).
+Pour savoir ce que fait réellement le moteur derrière ces réponses, lis [Qu'est-ce qu'un modèle de langage ?](/modele-de-langage-c-est-quoi/). Et pour comparer les assistants, consulte [ChatGPT ou Gemini : lequel choisir ?](/chatgpt-ou-gemini/). Si tu veux aller plus loin sur la fiabilité des réponses, lis aussi [peut-on faire confiance à une réponse de l'IA ?](/confiance-reponse-ia/) Pour limiter les erreurs dès le départ, soigne tes consignes grâce à [la méthode pour écrire de bons prompts](/prompt-chatgpt/).

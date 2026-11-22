@@ -9,7 +9,7 @@ imageAlt: "deux ordinateurs portables ouverts avec des documents papier annotés
 sources:
   - titre: "AI Act article 50 : ce que vos chatbots et contenus IA doivent afficher depuis le 2 août"
     url: "https://www.journaldunet.com/intelligence-artificielle/1557993-ai-act-article-50-ce-que-vos-chatbots-et-contenus-ia-doivent-afficher-depuis-le-2-aout/"
-sourcesConsultees: "2026-11-21"
+sourcesConsultees: "2026-11-22"
 ---
 <div class="essentiel">
 
@@ -31,7 +31,9 @@ Camille gère le site d'une petite boutique en ligne. Elle a installé un chatbo
 
 </div>
 
-Un point d'actualité à retenir. L'article 4 de l'AI Act a été réécrit cet été par le règlement (UE) 2026/1744. L'article 50, lui, n'a pas été allégé. Le texte est resté le même, et le calendrier aussi.
+Un point d'actualité à retenir. L'article 4 de l'AI Act a été réécrit cet été par le règlement (UE) 2026/1744. L'article 50, lui, n'a pas été allégé. Le texte est resté le même, et le calendrier aussi, à une exception près. Les contenus générés avant le 2 août 2026 ont jusqu'au 2 décembre 2026 pour recevoir leur marquage. Toutes les autres obligations s'appliquent sans délai.
+
+Le texte distingue deux rôles. Le **fournisseur** développe ou met le système sur le marché. C'est lui qui doit signaler un chatbot et marquer un contenu généré, dans un format lisible par machine. Le **déployeur** utilise ce système dans son activité. C'est lui qui doit signaler un deepfake ou un texte généré sur un sujet d'intérêt général. Une exception existe : un humain qui relit ce texte et en assume la responsabilité éditoriale. Une entreprise qui assemble son propre assistant à partir d'un modèle tiers peut être considérée comme fournisseur. Elle hérite alors de cette obligation d'information.
 
 Et au final, as-tu pris cette réforme de l'article 4 pour un report général ?
 
@@ -71,6 +73,10 @@ Ne te fie pas à l'idée que tout l'AI Act a été assoupli cet été. Seul l'ar
 
 **Règlement (UE) 2026/1744** : le texte qui a réécrit l'article 4 de l'AI Act cet été, sans toucher à l'article 50.
 
+**Fournisseur** : celui qui développe un système d'IA ou le met sur le marché.
+
+**Déployeur** : celui qui utilise un système d'IA dans son activité, sans l'avoir développé.
+
 </div>
 
 ## Questions fréquentes
@@ -87,6 +93,10 @@ Non. L'article 4 a été réécrit cet été par le règlement (UE) 2026/1744. L
 
 Oui, ce sont les deux sujets de l'article 50. Fais l'inventaire de ce que tu utilises, puis vérifie dans le texte ce que chaque cas doit afficher.
 
+### Que risque une entreprise qui ne respecte pas l'article 50 ?
+
+Une amende, jusqu'à 15 millions d'euros ou 3 % du chiffre d'affaires mondial, selon le montant le plus élevé. Les petites entreprises se voient appliquer le montant le plus bas des deux.
+
 ## Et maintenant ?
 
-Prends une heure pour ton inventaire : chatbots d'un côté, contenus IA de l'autre. Ensuite, ouvre le texte de l'article 50 et coche ce qui est déjà affiché. Qu'est-ce qui manque encore ?
+Prends une heure pour ton inventaire : chatbots d'un côté, contenus IA de l'autre. Ensuite, ouvre le texte de l'article 50 et coche ce qui est déjà affiché. Qu'est-ce qui manque encore ? Pour resituer ce texte dans le paysage des grands éditeurs d'IA, lis [OpenAI, Anthropic, Google, Mistral : qui fait quoi ?](/entreprises-ia-openai-anthropic-google-mistral/) Les obligations de transparence s'ajoutent à d'autres risques juridiques : [pourquoi la Californie attaque-t-elle OpenAI en justice ?](/pourquoi-la-californie-attaque-t-elle-openai-en-justice/) Et pour choisir ton assistant en connaissance de cause, compare [ChatGPT ou Gemini](/chatgpt-ou-gemini/) et relis [c'est quoi un modèle de langage ?](/modele-de-langage-c-est-quoi/)

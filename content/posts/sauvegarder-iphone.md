@@ -7,7 +7,7 @@ author: "nekena-judicael"
 category: "appareils-internet"
 image: "/images/articles/sauvegarder-iphone-hero.webp"
 imageAlt: "Un ordinateur portable et un symbole de nuage pour la sauvegarde"
-updated: "2026-10-15"
+updated: "2026-11-22"
 sourcesConsultees: "2026-10-15"
 sources:
   - titre: "Assistance Apple — Comment sauvegarder les données de votre iPhone, iPad ou iPod touch"
@@ -32,9 +32,7 @@ Ton iPhone contient tes photos, tes messages et tes codes de connexion. Le jour 
 
 **L'essentiel, si tu es pressé**
 
-- **iCloud** : sauvegarde en ligne, automatique, mais seuls **5 Go** sont gratuits.
-- **PC ou Mac** : sauvegarde complète sur ton ordinateur, mais à lancer toi-même.
-- Avant une réparation, fais une **sauvegarde chiffrée** sur ordinateur.
+**iCloud** sauvegarde automatiquement, mais seuls **5 Go** sont gratuits. Un **PC ou un Mac** sauvegarde tout gratuitement, à condition de le lancer toi-même. Avant une réparation, fais toujours une **sauvegarde chiffrée** sur ordinateur.
 
 </div>
 
@@ -159,4 +157,4 @@ Oui si tu veux garder tes données de santé et d'activité. Garde précieusemen
 
 ## Et maintenant ?
 
-Tu sais maintenant choisir ta méthode de sauvegarde. Pour libérer de la place sur ton iPhone, et pour d'autres sujets, va voir [le thème Appareils & Internet](/appareils-internet/).
+Tu sais maintenant choisir ta méthode de sauvegarde. Si tu as supprimé un message par erreur, regarde d'abord [Messages supprimés : peut-on les récupérer ?](/recuperer-messages-supprimes/). Pour reprendre la main sur ce que tes applications voient de toi, lis [Les réglages de confidentialité de l'iPhone](/reglages-confidentialite-iphone/). Pour comprendre ce qui remplit ton stockage, lis [Pourquoi mon stockage iPhone est plein ?](/donnees-systeme-iphone/). Pour d'autres sujets, va voir [le thème Appareils & Internet](/appareils-internet/).

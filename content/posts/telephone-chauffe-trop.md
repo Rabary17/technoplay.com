@@ -5,8 +5,9 @@ description: "Un téléphone tiède est normal, mais une chaleur persistante peu
 date: "2027-01-12"
 author: "nekena-judicael"
 category: "appareils-internet"
-image: "https://images.unsplash.com/photo-1609177336889-4e69aa3b1ff6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw0fHxzbWFydHBob25lJTIwb3JkaW5hdGV1cnxlbnwwfDB8fHwxNzk1MTU5Njk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "man in black shirt holding black iphone 5"
+image: "https://images.unsplash.com/photo-1609177336889-4e69aa3b1ff6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+imageAlt: "Homme en chemise noire tenant un smartphone noir"
+updated: "2026-11-22"
 ---
 
 ***Un téléphone tiède pendant un appel ou une recharge est courant. Mais s'il devient brûlant sans raison, il faut regarder de plus près, car la chaleur peut user la batterie.***
@@ -15,9 +16,7 @@ imageAlt: "man in black shirt holding black iphone 5"
 
 **L'essentiel en 30 secondes**
 
-- Un peu de chaleur est normale pendant un usage intensif, une recharge ou une vidéo longue.
-- Une chaleur forte au repos peut venir d'une application qui tourne en arrière-plan.
-- Si le téléphone gonfle, sent le brûlé ou chauffe sans raison, arrête de l'utiliser et consulte un professionnel.
+Un peu de chaleur est normale pendant un usage intensif, une recharge ou une vidéo longue. Une chaleur forte **au repos** vient souvent d'une application mal réglée en arrière-plan. Si le téléphone gonfle ou sent le brûlé, arrête de l'utiliser et consulte un professionnel.
 
 </div>
 
@@ -27,9 +26,20 @@ Le téléphone produit de la chaleur quand son processeur travaille dur, quand l
 
 Une application mal programmée peut consommer beaucoup d'énergie en arrière-plan. La recharge rapide, un étui qui retient la chaleur ou un téléphone exposé au soleil y contribuent aussi. Les mises à jour récentes peuvent provoquer une indexation temporaire, qui chauffe pendant quelques heures.
 
-## Les gestes simples à faire
+## Comment faire, pas à pas
 
-Retire l'étui pendant la recharge, éloigne le téléphone du soleil et ferme les applications que tu n'utilises pas. Consulte la liste des applications qui consomment le plus de batterie dans les réglages, puis désinstalle ou restreins celles qui se démarrent sans raison. Redémarre le téléphone pour libérer la mémoire.
+1. **Retire l'étui** pendant la recharge : il retient la chaleur produite par la batterie.
+2. **Éloigne le téléphone du soleil** et des surfaces déjà chaudes, comme un tableau de bord de voiture.
+3. **Ferme les applications** que tu n'utilises pas, surtout si elles tournent en vidéo ou en navigation GPS.
+4. **Consulte la liste des applications** qui consomment le plus de batterie dans les réglages, puis restreins celles qui se lancent sans raison en arrière-plan.
+5. **Redémarre le téléphone** pour libérer la mémoire et arrêter les processus bloqués.
+
+## Les erreurs à éviter
+
+- **Mettre le téléphone au congélateur ou au réfrigérateur.** Un choc thermique brutal abîme l'électronique et peut créer de la condensation.
+- **Continuer à l'utiliser alors qu'il est brûlant.** Mieux vaut le laisser refroidir, éteint, avant de reprendre.
+- **Ignorer un gonflement de la batterie.** C'est un signe qui demande un contrôle rapide, pas une simple surveillance.
+- **Charger avec un câble ou un chargeur abîmé.** Un matériel non conforme peut chauffer anormalement pendant la recharge.
 
 <div class="exemple">
 
@@ -73,4 +83,4 @@ Oui, pendant un temps, car il réorganise ses fichiers. Si la chaleur persiste p
 
 ## Et maintenant ?
 
-Si ton téléphone ne charge plus correctement, lis [Mon iPhone ne charge plus : que faire ?](/iphone-ne-charge-plus/). Pour un stockage saturé qui ralentit l'appareil, lis [Pourquoi mon stockage iPhone est plein ?](/donnees-systeme-iphone/).
+Si ton téléphone ne charge plus correctement, lis [Mon iPhone ne charge plus : que faire ?](/iphone-ne-charge-plus/). Pour un stockage saturé qui ralentit l'appareil, lis [Pourquoi mon stockage iPhone est plein ?](/donnees-systeme-iphone/). Avant une réparation ou un remplacement, pense à [sauvegarder ton iPhone](/sauvegarder-iphone/). Pour reprendre la main sur les applications qui tournent en arrière-plan, lis [Les réglages de confidentialité de l'iPhone](/reglages-confidentialite-iphone/).

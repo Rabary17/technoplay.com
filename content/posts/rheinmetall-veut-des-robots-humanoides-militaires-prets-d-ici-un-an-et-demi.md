@@ -4,8 +4,9 @@ description: "Lire à voix haute Principaux renseignements Le géant allemand de
 date: "2026-11-21"
 author: "nekena-judicael"
 category: "robotique-drones"
-image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMHZvbCUyMGV4dCVDMyVBOXJpZXVyfGVufDB8MHx8fDE3OTUyNzEyOTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "drone flying in sky"
+image: "https://images.unsplash.com/photo-1593376853899-fbb47a057fa0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+imageAlt: "Robot humanoïde blanc qui salue dans un hall moderne et lumineux"
+updated: "2026-11-22"
 sources:
   - titre: "Le géant allemand de la défense Rheinmetall souhaite que ses premiers robots militaires humanoïdes soient prêts d'ici un an et demi"
     url: "https://fr.businessam.be/le-geant-allemand-de-la-defense-rheinmetall-souhaite-que-ses-premiers-robots-militaires-humanoides-soient-prets-dici-un-an-et-demi/"
@@ -21,9 +22,9 @@ Tu as peut-être remarqué que les robots à forme humaine quittent peu à peu l
 
 ## Comment lire cette annonce ?
 
-Rheinmetall est un géant allemand de la défense. Il veut disposer de ses premiers robots militaires humanoïdes d'ici un an et demi, et se lance dans la course à la commercialisation d'un tel robot.
+Rheinmetall est un **géant allemand de la défense**. Il veut disposer de ses premiers robots militaires humanoïdes d'ici un an et demi. Il se lance ainsi dans la course à la **commercialisation** d'un tel robot.
 
-Un robot humanoïde est une machine dont le corps imite celui d'un humain, avec une forme générale qui rappelle la nôtre. Pense à un outil conçu pour un monde fait pour les humains : une poignée de porte ou un escalier ne se transforment pas pour un robot, c'est le robot qui prend une silhouette adaptée.
+Un robot humanoïde est une machine dont le corps imite celui d'un humain, avec une forme générale qui rappelle la nôtre. Pense à un outil conçu pour un monde fait pour les humains. Une poignée de porte ou un escalier ne se transforment pas pour un robot : c'est le robot qui prend une silhouette adaptée. Notre guide [Les robots humanoïdes, où en est-on ?](/robots-humanoides-ou-en-est-on/) détaille ce que ces machines savent déjà faire, et ce qui reste difficile.
 
 <div class="exemple">
 
@@ -33,7 +34,9 @@ Imagine un responsable des achats d'une armée européenne qui lit cette annonce
 
 ## Pourquoi les grandes puissances s'y intéressent
 
-Selon la source, les grandes puissances accélèrent rapidement le développement de robots humanoïdes militaires. Leur objectif est de compenser la baisse des taux de natalité. Concrètement, moins de naissances signifie à terme moins de personnes disponibles pour certaines missions, et les États cherchent des machines pour combler ce manque.
+Selon la source, les grandes puissances **accélèrent rapidement** le développement de robots humanoïdes militaires. Leur objectif est de compenser la baisse des taux de natalité. Concrètement, moins de naissances signifie à terme moins de personnes disponibles pour certaines missions, et les États cherchent des machines pour combler ce manque.
+
+Ce raisonnement rejoint celui déjà observé dans l'industrie civile. Des entreprises y développent des **robots, automates et cobots** pour une raison voisine : la pénurie de main-d'œuvre sur des tâches répétitives ou pénibles. Pour comprendre ce qui distingue ces catégories de machines, lis [Robot, automate ou cobot : quelle différence ?](/robot-automate-cobot/)
 
 ## Comment suivre ce dossier, pas à pas
 
@@ -80,3 +83,7 @@ Selon la source, les grandes puissances veulent compenser la baisse des taux de 
 ### Rheinmetall est-il seul sur ce terrain ?
 
 Non. La source indique que les grandes puissances accélèrent rapidement le développement de ces robots. Rheinmetall se lance dans la course à la commercialisation, ce qui suppose d'autres acteurs en lice.
+
+## Et maintenant ?
+
+Pour comprendre ce que les robots humanoïdes civils savent déjà faire, lis [Les robots humanoïdes, où en est-on ?](/robots-humanoides-ou-en-est-on/). Pour la définition de base, lis [C'est quoi un robot, exactement ?](/c-est-quoi-un-robot/). Pour la différence entre un automate, un robot et un cobot, lis [Robot, automate ou cobot : quelle différence ?](/robot-automate-cobot/).

@@ -5,32 +5,26 @@ description: "Le RAG permet à une IA de chercher dans tes documents avant de r�
 date: "2026-11-01"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
-image: "https://images.pexels.com/photos/11213237/pexels-photo-11213237.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
-imageAlt: "Red neon sign 'Plats à Emporter' reflected in city window, urban street vibe."
+image: "https://images.unsplash.com/photo-1762330470070-249e7c23c8c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+imageAlt: "Interface numérique affichant une invite de recherche « demandez n'importe quoi »"
+updated: "2026-11-22"
 ---
-
-***Un assistant IA répond mieux quand il peut consulter tes propres documents. C'est le principe du RAG, une technique très utilisée dans les outils professionnels.***
 
 <div class="essentiel">
 
 **L'essentiel en 30 secondes**
 
-- RAG signifie « génération augmentée par récupération ». L'IA cherche d'abord les passages utiles, puis elle répond.
-- Cela permet de répondre avec des informations récentes ou privées, sans réentraîner le modèle.
-- La réponse reste à vérifier : une mauvaise recherche produit une mauvaise réponse.
+Le RAG (génération augmentée par récupération) fait chercher l'IA dans tes documents avant qu'elle réponde, plutôt que de la laisser deviner. Ça rend ses réponses plus fiables sur des informations récentes ou privées, mais la réponse reste à vérifier.
 
 </div>
 
-Un modèle de langage ne connaît que ce qu'il a appris pendant son entraînement. Il ignore donc le contenu de ton contrat de travail, le règlement de ton association ou la notice de ton four. Le RAG ajoute une étape de recherche avant la réponse, pour que l'IA s'appuie sur un texte précis.
+Un modèle de langage ne connaît que ce qu'il a appris pendant son entraînement. Il ignore donc le contenu de ton contrat de travail, le règlement de ton association ou la notice de ton four. Le RAG ajoute une **étape de recherche** avant la réponse, pour que l'IA s'appuie sur un texte précis plutôt que sur sa seule mémoire.
 
-## Comment ça marche, étape par étape
+## C'est quoi, concrètement ?
 
-1. Les documents sont découpés en petits morceaux de texte.
-2. Chaque morceau est transformé en suite de nombres qui représente son sens. On range ces morceaux dans un index, une sorte de fichier de recherche.
-3. Quand tu poses une question, le système retrouve les morceaux les plus proches de ta demande.
-4. Ces morceaux sont transmis à l'IA, qui rédige sa réponse à partir d'eux.
+Le RAG est une technique qui combine deux outils : un moteur de recherche et un modèle de langage. Avant de répondre, le système va chercher les passages utiles dans une base de documents. Ces passages sont ensuite transmis à l'IA, qui rédige sa réponse à partir de ce texte précis.
 
-L'IA ne devine donc plus autant. Elle lit les passages pertinents avant de parler.
+Cette méthode règle un problème connu des modèles de langage seuls : ils **inventent parfois une réponse** plausible mais fausse, faute d'information. Un bon RAG réduit ce risque. L'IA a sous les yeux un texte réel à citer, au lieu de compléter un trou dans sa mémoire.
 
 <div class="exemple">
 
@@ -40,31 +34,51 @@ Une association range son règlement intérieur dans un outil de questions-répo
 
 </div>
 
+## Comment ça marche, étape par étape
+
+Un RAG suit toujours la même logique, qu'il interroge dix pages ou dix mille.
+
+1. Les documents sont **découpés** en petits morceaux de texte, assez courts pour rester précis.
+2. Chaque morceau est transformé en une suite de nombres qui représente son sens. Ces morceaux sont rangés dans un **index**, une sorte de fichier de recherche très rapide.
+3. Quand tu poses une question, le système retrouve les morceaux **les plus proches** de ta demande, souvent trois à dix passages.
+4. Ces morceaux sont transmis à l'IA, qui **rédige sa réponse** à partir d'eux, sans improviser le reste.
+
+L'IA ne devine donc plus autant. Elle lit les passages pertinents avant de parler, un peu comme un étudiant qui révise sur sa fiche plutôt que de réciter de mémoire.
+
 ## À quoi ça sert, dans la vraie vie ?
 
-Le RAG est utilisé pour les bases de connaissances d'entreprise, pour les assistants de service client qui lisent la documentation d'un produit, ou pour interroger de grandes archives. Il peut aussi servir à toi, si tu as des documents personnels que tu veux interroger.
+Le RAG équipe surtout des outils professionnels : bases de connaissances d'entreprise, assistants de service client, ou moteurs de recherche internes. Il peut aussi te servir directement, si tu as des documents personnels à interroger en langage courant, sans tout relire toi-même.
 
-## Les limites à connaître
+Pour comprendre comment ces systèmes automatisent des tâches entières, lis notre guide [C'est quoi un agent IA, au juste ?](/agent-ia/). Le RAG et l'agent IA sont souvent combinés dans les mêmes outils.
 
-- **La qualité de la recherche compte beaucoup.** Si les bons passages ne sont pas retrouvés, la réponse sera fausse, même bien écrite.
-- **La mise en page peut gêner.** Un tableau, une image ou un document scanné sont parfois mal lus.
-- **Une réponse doit rester vérifiable.** Demande la source, puis ouvre le passage cité.
+## Les erreurs à éviter
+
+Ces erreurs reviennent souvent, aussi bien chez les particuliers que dans les entreprises qui installent un RAG.
+
+- **Faire confiance sans vérifier la source.** Une réponse qui cite un passage n'est pas automatiquement exacte : le passage cité peut être mal choisi.
+- **Négliger la mise en page des documents.** Un tableau, une image ou un document scanné sont parfois mal découpés et mal lus par le système.
+- **Oublier de mettre à jour la base.** Un document modifié après l'indexation n'est pas pris en compte tant que l'index n'est pas reconstruit.
+- **Envoyer des documents confidentiels sans vérifier où ils sont stockés.** Lis les conditions d'utilisation avant d'y glisser des données sensibles.
 
 <div class="attention">
 
 **Attention à tes données**
 
-Avant d'envoyer des documents confidentiels à un service en ligne, vérifie où ils sont stockés et qui peut y accéder. Lis les conditions d'utilisation et les paramètres de confidentialité.
+Avant d'envoyer des documents confidentiels à un service en ligne, vérifie où ils sont stockés et qui peut y accéder. Pour les bons réflexes côté sécurité, lis aussi [C'est quoi, la cybersécurité ?](/c-est-quoi-la-cybersecurite/).
 
 </div>
 
+## Les mots à connaître
+
 <div class="lexique">
 
-**Les mots à connaître**
+**RAG** : technique qui ajoute une recherche dans des documents avant la réponse de l'IA.
 
-- **RAG** : technique qui ajoute une recherche dans des documents avant la réponse de l'IA.
-- **Index** : organisation des documents qui permet de retrouver vite les passages utiles.
-- **Source** : passage ou document sur lequel la réponse s'appuie.
+**Index** : organisation des documents qui permet de retrouver vite les passages utiles.
+
+**Source** : passage ou document sur lequel la réponse s'appuie.
+
+**Modèle de langage** : programme d'IA entraîné pour comprendre et produire du texte.
 
 </div>
 
@@ -72,16 +86,20 @@ Avant d'envoyer des documents confidentiels à un service en ligne, vérifie où
 
 ### Le RAG remplace-t-il l'entraînement du modèle ?
 
-Non. Le modèle reste le même. Le RAG lui fournit simplement des informations supplémentaires au moment de la question.
+Non. Le modèle reste le même. Le RAG lui fournit simplement des informations supplémentaires au moment de la question, sans toucher à son entraînement initial.
 
 ### Un RAG peut-il se tromper ?
 
-Oui. Il peut retrouver un mauvais passage ou mal interpréter un texte. D'où l'intérêt de vérifier la source citée.
+Oui. Il peut retrouver un mauvais passage ou mal interpréter un texte juste. D'où l'intérêt de toujours vérifier la source citée avant d'agir sur une réponse.
 
 ### Faut-il savoir programmer pour utiliser un RAG ?
 
-Pas forcément. Certains outils proposent cette fonction sans code. Pour le construire soi-même, il faut des bases de programmation.
+Pas forcément. Certains outils grand public proposent cette fonction sans code, en te laissant simplement glisser des fichiers. Pour le construire soi-même, il faut des bases de programmation.
+
+### Le RAG fonctionne-t-il avec n'importe quel type de document ?
+
+Il fonctionne mieux avec du texte structuré. Les scans de mauvaise qualité ou les mises en page complexes réduisent la qualité des réponses.
 
 ## Et maintenant ?
 
-Pour automatiser des tâches avec l'IA, lis [C'est quoi un agent IA, au juste ?](/agent-ia/). Pour formuler des demandes claires, lis [Comment écrire un bon prompt pour ChatGPT ?](/prompt-chatgpt/).
+Pour automatiser des tâches avec l'IA, lis [C'est quoi un agent IA, au juste ?](/agent-ia/). Pour formuler des demandes claires, lis [Comment écrire un bon prompt pour ChatGPT ?](/prompt-chatgpt/). Si tu te demandes pourquoi une IA se trompe parfois même avec un RAG, regarde [Quelle confiance accorder à la réponse d'une IA ?](/confiance-reponse-ia/).

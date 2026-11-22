@@ -7,38 +7,30 @@ author: "andrianina-rabarivelo"
 category: "cybersecurite"
 image: "/images/articles/reconnaitre-faux-message-phishing-hero.webp"
 imageAlt: "Une main qui tient un smartphone affichant un message de prudence"
-updated: "2026-10-16"
+updated: "2026-11-22"
 sources:
   - titre: "Cybermalveillance.gouv.fr : comment reconnaître un mail de phishing ou d'hameçonnage"
     url: "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/actualites/comment-reconnaitre-un-mail-de-phishing-ou-dhameconnage"
 sourcesConsultees: "2026-10-16"
 ---
 
-Le phishing, ou hameçonnage, est un faux message qui imite une banque, un service connu ou un proche. Son but : vous inciter à cliquer ou à donner vos informations. Il se reconnaît à quelques signes, si l'on sait où regarder.
-
 <div class="essentiel">
 
 **L'essentiel en 30 secondes**
 
-- Un message qui crée l'urgence ou promet un gain inespéré doit vous alerter.
-- Une organisation sérieuse ne demande jamais votre mot de passe par email.
-- En cas de doute, passez par le site officiel en tapant l'adresse vous-même.
+Un message qui crée l'**urgence** ou promet un gain inespéré doit t'alerter. Une organisation sérieuse ne demande jamais ton mot de passe par email ou SMS, et en cas de doute, tape toi-même l'adresse du site officiel.
 
 </div>
 
+Le phishing, ou hameçonnage, est un faux message qui imite une banque, un service connu ou un proche. Son but : vous inciter à cliquer ou à donner vos informations. Il se reconnaît à quelques signes, si l'on sait où regarder.
+
 ## C'est quoi un faux message (phishing), concrètement ?
 
-Le phishing est une tentative de tromperie. Son auteur se fait passer pour une entité connue, comme une banque, un transporteur ou une administration. Il veut que vous cliquiez sur un lien piégé, ouvriez une pièce jointe ou donniez vos identifiants.
+Le phishing est une **tentative de tromperie**. Son auteur se fait passer pour une entité connue, comme une banque, un transporteur ou une administration. Il veut que vous cliquiez sur un lien piégé, ouvriez une pièce jointe ou donniez vos identifiants.
 
 ![Une personne détendue qui lit un message sur son téléphone avec une tasse de café](/images/articles/reconnaitre-faux-message-phishing-1.webp)
 
-Le phishing ne passe pas seulement par email. Il existe aussi par SMS, appelé « smishing », et par messages sur les réseaux sociaux.
-
-### Les mots à connaître
-
-- **Hameçonnage (phishing)** : tentative de tromperie pour voler des informations.
-- **Smishing** : phishing envoyé par SMS.
-- **Pièce jointe** : fichier ajouté à un email, qui peut contenir un virus.
+Le phishing ne passe pas seulement par email. Il existe aussi par SMS, appelé **smishing**, et par messages sur les réseaux sociaux. Notre guide sur les [arnaques par SMS](/arnaques-sms-reconnaitre/) détaille les variantes propres au téléphone.
 
 ## Pourquoi c'est important ?
 
@@ -58,9 +50,13 @@ Enfin, signaler un faux message aide à protéger les autres personnes.
 
 ![Un jeune homme qui travaille sur son ordinateur portable dans un bureau](/images/articles/reconnaitre-faux-message-phishing-2.webp)
 
-## Un exemple du quotidien
+<div class="exemple">
+
+**Un exemple concret**
 
 Vous recevez un SMS : votre colis est bloqué, payez des frais via un lien. Le message n'indique pas d'expéditeur clair et insiste sur l'urgence. Vous ne cliquez pas. Vous allez sur le site officiel du transporteur pour vérifier votre colis.
+
+</div>
 
 ## Vrai ou faux ? Les idées reçues
 
@@ -107,15 +103,21 @@ Oui. Vous pouvez le transférer à votre fournisseur, ou le signaler sur Cyberma
 
 Changez immédiatement le mot de passe concerné, activez la double authentification et prévenez votre banque si nécessaire.
 
+## Les mots à connaître
+
+<div class="lexique">
+
+- **Hameçonnage (phishing)** : tentative de tromperie pour voler des informations.
+- **Smishing** : phishing envoyé par SMS.
+- **Identifiants** : nom d'utilisateur et mot de passe d'un compte.
+- **Antivirus** : logiciel qui détecte les fichiers et les liens dangereux.
+- **Pièce jointe** : fichier ajouté à un email ou un SMS, qui peut contenir un virus.
+
+</div>
+
 ## Pour aller plus loin
 
 - [Comment choisir un bon mot de passe ?](/choisir-bon-mot-de-passe/)
 - [Un VPN gratuit est-il fiable ?](/vpn-gratuit/)
-
-<div class="lexique">
-
-- **Identifiants** : nom d'utilisateur et mot de passe d'un compte.
-- **Antivirus** : logiciel qui détecte les fichiers et les liens dangereux.
-- **Pièce jointe** : fichier qui accompagne un email.
-
-</div>
+- [Comment activer la double authentification ?](/double-authentification-activer/)
+- [Un gestionnaire de mots de passe gratuit, ça vaut le coup ?](/gestionnaire-mot-de-passe-gratuit/)

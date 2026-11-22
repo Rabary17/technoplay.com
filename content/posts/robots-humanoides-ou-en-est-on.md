@@ -5,8 +5,9 @@ description: "Des robots à forme humaine marchent et saisissent des objets. Que
 date: "2026-11-27"
 author: "nekena-judicael"
 category: "robotique-drones"
-image: "https://images.unsplash.com/photo-1716191299980-a6e8827ba10b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxyb2JvdCUyMGF1dG9tYXRpc2F0aW9uJTIwaW5kdXN0cmllfGVufDB8MHx8fDE3OTUxNTk3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "blue industrial robot arm in factory"
+image: "https://images.unsplash.com/photo-1786179469715-c5fb5e9fee2b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+imageAlt: "Un robot humanoïde aux articulations mécaniques exposées, vu de profil"
+updated: "2026-11-22"
 ---
 
 ***Des robots à forme humaine marchent, saisissent des objets et font des démonstrations spectaculaires. Mais une vidéo réussie ne dit pas tout de leur usage réel.***
@@ -15,9 +16,7 @@ imageAlt: "blue industrial robot arm in factory"
 
 **L'essentiel en 30 secondes**
 
-- Un robot humanoïde a une forme proche de la nôtre, avec deux jambes, deux bras et une tête.
-- Il marche et manipule des objets, mais sa maîtrise dépend de l'environnement et de la tâche.
-- Les démonstrations filmées sont soigneusement préparées. Cherche les conditions réelles.
+Un robot humanoïde marche et manipule déjà des objets simples. Sa maîtrise dépend beaucoup de l'**environnement** et de la tâche demandée, et les démonstrations filmées sont soigneusement préparées.
 
 </div>
 
@@ -25,11 +24,11 @@ L'idée d'un robot à forme humaine est ancienne. Elle intéresse les chercheurs
 
 ## Ce qu'ils savent faire aujourd'hui
 
-Les humanoïdes actuels savent marcher, se redresser et transporter des objets simples dans des environnements contrôlés. Des essais existent, mais ces résultats restent limités et demandent beaucoup de réglages.
+Les humanoïdes actuels savent **marcher**, se redresser et transporter des objets simples dans des environnements contrôlés. Des essais existent, mais ces résultats restent limités et demandent beaucoup de réglages.
 
 ## Ce qui reste difficile
 
-Équilibrer un corps sur deux jambes est complexe. Manipuler un objet fragile, dans un lieu encombré et changeant, l'est encore plus. L'autonomie de la batterie, la sécurité autour des personnes et le coût de fabrication sont aussi des freins sérieux.
+**Équilibrer un corps sur deux jambes** est complexe. Manipuler un objet fragile, dans un lieu encombré et changeant, l'est encore plus. L'autonomie de la batterie, la sécurité autour des personnes et le **coût de fabrication** sont aussi des freins sérieux.
 
 <div class="exemple">
 
@@ -57,6 +56,24 @@ Une vidéo montre le meilleur essai, pas la moyenne. Demande-toi dans quelles co
 
 </div>
 
+## Ce qui est déjà solide, ce qui reste à prouver
+
+| Capacité | Niveau actuel | Ce qui bloque encore |
+|---|---|---|
+| Marcher sur terrain plat | Assez solide, en intérieur | Terrains irréguliers, pentes, escaliers étroits |
+| Se relever après une chute | Démontré dans des vidéos | Fiabilité répétée, hors environnement préparé |
+| Saisir un objet simple | Possible pour des formes connues | Objets fragiles, inconnus ou déformables |
+| Travailler toute une journée | Rarement démontré en public | Autonomie de la batterie, usure des moteurs |
+
+Ce tableau résume une règle simple : plus une tâche ressemble à ce qui a été entraîné, mieux elle fonctionne. Dès que le contexte change, la performance baisse souvent nettement.
+
+## Les erreurs à éviter en lisant l'actualité
+
+- **Confondre une démonstration et un produit fini.** Une vidéo réussie ne garantit ni la régularité, ni le prix final, ni la date de disponibilité.
+- **Ignorer le nombre d'essais nécessaires.** Beaucoup de démonstrations sont le meilleur résultat après de nombreuses tentatives.
+- **Croire qu'un seul modèle représente tout le secteur.** Les capacités varient beaucoup d'un fabricant à l'autre.
+- **Négliger le coût et la maintenance.** Un robot capable en laboratoire n'est pas forcément rentable à grande échelle.
+
 ## Questions fréquentes
 
 ### Un humanoïde remplacera-t-il les humains au travail ?
@@ -73,4 +90,4 @@ La forme humaine rend les robots plus faciles à comprendre et à accepter. Cela
 
 ## Et maintenant ?
 
-Pour replacer ces robots dans leur famille, lis [Robot, automate ou cobot : quelle différence ?](/robot-automate-cobot/). Pour comprendre les capteurs qui guident les machines, lis [Comment un robot sait-il où il va ?](/robot-sait-ou-il-va/).
+Pour replacer ces robots dans leur famille, lis [Robot, automate ou cobot : quelle différence ?](/robot-automate-cobot/). Pour comprendre les capteurs qui guident les machines, lis [Comment un robot sait-il où il va ?](/robot-sait-ou-il-va/). Pour la définition de base, lis [C'est quoi un robot, exactement ?](/c-est-quoi-un-robot/). Pour voir comment ces technologies arrivent aussi dans la défense, lis [Rheinmetall veut des robots humanoïdes militaires prêts d'ici un an et demi](/rheinmetall-veut-des-robots-humanoides-militaires-prets-d-ici-un-an-et-demi/).

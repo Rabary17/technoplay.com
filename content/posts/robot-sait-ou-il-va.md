@@ -5,8 +5,9 @@ description: "Capteurs, cartes et calculs : un robot se repère grâce à plusie
 date: "2026-11-09"
 author: "nekena-judicael"
 category: "robotique-drones"
-image: "https://images.unsplash.com/photo-1647427060118-4911c9821b82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMGF1dG9tYXRpc2F0aW9uJTIwaW5kdXN0cmllfGVufDB8MHx8fDE3OTUxNTk3NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "a factory filled with lots of orange machines"
+image: "https://images.unsplash.com/photo-1647940990395-967898eb0d65?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+imageAlt: "Un aspirateur robot posé sur le sol à côté d'un canapé"
+updated: "2026-11-22"
 ---
 
 ***Un aspirateur robot contourne ton canapé, évite le chat et rentre tout seul à sa base. Derrière cette petite routine, il y a un travail de repérage bien organisé.***
@@ -15,9 +16,7 @@ imageAlt: "a factory filled with lots of orange machines"
 
 **L'essentiel en 30 secondes**
 
-- Un robot combine plusieurs capteurs pour savoir où il se trouve.
-- Il construit ou utilise une carte de son environnement pour planifier son trajet.
-- Il se trompe parfois, surtout quand la pièce change ou que les capteurs sont encrassés.
+Un robot combine plusieurs **capteurs** et une **carte** de son environnement pour savoir où il se trouve et planifier son trajet. Il se trompe parfois, surtout quand la pièce change ou que ses capteurs sont encrassés.
 
 </div>
 
@@ -25,7 +24,7 @@ Un robot ne voit pas le monde comme toi. Il a besoin de mesures, de comparaisons
 
 ## Les capteurs : ses yeux et ses oreilles
 
-Les capteurs donnent au robot des informations sur son environnement. Une caméra repère des formes et des couleurs. Un capteur de distance mesure l'écart avec un mur ou un meuble. Un capteur de choc indique qu'il a heurté quelque chose. Plus il y a de capteurs, plus l'image qu'il se fait de son environnement est complète.
+Les capteurs donnent au robot des informations sur son environnement. Une caméra repère des formes et des couleurs. Un capteur de distance mesure l'écart avec un mur ou un meuble. Un capteur de choc indique qu'il a heurté quelque chose. **Plus il y a de capteurs**, plus l'image qu'il se fait de son environnement est complète.
 
 ## La carte : où suis-je, et où est-ce que je vais ?
 
@@ -75,4 +74,4 @@ Il peut se retrouver désorienté, mais la plupart des robots savent revenir à 
 
 ## Et maintenant ?
 
-Pour découvrir un robot du quotidien, lis [Un aspirateur robot, ça vaut le coup ?](/aspirateur-robot-ca-vaut-le-coup/). Pour replacer ces idées dans le contexte général, lis [C'est quoi un robot, exactement ?](/c-est-quoi-un-robot/).
+Pour découvrir un robot du quotidien, lis [Un aspirateur robot, ça vaut le coup ?](/aspirateur-robot-ca-vaut-le-coup/). Pour replacer ces idées dans le contexte général, lis [C'est quoi un robot, exactement ?](/c-est-quoi-un-robot/). Pour la différence entre un robot et un simple automate, lis [Robot, automate ou cobot : quelle différence ?](/robot-automate-cobot/). Pour voir ce que les robots à forme humaine savent faire, lis [Les robots humanoïdes, où en est-on ?](/robots-humanoides-ou-en-est-on/).

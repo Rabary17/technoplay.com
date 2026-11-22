@@ -7,7 +7,7 @@ author: "nekena-judicael"
 category: "appareils-internet"
 image: "/images/articles/windows-11-sans-compte-microsoft-hero.webp"
 imageAlt: "Un ordinateur de bureau dans un espace de travail"
-updated: "2026-10-15"
+updated: "2026-11-22"
 sources:
   - titre: "Microsoft Support : passer d'un compte local à un compte Microsoft dans Windows"
     url: "https://support.microsoft.com/fr-fr/windows/passer-d-un-compte-local-%C3%A0-un-compte-microsoft-dans-windows-395203bf-9f1b-eb24-b042-5b8dae6c1d20"
@@ -59,7 +59,7 @@ Le choix dépend de ton usage. Si tu as plusieurs appareils et que tu veux retro
 
 ## Passer d'un compte Microsoft à un compte local, pas à pas
 
-Microsoft décrit la procédure dans sa page d'aide. Elle se fait depuis les Paramètres, sans réinstaller Windows.
+Microsoft décrit la procédure dans sa page d'aide. Elle se fait depuis les Paramètres, sans [réinstaller Windows](/installer-windows-sans-perdre-fichiers/).
 
 ![Un ordinateur de bureau et son écran](/images/articles/windows-11-sans-compte-microsoft-2.webp)
 
@@ -76,7 +76,7 @@ Avant de terminer, crée un disque de réinitialisation du mot de passe. Microso
 
 **Attention au mot de passe**
 
-Un compte local n'a pas de procédure de récupération en ligne. Note ton mot de passe dans un endroit sûr, et crée le disque de réinitialisation avant de quitter les réglages. Ne garde jamais le mot de passe dans un simple fichier non protégé.
+Un compte local n'a pas de procédure de récupération en ligne. [Choisis un bon mot de passe](/choisir-bon-mot-de-passe/) et garde-le dans un [gestionnaire de mots de passe](/gestionnaire-mot-de-passe-gratuit/) plutôt que dans un simple fichier non protégé, et crée le disque de réinitialisation avant de quitter les réglages.
 
 </div>
 
@@ -122,7 +122,7 @@ Ouvre Paramètres, puis Comptes, puis Vos informations. Clique sur « Se connect
 Une question de la communauté Microsoft décrit ce cas, sans cause officielle. Une piste proposée consiste à vérifier les comptes avec netplwiz, puis à réparer les fichiers système.
 
 **Un compte local est-il plus sécurisé ?**
-Pas forcément. Un mot de passe fort, des mises à jour régulières et un antivirus à jour comptent davantage que le type de compte.
+Pas forcément. Un mot de passe fort, [la double authentification](/double-authentification-activer/) et des mises à jour régulières comptent davantage que le type de compte.
 
 ## Et maintenant ?
 

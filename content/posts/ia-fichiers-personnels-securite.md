@@ -7,70 +7,73 @@ author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
 image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHw0fHxyJUMzJUE5c2VhdSUyMGRlJTIwbmV1cm9uZXMlMjB0ZWNobm9sb2dpZXxlbnwwfDB8fHwxNzk1MTU5NzE5fDA&ixlib=rb-4.1.0&q=80&w=1080"
 imageAlt: "a group of cubes that are on a black surface"
+updated: "2026-11-22"
 ---
-
-***L'IA peut lire tes documents, résumer tes notes et retrouver une facture. Mais donner accès à tes fichiers, c'est aussi leur ouvrir une porte. Comment réfléchir avant de le faire.***
 
 <div class="essentiel">
 
 **L'essentiel en 30 secondes**
 
-- Un accès à tes fichiers peut envoyer leur contenu vers le service de l'outil.
-- Vérifie ce que l'outil garde, ce qu'il partage et comment il s'utilise.
-- Ne connecte jamais des documents très sensibles sans bien comprendre les réglages.
+Connecter une IA à tes fichiers permet de retrouver une facture ou de résumer tes notes, mais une partie du contenu peut être traitée sur les serveurs de l'éditeur. Vérifie les réglages de confidentialité, et ne connecte jamais un dossier entier sans distinguer ce qu'il contient vraiment.
 
 </div>
 
-Tu veux que l'IA retrouve un contrat dans ton dossier, ou qu'elle résume tes notes de cours. C'est pratique. Mais avant de donner accès à tes fichiers, il faut savoir ce qui se passe derrière.
+Tu veux que l'IA retrouve un contrat dans ton dossier, ou qu'elle résume tes notes de cours. C'est pratique. Mais avant de donner accès à tes fichiers, il faut savoir ce qui se passe derrière, et quel réglage garde la main sur tes données.
 
 ## C'est quoi, concrètement ?
 
-Connecter une IA à tes fichiers veut dire lui permettre de lire certains documents, parfois de les indexer pour retrouver le bon passage. Selon l'outil, ces contenus peuvent être traités sur les serveurs de l'éditeur. Il faut donc distinguer le fichier sur ton appareil et la copie envoyée pour le traitement.
+Connecter une IA à tes fichiers veut dire lui permettre de lire certains documents. Elle peut aussi les **indexer**, pour retrouver le bon passage au moment où tu poses une question. Cette technique de recherche avant la réponse porte un nom : le [RAG](/rag-c-est-quoi/). Selon l'outil, ces contenus peuvent être traités localement, sur ton appareil, ou envoyés sur les serveurs de l'éditeur pour le calcul. Il faut donc distinguer le fichier qui reste sur ton appareil et la copie éventuellement envoyée pour le traitement.
 
 <div class="exemple">
 
 **Un exemple concret**
 
-Tu ajoutes ton dossier « Impôts » à un assistant pour retrouver une attestation. Tu gagnes du temps. Mais ce dossier contient ton numéro fiscal et ton avis d'imposition. Avant de le connecter, tu vérifies les réglages de confidentialité, et tu hésites à donner tout le dossier au lieu d'un seul fichier.
+Tu ajoutes ton dossier « Impôts » à un assistant pour retrouver une attestation. Tu gagnes du temps. Mais ce dossier contient aussi ton numéro fiscal et ton avis d'imposition. Avant de le connecter, tu vérifies les réglages de confidentialité, et tu hésites à donner tout le dossier plutôt qu'un seul fichier précis.
 
 </div>
 
 ## Comment limiter les risques, étape par étape
 
-1. Ouvre les réglages de l'outil et repère ce qui est conservé et utilisé pour l'entraînement.
-2. Désactive le partage des données quand l'option existe.
-3. Ne connecte qu'un dossier précis, pas l'ensemble de ton ordinateur.
-4. Retire les documents d'identité, les relevés bancaires et les mots de passe de ce dossier.
-5. Vérifie les autorisations accordées à l'application sur ton ordinateur.
-6. Révoque l'accès quand tu n'en as plus besoin.
+1. Ouvre les **réglages de confidentialité** de l'outil et repère ce qui est conservé, et ce qui sert éventuellement à l'entraînement de futurs modèles.
+2. **Désactive le partage des données** pour l'entraînement, quand l'option existe.
+3. Ne connecte qu'un **dossier précis**, pas l'ensemble de ton ordinateur ou de ton espace cloud.
+4. **Retire les documents sensibles** du dossier connecté : pièces d'identité, relevés bancaires, mots de passe.
+5. **Vérifie les autorisations** accordées à l'application sur ton ordinateur ou ton compte cloud.
+6. **Révoque l'accès** dès que la tâche est terminée, plutôt que de le laisser ouvert indéfiniment.
 
 ## Lequel choisir selon ton cas ?
 
-- **Tu travailles sur des notes de cours** : un petit dossier dédié, sans données personnelles, est un bon test.
-- **Tu gères des documents professionnels** : vérifie avec ton employeur si l'outil est autorisé.
-- **Tu touches à des documents médicaux ou juridiques** : évite de les connecter à un outil généraliste.
+- **Tu travailles sur des notes de cours** : un petit dossier dédié, sans donnée personnelle, est un bon premier test sans grand risque.
+- **Tu gères des documents professionnels** : vérifie d'abord avec ton employeur si l'outil est autorisé, avant de connecter quoi que ce soit.
+- **Tu touches à des documents médicaux ou juridiques** : évite de les connecter à un outil généraliste, et privilégie un service pensé spécifiquement pour ces données sensibles.
+- **Tu veux juste poser une question ponctuelle sur un fichier** : partage ce seul fichier dans la conversation plutôt que de connecter tout un dossier en permanence.
 
 <div class="attention">
 
-**Attention : les accès permanents**
+**Attention aux accès qui restent ouverts dans la durée**
 
-Un accès qui reste ouvert pendant des mois peut être exploité si ton compte est piraté. Coupe-le dès que la tâche est finie.
+Un accès qui reste actif pendant des mois peut être exploité si ton compte est piraté entre-temps. Coupe-le dès que la tâche pour laquelle tu l'as ouvert est finie, même si l'outil propose de le garder actif par défaut.
 
 </div>
 
 ## Les erreurs à éviter
 
-- **Accepter les réglages par défaut sans les lire.** Prends deux minutes pour les vérifier.
-- **Connecter tout son disque.** Plus l'accès est large, plus le risque grandit.
-- **Oublier la double authentification.** Un compte mal protégé ouvre aussi l'accès à tes fichiers connectés.
+**Accepter les réglages par défaut sans les lire.** Prends deux minutes pour vérifier ce qui est coché, surtout la case liée à l'entraînement des modèles.
+
+**Connecter tout son disque d'un coup.** Plus l'accès est large, plus le risque grandit en cas de faille ou de mauvaise manipulation.
+
+**Oublier la double authentification.** Un compte mal protégé ouvre aussi l'accès à tes fichiers connectés, même si l'outil d'IA lui-même est fiable.
+
+**Confondre un outil grand public et un outil professionnel.** Un assistant pensé pour le grand public n'offre pas toujours les mêmes garanties qu'une offre destinée aux entreprises, avec des engagements contractuels sur les données.
+
+## Les mots à connaître
 
 <div class="lexique">
 
-**Les mots à connaître**
-
-- **Donnée personnelle** : information qui permet d'identifier une personne.
-- **Accès délégué** : autorisation donnée à une application d'agir ou de lire à ta place.
-- **Révoquer un accès** : retirer cette autorisation pour qu'elle ne fonctionne plus.
+- **Donnée personnelle** : information qui permet d'identifier une personne, directement ou indirectement.
+- **Accès délégué** : autorisation donnée à une application d'agir ou de lire des fichiers à ta place.
+- **Révoquer un accès** : retirer cette autorisation pour qu'elle ne fonctionne plus, sans supprimer les fichiers eux-mêmes.
+- **Indexation** : opération qui range le contenu d'un document pour le retrouver rapidement plus tard.
 
 </div>
 
@@ -78,16 +81,24 @@ Un accès qui reste ouvert pendant des mois peut être exploité si ton compte e
 
 ### Le fichier reste-t-il sur mon ordinateur ?
 
-Parfois. Une partie peut être traitée à distance. Les réglages de l'outil indiquent ce qui est envoyé.
+Parfois. Une partie peut être traitée à distance sur les serveurs de l'éditeur. Les réglages de confidentialité de l'outil indiquent précisément ce qui est envoyé.
 
-### Dois-je éviter toute connexion ?
+### Dois-je éviter toute connexion de fichiers à une IA ?
 
-Non. Un petit dossier non sensible peut être utile. Le problème vient surtout des documents très personnels.
+Non. Un petit dossier non sensible peut être utile et sans risque réel. Le problème vient surtout des documents très personnels ou professionnels sensibles.
 
 ### Comment savoir si un outil est fiable ?
 
-Lis sa politique de confidentialité, vérifie qui l'édite et si tu peux supprimer tes données facilement.
+Lis sa politique de confidentialité, vérifie qui l'édite, et si tu peux supprimer tes données facilement et à tout moment depuis les réglages.
+
+### Qu'est-ce que le RAG a à voir avec mes fichiers ?
+
+C'est la technique qui permet à l'IA de chercher dans tes documents avant de répondre, plutôt que de deviner. Comprendre son fonctionnement aide à savoir ce qui est réellement lu et stocké.
 
 ## Et maintenant ?
 
-Pour savoir ce que tu peux confier à une IA sur le fond, lis [Peut-on faire confiance à une réponse de l'IA ?](/confiance-reponse-ia/). Et pour protéger ton compte, consulte [Comment choisir un bon mot de passe ?](/choisir-bon-mot-de-passe/).
+- [C'est quoi un RAG, et à quoi ça sert ?](/rag-c-est-quoi/)
+- [Peut-on faire confiance à une réponse de l'IA ?](/confiance-reponse-ia/)
+- [Comment choisir un bon mot de passe ?](/choisir-bon-mot-de-passe/)
+- [Les réglages de confidentialité sur iPhone](/reglages-confidentialite-iphone/)
+- [Activer la double authentification](/double-authentification-activer/)

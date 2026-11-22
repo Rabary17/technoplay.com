@@ -7,7 +7,7 @@ author: "andrianina-rabarivelo"
 category: "cybersecurite"
 image: "/images/articles/gestionnaire-mot-de-passe-gratuit-hero.webp"
 imageAlt: "Un clavier d'ordinateur et un cadenas symbolisant la sécurité"
-updated: "2026-10-15"
+updated: "2026-11-22"
 sources:
   - titre: "Cybermalveillance.gouv.fr — Pourquoi et comment bien gérer ses mots de passe ?"
     url: "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/mots-de-passe"
@@ -178,4 +178,4 @@ Ses serveurs peuvent être attaqués. Mais ils ne stockent que des coffres chiff
 
 ## Et maintenant ?
 
-Choisis ton gestionnaire, puis migre tes comptes les plus importants en premier. Pour d'autres conseils de sécurité au quotidien, parcours [le thème Cybersécurité](/cybersecurite/).
+Choisis ton gestionnaire, puis migre tes comptes les plus importants en premier. Active ensuite [la double authentification](/double-authentification-activer/) partout où c'est possible, et apprends à [reconnaître un faux message de phishing](/reconnaitre-faux-message-phishing/) qui viserait justement à voler ton mot de passe maître. Pour d'autres conseils de sécurité au quotidien, parcours [le thème Cybersécurité](/cybersecurite/).

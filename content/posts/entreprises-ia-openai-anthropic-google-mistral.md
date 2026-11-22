@@ -25,6 +25,7 @@ sources:
   - titre: "Wikipédia : Grok (chatbot)"
     url: "https://en.wikipedia.org/wiki/Grok_(chatbot)"
 sourcesConsultees: "2026-11-02"
+updated: "2026-11-22"
 ---
 
 ***Une poignée d'entreprises fabrique les IA que le monde entier utilise : OpenAI, Anthropic, Google, Mistral, DeepSeek et quelques autres. Leur grande ligne de partage oppose les modèles fermés aux modèles ouverts.***
@@ -47,7 +48,7 @@ Tu dis « ChatGPT », mais derrière l'application il y a une entreprise, un mod
 
 Elle invente la famille **GPT** et lance **ChatGPT** en novembre 2022, le déclencheur de la vague actuelle. Son modèle phare s'appelle **GPT-6**, présenté en septembre 2026 et décliné en plusieurs versions. Astra vise les tâches les plus exigeantes. Sol et Luna, plus rapides et moins chères, font tourner ChatGPT pour les abonnés payants et pour la formule gratuite.
 
-OpenAI produit aussi des modèles d'images et de vidéo. Ses grands modèles sont **fermés** : la société ne publie ni leurs paramètres ni leur taille. Elle a cependant diffusé quelques modèles ouverts plus modestes, à destination des développeurs.
+OpenAI produit aussi des modèles d'images et de vidéo. Ses grands modèles sont **fermés** : la société ne publie ni leurs paramètres ni leur taille. Elle a cependant diffusé quelques modèles ouverts plus modestes, à destination des développeurs. L'entreprise fait aussi face à des procédures judiciaires, comme [la plainte du procureur de Californie pour un défaut de sécurisation de ses modèles](/pourquoi-la-californie-attaque-t-elle-openai-en-justice/).
 
 ## Anthropic et Google, les deux grands rivaux
 
@@ -146,4 +147,4 @@ Non. OpenAI est l'entreprise. ChatGPT est son application de discussion, qui uti
 
 ## La suite de la série
 
-Pour choisir un assistant au quotidien, lis notre comparatif [Claude ou ChatGPT : lequel choisir pour coder et écrire ?](/claude-ou-chatgpt/). L'article précédent décode [les paramètres d'une IA](/parametres-modele-ia/). Le suivant explique [où tourne une IA](/ou-tourne-une-ia-cloud-ordinateur-telephone/) : sur un serveur, sur ton ordinateur ou sur ton téléphone.
+Pour choisir un assistant au quotidien, lis notre comparatif [Claude ou ChatGPT : lequel choisir pour coder et écrire ?](/claude-ou-chatgpt/) ou [ChatGPT ou Gemini](/chatgpt-ou-gemini/). L'article précédent décode [les paramètres d'une IA](/parametres-modele-ia/). Le suivant explique [où tourne une IA](/ou-tourne-une-ia-cloud-ordinateur-telephone/) : sur un serveur, sur ton ordinateur ou sur ton téléphone. Pour remonter aux origines de ces entreprises, lis [l'histoire de l'intelligence artificielle](/histoire-intelligence-artificielle/).

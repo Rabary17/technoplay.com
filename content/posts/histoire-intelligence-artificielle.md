@@ -25,6 +25,7 @@ sources:
   - titre: "OpenAI : GPT-6 and Intelligent UI for everyone (octobre 2026)"
     url: "https://openai.com/index/gpt-6-for-everyone/"
 sourcesConsultees: "2026-11-02"
+updated: "2026-11-22"
 ---
 
 ***L'histoire de l'intelligence artificielle commence avec une question posée par Alan Turing en 1950. Elle traverse deux hivers et une longue attente avant l'arrivée des assistants que tu utilises aujourd'hui.***
@@ -93,7 +94,7 @@ Le 30 novembre 2022, OpenAI ouvre **ChatGPT** au public. Pour la première fois,
 
 Quatre ans après ChatGPT, les assistants ne se contentent plus de répondre. Ils lisent des images et des documents, cherchent sur le web et commencent à agir sur un ordinateur. On parle d'**agents** : des IA qui enchaînent plusieurs étapes pour accomplir une tâche.
 
-En septembre 2026, OpenAI présente **GPT-6 Astra**, son modèle le plus avancé, d'abord réservé à un nombre limité d'organisations. Début octobre, GPT-6 arrive dans ChatGPT pour toutes les formules, y compris la version gratuite. L'éditeur met en avant le travail sur ordinateur, le code et la science. Ses concurrents publient de leur côté des versions successives de Claude, Gemini ou Mistral.
+En septembre 2026, OpenAI présente **GPT-6 Astra**, son modèle le plus avancé, d'abord réservé à un nombre limité d'organisations. Début octobre, GPT-6 arrive dans ChatGPT pour toutes les formules, y compris la version gratuite. L'éditeur met en avant le travail sur ordinateur, le code et la science. Ses concurrents publient de leur côté des versions successives de Claude, Gemini ou Mistral : retrouve [qui fabrique ces IA](/entreprises-ia-openai-anthropic-google-mistral/) dans notre tour d'horizon des grands laboratoires.
 
 Les questions, elles, ressemblent à celles des débuts. Jusqu'où ces systèmes comprennent-ils ce qu'ils écrivent ? Comment les encadrer ? L'Union européenne a adopté l'**AI Act** en 2024, appliqué par étapes. Le récit de Dartmouth continue, avec des moyens incomparables et les mêmes promesses à vérifier.
 

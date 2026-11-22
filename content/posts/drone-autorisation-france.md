@@ -7,117 +7,106 @@ author: "nekena-judicael"
 category: "robotique-drones"
 image: "/images/articles/drone-autorisation-france-hero.webp"
 imageAlt: "Un drone qui survole un champ au coucher du soleil"
-updated: "2026-10-16"
+updated: "2026-11-22"
 sources:
   - titre: "Ministère de la Transition écologique : exploitation de drones en catégorie ouverte"
     url: "https://www.ecologie.gouv.fr/politiques-publiques/exploitation-drones-categorie-ouverte"
-sourcesConsultees: "2026-10-16"
+  - titre: "Ministère de la Transition écologique : AlphaTango, le portail d'enregistrement des drones"
+    url: "https://www.ecologie.gouv.fr/alphatango"
+sourcesConsultees: "2026-11-22"
 ---
-
-En France, un drone de loisir ne demande en général pas d'autorisation préalable. Il faut toutefois suivre une formation en ligne gratuite, s'enregistrer si le drone est lourd ou filme, et respecter des règles claires.
 
 <div class="essentiel">
 
 **L'essentiel en 30 secondes**
 
-- La plupart des vols de loisir relèvent de la « catégorie ouverte », sans autorisation préalable.
-- Une formation théorique en ligne, gratuite, précède le premier vol. Il faut 75 % de bonnes réponses à l'examen.
-- Un drone de plus de 250 g, ou un drone équipé d'une caméra, doit être enregistré sur AlphaTango.
+Un drone de loisir en catégorie ouverte ne demande pas d'autorisation préalable, mais une formation en ligne gratuite est obligatoire. Le drone doit aussi être enregistré sur AlphaTango dès qu'il pèse 800 g ou plus, ou qu'il embarque un dispositif de signalement électronique.
 
 </div>
 
-## C'est quoi la catégorie ouverte, concrètement ?
+Tu viens d'acheter un drone, ou tu en reçois un en cadeau. Avant le premier vol, trois choses comptent : une formation en ligne, un enregistrement selon le poids de l'appareil, et des règles de vol. Rien de compliqué, mais tout se joue avant le décollage.
 
-En France, les vols de drone sont classés en trois catégories : ouverte, spécifique et certifiée. Pour un usage de loisir, la catégorie ouverte suffit. Elle se découpe en sous-catégories selon le poids du drone et la situation de vol.
+## C'est quoi, concrètement ?
+
+En France, un vol de drone de loisir relève presque toujours de la **catégorie ouverte**, le cadre le plus simple parmi les trois catégories prévues par la réglementation européenne (ouverte, spécifique, certifiée). Elle se découpe en trois sous-catégories, selon la distance que tu gardes avec les personnes présentes.
+
+- **A1** : le survol de personnes isolées est toléré, réservé aux drones les plus légers.
+- **A2** : le survol de personnes est interdit. Il faut rester à au moins 5 mètres en mode lent, ou à 30 mètres sinon.
+- **A3** : le survol de personnes est toujours interdit. Ce mode convient aux zones éloignées de toute habitation.
 
 ![Un drone quadrirotor en vol au-dessus d'arbres verts](/images/articles/drone-autorisation-france-1.webp)
 
-- **A1** : le survol de personnes est toléré pour les petits drones, sous 250 g.
-- **A2** : le survol de personnes est interdit. Il faut rester à au moins 5 mètres des gens en mode lent, ou à 30 mètres sinon.
-- **A3** : le survol de personnes est toujours interdit. Ce mode convient aux zones éloignées des habitations.
+<div class="exemple">
 
-### Les mots à connaître
+**Un exemple concret**
 
-- **AlphaTango** : plateforme officielle où l'on enregistre son drone et son compte pilote.
-- **Zone restreinte** : espace où le vol nécessite une autorisation spécifique.
+Tu veux filmer une randonnée en forêt, loin de tout village. Tu voles en A3 et tu restes à distance des promeneurs croisés en chemin. Si ton drone pèse 800 g ou plus, il doit malgré tout être enregistré, même pour ce vol isolé.
 
-## Pourquoi c'est important ?
+</div>
 
-Voler sans respecter les règles peut causer un accident, même léger. Un drone qui tombe sur une personne ou une voiture engage votre responsabilité.
+## Comment faire, pas à pas
 
-Les règles protègent aussi la vie privée. Un drone équipé d'une caméra peut filmer des personnes sans qu'elles le sachent. La loi impose donc de les prévenir.
+L'essentiel tient en six étapes, à faire une seule fois avant ton premier vol.
 
-Enfin, la formation est gratuite et rapide. Elle vous évite des amendes et des vols inutilement risqués.
+1. Suis la formation théorique en ligne, gratuite, sur le portail Fox AlphaTango du ministère.
+2. Valide le questionnaire associé, avec un bon score de réponses correctes.
+3. Crée ton compte d'exploitant sur **AlphaTango**, la plateforme officielle d'enregistrement.
+4. Enregistre ton drone s'il pèse 800 g ou plus, ou s'il embarque un **dispositif de signalement électronique** comme un GPS ou une caméra récente.
+5. Affiche ton numéro d'exploitant sur l'appareil, de façon lisible et durable.
+6. Vérifie les zones de vol interdites ou réglementées avant chaque sortie, via la carte officielle Géoportail.
 
-## Comment ça marche, étape par étape
+<div class="attention">
 
-1. Suivez la formation théorique en ligne, gratuite. Elle contient 40 questions pour la catégorie A1 et A3.
-2. Obtenez au moins 75 % de bonnes réponses à l'examen.
-3. Créez votre compte sur AlphaTango, la plateforme officielle.
-4. Enregistrez votre drone si son poids dépasse 250 g, ou s'il collecte des données avec une caméra.
-5. Affichez le numéro d'enregistrement sur l'appareil.
-6. Vérifiez les zones interdites avant chaque vol.
+**Les zones interdites et les vols de nuit restent très encadrés**
 
-![Un jeune homme qui pilote un drone dans la nature](/images/articles/drone-autorisation-france-2.webp)
+Certaines zones, comme les abords d'aéroports, les sites militaires ou les centrales, sont interdites au vol. Voler de nuit n'est pas permis dans le cadre le plus simple : une dérogation préfectorale est nécessaire, à demander bien en amont de la date prévue.
 
-## Un exemple du quotidien
+</div>
 
-Vous voulez filmer une randonnée en forêt, loin des villages. Vous volez en catégorie A3 et restez à distance des promeneurs. Vous n'avez pas besoin de formation supérieure. En revanche, si votre drone pèse plus de 250 g, il doit être enregistré.
+## Les erreurs à éviter
 
-## Vrai ou faux ? Les idées reçues
+**Penser qu'un drone sans caméra échappe à toute règle.** Les règles de poids et de zones s'appliquent, caméra ou non.
 
-- **« Un drone de jouet échappe aux règles. »** : Faux. Dès qu'un drone a une caméra, la règle s'applique.
-- **« On peut voler partout tant qu'on ne vole pas trop haut. »** : Faux. Les zones restreintes et les zones urbaines sont interdites.
-- **« La formation coûte cher. »** : Faux pour la catégorie ouverte. Elle est gratuite et se fait en ligne.
+**Confondre enregistrement et autorisation de vol.** L'enregistrement identifie ton drone. Il ne t'autorise pas à voler n'importe où.
 
-## Les bons réflexes à retenir
+**Ignorer les personnes survolées.** Même en A3, croiser un promeneur impose de garder ses distances, pas de l'ignorer.
 
-1. Consultez la carte des zones avant chaque vol.
-2. Ne volez jamais la nuit sans dérogation de la préfecture, demandée au moins 30 jours à l'avance.
-3. Prévenez les personnes présentes si votre drone a une caméra.
-4. Demandez leur accord avant de publier une image qui permet de les reconnaître.
+**Publier une image sans accord.** Filmer une personne reconnaissable depuis un drone demande son consentement avant toute publication, au même titre qu'une photo prise au sol.
 
-## Exercice pratique (15 minutes)
-
-**Matériel :** un ordinateur ou un téléphone, un accès à internet.
-
-**Déroulement :**
-
-1. Ouvrez la page officielle du ministère sur la catégorie ouverte.
-2. Repérez le poids de votre drone dans sa notice.
-3. Notez dans quelle sous-catégorie vous pourriez voler.
-
-**Ce que vous retenez :** la règle dépend du poids du drone et du lieu de vol.
-
-## Mini-quiz : avez-vous bien compris ?
-
-1. Quel est l'âge minimum pour piloter en catégorie ouverte en France ? → *Réponse : 14 ans.*
-2. Quel score faut-il à l'examen théorique ? → *Réponse : 75 % de bonnes réponses.*
-3. Un drone de 300 g doit-il être enregistré ? → *Réponse : oui, il dépasse 250 g.*
-
-## FAQ
-
-### Quel âge faut-il pour piloter un drone en France ?
-
-L'âge minimum est de 14 ans pour piloter dans la catégorie ouverte. La formation et l'examen se font en ligne.
-
-### La formation est-elle vraiment gratuite ?
-
-Oui. La formation théorique de la catégorie ouverte est gratuite. Elle se passe en ligne.
-
-### Puis-je voler la nuit ?
-
-En principe non. La préfecture peut accorder une dérogation si elle est demandée au moins 30 jours à l'avance.
-
-## Pour aller plus loin
-
-- [Comment un drone reste-t-il en l'air ?](/comment-drone-reste-en-l-air/)
-- [C'est quoi un robot, exactement ?](/c-est-quoi-un-robot/)
+## Les mots à connaître
 
 <div class="lexique">
 
-- **Catégorie ouverte** : cadre le plus simple pour un vol de loisir ou léger.
-- **Survol** : passer au-dessus d'une personne ou d'un lieu pendant un vol.
-- **Dérogation** : autorisation exceptionnelle qui permet de déroger à une règle.
+- **Catégorie ouverte** : cadre le plus simple pour un vol de drone de loisir ou léger, sans autorisation préalable.
+- **AlphaTango** : plateforme officielle où l'on enregistre son compte d'exploitant et son drone.
+- **Dispositif de signalement électronique** : équipement comme un GPS ou une caméra qui identifie un drone en vol.
+- **Dérogation** : autorisation exceptionnelle accordée par la préfecture pour déroger à une règle, comme le vol de nuit.
 
 </div>
+
+## Questions fréquentes
+
+### Quel est l'âge minimum pour piloter un drone en France ?
+
+L'âge minimum généralement retenu pour la catégorie ouverte est de 14 ans. La formation théorique en ligne se suit avant le premier vol, quel que soit l'âge du pilote.
+
+### Mon drone doit-il être enregistré ?
+
+Oui, dès qu'il pèse 800 g ou plus, ou qu'il embarque un dispositif de signalement électronique comme une caméra récente. En dessous, et sans un tel dispositif, l'enregistrement n'est pas exigé.
+
+### Puis-je voler la nuit ?
+
+Pas dans le cadre de base. Une dérogation préfectorale est nécessaire, à demander suffisamment à l'avance pour avoir une réponse avant la date de vol souhaitée.
+
+### La formation en ligne coûte-t-elle quelque chose ?
+
+Non. La formation théorique de la catégorie ouverte, sur le portail Fox AlphaTango, est gratuite et accessible en ligne.
+
+## Et maintenant ?
+
+- [Comment un drone reste-t-il en l'air ?](/comment-drone-reste-en-l-air/)
+- [Bien utiliser les batteries de son drone](/batteries-drone-bien-utiliser/)
+- [Mon premier vol : les règles à connaître](/premier-vol-drone-regles/)
+- [Quel drone acheter pour débuter ?](/quel-drone-pour-debuter/)
+- [Filmer avec un drone : les bases](/filmer-avec-un-drone/)
+- [C'est quoi un robot, exactement ?](/c-est-quoi-un-robot/)

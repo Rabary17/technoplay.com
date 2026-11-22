@@ -7,7 +7,7 @@ author: "nekena-judicael"
 category: "appareils-internet"
 image: "/images/articles/enregistrer-appel-iphone-hero.webp"
 imageAlt: "Une personne qui parle au téléphone"
-updated: "2026-10-15"
+updated: "2026-11-22"
 sourcesConsultees: "2026-10-15"
 sources:
   - titre: "Assistance Apple — How to record a call on iPhone and iPad"
@@ -148,4 +148,4 @@ Ton système n'est peut-être pas à jour, ou la fonction est désactivée. Elle
 
 ## Et maintenant ?
 
-Tu sais maintenant enregistrer un appel en toute transparence. Pour garder tes données en sécurité, lis aussi notre guide pour [sauvegarder ton iPhone](/sauvegarder-iphone/). Et pour découvrir d'autres sujets, consulte [le thème Appareils & Internet](/appareils-internet/).
+Tu sais maintenant enregistrer un appel en toute transparence. Pour garder tes données en sécurité, lis aussi notre guide pour [sauvegarder ton iPhone](/sauvegarder-iphone/). Vérifie aussi [les réglages de confidentialité de ton iPhone](/reglages-confidentialite-iphone/), et comment [récupérer un message supprimé](/recuperer-messages-supprimes/) si l'un de tes fichiers audio disparaît par erreur. Pour découvrir d'autres sujets, consulte [le thème Appareils & Internet](/appareils-internet/).

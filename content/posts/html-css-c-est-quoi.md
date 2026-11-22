@@ -1,122 +1,138 @@
 ---
 title: "C'est quoi le HTML et le CSS ?"
 seoTitle: "HTML et CSS : c'est quoi et comment ça marche ?"
-description: "HTML et CSS, c'est quoi ? Le HTML pose le contenu d'une page web, le CSS le met en forme. Explication simple, avec un exemple à essayer."
+description: "HTML et CSS, c'est quoi ? Le HTML pose le contenu, le CSS gère l'apparence. Explication claire, avec balises et erreurs à connaître."
 date: "2026-10-16"
 author: "andee-rakotovao"
 category: "programmation"
 image: "/images/articles/html-css-c-est-quoi-hero.webp"
 imageAlt: "Gros plan sur des lignes de code HTML"
-updated: "2026-10-16"
+updated: "2026-11-22"
 sources:
   - titre: "MDN : mettre en forme le contenu avec CSS (apprendre le développement web)"
     url: "https://developer.mozilla.org/fr/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content"
   - titre: "MDN : syntaxe de base du HTML"
     url: "https://developer.mozilla.org/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
-sourcesConsultees: "2026-10-16"
+sourcesConsultees: "2026-11-22"
 ---
 
-Le HTML sert à dire ce qu'il y a dans une page : un titre, un paragraphe, une image. Le CSS sert à dire comment cela s'affiche : les couleurs, la taille, l'espacement. Les deux travaillent ensemble dans presque toutes les pages web.
+***Une page web mélange deux langages que la plupart des visiteurs ne distinguent jamais, mais que chaque créateur de site doit comprendre. Le HTML pose le contenu, le CSS gère l'apparence, et les confondre bloque vite une mise en page.***
+
+Le HTML indique ce qu'il y a dans une page : un titre, un paragraphe, une image. Le CSS indique comment cela s'affiche : couleurs, tailles, espacements. Les deux langages travaillent ensemble sur presque toutes les pages web, et la confusion entre les deux freine souvent une première mise en page.
 
 <div class="essentiel">
 
 **L'essentiel en 30 secondes**
 
-- HTML : le contenu et sa structure. CSS : l'apparence.
-- Chaque page web utilise les deux, souvent en même temps.
-- Vous pouvez tester les deux gratuitement dans votre navigateur.
+Le HTML structure le contenu, le CSS décide de son apparence.
+
+- Une balise HTML indique la nature d'un contenu, jamais sa couleur.
+- Une règle CSS cible un élément et change seulement son affichage.
+- Un fichier CSS externe garde le code plus facile à modifier.
 
 </div>
 
-## C'est quoi le HTML et le CSS, concrètement ?
+## HTML et CSS, quelle différence concrète ?
 
-Le HTML utilise des balises, des marqueurs écrits entre chevrons. Une balise indique la nature d'un contenu. Par exemple, `<h1>` marque un titre principal, et `<p>` marque un paragraphe.
+Le HTML décrit la structure d'une page, le CSS décrit son style. `<h1>` marque un titre, `<p>` marque un paragraphe : ce sont des balises HTML. Une couleur, une police ou une taille relèvent toujours du CSS, jamais du HTML.
+
+Ni l'un ni l'autre n'exécute de calcul ou de condition, à la différence d'un vrai [langage de programmation](/c-est-quoi-la-programmation/). Le HTML balise un contenu, le CSS le met en forme : aucun des deux ne traite de données.
+
+Pense à une affiche de concert. Le texte de l'affiche correspond au **contenu HTML** : le nom du groupe, la date, le lieu. La couleur, la police et la mise en page correspondent au CSS. Changer la couleur de fond ne change pas un mot du texte affiché.
+
+Cette séparation n'est pas qu'une habitude d'**intégrateurs web**. Elle évite de répéter la même mise en forme dans chaque page d'un site, et facilite un changement global de style.
+
+## Pourquoi séparer structure et apparence
+
+Un CSS séparé du HTML permet de changer tout le style d'un site depuis un seul fichier, sans toucher au contenu de chaque page. Un site de cent pages garde ainsi une apparence cohérente, modifiable en quelques lignes.
+
+Cette séparation aide aussi l'**accessibilité**. Un lecteur d'écran, utilisé par une personne malvoyante, s'appuie sur la structure HTML. Il annonce un titre ou un lien, peu importe sa couleur à l'écran.
 
 ![Deux écrans affichant du code et un logiciel de retouche d'image](/images/articles/html-css-c-est-quoi-1.webp)
 
-Le CSS, lui, décrit l'apparence. Il définit une couleur, une police ou une taille. Il ne change pas le contenu, seulement l'affichage.
+Un **moteur de recherche** lit aussi d'abord la structure HTML pour comprendre une page, avant de considérer son apparence visuelle. Un contenu bien balisé se comprend mieux, pour une machine comme pour une personne. Comprendre la différence entre le [front-end et le back-end](/front-back-fullstack/) situe mieux où s'arrête le rôle du HTML et du CSS sur un site complet.
 
-### Les mots à connaître
+## Comment lier ton CSS à une page HTML
 
-- **Balise** : marqueur HTML qui indique la nature d'un contenu.
-- **Navigateur** : logiciel qui affiche les pages web, comme Chrome, Firefox ou Safari.
-- **Sélecteur** : partie d'une règle CSS qui désigne les éléments à mettre en forme.
+Trois méthodes relient une règle CSS à une page. Un style en ligne, écrit directement sur une balise, convient pour un essai rapide mais complique vite la lecture. Un fichier externe convient le mieux à un vrai projet.
 
-## Pourquoi c'est important ?
+La première méthode écrit une règle directement sur la balise, via un attribut `style`. Rapide à tester, elle complique la maintenance dès que plusieurs pages partagent le même style.
 
-Comprendre ces deux langages vous aide à lire le code d'un site. Vous savez alors où modifier un titre ou une couleur.
+La deuxième regroupe les règles dans une balise `<style>`, placée dans la partie `<head>` de la page. Elle convient pour une page unique, sans dépendance externe.
 
-Ils servent aussi de base à tout développement web. Même les outils sans code produisent du HTML et du CSS en arrière-plan.
+La troisième, la plus courante, place tout le CSS dans un fichier séparé, relié par une ligne `<link>` dans le `<head>`. Un [éditeur de code adapté](/vs-code-debutant/) facilite l'écriture et la relecture de ce fichier au fil du projet.
 
-Enfin, c'est un bon premier pas dans la programmation, car le résultat est visible tout de suite.
+## Les balises et propriétés à connaître
 
-## Comment ça marche, étape par étape
+Une poignée de balises et de propriétés couvrent déjà la majorité des pages simples.
 
-1. Vous écrivez le contenu dans un fichier HTML, avec des balises.
-2. Vous écrivez les règles d'apparence dans un fichier CSS séparé.
-3. Vous reliez le fichier CSS à la page, dans la partie `<head>`.
-4. Votre navigateur lit les deux fichiers et affiche la page.
+| Élément | Rôle |
+|---|---|
+| `<h1>` à `<h6>` | Titres, du plus important au moins important |
+| `<p>` | Paragraphe de texte |
+| `<a>` | Lien vers une autre page |
+| `<img>` | Image affichée dans la page |
+| `<div>` | Bloc générique, souvent utilisé avec du CSS |
+| `color` | Couleur du texte en CSS |
+| `font-size` | Taille du texte en CSS |
+| `margin` | Espace autour d'un élément en CSS |
+
+Un sélecteur CSS désigne les éléments concernés par une règle : une balise, une **classe** ou un **identifiant**. Une classe cible plusieurs éléments similaires, un identifiant cible un seul élément précis sur toute la page.
 
 ![Un développeur qui code sur deux écrans dans un bureau lumineux](/images/articles/html-css-c-est-quoi-2.webp)
 
-## Un exemple du quotidien
+<div class="exemple">
 
-Pensez à une affiche de spectacle. Le texte de l'affiche correspond au HTML. La couleur, la police et la mise en page correspondent au CSS. Changer la couleur ne change pas les mots de l'affiche.
+**Un exemple concret**
 
-## Vrai ou faux ? Les idées reçues
+Un bouton « Commander » reçoit la classe `bouton-principal`. La règle CSS associée fixe un fond vert et un texte blanc. Chaque bouton qui porte cette classe adopte le même style, sans réécrire la règle à chaque fois.
 
-- **« Le HTML est un langage de programmation. »** : Faux, c'est un langage de balisage. Il décrit la structure d'un contenu.
-- **« On ne peut pas faire un site sans CSS. »** : Faux. Un site simple peut tenir en HTML seul, mais il sera sans mise en forme.
-- **« Le CSS change le contenu de la page. »** : Faux. Il change seulement l'apparence.
+</div>
 
-## Les bons réflexes à retenir
+Écrire [ta première page complète](/creer-premiere-page-web/) permet de tester ces balises et propriétés sur un cas réel, plutôt que sur des extraits isolés.
 
-1. Écrivez toujours les balises avec une balise fermante.
-2. Gardez le CSS dans un fichier séparé pour y voir clair.
-3. Vérifiez l'affichage dans votre navigateur après chaque modification.
-4. Consultez la documentation officielle quand vous hésitez.
+## Les erreurs qui cassent un affichage
 
-## Exercice pratique (20 minutes)
+Oublier une balise fermante casse souvent le reste d'une page, parfois loin de l'endroit où l'erreur se trouve vraiment. Vérifier chaque ouverture et chaque fermeture évite ce genre de souci.
 
-**Matériel :** un éditeur de texte et un navigateur.
+Confondre classe et identifiant pose aussi problème : un identifiant ne doit apparaître qu'une seule fois par page, sinon le CSS cible un élément imprévu. Une classe, elle, se répète sans limite.
 
-**Déroulement :**
+Une règle trop générale, comme un sélecteur qui cible toutes les balises `<div>` d'un coup, finit par toucher des **éléments imprévus**. Vérifier l'affichage dans le navigateur après chaque changement, plutôt qu'à la fin, repère vite ce genre d'**effet secondaire**. Des [tests réguliers sur ton code](/tests-automatises-pourquoi/) limitent ce risque à mesure qu'un projet grossit.
 
-1. Créez un fichier `page.html` avec un titre et deux paragraphes.
-2. Ouvrez-le dans votre navigateur.
-3. Ajoutez une règle CSS dans la balise `<style>` pour colorer le titre.
+## Après le HTML et le CSS, la suite logique
 
-**Ce que vous retenez :** le HTML pose le contenu, le CSS change son apparence.
+Le HTML et le CSS affichent une page, mais ils ne la rendent pas interactive à eux seuls. Un clic qui déclenche une action, un formulaire vérifié avant envoi ou une animation déclenchée au défilement demandent du **JavaScript**.
 
-## Mini-quiz : avez-vous bien compris ?
+Une fois une page terminée, elle doit aussi être visible en ligne. [Mettre une application ou un site en ligne](/mettre-application-en-ligne/) explique les étapes qui suivent la création des fichiers, de l'hébergement jusqu'au nom de domaine.
 
-1. À quoi sert le HTML ? → *Réponse : à décrire le contenu et sa structure.*
-2. À quoi sert le CSS ? → *Réponse : à décrire l'apparence.*
-3. Le CSS change-t-il les mots d'une page ? → *Réponse : non, seulement leur affichage.*
+Les bases du HTML et du CSS s'appliquent aussi sur WordPress ou un autre outil de création de site. Comprendre ces deux langages aide à corriger un affichage, même sans tout coder à la main.
 
 ## FAQ
 
 ### Faut-il apprendre le HTML avant le CSS ?
 
-Oui, c'est l'ordre le plus logique. Le HTML pose la structure, le CSS la met en forme.
+Oui, dans cet ordre logique. Le HTML pose d'abord la structure d'une page, le CSS vient ensuite mettre en forme cette structure déjà posée.
 
 ### Peut-on faire un site avec seulement du HTML ?
 
-Oui. Un site simple peut tenir en HTML seul. Le CSS le rend simplement plus agréable à lire.
+Oui. Un site simple tient en HTML seul, mais garde une apparence basique : polices par défaut, aucune couleur personnalisée, aucune mise en page travaillée.
 
-### Où apprendre gratuitement ?
+### Quelle est la différence entre une classe et un identifiant en CSS ?
 
-La documentation MDN est une référence fiable et gratuite, en français.
+Une classe s'applique à plusieurs éléments d'une page. Un identifiant cible un seul élément précis et ne doit jamais se répéter ailleurs sur la même page.
 
-## Pour aller plus loin
+### Le CSS ralentit-il l'affichage d'une page ?
 
-- [Peut-on créer un site sans savoir coder ?](/creer-site-sans-savoir-coder/)
-- [C'est quoi la programmation, concrètement ?](/c-est-quoi-la-programmation/)
+Un fichier CSS bien écrit a un effet négligeable sur la vitesse. Un CSS mal organisé, avec des règles répétées ou trop générales, peut compliquer l'affichage sur de grosses pages.
+
+### Où apprendre le HTML et le CSS gratuitement ?
+
+La documentation MDN sert de référence fiable, gratuite et disponible en français, avec des exemples que tu peux tester directement dans le navigateur.
 
 <div class="lexique">
 
-- **HTML** : langage qui décrit la structure d'une page web.
-- **CSS** : langage qui décrit l'apparence d'une page web.
-- **Balise** : marqueur écrit entre chevrons.
+- **Balise** : marqueur HTML, écrit entre chevrons, qui indique la nature d'un contenu.
+- **Sélecteur** : partie d'une règle CSS qui désigne les éléments à mettre en forme.
+- **Propriété CSS** : caractéristique d'affichage réglée par une règle, comme la couleur ou la taille.
 
 </div>

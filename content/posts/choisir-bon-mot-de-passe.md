@@ -7,112 +7,112 @@ author: "andrianina-rabarivelo"
 category: "cybersecurite"
 image: "/images/articles/choisir-bon-mot-de-passe-hero.webp"
 imageAlt: "Un écran d'ordinateur affichant un message d'authentification échouée"
-updated: "2026-10-16"
+updated: "2026-11-22"
 sources:
   - titre: "Cybermalveillance.gouv.fr : pourquoi et comment bien gérer ses mots de passe"
     url: "https://www.cybermalveillance.gouv.fr/tous-nos-contenus/bonnes-pratiques/mots-de-passe"
 sourcesConsultees: "2026-10-16"
 ---
 
-Un bon mot de passe est long, unique pour chaque compte, et protégé par une double authentification. Un mot de passe court, utilisé partout, est la porte d'entrée préférée des pirates. Cet article vous montre comment faire mieux, simplement.
+Un bon mot de passe est long, unique pour chaque compte, et complété par une double authentification. Un mot de passe court, réutilisé partout, reste la porte d'entrée préférée des pirates. Ce guide t'explique comment faire mieux, simplement, sans rien retenir par cœur.
 
 <div class="essentiel">
 
 **L'essentiel en 30 secondes**
 
-- Visez au moins 12 caractères, avec majuscules, minuscules, chiffres et symboles.
-- Utilisez un mot de passe différent pour chaque compte.
-- Activez la double authentification partout où c'est possible.
+Vise au moins 12 caractères différents, avec un mot de passe distinct pour chaque compte important. Confie-les à un gestionnaire de mots de passe, et active la double authentification partout où c'est possible.
 
 </div>
 
 ## C'est quoi un bon mot de passe, concrètement ?
 
-Un mot de passe prouve que c'est bien vous qui vous connectez. Plus il est difficile à deviner, mieux votre compte est protégé. La longueur compte davantage que les astuces compliquées.
+Un mot de passe prouve que c'est bien toi qui te connectes à un compte. Plus il est difficile à deviner ou à calculer, mieux ton compte est protégé. La **longueur** compte davantage que les astuces compliquées. Remplacer un « a » par un « 4 » ne sert à rien : les outils de piratage connaissent déjà cette ruse.
 
-![Deux personnes qui analysent des données sur des ordinateurs portables](/images/articles/choisir-bon-mot-de-passe-1.webp)
+<div class="exemple">
 
-### Les mots à connaître
+**Un exemple concret**
 
-- **Gestionnaire de mots de passe** : logiciel qui stocke vos mots de passe, protégés par un seul mot de passe maître.
-- **Double authentification** : deuxième preuve demandée en plus du mot de passe.
-- **Piratage** : accès non autorisé à un compte ou à un appareil.
+Tu as un compte de messagerie et un compte bancaire. Si le même mot de passe ouvre les deux, un pirate qui vole celui de la messagerie peut tenter sa chance sur la banque. Avec deux mots de passe différents, le vol de l'un ne compromet pas l'autre.
 
-## Pourquoi c'est important ?
+</div>
 
-Si vous utilisez le même mot de passe partout, un vol sur un seul site menace tous vos autres comptes. Votre messagerie et votre compte bancaire sont alors exposés.
+## Pourquoi la longueur protège mieux que la complexité
 
-Un mot de passe solide protège aussi vos photos, vos documents et vos achats en ligne.
+Un mot de passe se devine de deux façons : en essayant des mots courants, ou en testant toutes les combinaisons possibles avec un programme. Un mot de passe court, même avec des symboles, se teste en quelques instants avec du matériel récent. Un mot de passe long, même simple, demande un temps bien plus important à calculer.
 
-Enfin, la double authentification ajoute une barrière. Même si quelqu'un connaît votre mot de passe, il lui manque le second code.
+C'est pour cette raison que Cybermalveillance.gouv.fr recommande une **phrase de passe** : plusieurs mots sans lien entre eux, par exemple « lampe-voiture-montagne-sourire ». C'est facile à retenir, et difficile à deviner, car l'ordre et le choix des mots ne suivent aucune logique devinable.
 
-## Comment ça marche, étape par étape
+## Comment choisir et garder un bon mot de passe, pas à pas
 
-1. Choisissez un mot de passe d'au moins 12 caractères.
-2. Utilisez un mot de passe distinct pour chaque service.
-3. Confiez la mémoire à un gestionnaire de mots de passe. Vous ne retenez que celui qui l'ouvre.
-4. Activez la double authentification, par SMS ou par application.
+1. **Choisis une longueur d'au moins 12 caractères**, de préférence sous forme de phrase de passe avec plusieurs mots.
+2. **Utilise un mot de passe distinct pour chaque service important** : messagerie, banque, réseaux sociaux.
+3. **Confie la mémoire à un gestionnaire de mots de passe.** Tu ne retiens plus qu'un seul mot de passe maître, qui ouvre tous les autres.
+4. **Active la double authentification** sur ta messagerie et ta banque en priorité, puis sur les autres comptes sensibles.
+5. **Change un mot de passe seulement en cas de fuite avérée**, ou si un service te le demande explicitement.
 
-![Une main qui tient un cadenas en laiton](/images/articles/choisir-bon-mot-de-passe-2.webp)
+## Les trois priorités, selon le risque
 
-## Un exemple du quotidien
+| Compte | Pourquoi c'est prioritaire | Ce qu'il faut faire |
+|---|---|---|
+| Messagerie principale | Elle permet de réinitialiser presque tous tes autres comptes | Mot de passe long et unique, double authentification activée |
+| Compte bancaire | Accès direct à ton argent | Mot de passe long et unique, double authentification activée |
+| Réseaux sociaux | Souvent liés à ta vie privée et à tes contacts | Mot de passe unique, double authentification si possible |
+| Petits comptes secondaires | Moins sensibles, mais souvent réutilisés par réflexe | Mot de passe généré par le gestionnaire, jamais recyclé |
 
-Vous avez un compte de messagerie et un compte bancaire. Si le même mot de passe ouvre les deux, un pirate qui vole l'un peut tenter l'autre. Avec deux mots de passe différents, le vol de l'un ne compromet pas l'autre.
+Commence par ta messagerie principale. Si elle tombe entre de mauvaises mains, presque tous tes autres comptes deviennent vulnérables. Un pirate peut réinitialiser leurs mots de passe à partir d'elle.
 
-## Vrai ou faux ? Les idées reçues
+<div class="attention">
 
-- **« Mon prénom et ma date de naissance font un bon mot de passe. »** : Faux. Ce sont les premiers essais des pirates.
-- **« Il faut changer son mot de passe chaque mois. »** : Faux. Changez-le surtout en cas de fuite ou si un service vous le demande.
-- **« La double authentification est compliquée et inutile. »** : Faux. Elle protège même si le mot de passe est connu.
+**Ne retape jamais ton mot de passe sur une page douteuse**
 
-## Les bons réflexes à retenir
+Un bon mot de passe ne sert à rien si tu le donnes toi-même à un faux site. Vérifie toujours l'adresse avant de te connecter, surtout après avoir cliqué sur un lien reçu par e-mail ou SMS.
 
-1. Choisissez un mot de passe long et unique.
-2. Ne le notez jamais sur un post-it ou dans un fichier non protégé.
-3. Activez la double authentification sur votre messagerie et votre banque en premier.
-4. Changez le mot de passe d'un compte si vous pensez qu'il a fuité.
+</div>
 
-## Exercice pratique (15 minutes)
+## Les erreurs à éviter
 
-**Matériel :** un ordinateur ou un téléphone, une liste de vos comptes importants.
+- **Utiliser ton prénom ou ta date de naissance.** Ce sont les premiers essais des pirates, bien avant les tentatives automatisées.
+- **Réutiliser le même mot de passe partout.** Un seul vol expose alors tous tes comptes d'un coup.
+- **Changer de mot de passe chaque mois sans raison.** Cette habitude pousse souvent à choisir des mots de passe plus faibles, par lassitude.
+- **Noter ses mots de passe sur un post-it ou un fichier non protégé.** Un gestionnaire dédié protège bien mieux cette information.
+- **Négliger la double authentification.** Elle protège ton compte même si le mot de passe a fuité ailleurs.
 
-**Déroulement :**
-
-1. Listez vos cinq comptes les plus importants.
-2. Repérez ceux qui utilisent le même mot de passe.
-3. Changez le mot de passe de la messagerie, puis activez la double authentification.
-
-**Ce que vous retenez :** un mot de passe unique par compte limite les dégâts en cas de vol.
-
-## Mini-quiz : avez-vous bien compris ?
-
-1. Quelle longueur minimale conseille-t-on ? → *Réponse : au moins 12 caractères.*
-2. Faut-il utiliser le même mot de passe partout ? → *Réponse : non, un mot de passe par compte.*
-3. Que protège la double authentification ? → *Réponse : elle protège même si le mot de passe est connu.*
-
-## FAQ
-
-### Faut-il changer son mot de passe régulièrement ?
-
-Pas forcément. Changez-le surtout s'il a pu fuiter, ou si un service vous le demande.
-
-### La double authentification est-elle vraiment utile ?
-
-Oui. Elle ajoute un second code, que le pirate ne possède généralement pas.
-
-### Un gestionnaire de mots de passe est-il sûr ?
-
-Un bon gestionnaire est protégé par un mot de passe maître fort. C'est plus sûr que de tout retenir ou de tout noter.
-
-## Pour aller plus loin
-
-- [Comment reconnaître un faux message (phishing) ?](/reconnaitre-faux-message-phishing/)
-- [Gestionnaire de mots de passe gratuit : lequel choisir ?](/gestionnaire-mot-de-passe-gratuit/)
+## Les mots à connaître
 
 <div class="lexique">
 
-- **Mot de passe maître** : mot de passe qui ouvre votre gestionnaire.
-- **Fuite de données** : vol de vos identifiants lors d'une attaque sur un service.
-- **Identifiants** : nom d'utilisateur et mot de passe d'un compte.
+**Mot de passe maître** : le seul mot de passe à retenir, celui qui ouvre ton gestionnaire de mots de passe.
+
+**Gestionnaire de mots de passe** : logiciel qui stocke tes mots de passe, protégés par ce mot de passe maître.
+
+**Double authentification** : deuxième preuve demandée en plus du mot de passe, par exemple un code reçu sur ton téléphone.
+
+**Phrase de passe** : suite de plusieurs mots sans lien entre eux, plus longue et plus facile à retenir qu'un mot de passe classique.
+
+**Fuite de données** : vol de tes identifiants lors d'une attaque sur un service que tu utilises.
+
+**Identifiants** : nom d'utilisateur et mot de passe d'un compte.
 
 </div>
+
+## Questions fréquentes
+
+### Faut-il changer son mot de passe régulièrement ?
+
+Pas forcément. Change-le surtout s'il a pu fuiter lors d'un piratage, ou si un service te le demande explicitement.
+
+### La double authentification est-elle vraiment utile ?
+
+Oui. Elle ajoute un second code que le pirate ne possède généralement pas, même s'il connaît déjà ton mot de passe.
+
+### Un gestionnaire de mots de passe est-il sûr ?
+
+Un bon gestionnaire est protégé par un mot de passe maître fort. C'est plus sûr que de tout retenir soi-même ou de tout noter sur papier.
+
+### Comment savoir si mon mot de passe a fuité ?
+
+Certains sites spécialisés permettent de vérifier si ton adresse e-mail apparaît dans une fuite connue. En cas de doute, change le mot de passe concerné sans attendre.
+
+## Et maintenant ?
+
+Pour choisir ton gestionnaire, lis [Gestionnaire de mots de passe gratuit : lequel choisir ?](/gestionnaire-mot-de-passe-gratuit/). Pour activer la double authentification, suis [Double authentification : comment l'activer ?](/double-authentification-activer/). Pour repérer les pièges les plus courants, lis [Comment reconnaître un faux message (phishing) ?](/reconnaitre-faux-message-phishing/). Pour comprendre comment tes données circulent en sécurité, découvre [C'est quoi le chiffrement ?](/c-est-quoi-le-chiffrement/).

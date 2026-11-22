@@ -163,7 +163,7 @@ Suivre : [Canva sur X](https://x.com/canva)
 
 Midjourney génère des images à partir d'une description écrite. Tu décris une scène, un style et une ambiance, et l'outil produit plusieurs propositions. Son interface peut dérouter au début, car elle ne fonctionne pas exactement comme un site classique.
 
-Il s'adresse à ceux qui veulent explorer la création d'images. Avant de te lancer, vérifie sur le site officiel les formules proposées et leurs conditions. Garde à l'esprit les règles de droit d'auteur et de respect des personnes lorsque tu publies une image générée.
+Il s'adresse à ceux qui veulent explorer la création d'images. Avant de te lancer, vérifie sur le site officiel les formules proposées et leurs conditions. Garde à l'esprit les règles de [droit d'auteur](/image-ia-droits-d-auteur/) et de respect des personnes lorsque tu publies une image générée. Pour comparer d'autres générateurs d'images, lis aussi [Les 10 meilleurs outils d'IA pour créer des images](/top10-outils-ia-creer-images/).
 
 Pour le voir en vidéo : [La chaîne YouTube officielle de Midjourney](https://www.youtube.com/@Midjourney).
 
@@ -183,7 +183,7 @@ Suivre : [Otter sur X](https://x.com/otter_ai)
 
 ## Comment choisir, en pratique ?
 
-Pose-toi une question simple : quel est le problème que je veux résoudre cette semaine ? Si tu écris beaucoup, commence par ChatGPT, Claude ou Gemini. Si tu cherches des sources fiables, essaie Perplexity. Si tu lis de longs documents, NotebookLM sera plus utile. Si tu travailles dans Word et Excel, Copilot est un bon point de départ.
+Pose-toi une question simple : quel est le problème que je veux résoudre cette semaine ? Si tu écris beaucoup, commence par ChatGPT, Claude ou Gemini. Pour t'aider à trancher entre ces deux derniers, lis [Claude ou ChatGPT ?](/claude-ou-chatgpt/) et [ChatGPT ou Gemini ?](/chatgpt-ou-gemini/). Si tu cherches des sources fiables, essaie Perplexity. Si tu lis de longs documents, NotebookLM sera plus utile. Si tu travailles dans Word et Excel, Copilot est un bon point de départ.
 
 Ne cherche pas l'outil parfait. Un seul outil bien pris en main vaut mieux que dix outils survolés. Et garde toujours le même réflexe : vérifier ce qui compte avant de l'utiliser.
 
@@ -211,14 +211,21 @@ La troisième erreur est de faire confiance aveuglément à une réponse. Une IA
 
 ## Questions fréquentes
 
-**Tous ces outils sont-ils gratuits ?**
+### Tous ces outils sont-ils gratuits ?
+
 La plupart proposent une version gratuite ou d'essai, avec des limites. Les formules payantes ajoutent des fonctions ou un usage plus large. Les tarifs changent, consulte la page officielle de chaque outil.
 
-**Faut-il installer une application ?**
+### Faut-il installer une application ?
+
 Pas forcément. La plupart fonctionnent dans un navigateur. Une application mobile peut être pratique au quotidien.
 
-**Peut-on utiliser ces outils pour un travail professionnel ?**
+### Peut-on utiliser ces outils pour un travail professionnel ?
+
 Oui, à condition de respecter les règles de ton entreprise et la confidentialité des données. Vérifie avec ta hiérarchie avant d'envoyer des informations internes.
+
+### Quelle est la différence entre ces outils et les entreprises qui les créent ?
+
+Chaque outil appartient à une entreprise différente, avec sa propre approche. Pour comprendre qui fait quoi, lis [Entreprises d'IA : OpenAI, Anthropic, Google, Mistral](/entreprises-ia-openai-anthropic-google-mistral/).
 
 ## Crédits des images
 
@@ -226,4 +233,4 @@ Les illustrations sont des photos libres de droit issues de Pexels, dont les aut
 
 ## Et maintenant ?
 
-Choisis un outil de cette liste et utilise-le une semaine sur une tâche réelle. Pour apprendre à mieux formuler tes demandes, lis aussi notre guide sur l'intelligence artificielle : [C'est quoi, l'intelligence artificielle ?](/intelligence-artificielle/). Et si tu hésites entre deux outils, dis-nous en commentaire lequel tu utilises et pourquoi.
+Choisis un outil de cette liste et utilise-le une semaine sur une tâche réelle. Pour apprendre à mieux formuler tes demandes, lis aussi notre guide sur l'intelligence artificielle : [C'est quoi, l'intelligence artificielle ?](/intelligence-artificielle-guide-debutants/). Et si tu hésites entre deux outils, dis-nous en commentaire lequel tu utilises et pourquoi.

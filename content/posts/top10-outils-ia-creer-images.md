@@ -151,7 +151,7 @@ Garde une trace des consignes qui marchent. Un bon prompt se réutilise facileme
 
 La première erreur est de vouloir obtenir la perfection du premier coup. Les générateurs fonctionnent par essais successifs : génère plusieurs propositions, garde la meilleure, puis affine.
 
-La deuxième erreur est de publier une image sans vérifier ses conditions d'usage ni son contenu. Une image peut contenir un détail faux ou ressembler à une œuvre protégée.
+La deuxième erreur est de publier une image sans vérifier ses conditions d'usage ni son contenu. Une image peut contenir un détail faux ou ressembler à une œuvre protégée. Pour ce point précis, lis notre guide [Créer une image avec l'IA sans risquer les droits d'auteur ?](/image-ia-droits-d-auteur/).
 
 La troisième erreur est de demander le nom d'une personne réelle ou une marque précise sans savoir ce que cela implique. Reste sur des sujets génériques, sauf si tu as les droits nécessaires.
 
@@ -171,15 +171,22 @@ La troisième erreur est de demander le nom d'une personne réelle ou une marque
 
 ## Questions fréquentes
 
-**Une image générée par IA m'appartient-elle ?**
+### Une image générée par IA m'appartient-elle ?
+
 Ça dépend de l'outil et de ses conditions. Lis-les avant de t'en servir pour un usage commercial, et ne présente jamais une image générée comme une photo réelle.
 
-**Faut-il savoir dessiner ?**
+### Faut-il savoir dessiner ?
+
 Non. La consigne écrite remplace le crayon. Savoir décrire ce que tu veux aide beaucoup, mais ce n'est pas un prérequis.
 
-**Les outils gratuits suffisent-ils pour débuter ?**
+### Les outils gratuits suffisent-ils pour débuter ?
+
 Souvent, oui pour les premiers essais. Les formules payantes ajoutent des images plus nombreuses ou des fonctions avancées. Les tarifs changent, consulte le site officiel de chaque outil.
+
+### Quelle différence avec un outil d'écriture comme ChatGPT ?
+
+Un générateur d'images transforme une consigne en visuel, pas en texte. Pour écrire une bonne consigne, les mêmes principes que pour un [prompt ChatGPT](/prompt-chatgpt/) s'appliquent : précision et contexte.
 
 ## Et maintenant ?
 
-Choisis un outil de cette liste et génère cinq images sur le même sujet, en ne changeant qu'un élément de la consigne à chaque fois. Tu verras vite ce qui compte. Pour mieux formuler tes demandes à un assistant, lis aussi notre guide : [C'est quoi, l'intelligence artificielle ?](/intelligence-artificielle-guide-debutants/).
+Choisis un outil de cette liste et génère cinq images sur le même sujet, en ne changeant qu'un élément de la consigne à chaque fois. Tu verras vite ce qui compte. Pour mieux formuler tes demandes à un assistant, lis aussi notre guide [C'est quoi, l'intelligence artificielle ?](/intelligence-artificielle-guide-debutants/) et notre sélection [Les 10 outils d'IA à tester en premier](/top10-outils-ia-debutants/).

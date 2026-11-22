@@ -91,4 +91,4 @@ Pour une vidéo courte et imaginaire, parfois. Pour une présentation de toi, to
 
 ## Et maintenant ?
 
-Pour des images fixes, lis [Créer une image avec l'IA sans risquer les droits d'auteur ?](/image-ia-droits-d-auteur/). Pour choisir tes outils, consulte [Les 10 outils d'IA à tester en premier](/top10-outils-ia-debutants/).
+Pour des images fixes, lis [Créer une image avec l'IA sans risquer les droits d'auteur ?](/image-ia-droits-d-auteur/). Pour choisir tes outils, consulte [Les 10 outils d'IA à tester en premier](/top10-outils-ia-debutants/). Pour bien formuler ta demande à un outil, lis [Prompt ChatGPT](/prompt-chatgpt/). Pour les bases, lis [C'est quoi, l'intelligence artificielle ?](/intelligence-artificielle-guide-debutants/).

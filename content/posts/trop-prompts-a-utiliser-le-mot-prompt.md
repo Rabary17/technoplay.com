@@ -21,7 +21,7 @@ Tu lis « prompt » partout : dans les articles, les formations, les conversatio
 
 ## C'est quoi, concrètement ?
 
-Un prompt est une requête écrite en langage naturel, adressée à une intelligence artificielle générative. Cette définition vient du Petit Robert. Le langage naturel, c'est simplement la façon dont tu parles ou écris tous les jours, sans code informatique.
+Un **prompt** est une requête écrite en langage naturel, adressée à une intelligence artificielle générative. Cette définition vient du Petit Robert. Le **langage naturel**, c'est simplement la façon dont tu parles ou écris tous les jours, sans code informatique.
 
 C'est comme demander un service à quelqu'un. Tu formules ta demande avec tes mots, et la personne te répond selon ce qu'elle a compris. Avec une IA générative, ta phrase joue ce rôle.
 
@@ -31,24 +31,26 @@ Sofia veut un texte pour souhaiter un bon anniversaire à une collègue. Elle é
 
 </div>
 
-Le mot a pris de l'ampleur dès la fin de 2022. Une chronique du « Fin mot » de La Presse s'est alors penchée sur le mot « prompt ». Son emploi s'est emballé avec le lancement de ChatGPT.
+Le mot a pris de l'ampleur dès la fin de 2022. Une chronique du « Fin mot » de La Presse s'est alors penchée sur le mot « prompt ». Son emploi s'est **emballé** avec le lancement de ChatGPT. Pour écrire un bon prompt, pas seulement pour nommer le mot correctement, lis notre guide [Prompt ChatGPT : comment bien formuler ta demande](/prompt-chatgpt/).
 
 ## Comment faire, pas à pas
 
 Voici comment employer le mot avec un peu de recul.
 
 1. Repère le sens. Demande-toi si tu parles bien d'une requête adressée à une IA générative.
-2. Pense à ton lecteur. Si tu écris pour des débutants, explique le mot dès sa première apparition.
+2. Pense à ton lecteur. S'il ne connaît pas le terme, explique-le dès sa première apparition.
 3. Essaie « requête ». C'est le terme qui figure dans la définition du Petit Robert.
 4. Varie les formulations. Alterne entre « prompt » et « requête » pour éviter les répétitions.
 5. Relis ton texte. Si le mot revient à chaque phrase, remplace-le dans quelques-unes.
 
 ## Les erreurs à éviter
 
-- Employer « prompt » pour tout et n'importe quoi, même quand aucune IA générative n'est en jeu.
+- Employer « prompt » pour tout et n'importe quoi, même quand aucune **IA générative** n'est en jeu.
 - Utiliser le mot sans l'expliquer devant des personnes qui ne le connaissent pas.
 - Croire qu'il n'existe aucun équivalent en français.
 - Répéter le même terme dix fois dans un court texte.
+
+Si ces outils sont nouveaux pour toi, consulte notre sélection [Les 10 outils d'IA à tester en premier](/top10-outils-ia-debutants/). Tu verras où le mot « prompt » s'applique concrètement.
 
 ## Les mots à connaître
 
@@ -77,4 +79,4 @@ Oui. « Requête » correspond à la définition donnée par Le Petit Robert. Ch
 
 ## Et maintenant ?
 
-Relis un de tes textes récents et compte combien de fois tu as écrit « prompt ». Remplace quelques occurrences par « requête » quand le sens reste clair. Si le mot t'intéresse, lis la chronique « Le fin mot » de La Presse, qui lui est consacrée.
+Relis un de tes textes récents et compte combien de fois tu as écrit « prompt ». Remplace quelques occurrences par « requête » quand le sens reste clair. Si le mot t'intéresse, lis la chronique « Le fin mot » de La Presse, qui lui est consacrée. Pour aller plus loin sur l'IA générative, lis aussi [C'est quoi, l'intelligence artificielle ?](/intelligence-artificielle-guide-debutants/).

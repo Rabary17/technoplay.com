@@ -35,7 +35,7 @@ Quand tu écris « Bonjour, comment vas-tu ? » à un assistant, il ne voit ni t
 
 ## C'est quoi un token, en pratique ?
 
-Un **token** est l'unité de base qu'un modèle de langage manipule. Ce n'est ni une lettre ni un mot : c'est un morceau de texte de taille variable. Un mot courant comme « maison » tient souvent dans un seul token. Un mot rare ou long se découpe en plusieurs morceaux.
+Un **token** est l'unité de base qu'un [modèle de langage](/modele-de-langage-c-est-quoi/) manipule. Ce n'est ni une lettre ni un mot : c'est un morceau de texte de taille variable. Un mot courant comme « maison » tient souvent dans un seul token. Un mot rare ou long se découpe en plusieurs morceaux.
 
 Avant d'arriver au modèle, ton texte passe par un **tokenizer**, un programme de découpage. Il consulte un dictionnaire de morceaux, souvent fort de 100 000 à 200 000 entrées. Il remplace ensuite chaque morceau par son numéro dans ce dictionnaire. Le modèle ne travaille que sur ces numéros.
 
@@ -96,7 +96,7 @@ Pour les développeurs et les entreprises, les éditeurs d'IA facturent **au mil
 
 Exemple avec la grille annoncée par OpenAI en septembre 2026. GPT-6 Sol est facturé **2 dollars par million de tokens en entrée et 10 dollars en sortie**. Un e-mail de 300 tokens, suivi d'une réponse de 300 tokens, coûte donc environ 0,4 centime de dollar. Les tarifs changent souvent : vérifie la grille officielle avant de faire un budget.
 
-Si tu utilises ChatGPT, Claude ou Gemini avec un abonnement mensuel, tu ne paies pas au token. Mais les tokens comptent quand même : les limites d'usage des formules, comme le nombre de messages ou la taille des fichiers, en découlent. Une longue conversation avec des documents lourds épuise ton quota plus vite qu'une série de questions courtes.
+Si tu utilises ChatGPT, Claude ou Gemini avec un abonnement mensuel, tu ne paies pas au token. Mais les tokens comptent quand même : les limites d'usage des formules, comme le nombre de messages ou la taille des fichiers, en découlent. Une longue conversation avec des documents lourds épuise ton quota plus vite qu'une série de questions courtes. Certains [réglages du modèle](/parametres-modele-ia/), comme la longueur maximale de réponse, influencent aussi ta consommation de tokens.
 
 <div class="lexique">
 

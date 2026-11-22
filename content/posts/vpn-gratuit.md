@@ -52,7 +52,7 @@ Un VPN ne remplace pas un antivirus. Il ne t'empêche pas de cliquer sur un lien
 
 Un VPN protège le trajet de tes données. Il ne protège pas l'appareil qui envoie ces données.
 
-La double authentification est un bon réflexe sur tes comptes importants. Cybermalveillance.gouv.fr la recommande aussi pour les connexions VPN.
+La [double authentification](/double-authentification-activer/) est un bon réflexe sur tes comptes importants. Cybermalveillance.gouv.fr la recommande aussi pour les connexions VPN.
 
 ## Comment gagne un VPN gratuit ?
 
@@ -102,7 +102,7 @@ Un VPN payant n'est pas automatiquement fiable. Le même principe s'applique : v
 - **Penser que la gratuité garantit la sécurité.** Une offre gratuite peut être sérieuse, mais elle se vérifie comme toute autre offre.
 - **Donner ses coordonnées pour un essai.** Un essai gratuit qui demande une carte bancaire mérite une lecture attentive des conditions.
 
-Ces erreurs arrivent à tout le monde. L'important est de les repérer avant qu'elles coûtent cher.
+Ces erreurs arrivent à tout le monde. L'important est de les repérer avant qu'elles coûtent cher. Un [gestionnaire de mots de passe gratuit](/gestionnaire-mot-de-passe-gratuit/) protège davantage tes comptes au quotidien qu'un VPN mal choisi.
 
 <div class="lexique">
 
@@ -136,4 +136,4 @@ Rien ne le garantit. Certains services bloquent les VPN, et les offres gratuites
 
 ## Et maintenant ?
 
-Tu sais maintenant comment trier un VPN gratuit. Pour protéger aussi tes comptes, pense à un mot de passe unique et solide pour chacun. Retrouve tous nos conseils dans [le thème Cybersécurité](/cybersecurite/).
+Tu sais maintenant comment trier un VPN gratuit. Pour protéger aussi tes comptes, lis [Comment choisir un bon mot de passe ?](/choisir-bon-mot-de-passe/). Pour le Wi-Fi public, qui est une autre source de risque, lis [Le Wi-Fi public est-il dangereux ?](/wifi-public-dangereux/). Retrouve tous nos conseils dans [le thème Cybersécurité](/cybersecurite/).

@@ -76,10 +76,11 @@ Le corps suit ce fil, dans cet ordre (voir README du projet « Structure d'un ar
 7. "## Les mots à connaître" : <div class="lexique">...</div> (définitions d'une phrase).
 8. "## Questions fréquentes" (${variation.nbFaq} questions en ### , réponses 50 mots max).
 ${variation.inclureEtMaintenant ? '9. "## Et maintenant ?" (lien vers un autre article pertinent du site si pertinent).' : ""}
+Longue traîne : si le brief indique un mot-clé, le titre et la première phrase de l'introduction reprennent sa formulation de question la plus précise (ex. « Quel budget pour une pompe à chaleur air-eau en 2026 ? »), jamais un mot-clé générique.
 Règles : tutoiement, phrases courtes (20 mots en moyenne, 25 max), un mot technique =
 une explication au moment où il apparaît, un exemple concret par idée, aucune formule qui
 infantilise ("il suffit de", "évidemment"...), jamais de tiret cadratin (—). Mets en **gras**
-(Markdown, \`**...**\`) 2 à 4 passages par section ##, des groupes de 1 à 4 mots liés au
+(Markdown, \`**...**\`) au minimum 2 passages en gras dans tout l'article (obligatoire), 2 à 4 par section ## si possible, des groupes de 1 à 4 mots liés au
 mot-clé ou au vocabulaire technique du sujet (pas seulement des chiffres) : jamais une phrase
 entière en gras, jamais le même terme mis en gras à deux endroits différents de l'article.
 Dans "## C'est quoi, concrètement ?" et dans "## Comment faire, pas à pas" (ou "## Lequel
@@ -147,6 +148,11 @@ function descriptionDepuisResume(resume) {
 }
 
 // Sépare la première ligne (titre) du reste (corps) — voir consigne de génération.
+// Nombre de segments en gras (**...**) dans le corps : minimum 2 par article (garde-fou).
+function compterGras(texte) {
+  return (texte.match(/\*\*[^*\n]+?\*\*/g) || []).length;
+}
+
 function separerTitreEtCorps(texte, titreDeSecours) {
   const t = retirerBlocCode(texte);
   const lignes = t.split("\n");
@@ -301,6 +307,10 @@ un sujet simple.`
 
   if (resultat.audit.bloquant) {
     return { ok: false, slug: slugify(titreGenere), raison: `garde-fou : ${resultat.audit.violations.length} violation(s)`, audit: resultat.audit };
+  }
+  const nbGras = compterGras(resultat.texte);
+  if (nbGras < 2) {
+    return { ok: false, slug: slugify(titreGenere), raison: `garde-fou : gras insuffisant (${nbGras} segment(s), minimum 2)` };
   }
   if (resultat.texte.includes("[À VÉRIFIER")) {
     return { ok: false, slug: slugify(titreGenere), raison: "marqueur [À VÉRIFIER] non résolu (info non sourcée) — à corriger ou sourcer" };

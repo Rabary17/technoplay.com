@@ -37,6 +37,18 @@ function dejaCouvert(motCle, textesExistants) {
 // fautes de frappe auxquelles l'API colle à tort le même volume que le terme principal.
 const VOLUME_MAX = 20000;
 
+// Question directe (« comment… ? », « quel… », « combien… ») : formulation que tape un lecteur.
+function estQuestion(motCle) {
+  const m = motCle.trim().toLowerCase();
+  return /^(comment|quel|quelle|quels|quelles|pourquoi|combien|est-ce|peut-on|faut-il|qu'est|c'est quoi|à quoi|où|quand)/.test(m) || m.endsWith("?");
+}
+
+// Concurrence en nombre 0-1 ; DataForSEO renvoie parfois LOW / MEDIUM / HIGH.
+function niveauConcurrence(c) {
+  if (typeof c === "number") return c;
+  return { LOW: 0.1, MEDIUM: 0.5, HIGH: 0.9 }[String(c).toUpperCase()] ?? 0.5;
+}
+
 function estLongueTraine(motCle) {
   return motCle.trim().split(/\s+/).length >= 3;
 }
@@ -52,14 +64,19 @@ async function selectionnerSujetsSeo({ n = 3, volumeMin = 150, volumeMax = VOLUM
         if (!r.search_volume || r.search_volume < volumeMin || r.search_volume > volumeMax) continue;
         if (!estLongueTraine(r.keyword)) continue;
         if (dejaCouvert(r.keyword, textesExistants)) continue;
-        sujets.push({ theme, keyword: r.keyword, volume: r.search_volume, cpc: r.cpc, competition: r.competition });
+        sujets.push({ theme, keyword: r.keyword, volume: r.search_volume, cpc: r.cpc, competition: r.competition, question: estQuestion(r.keyword) });
       }
     } catch (err) {
       console.error(`Erreur DataForSEO pour le thème ${theme} : ${err.message}`);
     }
   }
   // Un meilleur mot-clé par thème d'abord (diversité), puis complète par volume décroissant.
-  sujets.sort((a, b) => b.volume - a.volume);
+  // Priorité longue traîne : questions d'abord, puis concurrence faible, puis volume.
+  sujets.sort((a, b) =>
+    (Number(b.question) - Number(a.question)) ||
+    (niveauConcurrence(a.competition) - niveauConcurrence(b.competition)) ||
+    (b.volume - a.volume)
+  );
   const parTheme = new Map();
   const selection = [];
   for (const s of sujets) {

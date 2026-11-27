@@ -21,6 +21,7 @@ const { choisirAuteur } = require("../generation/choisir-auteur");
 const { selectionnerSujetsSeo } = require("./select-keyword-topics");
 const { selectionnerActusDuJour } = require("./select-news-topics");
 const { findImage } = require("./image-client");
+const unicite = require("../images/unicite");
 const { voixPour } = require("../generation/voix-auteurs");
 const { choisirParmi, entier } = require("../generation/variation");
 
@@ -256,24 +257,13 @@ function imagesDejaUtilisees() {
 
 // Essaie plusieurs requêtes dans l'ordre (mot-clé SEO d'abord si connu, puis les synonymes
 // du thème) et prend le premier résultat qui n'est PAS déjà utilisé par un autre article.
-// En dernier recours (tout épuisé), accepte un doublon plutôt que de laisser l'article
-// sans image — mais ça ne devrait arriver qu'à très forte densité d'articles par thème.
+// Règle stricte : une photo n'est jamais réutilisée sur le site.
 async function choisirImage({ keyword, theme, titre }) {
-  const dejaUtilisees = imagesDejaUtilisees();
-  const requetes = [keyword, ...(SYNONYMES_IMAGE_PAR_THEME[theme] || []), titre].filter(Boolean);
-  let premierResultatVu = null;
-  for (const requete of requetes) {
-    try {
-      const resultats = await findImage(requete);
-      if (!premierResultatVu && resultats.length > 0) premierResultatVu = resultats[0];
-      const libre = resultats.find((r) => !dejaUtilisees.has(r.url));
-      if (libre) return libre;
-    } catch (err) {
-      console.error(`Recherche image échouée pour "${requete}" : ${err.message}`);
-    }
-  }
-  if (premierResultatVu) console.error(`Toutes les images candidates pour "${titre}" sont déjà utilisées — doublon accepté par défaut.`);
-  return premierResultatVu;
+  return unicite.choisirImageUnique(
+    unicite.requetesImage({ keyword, theme, titre, synonymes: SYNONYMES_IMAGE_PAR_THEME[theme] || [] }),
+    findImage,
+    unicite.idsUtilisees(POSTS_DIR)
+  );
 }
 
 async function construireArticle(sujet) {

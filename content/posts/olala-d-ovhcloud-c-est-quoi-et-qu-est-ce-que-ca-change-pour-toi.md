@@ -4,8 +4,8 @@ description: "Spécialiste de l'hébergement de sites web et du cloud, l'entrepr
 date: "2026-11-23"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
-image: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBvcmRpbmF0ZXVyfGVufDB8MHx8fDE3OTU0NTU5NDN8MA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "a computer chip with the letter a on top of it"
+image: "https://images.unsplash.com/photo-1690627931320-16ac56eb2588?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxvbGFsYSUyMG92aGNsb3VkJTIwY2hhbmdlfGVufDB8MHx8fDE3OTU3NTg5OTF8MA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "A white cloud icon on a glass square with floating data charts and cylinders"
 sources:
   - titre: "Avec « Olala », OVHcloud se lance également dans la course aux modèles d'IA"
     url: "https://www.ouest-france.fr/high-tech/intelligence-artificielle/avec-olala-ovhcloud-se-lance-egalement-dans-la-course-aux-modeles-dia-62d71222-e261-11f1-9a72-32f9104dab1b"

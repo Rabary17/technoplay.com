@@ -4,8 +4,8 @@ description: "Tout savoir sur comment bien utiliser une intelligence artificiell
 date: "2026-11-24"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
-image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBjaGF0fGVufDB8MHx8fDE3OTU1NDA2MDB8MA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "a computer circuit board with a brain on it"
+image: "https://images.unsplash.com/photo-1677442135136-760c813028c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwzfHxiaWVuJTIwdXRpbGlzZXIlMjBpbnRlbGxpZ2VuY2V8ZW58MHwwfHx8MTc5NTc1ODk5NHww&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "a person's head with a circuit board in front of it"
 ---
 <div class="essentiel">
 

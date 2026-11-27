@@ -4,8 +4,8 @@ description: "Orange Business a annoncé le lancement du mode protégé au sein 
 date: "2026-11-26"
 author: "nekena-judicael"
 category: "intelligence-artificielle"
-image: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBvcmRpbmF0ZXVyfGVufDB8MHx8fDE3OTU3MTEyMzZ8MA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "a computer chip with the letter a on top of it"
+image: "https://images.pexels.com/photos/37916496/pexels-photo-37916496.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+imageAlt: "Detailed view of a modern automatic gear shift lever in a vehicle interior, highlighting design and function."
 sources:
   - titre: "Orange Business lance le mode protégé au sein de Live Intelligence"
     url: "https://www.zonebourse.com/actualite-bourse/orange-business-lance-le-mode-protege-au-sein-de-live-intelligence-ce785edfd081f520"

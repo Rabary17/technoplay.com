@@ -4,8 +4,8 @@ description: "OpenAI a déclaré que GPT-6.2 Astra a obtenu 5,5 points de plus q
 date: "2026-11-24"
 author: "andrianina-rabarivelo"
 category: "intelligence-artificielle"
-image: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxpbnRlbGxpZ2VuY2UlMjBhcnRpZmljaWVsbGUlMjBvcmRpbmF0ZXVyfGVufDB8MHx8fDE3OTU1NDA2NDV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "a computer chip with the letter a on top of it"
+image: "https://images.unsplash.com/photo-1679403766682-3b31efa571a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxncHQlMjBhc3RyYSUyMGNoYW5nZXxlbnwwfDB8fHwxNzk1NzU4OTkyfDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "a computer screen with a purple and green background"
 sources:
   - titre: "OpenAI dévoile son modèle d'IA le plus avancé après avoir abandonné une version précédente."
     url: "https://fr.qz.com/openai-gpt-6-2-astra-release-version-abandonne-111726"

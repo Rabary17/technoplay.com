@@ -4,8 +4,8 @@ description: "Genesis AI a levé environ 454 millions d'euros pour produire à g
 date: "2026-11-24"
 author: "nekena-judicael"
 category: "robotique-drones"
-image: "https://images.unsplash.com/photo-1473968512647-3e447244af8f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMHZvbCUyMGV4dCVDMyVBOXJpZXVyfGVufDB8MHx8fDE3OTU1NDA2OTF8MA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "drone flying in sky"
+image: "https://images.unsplash.com/photo-1590591399072-358accde7811?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxnZW5lc2lzJTIwY29tcHRlJTIwZWxsZXxlbnwwfDB8fHwxNzk1NzU4OTk2fDA&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "white printer paper on white textile"
 sources:
   - titre: "La société française de robotique Genesis AI lève 454 millions d'euros pour la production d'un robot humanoïde"
     url: "https://fr.businessam.be/la-societe-francaise-de-robotique-genesis-ai-leve-454-millions-deuros-pour-la-production-dun-robot-humanoide/"

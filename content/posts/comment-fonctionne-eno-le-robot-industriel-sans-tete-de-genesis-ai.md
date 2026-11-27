@@ -4,8 +4,8 @@ description: "Genesis AI rejette l'approche de la robotique humanoïde tradition
 date: "2026-11-25"
 author: "nekena-judicael"
 category: "robotique-drones"
-image: "https://images.unsplash.com/photo-1521405924368-64c5b84bec60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwxfHxkcm9uZSUyMHZvbCUyMGV4dCVDMyVBOXJpZXVyfGVufDB8MHx8fDE3OTU2MjU5OTJ8MA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "selective focus photography of DJI Phantom 3 Professional quadcopter drone"
+image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxmb25jdGlvbm5lJTIwZW5vJTIwcm9ib3R8ZW58MHwwfHx8MTc5NTc1ODk5NHww&ixlib=rb-4.1.0&q=80&w=1080"
+imageAlt: "white robot near brown wall"
 sources:
   - titre: "Valorisé 3,5 milliards de dollars, Genesis AI déploie son robot i ..."
     url: "https://www.zdnet.fr/actualites/valorise-35-milliards-de-dollars-genesis-ai-deploie-son-robot-industriel-eno-508220.htm"

@@ -4,8 +4,8 @@ description: "# Le NIOSH ouvre une consultation sur la sécurité des humanoïde
 date: "2026-11-26"
 author: "nekena-judicael"
 category: "robotique-drones"
-image: "https://images.unsplash.com/photo-1521405924368-64c5b84bec60?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTE4NzJ8MHwxfHNlYXJjaHwyfHxkcm9uZSUyMHZvbCUyMGV4dCVDMyVBOXJpZXVyfGVufDB8MHx8fDE3OTU1NDA2OTF8MA&ixlib=rb-4.1.0&q=80&w=1080"
-imageAlt: "selective focus photography of DJI Phantom 3 Professional quadcopter drone"
+image: "https://images.pexels.com/photos/3992946/pexels-photo-3992946.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+imageAlt: "Assorted N95 and surgical masks for respiratory protection against harmful particles."
 sources:
   - titre: "Le NIOSH ouvre une consultation sur la sécurité des humanoïdes au travail | RoboActu"
     url: "https://www.roboactu.fr/niosh-consultation-securite-humanoides-travail/"

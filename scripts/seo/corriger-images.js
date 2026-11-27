@@ -66,7 +66,7 @@ async function choisirImage({ theme, titre }, dejaUtilisees) {
       console.error(`Recherche image échouée pour "${requete}" : ${err.message}`);
     }
   }
-  return premierResultatVu;
+  return null; // jamais de photo déjà utilisée (règle stricte)
 }
 
 // Remplace/insère les lignes `image:`/`imageAlt:` dans le frontmatter brut,

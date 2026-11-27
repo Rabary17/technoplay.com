@@ -108,11 +108,28 @@ renvois, ils apparaîtraient tels quels, en texte brut visible, ce qui a l'air c
 // (plus d'exemples, une section en plus si pertinent) plutôt qu'un traitement minimal.
 const SEUIL_VOLUME_DEVELOPPEMENT = 500;
 
+// Article de fond sans source externe (SEO) : intemporel, sans aucun fait daté ou chiffré.
+// Le garde-fou reste bloquant ; cette consigne évite qu'il ait quelque chose à marquer.
+const CONSIGNE_EVERGREEN = `
+Article de fond intemporel : tu n'as AUCUNE source externe.
+N'écris AUCUN chiffre, prix, pourcentage, date, année, numéro de version de logiciel ou de produit,
+nom de modèle, classement, statistique ou citation. Parle des méthodes, des critères de choix,
+des erreurs fréquentes, des comparaisons qualitatives (selon le besoin, plus ou moins adapté) et
+de questions pratiques.
+Si un point dépendrait d'un chiffre ou d'une date, supprime ce point : ne le remplace pas par un
+autre chiffre et n'écris jamais de marqueur [À VÉRIFIER] ni de balise [S1]...
+Structure obligatoire : un titre principal (question précise, longue traîne), une introduction qui
+répond directement en 2 à 3 phrases, puis des sections en titre ## (méthode, critères, erreurs,
+comparaison), avec des sous-titres en ### si utile, et une section ## « Questions fréquentes » avec
+3 à 4 questions en ###.
+Mets en gras (**...**) les termes importants : au moins 2 passages en gras par section ##, jamais une
+phrase entière.`;
+
 async function genererArticle({ titre, theme, sources = [], brief = "", voix = "" }) {
   const variation = tirerVariation();
   const resultat = await generer({
     phase: "premier-jet",
-    consigne: construireConsigneStructure(variation) + (sources.length > 0 ? CONSIGNE_RESTER_DANS_LA_SOURCE : ""),
+    consigne: construireConsigneStructure(variation) + (sources.length > 0 ? CONSIGNE_RESTER_DANS_LA_SOURCE : CONSIGNE_EVERGREEN),
     instructions: voix,
     brief: `Titre de l'article : "${titre}"\nThème : ${theme}\n${brief}`,
     sources,
